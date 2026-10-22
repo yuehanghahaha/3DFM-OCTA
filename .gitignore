@@ -92,3 +92,22 @@ events.out.tfevents.*
 *.tar
 *.tgz
 *.tar.gz
+
+# Curated review materials only; raw datasets and other images stay excluded.
+!/docs/review/tables/training_history.csv
+!/docs/review/tables/test_metrics.csv
+!/docs/review/tables/summary_metrics.csv
+!/docs/review/tables/selected_examples.csv
+!/docs/review/figures/training_curves.png
+!/docs/review/figures/validation_trajectory.png
+!/docs/review/figures/test_patient_scatter.png
+!/docs/review/figures/example_01_fixed.png
+!/docs/review/figures/example_01_enhanced.png
+!/docs/review/figures/example_02_fixed.png
+!/docs/review/figures/example_02_enhanced.png
+!/docs/review/figures/example_03_fixed.png
+!/docs/review/figures/example_03_enhanced.png
+!/docs/review/figures/example_04_fixed.png
+!/docs/review/figures/example_04_enhanced.png
+!/docs/review/figures/example_05_fixed.png
+!/docs/review/figures/example_05_enhanced.png

@@ -1,0 +1,156 @@
+{
+  "example_figures": [
+    {
+      "file": "figures/example_01_fixed.png",
+      "sample_id": "sample_048",
+      "public_dataset_case_number": "10497",
+      "display_mode": "fixed",
+      "dimensions": [
+        1330,
+        1354
+      ],
+      "sha256": "137f27048e8c9d86fa886f312f5e12692c8844df062c2ffada20223ae5719b14",
+      "transformation": "Exact copy of pre-existing scientific comparison panel; no retouching"
+    },
+    {
+      "file": "figures/example_01_enhanced.png",
+      "sample_id": "sample_048",
+      "public_dataset_case_number": "10497",
+      "display_mode": "enhanced",
+      "dimensions": [
+        806,
+        1354
+      ],
+      "sha256": "b4fb69f6e8d71bbb1f19691c9856dfdadae6142ef0839c3109a4ccda09c39c3f",
+      "transformation": "Exact copy of pre-existing scientific comparison panel; no retouching"
+    },
+    {
+      "file": "figures/example_02_fixed.png",
+      "sample_id": "sample_011",
+      "public_dataset_case_number": "10330",
+      "display_mode": "fixed",
+      "dimensions": [
+        1330,
+        1354
+      ],
+      "sha256": "98a1f430d53899de93f9abe766ca5aa8c9ec0911ef4b20683770b4d889e46bf6",
+      "transformation": "Exact copy of pre-existing scientific comparison panel; no retouching"
+    },
+    {
+      "file": "figures/example_02_enhanced.png",
+      "sample_id": "sample_011",
+      "public_dataset_case_number": "10330",
+      "display_mode": "enhanced",
+      "dimensions": [
+        806,
+        1354
+      ],
+      "sha256": "61b421bf2cd5d88b6f9ba7d6880e992c40233399474454a722751365f805a56c",
+      "transformation": "Exact copy of pre-existing scientific comparison panel; no retouching"
+    },
+    {
+      "file": "figures/example_03_fixed.png",
+      "sample_id": "sample_001",
+      "public_dataset_case_number": "10305",
+      "display_mode": "fixed",
+      "dimensions": [
+        1330,
+        1354
+      ],
+      "sha256": "9dacbb6a2816ad08dcaf71f948d0f9a3f2883e164a148e0aa546875124b35bdf",
+      "transformation": "Exact copy of pre-existing scientific comparison panel; no retouching"
+    },
+    {
+      "file": "figures/example_03_enhanced.png",
+      "sample_id": "sample_001",
+      "public_dataset_case_number": "10305",
+      "display_mode": "enhanced",
+      "dimensions": [
+        806,
+        1354
+      ],
+      "sha256": "c8dd60c9fc55c902b37e2e9e7a90b4fc46b11466e1bf9153027ce810e9747d51",
+      "transformation": "Exact copy of pre-existing scientific comparison panel; no retouching"
+    },
+    {
+      "file": "figures/example_04_fixed.png",
+      "sample_id": "sample_043",
+      "public_dataset_case_number": "10472",
+      "display_mode": "fixed",
+      "dimensions": [
+        1330,
+        1354
+      ],
+      "sha256": "7bb601e09f9a3952073096045efa374846e84052f67e3153b581e74cfee18c76",
+      "transformation": "Exact copy of pre-existing scientific comparison panel; no retouching"
+    },
+    {
+      "file": "figures/example_04_enhanced.png",
+      "sample_id": "sample_043",
+      "public_dataset_case_number": "10472",
+      "display_mode": "enhanced",
+      "dimensions": [
+        806,
+        1354
+      ],
+      "sha256": "56afd2a9d1cc247ffc71fed4d2d63751a8afadce969066b3303a347f3f8f8e7e",
+      "transformation": "Exact copy of pre-existing scientific comparison panel; no retouching"
+    },
+    {
+      "file": "figures/example_05_fixed.png",
+      "sample_id": "sample_040",
+      "public_dataset_case_number": "10454",
+      "display_mode": "fixed",
+      "dimensions": [
+        1330,
+        1354
+      ],
+      "sha256": "be8ef6dca985869e2e51f0900f671b76838dc42b1f309adf142f27ca7d96b70c",
+      "transformation": "Exact copy of pre-existing scientific comparison panel; no retouching"
+    },
+    {
+      "file": "figures/example_05_enhanced.png",
+      "sample_id": "sample_040",
+      "public_dataset_case_number": "10454",
+      "display_mode": "enhanced",
+      "dimensions": [
+        806,
+        1354
+      ],
+      "sha256": "2432b919020ec6dd0b1c95b0d35d8fab646c51343698658a8a74709e202bc25d",
+      "transformation": "Exact copy of pre-existing scientific comparison panel; no retouching"
+    }
+  ],
+  "input_report_sha256": {
+    "analysis_summary.json": "4bbf66f8380161d43d0d7dd443d2c838195f3abae7c8015cc2a3e9272659ce53",
+    "baseline_test_metrics.json": "7d09d9bb43a0fdce5d5a495437d6891ed234811a2e42b36841a72bf53aba489c",
+    "wavelet_test_metrics.json": "243da893eb9de6a58b1c42e414b7af47e28240b666ff814525af08a28a2d6f13",
+    "baseline_projection_metrics.json": "ee5a034b1d21453255943546c7e77e72ea9e1c0474eb7ac0fffb19723a2062a8",
+    "wavelet_projection_metrics.json": "79fdf4ed082b0969a79b462bbc7b00cbd6b7ff0802887f4fc5cd735b8c297584",
+    "baseline_history.jsonl": "c0e80f1b5ec9b2f86970c57b0e73669f071f7f30d5554e767ed2cbe8e76111d0",
+    "wavelet_history.jsonl": "e0389769b0f2718cfb0abedb1f912c284d9c1a11cfd71efcd4415c5b57846a70"
+  },
+  "chart_generation": {
+    "script": "reproduce_summary.py",
+    "charts": [
+      {
+        "file": "figures/training_curves.png",
+        "sha256": "459bd29f45cb17e5f28b81d843a030ce807184534782f23b1c6930e8ff6061c1"
+      },
+      {
+        "file": "figures/validation_trajectory.png",
+        "sha256": "5fa464a790a46de77e15b6e645fed149aa710985e7013626ea7a1a9aa3bec965"
+      },
+      {
+        "file": "figures/test_patient_scatter.png",
+        "sha256": "bf2b7a70bc1569cf9e63958f19aa46ebde55cafa643829bd4f4689d16948f851"
+      }
+    ],
+    "exported_table_sha256": {
+      "selected_examples.csv": "0685ba6a7cca21d653a8a916dd6ec526b47043fbfd37e701de5acd1a1399eead",
+      "summary_metrics.csv": "4244f20495b0f6226c63b6870a0d62646263bbde979e6e0f987b2c402e39c45f",
+      "test_metrics.csv": "c96b5eb00794ed12d604e8fd83651ef8d1b3ddf622a693de839927a0a433b6d1",
+      "training_history.csv": "e19ef06de1df6a6bd6309cbdad0d375f75b035a55285db8ed0ccaf835952c3b4"
+    }
+  }
+}

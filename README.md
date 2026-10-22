@@ -8,9 +8,29 @@
 | 3DFM 基线 | `python -m fm3d.train` | 原始三维体素 | [基线说明](fm3d/README.md) |
 | 3DFM + 3D Haar 小波 | `python -m fm3d.train_wavelet` | 三维 Haar 八子带 | [小波说明](fm3d/WAVELET.md) |
 
-本仓库发布源代码、测试、依赖和操作说明；模型权重、医学影像、患者名单、训练日志与实验输出均由使用者在本地管理。
+本仓库发布源代码、测试、依赖、操作说明，以及少量用于审阅的结果图与派生指标。
+模型权重、原始医学体积、患者名单和完整运行输出由使用者在本地管理。
 源代码快照整理于 2026-10-22。既有说明中的服务器路径、压缩包名和结果目录属于历史运行示例，运行时替换为自己的路径。
 这是独立研究实现，方法源于 FlowOCT 的配对直线路径思路；FlowOCT 官方代码见 [cnu-medilab/FlowOCT](https://github.com/cnu-medilab/FlowOCT)。
+
+## 给审阅者的材料
+
+请先阅读 **[结果、配置与五例对比图](docs/review/README.md)**，再结合
+[代码审阅指南](docs/review/CODE_REVIEW_GUIDE.md) 查看实现。
+材料包含 50 例成对测试指标、两组训练与验证曲线、五例固定窗/增强窗对比图，以及实际配置。
+可以用 [复核脚本](docs/review/reproduce_summary.py) 从随附指标表重算均值、成对 bootstrap 区间和曲线，无需数据与权重。
+
+**这批历史结果比较的是：基线训练 100 轮、选择第 90 轮；小波训练 200 轮、选择第 195 轮。**
+它与本页下方采用 200/200 轮的训练命令示例有区别，尚不能单独作为相同预算下的小波消融结论。
+
+| 50 例完整体积测试 | 3DFM 基线 | 3DFM + 3D Haar |
+| --- | ---: | ---: |
+| MAE ↓ | 0.013878 | 0.014594 |
+| PSNR ↑ | 28.322 dB | 28.898 dB |
+
+这一快照中小波的 MAE 更高、PSNR 更高；投影指标也存在权衡，详见评审材料。
+
+![验证曲线：基线 100 轮与小波 200 轮](docs/review/figures/validation_trajectory.png)
 
 ## 安装
 
@@ -80,7 +100,8 @@ python -m fm3d.visualize \
   --input runs/fm3d_3M_test --output runs/fm3d_3M_test_report
 ```
 
-小波模型只需换用对应运行目录的 checkpoint。生成的体积与图片保留在本地，并由 `.gitignore` 排除。
+小波模型只需换用对应运行目录的 checkpoint。生成的体积与图片默认保留在本地，由 `.gitignore` 排除；
+仓库只对 `docs/review/` 中明确列出的评审图表设置例外。
 扩展指标见 [评价说明](fm3d/EVALUATION.md)。
 共享代码还保留了独立的 [Z 投影监督扩展](fm3d/PROJECTION.md)；上述两种基础方案的投影损失权重均为 0。
 
@@ -112,6 +133,7 @@ fm3d/
   scripts/                 服务器启动脚本
   test_*.py                现有验证测试
 tools/                     数据准备与评价辅助工具
+docs/review/               冻结结果、五例对比图、指标表与审阅指南
 snapshots/baseline_resume_200/
                            基线 200 轮续训训练脚本快照
 ```

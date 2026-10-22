@@ -1,0 +1,153 @@
+{
+  "prepared_date": "2026-10-22",
+  "scope": "Frozen 100-epoch voxel baseline versus 200-epoch Haar run; existing results, no new training.",
+  "dataset": {
+    "name": "OCTA-500",
+    "fov": "3M",
+    "train_cases": 140,
+    "validation_cases": 10,
+    "test_cases": 50,
+    "manifest_sha256": "652544a427071b8350d346deb941c03182ae4e248659b1117a45fcb870bc253b",
+    "official_source": "https://ieee-dataport.org/open-access/octa-500"
+  },
+  "models": {
+    "voxel": {
+      "config": {
+        "fov": "3M",
+        "axis_order": "ZYX",
+        "intensity_scale": 255.0,
+        "depth": 256,
+        "patch": [
+          256,
+          64,
+          64
+        ],
+        "base_channels": 16,
+        "condition": true,
+        "batch_size": 1,
+        "epochs": 100,
+        "steps_per_epoch": 200,
+        "lr": 0.0002,
+        "val_every": 5,
+        "ode_steps": 8,
+        "overlap": 0.5,
+        "seed": 2026,
+        "workers": 0,
+        "amp": true,
+        "representation": "voxel",
+        "lambda_projection": 0.0
+      },
+      "checkpoint_epoch": 90,
+      "parameters": 2097521,
+      "network_patch_ZYX": [
+        256,
+        64,
+        64
+      ],
+      "state_channels": 1,
+      "optimizer_updates": 20000,
+      "amp_skipped_updates": 0
+    },
+    "haar3d": {
+      "config": {
+        "fov": "3M",
+        "axis_order": "ZYX",
+        "intensity_scale": 255.0,
+        "depth": 256,
+        "patch": [
+          256,
+          64,
+          64
+        ],
+        "base_channels": 16,
+        "condition": true,
+        "batch_size": 1,
+        "epochs": 200,
+        "steps_per_epoch": 200,
+        "lr": 0.0002,
+        "val_every": 5,
+        "ode_steps": 8,
+        "overlap": 0.5,
+        "seed": 2026,
+        "workers": 0,
+        "amp": true,
+        "representation": "haar3d",
+        "lambda_projection": 0.0,
+        "save_every": 50
+      },
+      "checkpoint_epoch": 195,
+      "parameters": 2106600,
+      "network_patch_ZYX": [
+        128,
+        32,
+        32
+      ],
+      "state_channels": 8,
+      "optimizer_updates": 39992,
+      "amp_skipped_updates": 8
+    }
+  },
+  "model_selection": "Lowest full-volume patient-macro validation MAE within each run budget; test not used for checkpoint selection.",
+  "volume_evaluation": "full preprocessed volume; range=1; final clamp; patient macro mean; PSNR MSE floor=1e-12",
+  "projection_evaluation": {
+    "grid": "Same Z256 reference grid for both models",
+    "FULL": "Full-depth mean",
+    "ILM_OPL": "Layer-interval maximum",
+    "OPL_BM": "Layer-interval maximum",
+    "layer_labels": "Ground-truth layers used only after inference to calculate projections; not generator inputs",
+    "fixed_display_windows": {
+      "FULL": [
+        0,
+        0.3137254901960784
+      ],
+      "ILM_OPL": [
+        0,
+        1
+      ],
+      "OPL_BM": [
+        0,
+        1
+      ]
+    },
+    "absolute_error_windows": {
+      "FULL": [
+        0,
+        0.05
+      ],
+      "ILM_OPL": [
+        0,
+        0.2
+      ],
+      "OPL_BM": [
+        0,
+        0.2
+      ]
+    },
+    "enhanced_display": "Independent [0,P99] for each panel; morphology inspection only",
+    "center_crop": "Fixed central 128x128 pixels; not selected by visual quality"
+  },
+  "example_selection": {
+    "sort_key": "haar3d volume MAE minus voxel volume MAE, ascending",
+    "one_based_ranks": [
+      1,
+      13,
+      25,
+      38,
+      50
+    ],
+    "purpose": "Show the range of observed changes; descriptive selection after evaluation, not an independent validation set"
+  },
+  "bootstrap": {
+    "seed": 2026,
+    "resamples": 20000,
+    "unit": "paired test case",
+    "interval": "2.5th and 97.5th percentiles"
+  },
+  "privacy": "Metric tables use bundle-local sample labels; five pre-existing example figures retain public dataset case numbers. No demographic labels, identity mappings, patient manifests or local machine paths are included.",
+  "limitations": [
+    "Unequal total training budgets: 100 versus 200 epochs",
+    "One seed only",
+    "Does not include subsequent baseline-200 evaluations",
+    "No model weights or raw volumes; exported metrics can be rechecked but inference cannot be rerun from this bundle alone"
+  ]
+}
