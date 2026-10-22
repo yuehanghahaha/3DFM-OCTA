@@ -1,0 +1,4 @@
+# Reuse the existing flowoct environment; no MONAI/TorchIO/wavelet dependency here.
+torch==2.5.1
+numpy==1.26.4
+Pillow>=10.0
