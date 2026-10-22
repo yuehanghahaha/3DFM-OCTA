@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "completed": "2026-10-22T11:41:15.972814+08:00",
+  "records": [
+    {
+      "arm": "fm_uniform",
+      "budget": 4800,
+      "additional_updates": 2400,
+      "passed": true
+    },
+    {
+      "arm": "direct_t0",
+      "budget": 4800,
+      "additional_updates": 2400,
+      "passed": true
+    },
+    {
+      "arm": "fm_half_start",
+      "budget": 4800,
+      "additional_updates": 2400,
+      "passed": true
+    },
+    {
+      "arm": "fm_uniform",
+      "budget": 7200,
+      "additional_updates": 2400,
+      "passed": true
+    },
+    {
+      "arm": "direct_t0",
+      "budget": 7200,
+      "additional_updates": 2400,
+      "passed": true
+    },
+    {
+      "arm": "fm_half_start",
+      "budget": 7200,
+      "additional_updates": 2400,
+      "passed": true
+    }
+  ],
+  "optimizer_and_scaler_resumed": true,
+  "schedule_prefix_and_continuation_verified": true,
+  "original_study_and_dependencies_unchanged": true,
+  "saved_3d_predictions_verified": 48,
+  "additional_successful_updates": 14400,
+  "total_successful_updates_including_original": 21600
+}

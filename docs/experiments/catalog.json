@@ -1,0 +1,124 @@
+{
+  "snapshot_time": "2026-10-22T12:56:30.018448+08:00",
+  "server_capture_time_utc": "2026-10-22T04:44:11.144384+00:00",
+  "families": [
+    {
+      "family": "ablation_validation_20261021",
+      "title": "五组损失消融 + 原生 FlowOCT + 1600 次诊断",
+      "budget": "单病例 400 / 四病例 800；诊断对照 1600",
+      "scope": "固定 256×64×64，验证 4 位患者",
+      "snapshot_state": "原五组、FlowOCT 两阶段及诊断均有最终记录",
+      "report": "research_archive/experiments/ablation_validation_20261021/reports/FLOWOCT_DIAGNOSIS.md",
+      "numeric_comparisons": 19
+    },
+    {
+      "family": "ablation_validation_256cube_20261021",
+      "title": "256³ 视野对照 + FlowOCT 去模块",
+      "budget": "每组 400 次；单病例",
+      "scope": "固定中央 256³，验证 4 位患者",
+      "snapshot_state": "原六组 + Haar-only 已完成；FM-only 见快照状态",
+      "report": "research_archive/experiments/ablation_validation_256cube_20261021/reports/CONCLUSIONS.md",
+      "numeric_comparisons": 9
+    },
+    {
+      "family": "flowoct3d_full_20261022",
+      "title": "3D FlowOCT 完整模块及 RDCA / 投影 / 结构消融",
+      "budget": "12 个运行，共 8000 次成功更新",
+      "scope": "单病例 400 / 四病例 800；固定 256×64×64",
+      "snapshot_state": "12 个运行已完成",
+      "report": "research_archive/experiments/flowoct3d_full_20261022/reports/实验报告.md",
+      "numeric_comparisons": 12
+    },
+    {
+      "family": "fm_start_control_20261022",
+      "title": "均匀 FM / 纯起点 / 半数起点匹配对照",
+      "budget": "三组各 2400 次",
+      "scope": "同一训练体块；主推理为 8 / 1 / 8 步",
+      "snapshot_state": "complete",
+      "report": "research_archive/experiments/fm_start_control_20261022/验证报告.md",
+      "numeric_comparisons": 3
+    },
+    {
+      "family": "fm_start_long_20261022",
+      "title": "起点三组的长预算续训",
+      "budget": "三组各达到 4800，再达到 7200 次",
+      "scope": "恢复优化器与 AMP；同一训练体块",
+      "snapshot_state": "三组 4800 / 7200 均完成",
+      "report": "research_archive/experiments/fm_start_long_20261022/SERVER_RUN.md",
+      "numeric_comparisons": 6
+    },
+    {
+      "family": "three_diagnostics_20261021",
+      "title": "监督能力 / 速度场 / 公式与积分器诊断",
+      "budget": "两种直接监督各 2400 次；冻结 FM 权重探针",
+      "scope": "训练与验证固定块；不是完整方法排名",
+      "snapshot_state": "诊断与能力对照已完成",
+      "report": "research_archive/experiments/three_diagnostics_20261021/诊断报告.md",
+      "numeric_comparisons": 0
+    },
+    {
+      "family": "flowoct3d_progressive_20261022",
+      "title": "公开 FlowOCT 到三维模块的逐步对照",
+      "budget": "按归档时状态，仍在进行",
+      "scope": "保存已有配置、预检、阶段指标；不冒充最终结果",
+      "snapshot_state": "running",
+      "report": "research_archive/experiments/flowoct3d_progressive_20261022/README.md",
+      "numeric_comparisons": 0
+    }
+  ],
+  "numeric_comparisons": 49,
+  "full_training_runs": [
+    {
+      "experiment": "基线原 100 轮",
+      "target_epochs": 100,
+      "last_completed_epoch": 100,
+      "selected_epoch": 90,
+      "validation_mae": 0.013699754575843756,
+      "validation_psnr": 28.102417253594915,
+      "status": "complete",
+      "source_file": "research_archive/analysis/haar3d_200_2026-10-21/baseline_history.jsonl"
+    },
+    {
+      "experiment": "基线续训至 200 轮",
+      "target_epochs": 200,
+      "last_completed_epoch": 200,
+      "selected_epoch": 106,
+      "validation_mae": 0.012990249151668704,
+      "validation_psnr": 28.76036301381067,
+      "status": "complete",
+      "source_file": "research_archive/server_runs/fm3d_ubuntu/runs/fm3d_3M_run01/history.jsonl"
+    },
+    {
+      "experiment": "三维 Haar 200 轮",
+      "target_epochs": 200,
+      "last_completed_epoch": 200,
+      "selected_epoch": 195,
+      "validation_mae": 0.014347735892618679,
+      "validation_psnr": 28.806652253631377,
+      "status": "complete",
+      "source_file": "research_archive/server_runs/fm3d_wavelet_200/runs/fm3d_haar3d_3M_200/history.jsonl"
+    },
+    {
+      "experiment": "Z 投影 + 横向 96 体块",
+      "target_epochs": 200,
+      "last_completed_epoch": 105,
+      "selected_epoch": 37,
+      "validation_mae": 0.013751397867441947,
+      "validation_psnr": 28.302283355711417,
+      "status": "partial_snapshot",
+      "source_file": "research_archive/server_runs/fm3d_zproj_96_200/runs/fm3d_zproj_3M_96_200/history.jsonl"
+    }
+  ],
+  "archive_file_count_before_generated_indexes": 3086,
+  "public_scope": "code, configuration, scalar metrics, logs and rendered scientific panels",
+  "exclusions": [
+    "model weights",
+    "raw OCT/OCTA volumes",
+    "raw labels",
+    "patient inventory/identity manifests",
+    "Python environments",
+    "bytecode/caches",
+    "packaged duplicates",
+    "unrelated slide decks and paper asset copies"
+  ]
+}

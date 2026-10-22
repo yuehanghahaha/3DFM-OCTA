@@ -1,0 +1,15 @@
+{
+  "source_sha256": {
+    "fm3d\\metrics_suite.py": "0e794258f3eb6d4d69813e0841fdf76a642b6fd283df74f4acd63b52859a41d1",
+    "fm3d\\fid_projection.py": "2cbae41b8a00f7adee6f828cce6fa9c4ac26f6bb49d2328012b5f696672c55ac",
+    "tools\\build_fm3d_metrics_report.py": "f144578be63a3532bad6673d0baa6ee9003f021d0c954367f44eed79c9b2f05b"
+  },
+  "validation": {
+    "unit_tests_passed": 7,
+    "case_count": 50,
+    "bscan_count": 15200,
+    "max_mae_difference_from_original": 1.326951500069118e-10,
+    "max_psnr_difference_from_original": 1.0320497878524293e-07,
+    "fid_lowrank_abs_difference": 2.20948794478257e-05
+  }
+}

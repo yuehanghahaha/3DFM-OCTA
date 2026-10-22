@@ -111,3 +111,16 @@ events.out.tfevents.*
 !/docs/review/figures/example_04_enhanced.png
 !/docs/review/figures/example_05_fixed.png
 !/docs/review/figures/example_05_enhanced.png
+
+# Scientific review archive: rendered results, metadata and numeric logs only.
+# Binary weights, medical arrays and packaged datasets remain ignored.
+!/research_archive/**/
+!/research_archive/**/*.png
+!/research_archive/**/*.jpg
+!/research_archive/**/*.jpeg
+!/research_archive/**/*.csv
+!/research_archive/**/*.tsv
+!/research_archive/**/*.jsonl
+!/research_archive/**/*.log
+!/docs/experiments/**/*.csv
+!/docs/experiments/**/*.png

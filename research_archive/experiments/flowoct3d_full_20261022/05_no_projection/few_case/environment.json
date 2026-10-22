@@ -1,0 +1,11 @@
+{
+  "python": "3.10.20",
+  "torch": "2.5.1+cu121",
+  "numpy": "1.26.4",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "velocity_parameters": 2106600,
+  "rdca_parameters": 8960,
+  "amp": true,
+  "source_only_inference": true
+}

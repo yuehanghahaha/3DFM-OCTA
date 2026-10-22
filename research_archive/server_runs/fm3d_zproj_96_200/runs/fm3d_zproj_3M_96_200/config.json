@@ -1,0 +1,31 @@
+{
+  "manifest": "/srv/oct_research/OCTA500_common_v1/split_3M_z256.csv",
+  "fov": "3M",
+  "output": "/srv/oct_research/fm3d_zproj_96_200/runs/fm3d_zproj_3M_96_200",
+  "axis_order": "ZYX",
+  "intensity_scale": 255.0,
+  "depth": 256,
+  "patch": [
+    256,
+    96,
+    96
+  ],
+  "base_channels": 16,
+  "representation": "voxel",
+  "condition": true,
+  "batch_size": 1,
+  "epochs": 200,
+  "save_every": 5,
+  "steps_per_epoch": 200,
+  "lr": 0.0002,
+  "lambda_projection": 0.1,
+  "val_every": 1,
+  "ode_steps": 8,
+  "overlap": 0.5,
+  "seed": 2026,
+  "workers": 0,
+  "device": "cuda",
+  "amp": true,
+  "resume": false,
+  "manifest_sha256": "652544a427071b8350d346deb941c03182ae4e248659b1117a45fcb870bc253b"
+}

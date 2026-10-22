@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "stages": [
+    "one_case",
+    "few_case"
+  ],
+  "runs": 10,
+  "total_successful_updates": 6000,
+  "checked_predictions": 125
+}

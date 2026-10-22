@@ -1,0 +1,25 @@
+----------------- Options ---------------
+               batch_size: 1                             
+                     beta: 0.5                           
+          checkpoints_dir: /workspace/FlowOCT\artifacts\smoke_synthetic\checkpoint	[default: ./checkpoint]
+           continue_train: False                         
+                crop_size: 32                            	[default: 256]
+                 dataroot: /workspace/FlowOCT\artifacts\smoke_synthetic\data	[default: None]
+             dataset_name: unaligned                     
+                    epoch: latest                        
+              epoch_count: 1                             
+                  gpu_ids: 0                             
+                 input_nc: 1                             
+                  isTrain: True                          	[default: None]
+                load_size: 32                            	[default: 400]
+                       lr: 0.0002                        
+                    model: model                         
+                 n_epochs: 1                             	[default: 400]
+                     name: smoke_synthetic               	[default: experiment_name]
+              num_threads: 0                             	[default: 4]
+                output_nc: 1                             
+                    phase: train                         
+               print_freq: 1                             	[default: 90]
+          save_epoch_freq: 1                             
+           val_epoch_freq: 1                             
+----------------- End -------------------

@@ -1,0 +1,15 @@
+{
+  "fm_weight": 1.0,
+  "reconstruction_weight": 0.5,
+  "projection_weight": 0.1,
+  "rdca_weight": 0.005,
+  "structure": true,
+  "mask_ratio": 0.05,
+  "background_weight": 0.1,
+  "temperature": 0.1,
+  "rdca_slices": 32,
+  "projection": "retinal",
+  "auxiliary": "path",
+  "native_depth": 640
+}
+

@@ -1,0 +1,221 @@
+{
+  "config": {
+    "schema": "flowoct3d_full_v1",
+    "seed": 20261021,
+    "base_channels": 16,
+    "condition": true,
+    "lr": 0.0002,
+    "amp": true,
+    "ode_steps": 8,
+    "eval_every": 200,
+    "patch_ZYX": [
+      256,
+      64,
+      64
+    ],
+    "stages": [
+      {
+        "name": "one_case",
+        "updates": 400,
+        "seed": 20261022,
+        "arms": [
+          "01_voxel_fm",
+          "02_haar_fm",
+          "03_full",
+          "08_full_half_start"
+        ]
+      },
+      {
+        "name": "few_case",
+        "updates": 800,
+        "seed": 20261023,
+        "arms": [
+          "01_voxel_fm",
+          "02_haar_fm",
+          "03_full",
+          "04_no_rdca",
+          "05_no_projection",
+          "06_no_structure",
+          "07_no_reconstruction",
+          "08_full_half_start"
+        ]
+      }
+    ],
+    "arms": {
+      "01_voxel_fm": {
+        "representation": "voxel",
+        "losses": {
+          "fm_weight": 1.0,
+          "reconstruction_weight": 0.0,
+          "projection_weight": 0.0,
+          "rdca_weight": 0.0,
+          "structure": false,
+          "mask_ratio": 0.05,
+          "background_weight": 0.1,
+          "temperature": 0.1,
+          "rdca_slices": 32,
+          "projection": "retinal",
+          "auxiliary": "path",
+          "native_depth": 640
+        },
+        "start_fraction": 0.0
+      },
+      "02_haar_fm": {
+        "representation": "haar3d",
+        "losses": {
+          "fm_weight": 1.0,
+          "reconstruction_weight": 0.0,
+          "projection_weight": 0.0,
+          "rdca_weight": 0.0,
+          "structure": false,
+          "mask_ratio": 0.05,
+          "background_weight": 0.1,
+          "temperature": 0.1,
+          "rdca_slices": 32,
+          "projection": "retinal",
+          "auxiliary": "path",
+          "native_depth": 640
+        },
+        "start_fraction": 0.0
+      },
+      "03_full": {
+        "representation": "haar3d",
+        "losses": {
+          "fm_weight": 1.0,
+          "reconstruction_weight": 0.5,
+          "projection_weight": 0.1,
+          "rdca_weight": 0.005,
+          "structure": true,
+          "mask_ratio": 0.05,
+          "background_weight": 0.1,
+          "temperature": 0.1,
+          "rdca_slices": 32,
+          "projection": "retinal",
+          "auxiliary": "path",
+          "native_depth": 640
+        },
+        "start_fraction": 0.0
+      },
+      "04_no_rdca": {
+        "representation": "haar3d",
+        "losses": {
+          "fm_weight": 1.0,
+          "reconstruction_weight": 0.5,
+          "projection_weight": 0.1,
+          "rdca_weight": 0.0,
+          "structure": true,
+          "mask_ratio": 0.05,
+          "background_weight": 0.1,
+          "temperature": 0.1,
+          "rdca_slices": 32,
+          "projection": "retinal",
+          "auxiliary": "path",
+          "native_depth": 640
+        },
+        "start_fraction": 0.0
+      },
+      "05_no_projection": {
+        "representation": "haar3d",
+        "losses": {
+          "fm_weight": 1.0,
+          "reconstruction_weight": 0.5,
+          "projection_weight": 0.0,
+          "rdca_weight": 0.005,
+          "structure": true,
+          "mask_ratio": 0.05,
+          "background_weight": 0.1,
+          "temperature": 0.1,
+          "rdca_slices": 32,
+          "projection": "retinal",
+          "auxiliary": "path",
+          "native_depth": 640
+        },
+        "start_fraction": 0.0
+      },
+      "06_no_structure": {
+        "representation": "haar3d",
+        "losses": {
+          "fm_weight": 1.0,
+          "reconstruction_weight": 0.5,
+          "projection_weight": 0.1,
+          "rdca_weight": 0.005,
+          "structure": false,
+          "mask_ratio": 0.05,
+          "background_weight": 0.1,
+          "temperature": 0.1,
+          "rdca_slices": 32,
+          "projection": "retinal",
+          "auxiliary": "path",
+          "native_depth": 640
+        },
+        "start_fraction": 0.0
+      },
+      "07_no_reconstruction": {
+        "representation": "haar3d",
+        "losses": {
+          "fm_weight": 1.0,
+          "reconstruction_weight": 0.0,
+          "projection_weight": 0.1,
+          "rdca_weight": 0.005,
+          "structure": true,
+          "mask_ratio": 0.05,
+          "background_weight": 0.1,
+          "temperature": 0.1,
+          "rdca_slices": 32,
+          "projection": "retinal",
+          "auxiliary": "path",
+          "native_depth": 640
+        },
+        "start_fraction": 0.0
+      },
+      "08_full_half_start": {
+        "representation": "haar3d",
+        "losses": {
+          "fm_weight": 1.0,
+          "reconstruction_weight": 0.5,
+          "projection_weight": 0.1,
+          "rdca_weight": 0.005,
+          "structure": true,
+          "mask_ratio": 0.05,
+          "background_weight": 0.1,
+          "temperature": 0.1,
+          "rdca_slices": 32,
+          "projection": "retinal",
+          "auxiliary": "path",
+          "native_depth": 640
+        },
+        "start_fraction": 0.5
+      }
+    },
+    "selection": "Validation patient-macro ILM-OPL SSIM; primary comparison uses final equal-update weights",
+    "scope": "One seed; fixed full-Z patches; no test set, no whole-volume or clinical efficacy claim"
+  },
+  "stage": {
+    "name": "one_case",
+    "updates": 400,
+    "seed": 20261022,
+    "arms": [
+      "01_voxel_fm",
+      "02_haar_fm",
+      "03_full",
+      "08_full_half_start"
+    ]
+  },
+  "arm": "02_haar_fm",
+  "sources": {
+    "flowoct3d/__init__.py": "a2c6e0bfc71954982e2609460830f9f5465df6b3ab2c654dc799be912488e3fc",
+    "flowoct3d/losses.py": "4c971c265316fc4f45038e2daab3ca79283c12f02c7d1de42ab13c210c1f488d",
+    "flowoct3d/metrics.py": "ce3e5870f4cf40043f337098b9bd784eecf02ee6a4c4d7034593a8df537838db",
+    "flowoct3d/model.py": "2a317c2d5a7a739367ce9a046394e43e9cbe5124a7065e87f38c8e63a1a992c5",
+    "flowoct3d/small_data.py": "e54d9c18cda1e41e5d009cf469c0914980b4c59fdb89120a11075b60d83a8c50",
+    "flowoct3d/study.py": "2ee25a238ff0ddeb1ddb1b5d00f66f4916a472a549e01becbff6ffecbb9243c9",
+    "flowoct3d/test_core.py": "537217fb949c7f9a27f4a04f0f3b250010805fe118c02c5fcc1238483aa240b8",
+    "flowoct3d/utils.py": "80cbe179b2ef963d542ef4a9d8d23923263e1357f22547d775d3e3e1ca5cd756",
+    "fm3d/data.py": "692792101f3983cf6acf88a82b7057cd320c282eb813909e8c18192136abbe54",
+    "fm3d/inference.py": "cf043091231609a36cbe315a1b8f00790b797fdb08e4ba8608c73e79aa00ebac",
+    "fm3d/model.py": "725d6907eaa89212d339436589fdb9323a014543ca8d84d2bcc899e9c66f74af",
+    "fm3d/wavelets.py": "20c6791a5ae3344b5fc062e3d242bd833872dbce78e511c0e4a40fa80c5dde98"
+  },
+  "selection_sha256": "22bab92cb78e816d1681bced0919a8983f648ef315cb77d69140ff727bf9385c",
+  "schedule_sha256": "3426f8b8bcad21d6f17a9a85d04dfe131f604c9b94b9c2b395ddf314fe3c4f35"
+}

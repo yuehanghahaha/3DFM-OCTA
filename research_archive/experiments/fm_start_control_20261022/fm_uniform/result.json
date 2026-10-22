@@ -1,0 +1,1051 @@
+{
+  "complete": true,
+  "arm": "fm_uniform",
+  "successful_updates": 2400,
+  "attempts": 2400,
+  "amp_skipped_updates": 0,
+  "training_forward_calls": 2400,
+  "initial_state_sha256": "39ed864e077193dddd4ef16dfaa3fc0ed0cc6e5d03e2736143eaeb111d37d1ba",
+  "final_state_sha256": "f8daac98a0607dd9599991b0b65e2349fe3f70b1e7b4c7b7069102d8d6e30f17",
+  "training_patch": "train_10301_y064_x064",
+  "initial_file_sha256": "2d9b217d8cf75f9e675b0a4af8d0abf25671e75e8626587dce42e5d3b392d340",
+  "schedule_sha256": "2e11c64fe6e34e7ce35dc6d164f37db3aa179c074aae2f297658f1444d468b94",
+  "zero_time_updates": 0,
+  "elapsed_seconds": 238.22837425302714,
+  "peak_allocated_bytes": 2373292544,
+  "primary_steps": 8,
+  "evaluation": [
+    {
+      "id": "train_10301_y064_x064",
+      "case_id": "10301",
+      "patient_id": "10301",
+      "split": "train",
+      "origin_ZYX": [
+        0,
+        64,
+        64
+      ],
+      "file": "/srv/oct_research/fm_start_control_20261022/inputs/train_10301_y064_x064.npz",
+      "sha256": "078eb3c16579c634b8594517c287e44738df2f973853bc2c5606f3397179858f",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.1039215698838234,
+        0.9058823585510254
+      ],
+      "octa_range": [
+        0.0,
+        0.6764705777168274
+      ],
+      "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/train_10301_y064_x064.npz",
+      "annotation_sha256": "36684d39646bb48bc6332f89d593b4d25bc44f3141bdef824a8728006122d68e",
+      "cached_input_exact_match": true,
+      "cached_reference_sha256": "78db6998ca49173e885a011d90648f0f7666210961f1e0693d8602ae4fb6526e",
+      "trained_on_this_patch": true,
+      "outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.023018542596166758,
+            "mse": 0.0013151623880492459,
+            "psnr": 28.810206198893646,
+            "max_projection_pcc": 0.21743993724813448,
+            "max_projection_ssim": 0.19080747482581936,
+            "high_signal_mae": 0.0764819485274751,
+            "fraction_outside_0_1": 0.04395484924316406
+          },
+          "final_clamp": {
+            "mae": 0.022721363067266798,
+            "mse": 0.0013097700318924455,
+            "psnr": 28.82804950640029,
+            "max_projection_pcc": 0.21743993724813448,
+            "max_projection_ssim": 0.19080747482581936,
+            "high_signal_mae": 0.07647311497137999,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.32965659479649645,
+            "ilm_opl_ssim": 0.1501448665375685,
+            "ilm_opl_mae": 0.08063229008325834,
+            "empty_rays": 0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.022300537003730247,
+            "mse": 0.0012498732024605252,
+            "psnr": 29.03134043203839,
+            "max_projection_pcc": 0.19583234123442514,
+            "max_projection_ssim": 0.18618722088524936,
+            "high_signal_mae": 0.07437628504371999,
+            "fraction_outside_0_1": 0.05329418182373047
+          },
+          "final_clamp": {
+            "mae": 0.021857795473254504,
+            "mse": 0.0012403688476468203,
+            "psnr": 29.06449149775069,
+            "max_projection_pcc": 0.19583234123442514,
+            "max_projection_ssim": 0.18618722088524936,
+            "high_signal_mae": 0.07435531222550389,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.31674386051259235,
+            "ilm_opl_ssim": 0.14540130516827576,
+            "ilm_opl_mae": 0.08213893534480121,
+            "empty_rays": 0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.02208710329352226,
+            "mse": 0.0012422422364783748,
+            "psnr": 29.057937087423312,
+            "max_projection_pcc": 0.195600820885936,
+            "max_projection_ssim": 0.18589877455286397,
+            "high_signal_mae": 0.07358123197866835,
+            "fraction_outside_0_1": 0.0589752197265625
+          },
+          "final_clamp": {
+            "mae": 0.021577406159720813,
+            "mse": 0.0012304183980334366,
+            "psnr": 29.099471836344335,
+            "max_projection_pcc": 0.195600820885936,
+            "max_projection_ssim": 0.18589877455286397,
+            "high_signal_mae": 0.07354941538414424,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.3103863166446548,
+            "ilm_opl_ssim": 0.1449551133610038,
+            "ilm_opl_mae": 0.08185630406069322,
+            "empty_rays": 0
+          }
+        }
+      },
+      "teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.0013151622842997313
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.0011637737043201923
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.0007432131678797305
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.0004921494401060045
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 0.000173821987118572
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 0.00016521688667126
+        }
+      ]
+    },
+    {
+      "id": "train_10301_y120_x120",
+      "case_id": "10301",
+      "patient_id": "10301",
+      "split": "train",
+      "origin_ZYX": [
+        0,
+        120,
+        120
+      ],
+      "file": "/srv/oct_research/fm_start_control_20261022/inputs/train_10301_y120_x120.npz",
+      "sha256": "d2fbe7824e06e0b109c6937f5f7456051d37768b5fb9a76a38f340c916044c6f",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.1147058829665184,
+        0.9813725352287292
+      ],
+      "octa_range": [
+        0.0,
+        0.704901933670044
+      ],
+      "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/train_10301_y120_x120.npz",
+      "annotation_sha256": "91b452d2a05ff25ae1b6f63eded8e763f169d232221d44c796728efd49834ed7",
+      "cached_input_exact_match": true,
+      "cached_reference_sha256": "d6a8dc3e57ca1a0d88d6130e8be211ffc5692b1502d9aa132728ecf21125251f",
+      "trained_on_this_patch": false,
+      "outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.01567302271842841,
+            "mse": 0.0009295671412141443,
+            "psnr": 30.31719236332396,
+            "max_projection_pcc": 0.1878902165897247,
+            "max_projection_ssim": 0.2142806901466644,
+            "high_signal_mae": 0.08821004560099492,
+            "fraction_outside_0_1": 0.21611309051513672
+          },
+          "final_clamp": {
+            "mae": 0.01436345624865687,
+            "mse": 0.0009097941856817194,
+            "psnr": 30.410568429890425,
+            "max_projection_pcc": 0.1878902165897247,
+            "max_projection_ssim": 0.2142806901466644,
+            "high_signal_mae": 0.08815965186116899,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.46326631640237065,
+            "ilm_opl_ssim": 0.34036627084668225,
+            "ilm_opl_mae": 0.04645624368518497,
+            "empty_rays": 0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.01488707132831324,
+            "mse": 0.0008605907744219475,
+            "psnr": 30.652033138880395,
+            "max_projection_pcc": 0.1477001492231003,
+            "max_projection_ssim": 0.2060988613677688,
+            "high_signal_mae": 0.08254066162431069,
+            "fraction_outside_0_1": 0.22788619995117188
+          },
+          "final_clamp": {
+            "mae": 0.013383786648457074,
+            "mse": 0.0008338600330104494,
+            "psnr": 30.78906841439714,
+            "max_projection_pcc": 0.1477001492231003,
+            "max_projection_ssim": 0.2060988613677688,
+            "high_signal_mae": 0.08245351107630544,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.438839051263573,
+            "ilm_opl_ssim": 0.3531218742496575,
+            "ilm_opl_mae": 0.04479987877394365,
+            "empty_rays": 0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.014850942078413198,
+            "mse": 0.0008617448370693338,
+            "psnr": 30.64621309879998,
+            "max_projection_pcc": 0.13836743112850156,
+            "max_projection_ssim": 0.20298316174695616,
+            "high_signal_mae": 0.08124535484499759,
+            "fraction_outside_0_1": 0.2444601058959961
+          },
+          "final_clamp": {
+            "mae": 0.013197764955927505,
+            "mse": 0.0008308033848032718,
+            "psnr": 30.805017427599658,
+            "max_projection_pcc": 0.13836743112850156,
+            "max_projection_ssim": 0.20298316174695616,
+            "high_signal_mae": 0.0811435320827643,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.4302469736440122,
+            "ilm_opl_ssim": 0.35176450707512275,
+            "ilm_opl_mae": 0.04504793833089593,
+            "empty_rays": 0
+          }
+        }
+      },
+      "teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.0009295671479776502
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.0008283057832159102
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.0005292663117870688
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.0003416741965338588
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 0.00010028628457803279
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 9.30395326577127e-05
+        }
+      ]
+    },
+    {
+      "id": "train_10303_y064_x064",
+      "case_id": "10303",
+      "patient_id": "10303",
+      "split": "train",
+      "origin_ZYX": [
+        0,
+        64,
+        64
+      ],
+      "file": "/srv/oct_research/fm_start_control_20261022/inputs/train_10303_y064_x064.npz",
+      "sha256": "96a66d9112d96d9464add4446ebef9eb3e9dc6edc737446e1d50933f725695e8",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.13137255609035492,
+        0.9333333373069763
+      ],
+      "octa_range": [
+        0.0,
+        0.7941176295280457
+      ],
+      "trained_on_this_patch": false,
+      "outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.026942653099557123,
+            "mse": 0.0020124308851885236,
+            "psnr": 26.962790260888756,
+            "max_projection_pcc": 0.10761049482214712,
+            "max_projection_ssim": 0.12011228356893128,
+            "high_signal_mae": 0.09649756931492258,
+            "fraction_outside_0_1": 0.03106689453125
+          },
+          "final_clamp": {
+            "mae": 0.026701233463161334,
+            "mse": 0.0020044228044024445,
+            "psnr": 26.980106649148897,
+            "max_projection_pcc": 0.10761049482214712,
+            "max_projection_ssim": 0.12011228356893128,
+            "high_signal_mae": 0.09644243367996118,
+            "fraction_outside_0_1": 0.0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.026528541461456667,
+            "mse": 0.0019769388562634505,
+            "psnr": 27.040067625517935,
+            "max_projection_pcc": 0.07386545029907567,
+            "max_projection_ssim": 0.11663961648916703,
+            "high_signal_mae": 0.09551838418184108,
+            "fraction_outside_0_1": 0.04144287109375
+          },
+          "final_clamp": {
+            "mae": 0.026156969204003344,
+            "mse": 0.00196367075772854,
+            "psnr": 27.069313271846134,
+            "max_projection_pcc": 0.07386545029907567,
+            "max_projection_ssim": 0.11663961648916703,
+            "high_signal_mae": 0.09541710294851041,
+            "fraction_outside_0_1": 0.0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.026335766624752566,
+            "mse": 0.001968507220448198,
+            "psnr": 27.05862987886676,
+            "max_projection_pcc": 0.07326481955090082,
+            "max_projection_ssim": 0.11637534435142045,
+            "high_signal_mae": 0.0948211826954873,
+            "fraction_outside_0_1": 0.045897483825683594
+          },
+          "final_clamp": {
+            "mae": 0.025911339895310803,
+            "mse": 0.0019529450294032556,
+            "psnr": 27.093099808610543,
+            "max_projection_pcc": 0.07326481955090082,
+            "max_projection_ssim": 0.11637534435142045,
+            "high_signal_mae": 0.09469995542220175,
+            "fraction_outside_0_1": 0.0
+          }
+        }
+      },
+      "teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.0020124309230595827
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.001781193190254271
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.0011248604860156775
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.0007250366033986211
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 0.0002078153338516131
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 0.00018990477838087827
+        }
+      ]
+    },
+    {
+      "id": "train_10303_y120_x120",
+      "case_id": "10303",
+      "patient_id": "10303",
+      "split": "train",
+      "origin_ZYX": [
+        0,
+        120,
+        120
+      ],
+      "file": "/srv/oct_research/fm_start_control_20261022/inputs/train_10303_y120_x120.npz",
+      "sha256": "11e2de90636ee2e4dd3d50c6d3b36d5aa478770b26a678bc5fc8c00183e86880",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.11666666716337204,
+        0.949999988079071
+      ],
+      "octa_range": [
+        0.0,
+        0.6421568393707275
+      ],
+      "trained_on_this_patch": false,
+      "outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.013327404749166827,
+            "mse": 0.0007006182545654122,
+            "psnr": 31.545185513549704,
+            "max_projection_pcc": 0.19412017677520285,
+            "max_projection_ssim": 0.1931573400519208,
+            "high_signal_mae": 0.08162881870812923,
+            "fraction_outside_0_1": 0.35983753204345703
+          },
+          "final_clamp": {
+            "mae": 0.010958800391759449,
+            "mse": 0.0006625447785342682,
+            "psnr": 31.787847643146957,
+            "max_projection_pcc": 0.19412017677520285,
+            "max_projection_ssim": 0.1931573400519208,
+            "high_signal_mae": 0.08146222598262085,
+            "fraction_outside_0_1": 0.0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.01279151930476885,
+            "mse": 0.0006710736791344006,
+            "psnr": 31.732297947567364,
+            "max_projection_pcc": 0.1996627918605442,
+            "max_projection_ssim": 0.19474414607691862,
+            "high_signal_mae": 0.07698784952740595,
+            "fraction_outside_0_1": 0.3913850784301758
+          },
+          "final_clamp": {
+            "mae": 0.010209693437366663,
+            "mse": 0.0006254332346111069,
+            "psnr": 32.03819044703711,
+            "max_projection_pcc": 0.1996627918605442,
+            "max_projection_ssim": 0.19474414607691862,
+            "high_signal_mae": 0.07675330018354139,
+            "fraction_outside_0_1": 0.0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.01289486417574437,
+            "mse": 0.0006826032314372586,
+            "psnr": 31.65831660106533,
+            "max_projection_pcc": 0.20135900207317411,
+            "max_projection_ssim": 0.19506443780473146,
+            "high_signal_mae": 0.07618500240961167,
+            "fraction_outside_0_1": 0.4111776351928711
+          },
+          "final_clamp": {
+            "mae": 0.010125809012772158,
+            "mse": 0.0006320840049636518,
+            "psnr": 31.992251994585295,
+            "max_projection_pcc": 0.20135900207317411,
+            "max_projection_ssim": 0.19506443780473146,
+            "high_signal_mae": 0.07592161056027333,
+            "fraction_outside_0_1": 0.0
+          }
+        }
+      },
+      "teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.0007006181986071169
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.0006362266140058637
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.00040759099647402763
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.0002604294568300247
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 7.092226587701589e-05
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 6.689997098874301e-05
+        }
+      ]
+    },
+    {
+      "id": "validation_10302_y064_x064",
+      "case_id": "10302",
+      "patient_id": "10302",
+      "split": "validation",
+      "origin_ZYX": [
+        0,
+        64,
+        64
+      ],
+      "file": "/srv/oct_research/fm_start_control_20261022/inputs/validation_10302_y064_x064.npz",
+      "sha256": "80071c905c58ec5963443a5e9abc3ad57a2daf0119308aa9a780eebb38849fbe",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.1147058829665184,
+        0.9450980424880981
+      ],
+      "octa_range": [
+        0.0,
+        0.9882352948188782
+      ],
+      "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/validation_10302_y064_x064.npz",
+      "annotation_sha256": "379117a64a6a68378e471370e3a5ed6222e069603e2bb2d388b013e1345098cd",
+      "cached_input_exact_match": true,
+      "cached_reference_sha256": "214e59453d34a61ea6db646df88632715eb701847b7c14c36dfd6fa0b354365a",
+      "trained_on_this_patch": false,
+      "outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.03597906703541165,
+            "mse": 0.0021192633084814224,
+            "psnr": 26.738150808936,
+            "max_projection_pcc": 0.1797445941849398,
+            "max_projection_ssim": 0.15009754338316011,
+            "high_signal_mae": 0.07613774788801818,
+            "fraction_outside_0_1": 0.007404327392578125
+          },
+          "final_clamp": {
+            "mae": 0.03590898551907751,
+            "mse": 0.0021164847825181766,
+            "psnr": 26.743848497470903,
+            "max_projection_pcc": 0.1797445941849398,
+            "max_projection_ssim": 0.15009754338316011,
+            "high_signal_mae": 0.0761155783504451,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.14638356838179023,
+            "ilm_opl_ssim": 0.1397885589965029,
+            "ilm_opl_mae": 0.08637234397883731,
+            "empty_rays": 0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.03555207548716499,
+            "mse": 0.0020860905508709843,
+            "psnr": 26.80666844092574,
+            "max_projection_pcc": 0.16220108573023212,
+            "max_projection_ssim": 0.14376025101557424,
+            "high_signal_mae": 0.07617329008802831,
+            "fraction_outside_0_1": 0.011362075805664062
+          },
+          "final_clamp": {
+            "mae": 0.03543928649501371,
+            "mse": 0.002079935620981407,
+            "psnr": 26.819501072897513,
+            "max_projection_pcc": 0.16220108573023212,
+            "max_projection_ssim": 0.14376025101557424,
+            "high_signal_mae": 0.07610112504639946,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.1382152584757475,
+            "ilm_opl_ssim": 0.13628577708317063,
+            "ilm_opl_mae": 0.08769314026358188,
+            "empty_rays": 0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.03534143577695725,
+            "mse": 0.0020796851279582147,
+            "psnr": 26.82002413855386,
+            "max_projection_pcc": 0.15798971866523662,
+            "max_projection_ssim": 0.14218065955912723,
+            "high_signal_mae": 0.07587675362937063,
+            "fraction_outside_0_1": 0.012928009033203125
+          },
+          "final_clamp": {
+            "mae": 0.03520704233800709,
+            "mse": 0.0020714702486477245,
+            "psnr": 26.837212998462135,
+            "max_projection_pcc": 0.15798971866523662,
+            "max_projection_ssim": 0.14218065955912723,
+            "high_signal_mae": 0.07577534201853652,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.1343213731818916,
+            "ilm_opl_ssim": 0.13509057597947938,
+            "ilm_opl_mae": 0.08741768991694698,
+            "empty_rays": 0
+          }
+        }
+      },
+      "teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.002119263168424368
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.0019297781400382519
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.001394837163388729
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.001055610366165638
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 0.0005678437883034348
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 0.0005483600543811917
+        }
+      ]
+    },
+    {
+      "id": "validation_10302_y120_x120",
+      "case_id": "10302",
+      "patient_id": "10302",
+      "split": "validation",
+      "origin_ZYX": [
+        0,
+        120,
+        120
+      ],
+      "file": "/srv/oct_research/fm_start_control_20261022/inputs/validation_10302_y120_x120.npz",
+      "sha256": "38c8d5093dafaa5ad3fbe1bd9ea650c62cd321bc3be33d83c417d3c9d6b08fcd",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.12254901975393295,
+        0.9215686321258545
+      ],
+      "octa_range": [
+        0.0,
+        0.699999988079071
+      ],
+      "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/validation_10302_y120_x120.npz",
+      "annotation_sha256": "20d2a20a4353c4c81038472095c993de94316668e887da488643bc687c74b766",
+      "cached_input_exact_match": true,
+      "cached_reference_sha256": "20a806e9564520cb20315fa8a572f0929e11c5151aff22ce1bb131dc22df77d7",
+      "trained_on_this_patch": false,
+      "outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.03024847124889729,
+            "mse": 0.0016524108318216194,
+            "psnr": 27.818819668151924,
+            "max_projection_pcc": 0.20807150141726807,
+            "max_projection_ssim": 0.17974973741368425,
+            "high_signal_mae": 0.08172495148762732,
+            "fraction_outside_0_1": 0.012894630432128906
+          },
+          "final_clamp": {
+            "mae": 0.030141476444648818,
+            "mse": 0.0016480327810497026,
+            "psnr": 27.830341539936327,
+            "max_projection_pcc": 0.20807150141726807,
+            "max_projection_ssim": 0.17974973741368425,
+            "high_signal_mae": 0.08166740411067601,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.353953207346439,
+            "ilm_opl_ssim": 0.18169670650400785,
+            "ilm_opl_mae": 0.07717932902789926,
+            "empty_rays": 0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.029687366342373123,
+            "mse": 0.0015933503391443167,
+            "psnr": 27.976887228624868,
+            "max_projection_pcc": 0.17251175434222787,
+            "max_projection_ssim": 0.16466438622294635,
+            "high_signal_mae": 0.08043265910632126,
+            "fraction_outside_0_1": 0.018106460571289062
+          },
+          "final_clamp": {
+            "mae": 0.029532636341273344,
+            "mse": 0.0015857851708391934,
+            "psnr": 27.9975564768582,
+            "max_projection_pcc": 0.17251175434222787,
+            "max_projection_ssim": 0.16466438622294635,
+            "high_signal_mae": 0.08032474893739548,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.3343954793806621,
+            "ilm_opl_ssim": 0.18687769169115984,
+            "ilm_opl_mae": 0.07754581775964198,
+            "empty_rays": 0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.029477407788873755,
+            "mse": 0.001584056510347939,
+            "psnr": 28.002293292525152,
+            "max_projection_pcc": 0.16970787746144275,
+            "max_projection_ssim": 0.16192588903611072,
+            "high_signal_mae": 0.07973941267584503,
+            "fraction_outside_0_1": 0.020506858825683594
+          },
+          "final_clamp": {
+            "mae": 0.0292946721394598,
+            "mse": 0.0015746448256129509,
+            "psnr": 28.028173896022057,
+            "max_projection_pcc": 0.16970787746144275,
+            "max_projection_ssim": 0.16192588903611072,
+            "high_signal_mae": 0.07960934090025097,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.3276568790846535,
+            "ilm_opl_ssim": 0.1869414757911446,
+            "ilm_opl_mae": 0.07748030738105172,
+            "empty_rays": 0
+          }
+        }
+      },
+      "teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.0016524107195436954
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.0015014148084446788
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.0010609956225380301
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.0007921390933915973
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 0.0004199680988676846
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 0.0004069067654199898
+        }
+      ]
+    },
+    {
+      "id": "validation_10319_y064_x064",
+      "case_id": "10319",
+      "patient_id": "10319",
+      "split": "validation",
+      "origin_ZYX": [
+        0,
+        64,
+        64
+      ],
+      "file": "/srv/oct_research/fm_start_control_20261022/inputs/validation_10319_y064_x064.npz",
+      "sha256": "7cd6eba6c1cc9bb8964f063ac85952bd0649560f0a1affbdbcdd79b489053a3b",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.09607843309640884,
+        0.8303921818733215
+      ],
+      "octa_range": [
+        0.0,
+        0.7745097875595093
+      ],
+      "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/validation_10319_y064_x064.npz",
+      "annotation_sha256": "c5c53704c36b0740e243a6c8be86cb420fe9b151e04c7a4cd7a8ce9456a82281",
+      "cached_input_exact_match": true,
+      "cached_reference_sha256": "a82952844fac1cf8cc286b44427194c0660bc53c05e5d66b135793f34fcd43f0",
+      "trained_on_this_patch": false,
+      "outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.028144391359334997,
+            "mse": 0.0016629729964263724,
+            "psnr": 27.791148028539826,
+            "max_projection_pcc": 0.1922603306520601,
+            "max_projection_ssim": 0.1879841109283117,
+            "high_signal_mae": 0.07247053439255464,
+            "fraction_outside_0_1": 0.026025772094726562
+          },
+          "final_clamp": {
+            "mae": 0.02794198393626035,
+            "mse": 0.0016586992440412222,
+            "psnr": 27.802323532729936,
+            "max_projection_pcc": 0.1922603306520601,
+            "max_projection_ssim": 0.1879841109283117,
+            "high_signal_mae": 0.07245901807588084,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.28073869407235763,
+            "ilm_opl_ssim": 0.15105421927784693,
+            "ilm_opl_mae": 0.08491004816278291,
+            "empty_rays": 0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.027671697050683952,
+            "mse": 0.001638659143236052,
+            "psnr": 27.855113744384653,
+            "max_projection_pcc": 0.11044211954915646,
+            "max_projection_ssim": 0.17225298166764177,
+            "high_signal_mae": 0.07286661083295182,
+            "fraction_outside_0_1": 0.03302001953125
+          },
+          "final_clamp": {
+            "mae": 0.027377286574484017,
+            "mse": 0.001630194944805627,
+            "psnr": 27.877604579328693,
+            "max_projection_pcc": 0.11044211954915646,
+            "max_projection_ssim": 0.17225298166764177,
+            "high_signal_mae": 0.07280746944067124,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.2514940045502523,
+            "ilm_opl_ssim": 0.14809799001675328,
+            "ilm_opl_mae": 0.08656790522036317,
+            "empty_rays": 0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.027469362506165607,
+            "mse": 0.0016360216338160449,
+            "psnr": 27.862109577644446,
+            "max_projection_pcc": 0.09861275004793872,
+            "max_projection_ssim": 0.16909757521098592,
+            "high_signal_mae": 0.07247223329986437,
+            "fraction_outside_0_1": 0.036660194396972656
+          },
+          "final_clamp": {
+            "mae": 0.02713067278843717,
+            "mse": 0.0016253593691605216,
+            "psnr": 27.89050600969268,
+            "max_projection_pcc": 0.09861275004793872,
+            "max_projection_ssim": 0.16909757521098592,
+            "high_signal_mae": 0.07238848305293799,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.24377819617102514,
+            "ilm_opl_ssim": 0.14822278363868197,
+            "ilm_opl_mae": 0.0862033928810888,
+            "empty_rays": 0
+          }
+        }
+      },
+      "teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.0016629729652777314
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.001498053316026926
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.0010162752587348223
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.0007138986838981509
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 0.0003084121271967888
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 0.00029695002012886107
+        }
+      ]
+    },
+    {
+      "id": "validation_10319_y120_x120",
+      "case_id": "10319",
+      "patient_id": "10319",
+      "split": "validation",
+      "origin_ZYX": [
+        0,
+        120,
+        120
+      ],
+      "file": "/srv/oct_research/fm_start_control_20261022/inputs/validation_10319_y120_x120.npz",
+      "sha256": "13b418f543cca1f9909ea62c64e499939dab3ce71b633e6d3a9c69a49980dba6",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.09607843309640884,
+        0.9558823704719543
+      ],
+      "octa_range": [
+        0.0,
+        0.658823549747467
+      ],
+      "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/validation_10319_y120_x120.npz",
+      "annotation_sha256": "d0a941a40afda44e9b51b8166ecb325a6763ca09577bfcb9e3dd90839ac31da6",
+      "cached_input_exact_match": true,
+      "cached_reference_sha256": "e8b4a0f8fd501315c74d4cd856f47e0c7cd186330035bee3ff23c46f6b06024b",
+      "trained_on_this_patch": false,
+      "outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.01907528195088215,
+            "mse": 0.0010047788895987506,
+            "psnr": 29.979294980367,
+            "max_projection_pcc": 0.2047262073472175,
+            "max_projection_ssim": 0.210708427491615,
+            "high_signal_mae": 0.07290209292761374,
+            "fraction_outside_0_1": 0.12331962585449219
+          },
+          "final_clamp": {
+            "mae": 0.018233757464492406,
+            "mse": 0.0009880411895317525,
+            "psnr": 30.052249501355696,
+            "max_projection_pcc": 0.2047262073472175,
+            "max_projection_ssim": 0.210708427491615,
+            "high_signal_mae": 0.07280604928238432,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.48437688591610156,
+            "ilm_opl_ssim": 0.2937701348395536,
+            "ilm_opl_mae": 0.05197735645646162,
+            "empty_rays": 0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.018261531475499027,
+            "mse": 0.000964072493693775,
+            "psnr": 30.15890307977418,
+            "max_projection_pcc": 0.171483873601388,
+            "max_projection_ssim": 0.20265341512423002,
+            "high_signal_mae": 0.07166942857494021,
+            "fraction_outside_0_1": 0.11981964111328125
+          },
+          "final_clamp": {
+            "mae": 0.017329308374663732,
+            "mse": 0.0009424218240047648,
+            "psnr": 30.25754665325333,
+            "max_projection_pcc": 0.171483873601388,
+            "max_projection_ssim": 0.20265341512423002,
+            "high_signal_mae": 0.07149479959019595,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.46247255225073647,
+            "ilm_opl_ssim": 0.30739025209322196,
+            "ilm_opl_mae": 0.050535033648714034,
+            "empty_rays": 0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.018133783798677472,
+            "mse": 0.0009690225969146975,
+            "psnr": 30.136660953940893,
+            "max_projection_pcc": 0.17258980618155653,
+            "max_projection_ssim": 0.20242007857200486,
+            "high_signal_mae": 0.07122769547393497,
+            "fraction_outside_0_1": 0.12696075439453125
+          },
+          "final_clamp": {
+            "mae": 0.017114216905892432,
+            "mse": 0.0009440129261963594,
+            "psnr": 30.25022058946299,
+            "max_projection_pcc": 0.17258980618155653,
+            "max_projection_ssim": 0.20242007857200486,
+            "high_signal_mae": 0.07101193224728199,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.45590328915537964,
+            "ilm_opl_ssim": 0.30666389695954105,
+            "ilm_opl_mae": 0.05076549541837494,
+            "empty_rays": 0
+          }
+        }
+      },
+      "teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.001004778896458447
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.0009083457989618182
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.0006062616594135761
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.0004167346050962806
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 0.00016891094855964184
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 0.0001661104615777731
+        }
+      ]
+    }
+  ]
+}

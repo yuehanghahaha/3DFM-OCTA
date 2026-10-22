@@ -1,0 +1,5 @@
+{
+  "last_completed_epoch": 133,
+  "reason": "User requested validation after every epoch to select strict best checkpoint within each 10-epoch window; restart from original epoch 100",
+  "replacement_run": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01"
+}

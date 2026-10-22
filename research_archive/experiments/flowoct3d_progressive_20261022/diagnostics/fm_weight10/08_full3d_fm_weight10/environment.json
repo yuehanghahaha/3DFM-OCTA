@@ -1,0 +1,14 @@
+{
+  "torch": "2.5.1+cu121",
+  "numpy": "1.26.4",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "parameters": 2115560,
+  "amp": true,
+  "input_ZYX": [
+    256,
+    64,
+    64
+  ],
+  "source_only_generation": true
+}

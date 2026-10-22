@@ -1,0 +1,30 @@
+{
+  "state": "complete",
+  "host": "research-server.example.org",
+  "remote_directory": "/srv/oct_research/fm3d_validation_256cube_20261021",
+  "tmux_session": "lyh_256cube_train_20261021",
+  "physical_gpu": 0,
+  "python": "/srv/oct_research/conda_envs/lyh_flowoct/bin/python",
+  "stage": "one_case",
+  "training_patient": "10301",
+  "validation_patients": [
+    "10319",
+    "10447",
+    "10456",
+    "10302"
+  ],
+  "shape_ZYX": [
+    256,
+    256,
+    256
+  ],
+  "updates_per_arm": 400,
+  "planned_successful_updates": 2400,
+  "expected_prediction_files": 35,
+  "result_storage": "Large checkpoints, cached input cubes and 3D predictions on server; local small metrics, logs, native-pixel PNGs and reports.",
+  "successful_updates": 2400,
+  "checked_predictions": 35,
+  "server_checkpoints": 6,
+  "large_artifacts": 41,
+  "amp_skipped": 0
+}

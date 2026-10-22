@@ -1,0 +1,8 @@
+{
+  "torch": "2.5.1+cu121",
+  "numpy": "1.26.4",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "parameters": 2097521,
+  "reproducibility": "Epoch-specific RNG seeds; bitwise determinism across GPU/software not guaranteed"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "arm": "08_flowoct_wavelet_only",
+  "updates": 400,
+  "attempts": 400,
+  "amp_skipped": 0,
+  "seconds": 1069.0517862059642,
+  "peak_allocated_bytes": 3423036416
+}

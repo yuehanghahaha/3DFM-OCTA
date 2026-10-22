@@ -1,0 +1,17 @@
+epoch=185 saved current and best-through (selected epoch=75)
+epoch=190 saved current and best-through (selected epoch=75)
+epoch=195 saved current and best-through (selected epoch=195)
+Traceback (most recent call last):
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/srv/oct_research/fm3d_wavelet_200/fm3d/snapshot_watch.py", line 76, in <module>
+    main()
+  File "/srv/oct_research/fm3d_wavelet_200/fm3d/snapshot_watch.py", line 70, in main
+    while not snapshot_epoch(args.output, epoch, completed_records(args.output / 'history.jsonl')):
+  File "/srv/oct_research/fm3d_wavelet_200/fm3d/snapshot_watch.py", line 50, in snapshot_epoch
+    raise FileExistsError(f'Snapshot for epoch {epoch} already exists')
+FileExistsError: Snapshot for epoch 200 already exists
+epoch=200 snapshots already saved (selected epoch=195)
+All requested snapshots saved.

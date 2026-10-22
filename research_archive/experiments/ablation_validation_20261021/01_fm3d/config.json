@@ -1,0 +1,6 @@
+{
+  "name": "01_fm3d",
+  "representation": "voxel",
+  "lambda_projection": 0.0,
+  "lambda_reconstruction": 0.0
+}

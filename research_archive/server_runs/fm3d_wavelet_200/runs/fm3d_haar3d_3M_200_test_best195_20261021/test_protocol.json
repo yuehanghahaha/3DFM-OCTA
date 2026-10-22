@@ -1,0 +1,12 @@
+{
+  "checkpoint": "/srv/oct_research/fm3d_wavelet_200/runs/fm3d_haar3d_3M_200/best.pt",
+  "checkpoint_sha256": "b1cb22db701c5a6704417bf96990118d4520417e9a468312a551028fdc1fd342",
+  "split": "test",
+  "expected_cases": 50,
+  "gpu_visible_devices": "1",
+  "ode_steps": 8,
+  "checkpoint_epoch": 195,
+  "manifest_sha256": "652544a427071b8350d346deb941c03182ae4e248659b1117a45fcb870bc253b",
+  "patient_macro": true,
+  "model_selection": "lowest full-volume validation patient-macro MAE at epoch 195; no test tuning"
+}

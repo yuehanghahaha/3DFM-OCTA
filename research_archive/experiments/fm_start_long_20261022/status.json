@@ -1,0 +1,9 @@
+{
+  "state": "complete",
+  "completed": "2026-10-22T11:41:15.975015+08:00",
+  "final_updates_per_arm": 7200,
+  "stages": [
+    4800,
+    7200
+  ]
+}

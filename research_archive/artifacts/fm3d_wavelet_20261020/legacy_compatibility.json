@@ -1,0 +1,6 @@
+{
+  "scope": "Compatibility with the archived pre-wavelet source",
+  "default_voxel_initialization_and_forward_bitwise_equal": true,
+  "legacy_checkpoint_evaluation": true,
+  "legacy_resume_bitwise_equal_to_original_continuous": true
+}

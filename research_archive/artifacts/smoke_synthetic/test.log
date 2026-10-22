@@ -1,0 +1,29 @@
+/workspace/FlowOCT\upstream\models\FlowOCT_model.py:287: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.netG.load_state_dict(torch.load(os.path.join(self.save_dir, f'{label}_net_G.pth'), map_location=self.device))
+/workspace/FlowOCT\upstream\models\FlowOCT_model.py:288: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.contrast_projection_head.load_state_dict(torch.load(os.path.join(self.save_dir, f'{label}_net_Contrast.pth'), map_location=self.device))
+----------------- Options ---------------
+               batch_size: 1                             
+          checkpoints_dir: /workspace/FlowOCT\artifacts\smoke_synthetic\checkpoint	[default: ./checkpoint]
+                crop_size: 32                            	[default: 256]
+                 dataroot: /workspace/FlowOCT\artifacts\smoke_synthetic\data	[default: None]
+             dataset_name: unaligned                     
+                    epoch: best_epoch_001_psnr_6.8567_ssim_0.0891	[default: latest]
+                  gpu_ids: 0                             
+                 input_nc: 1                             
+                  isTrain: False                         	[default: None]
+                load_size: 32                            	[default: 400]
+                    model: model                         
+                     name: smoke_synthetic               	[default: experiment_name]
+              num_threads: 4                             
+                output_nc: 1                             
+                    phase: test                          
+              results_dir: /workspace/FlowOCT\artifacts\smoke_synthetic\results	[default: ./results/]
+                save_data: False                         
+               save_image: False                         
+----------------- End -------------------
+[Dataset] test: 1 volumes
+Loaded checkpoint from epoch best_epoch_001_psnr_6.8567_ssim_0.0891
+Test:   0%|          | 0/1 [00:00<?, ?it/s]Test: 100%|██████████| 1/1 [00:04<00:00,  4.40s/it]Test: 100%|██████████| 1/1 [00:05<00:00,  5.04s/it]
+Saved /workspace/FlowOCT\artifacts\smoke_synthetic\results\smoke_synthetic\best_epoch_001_psnr_6.8567_ssim_0.0891\synthetic_test_000.npz
+Done. Results saved to /workspace/FlowOCT\artifacts\smoke_synthetic\results\smoke_synthetic\best_epoch_001_psnr_6.8567_ssim_0.0891

@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "completed": "2026-10-22T10:34:19.774255+08:00",
+  "arms": {
+    "fm_uniform": {
+      "successful_updates": 2400,
+      "zero_time_updates": 0,
+      "amp_skipped_updates": 0,
+      "schedule_and_saved_truth_verified": true
+    },
+    "direct_t0": {
+      "successful_updates": 2400,
+      "zero_time_updates": 2400,
+      "amp_skipped_updates": 0,
+      "schedule_and_saved_truth_verified": true
+    },
+    "fm_half_start": {
+      "successful_updates": 2400,
+      "zero_time_updates": 1200,
+      "amp_skipped_updates": 0,
+      "schedule_and_saved_truth_verified": true
+    }
+  },
+  "same_initial_parameters": true,
+  "same_training_patch": true,
+  "same_successful_updates": true,
+  "fixed_schedule_replayed": true,
+  "frozen_dependencies_unchanged": true,
+  "no_test_patients": true,
+  "saved_3d_predictions_verified": 24
+}

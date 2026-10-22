@@ -1,0 +1,23 @@
+从 README.md 开始，所有改动和理由在 CHANGES.md，实际验证证据在 VERIFICATION.md。
+
+当前服务器：
+cd /srv/oct_research/flowoct_reproduction
+source /srv/oct_research/conda_envs/lyh_flowoct/bin/activate
+
+复现口径：作者公开二维模型/损失 + 论文200轮预算。
+默认配置：network_chunk=0，关闭分批和激活重计算；inference_chunk=32。
+正式尺寸：256^3，每例抽64张片一次送入主干，FP32，病例batch=1。
+
+先在第二张3090做一次正式尺寸的整批显存检查：
+python scripts/benchmark.py --config configs/3m.json --device cuda:1 --output verification/my_unchunked_check.json
+
+整批显存检查通过后，3M 全流程（200轮、最佳权重推理、评价）：
+bash scripts/run_experiment.sh 3m flowoct_3m_200e
+
+6M 全流程：
+bash scripts/run_experiment.sh 6m flowoct_6m_200e
+
+本机24GB 3090此前整批检查显存不足，本次重试见 VERIFICATION.md。
+迁移到A100时按README新建环境，修改configs中manifest路径和device；先做同样单步检查。
+默认第二张卡；两套实验请顺序运行。当前方案不启用network_chunk=4。
+本次没有自动启动完整训练。原 fm3d 实验、环境和数据未修改。

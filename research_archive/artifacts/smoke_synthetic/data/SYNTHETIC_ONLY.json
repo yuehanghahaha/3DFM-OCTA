@@ -1,0 +1,10 @@
+{
+  "purpose": "Pipeline smoke test only; no scientific or medical conclusions",
+  "seed": 2026,
+  "shape": [
+    32,
+    32,
+    32
+  ],
+  "axis_semantics": "synthetic index axes only"
+}

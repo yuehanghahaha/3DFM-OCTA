@@ -1,0 +1,10 @@
+{
+  "status": "running",
+  "arm": "08_full3d_fm_weight10",
+  "updates": 800,
+  "target": 2400,
+  "attempts": 800,
+  "skipped": 0,
+  "seconds": 80.67071730000316,
+  "loss": 0.04337232559919357
+}

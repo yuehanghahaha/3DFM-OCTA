@@ -1,0 +1,15 @@
+{
+  "control": "start_only_mse",
+  "updates": 1600,
+  "case_id": "10301",
+  "patch_id": "y064_x064",
+  "initial_parameter_sha256": "0b0f1506f6736609d10d2351f4d0e4dafe3232dd4a880dec10b36ec75a318ed0",
+  "seed": 20261021,
+  "time_scale": 1000,
+  "target": "Same residual MSE as baseline; t=0 on every update for start_only_mse",
+  "time_sequence": "All zero",
+  "prediction": "OCT+v(OCT,0,OCT); direct capacity control, not a trained ODE",
+  "selection_sha256": "bac002ac2c30b72c594b5ef58ac717dbcd9f5c873ee2b6305c16bbd6c67548fd",
+  "lr": 0.0002,
+  "amp": true
+}

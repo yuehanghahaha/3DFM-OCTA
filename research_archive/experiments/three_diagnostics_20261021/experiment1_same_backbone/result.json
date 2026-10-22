@@ -1,0 +1,397 @@
+{
+  "complete": true,
+  "updates": 2400,
+  "successful_updates": 2400,
+  "skipped_amp_updates": 0,
+  "parameter_count": 2097521,
+  "elapsed_seconds": 209.8748729591025,
+  "peak_allocated_bytes": 2368967168,
+  "memorization_threshold_passed": true,
+  "constant_mean_predictor": {
+    "mae": 0.03445032229373923,
+    "mse": 0.0033605451272273185,
+    "psnr": 24.73590268281587,
+    "max_projection_pcc": null,
+    "max_projection_ssim": 0.021621853267102902,
+    "high_signal_mae": 0.170655929558313,
+    "fraction_outside_0_1": 0.0
+  },
+  "evaluation": [
+    {
+      "id": "train_10301_y064_x064",
+      "case_id": "10301",
+      "patient_id": "10301",
+      "split": "train",
+      "origin_ZYX": [
+        0,
+        64,
+        64
+      ],
+      "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10301_y064_x064.npz",
+      "sha256": "078eb3c16579c634b8594517c287e44738df2f973853bc2c5606f3397179858f",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.1039215698838234,
+        0.9058823585510254
+      ],
+      "octa_range": [
+        0.0,
+        0.6764705777168274
+      ],
+      "raw": {
+        "mae": 0.0061343428889674145,
+        "mse": 0.00013139206493803046,
+        "psnr": 38.814308620036755,
+        "max_projection_pcc": 0.9190458530285766,
+        "max_projection_ssim": 0.9069941551131102,
+        "high_signal_mae": 0.021779123174214824,
+        "fraction_outside_0_1": 0.3888874053955078
+      },
+      "final_clamp": {
+        "mae": 0.005096134869387758,
+        "mse": 0.0001234285925671776,
+        "psnr": 39.08584223157291,
+        "max_projection_pcc": 0.9190458530285766,
+        "max_projection_ssim": 0.9069941551131102,
+        "high_signal_mae": 0.021779123174214824,
+        "fraction_outside_0_1": 0.0
+      },
+      "trained_on_this_patch": true
+    },
+    {
+      "id": "train_10301_y120_x120",
+      "case_id": "10301",
+      "patient_id": "10301",
+      "split": "train",
+      "origin_ZYX": [
+        0,
+        120,
+        120
+      ],
+      "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10301_y120_x120.npz",
+      "sha256": "d2fbe7824e06e0b109c6937f5f7456051d37768b5fb9a76a38f340c916044c6f",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.1147058829665184,
+        0.9813725352287292
+      ],
+      "octa_range": [
+        0.0,
+        0.704901933670044
+      ],
+      "raw": {
+        "mae": 0.023066672778835007,
+        "mse": 0.002110751918508843,
+        "psnr": 26.755628073147562,
+        "max_projection_pcc": 0.06820790534995029,
+        "max_projection_ssim": 0.11399882754514258,
+        "high_signal_mae": 0.10822885980159659,
+        "fraction_outside_0_1": 0.7783975601196289
+      },
+      "final_clamp": {
+        "mae": 0.013712311906228458,
+        "mse": 0.0016444601008137646,
+        "psnr": 27.839766592482924,
+        "max_projection_pcc": 0.06820790534995029,
+        "max_projection_ssim": 0.11399882754514258,
+        "high_signal_mae": 0.10339896968550484,
+        "fraction_outside_0_1": 0.0
+      },
+      "trained_on_this_patch": false
+    },
+    {
+      "id": "train_10303_y064_x064",
+      "case_id": "10303",
+      "patient_id": "10303",
+      "split": "train",
+      "origin_ZYX": [
+        0,
+        64,
+        64
+      ],
+      "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10303_y064_x064.npz",
+      "sha256": "96a66d9112d96d9464add4446ebef9eb3e9dc6edc737446e1d50933f725695e8",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.13137255609035492,
+        0.9333333373069763
+      ],
+      "octa_range": [
+        0.0,
+        0.7941176295280457
+      ],
+      "raw": {
+        "mae": 0.02320526366646236,
+        "mse": 0.003011360833619739,
+        "psnr": 25.212372024211955,
+        "max_projection_pcc": 0.13415070823242034,
+        "max_projection_ssim": 0.1361042023930651,
+        "high_signal_mae": 0.11166371531997094,
+        "fraction_outside_0_1": 0.3147716522216797
+      },
+      "final_clamp": {
+        "mae": 0.020338541233237084,
+        "mse": 0.0026339618997436092,
+        "psnr": 25.793905113980706,
+        "max_projection_pcc": 0.13415070823242034,
+        "max_projection_ssim": 0.1361042023930651,
+        "high_signal_mae": 0.1068003805473237,
+        "fraction_outside_0_1": 0.0
+      },
+      "trained_on_this_patch": false
+    },
+    {
+      "id": "train_10303_y120_x120",
+      "case_id": "10303",
+      "patient_id": "10303",
+      "split": "train",
+      "origin_ZYX": [
+        0,
+        120,
+        120
+      ],
+      "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10303_y120_x120.npz",
+      "sha256": "11e2de90636ee2e4dd3d50c6d3b36d5aa478770b26a678bc5fc8c00183e86880",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.11666666716337204,
+        0.949999988079071
+      ],
+      "octa_range": [
+        0.0,
+        0.6421568393707275
+      ],
+      "raw": {
+        "mae": 0.023640634860678023,
+        "mse": 0.0018760093712079948,
+        "psnr": 27.26764996525315,
+        "max_projection_pcc": 0.04873301017619971,
+        "max_projection_ssim": 0.09687554160841116,
+        "high_signal_mae": 0.10346438071289832,
+        "fraction_outside_0_1": 0.8226203918457031
+      },
+      "final_clamp": {
+        "mae": 0.011540641548941966,
+        "mse": 0.0013430470570426933,
+        "psnr": 28.719087704616285,
+        "max_projection_pcc": 0.04873301017619971,
+        "max_projection_ssim": 0.09687554160841116,
+        "high_signal_mae": 0.09860991487659809,
+        "fraction_outside_0_1": 0.0
+      },
+      "trained_on_this_patch": false
+    },
+    {
+      "id": "validation_10302_y064_x064",
+      "case_id": "10302",
+      "patient_id": "10302",
+      "split": "validation",
+      "origin_ZYX": [
+        0,
+        64,
+        64
+      ],
+      "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10302_y064_x064.npz",
+      "sha256": "80071c905c58ec5963443a5e9abc3ad57a2daf0119308aa9a780eebb38849fbe",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.1147058829665184,
+        0.9450980424880981
+      ],
+      "octa_range": [
+        0.0,
+        0.9882352948188782
+      ],
+      "raw": {
+        "mae": 0.027700943779285225,
+        "mse": 0.0025540723349961525,
+        "psnr": 25.92766807055055,
+        "max_projection_pcc": 0.12127110409870859,
+        "max_projection_ssim": 0.11327667563712995,
+        "high_signal_mae": 0.09374627244898641,
+        "fraction_outside_0_1": 0.060936927795410156
+      },
+      "final_clamp": {
+        "mae": 0.02640353413656804,
+        "mse": 0.002362707946310572,
+        "psnr": 26.265899580733347,
+        "max_projection_pcc": 0.12127110409870859,
+        "max_projection_ssim": 0.11327667563712995,
+        "high_signal_mae": 0.09134958437534686,
+        "fraction_outside_0_1": 0.0
+      },
+      "trained_on_this_patch": false
+    },
+    {
+      "id": "validation_10302_y120_x120",
+      "case_id": "10302",
+      "patient_id": "10302",
+      "split": "validation",
+      "origin_ZYX": [
+        0,
+        120,
+        120
+      ],
+      "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10302_y120_x120.npz",
+      "sha256": "38c8d5093dafaa5ad3fbe1bd9ea650c62cd321bc3be33d83c417d3c9d6b08fcd",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.12254901975393295,
+        0.9215686321258545
+      ],
+      "octa_range": [
+        0.0,
+        0.699999988079071
+      ],
+      "raw": {
+        "mae": 0.024188371233044625,
+        "mse": 0.0024946698385812298,
+        "psnr": 26.029869236960263,
+        "max_projection_pcc": 0.13232901309025527,
+        "max_projection_ssim": 0.15162098999274876,
+        "high_signal_mae": 0.10265874142155189,
+        "fraction_outside_0_1": 0.12023258209228516
+      },
+      "final_clamp": {
+        "mae": 0.021926378203040775,
+        "mse": 0.002192023622902703,
+        "psnr": 26.591547698769887,
+        "max_projection_pcc": 0.13232901309025527,
+        "max_projection_ssim": 0.15162098999274876,
+        "high_signal_mae": 0.09841596940799828,
+        "fraction_outside_0_1": 0.0
+      },
+      "trained_on_this_patch": false
+    },
+    {
+      "id": "validation_10319_y064_x064",
+      "case_id": "10319",
+      "patient_id": "10319",
+      "split": "validation",
+      "origin_ZYX": [
+        0,
+        64,
+        64
+      ],
+      "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10319_y064_x064.npz",
+      "sha256": "7cd6eba6c1cc9bb8964f063ac85952bd0649560f0a1affbdbcdd79b489053a3b",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.09607843309640884,
+        0.8303921818733215
+      ],
+      "octa_range": [
+        0.0,
+        0.7745097875595093
+      ],
+      "raw": {
+        "mae": 0.02400732409737516,
+        "mse": 0.0028005429049803143,
+        "psnr": 25.52757769449994,
+        "max_projection_pcc": 0.12387998327923791,
+        "max_projection_ssim": 0.1616523918777287,
+        "high_signal_mae": 0.09552648613634654,
+        "fraction_outside_0_1": 0.21367359161376953
+      },
+      "final_clamp": {
+        "mae": 0.021679355224910934,
+        "mse": 0.0025042555924549023,
+        "psnr": 26.013213476948525,
+        "max_projection_pcc": 0.12387998327923791,
+        "max_projection_ssim": 0.1616523918777287,
+        "high_signal_mae": 0.09158856339522822,
+        "fraction_outside_0_1": 0.0
+      },
+      "trained_on_this_patch": false
+    },
+    {
+      "id": "validation_10319_y120_x120",
+      "case_id": "10319",
+      "patient_id": "10319",
+      "split": "validation",
+      "origin_ZYX": [
+        0,
+        120,
+        120
+      ],
+      "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10319_y120_x120.npz",
+      "sha256": "13b418f543cca1f9909ea62c64e499939dab3ce71b633e6d3a9c69a49980dba6",
+      "shape": [
+        1,
+        1,
+        256,
+        64,
+        64
+      ],
+      "oct_range": [
+        0.09607843309640884,
+        0.9558823704719543
+      ],
+      "octa_range": [
+        0.0,
+        0.658823549747467
+      ],
+      "raw": {
+        "mae": 0.02104878165268742,
+        "mse": 0.0021315250068731496,
+        "psnr": 26.713095678804137,
+        "max_projection_pcc": 0.12303925788488534,
+        "max_projection_ssim": 0.15042693382376163,
+        "high_signal_mae": 0.10010754042088597,
+        "fraction_outside_0_1": 0.711369514465332
+      },
+      "final_clamp": {
+        "mae": 0.01504554274545411,
+        "mse": 0.001821086136321901,
+        "psnr": 27.39669511841226,
+        "max_projection_pcc": 0.12303925788488534,
+        "max_projection_ssim": 0.15042693382376163,
+        "high_signal_mae": 0.0961087455065188,
+        "fraction_outside_0_1": 0.0
+      },
+      "trained_on_this_patch": false
+    }
+  ]
+}

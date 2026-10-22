@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "arm": "01_fm3d",
+      "logged_updates": 400,
+      "source_signatures_match": true,
+      "reference_schedule_matches_old400": true
+    },
+    {
+      "arm": "02_fm3d_wavelet",
+      "logged_updates": 400,
+      "source_signatures_match": true,
+      "reference_schedule_matches_old400": true
+    },
+    {
+      "arm": "03_fm3d_zproj",
+      "logged_updates": 400,
+      "source_signatures_match": true,
+      "reference_schedule_matches_old400": true
+    },
+    {
+      "arm": "04_fm3d_wavelet_zproj",
+      "logged_updates": 400,
+      "source_signatures_match": true,
+      "reference_schedule_matches_old400": true
+    },
+    {
+      "arm": "05_fm3d_wavelet_zproj_reconstruction",
+      "logged_updates": 400,
+      "source_signatures_match": true,
+      "reference_schedule_matches_old400": true
+    },
+    {
+      "arm": "06_flowoct",
+      "logged_updates": 400,
+      "source_signatures_match": true,
+      "reference_schedule_matches_old400": true
+    }
+  ],
+  "flowoct_time_note": "FlowOCT uses independent native per-slice times; steps.time is only the unused common schedule reference."
+}

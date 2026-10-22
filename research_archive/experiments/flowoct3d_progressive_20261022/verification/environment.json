@@ -1,0 +1,11 @@
+{
+  "python": "3.10.20",
+  "torch": "2.5.1+cu121",
+  "numpy": "1.26.4",
+  "monai": "1.4.0",
+  "pywavelets": "1.8.0",
+  "scipy": "1.15.3",
+  "skimage": "0.25.2",
+  "pillow": "12.3.0",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU"
+}

@@ -1,0 +1,7 @@
+experiment_id,baseline_protocol,contrast_enabled,projection_enabled,seed,training_budget,inference_steps,requires_training,status,note
+pilot_full_seed17,same_fixed_protocol,true,true,17,TO_BE_DEFINED,3,true,planned,configuration proposal only
+pilot_no_contrast_seed17,same_fixed_protocol,false,true,17,TO_BE_DEFINED,3,true,planned,skip contrast computation and retrain
+pilot_no_projection_seed17,same_fixed_protocol,true,false,17,TO_BE_DEFINED,3,true,planned,skip projection computation and retrain
+pilot_neither_seed17,same_fixed_protocol,false,false,17,TO_BE_DEFINED,3,true,planned,check interaction
+infer_full_step1,same_fixed_protocol,true,true,17,reuse_full_checkpoint,1,false,planned,reuse trained weights for inference comparison
+infer_full_step5,same_fixed_protocol,true,true,17,reuse_full_checkpoint,5,false,planned,reuse trained weights for inference comparison

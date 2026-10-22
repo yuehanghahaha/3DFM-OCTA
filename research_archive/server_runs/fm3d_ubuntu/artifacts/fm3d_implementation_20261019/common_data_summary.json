@@ -1,0 +1,119 @@
+{
+  "status": "complete",
+  "public_case_ids": 500,
+  "unique_exact_content_groups": 499,
+  "volumes": 1000,
+  "support_files": 7002,
+  "checksum_entries": 8009,
+  "volume_bytes": {
+    "native": {
+      "3M": 10892106132,
+      "6M": 27264492511
+    },
+    "z256": {
+      "3M": 9545652652,
+      "6M": 23865749736
+    }
+  },
+  "support_bytes": 1251352503,
+  "distribution": {
+    "3M": {
+      "train": {
+        "NORMAL": 113,
+        "DR": 20,
+        "AMD": 4,
+        "CNV": 3
+      },
+      "validation": {
+        "CNV": 1,
+        "NORMAL": 7,
+        "DR": 1,
+        "AMD": 1
+      },
+      "test": {
+        "NORMAL": 40,
+        "DR": 8,
+        "AMD": 1,
+        "CNV": 1
+      }
+    },
+    "6M": {
+      "train": {
+        "NORMAL": 55,
+        "OTHERS": 58,
+        "AMD": 26,
+        "CNV": 6,
+        "DR": 21,
+        "RVO": 6,
+        "CSC": 8
+      },
+      "validation": {
+        "DR": 2,
+        "OTHERS": 6,
+        "NORMAL": 6,
+        "CSC": 1,
+        "AMD": 3,
+        "CNV": 1,
+        "RVO": 1
+      },
+      "test": {
+        "OTHERS": 32,
+        "NORMAL": 30,
+        "CNV": 4,
+        "AMD": 14,
+        "DR": 12,
+        "RVO": 3,
+        "CSC": 5
+      }
+    }
+  },
+  "duplicate_audit": {
+    "policy": "Exact OCT or OCTA pixel identity links cases; duplicate groups kept in train; deterministic largest-ID same-disease singleton exchanges preserve quotas",
+    "groups": [
+      {
+        "leakage_group": "10333",
+        "case_ids": [
+          "10333",
+          "10388"
+        ],
+        "metadata": [
+          {
+            "case_id": "10333",
+            "disease": "NORMAL",
+            "sex": "M",
+            "eye": "OS",
+            "age": "50"
+          },
+          {
+            "case_id": "10388",
+            "disease": "NORMAL",
+            "sex": "M",
+            "eye": "OS",
+            "age": "57"
+          }
+        ]
+      }
+    ],
+    "exchanges": [
+      {
+        "to_train": "10388",
+        "from_train": "10497",
+        "other_split": "test"
+      }
+    ],
+    "unique_content_groups": 499,
+    "identity_limit": "Image equality does not establish patient identity; metadata conflicts retained, not corrected",
+    "weighting": "All public IDs retained; repeated training images are sampled once per ID and therefore receive extra weight"
+  },
+  "checks": [
+    "4 manifests have exact counts, valid paths and no patient/content group crossing splits",
+    "1000 NPZ checksums verified during resume after initial exact array read-back",
+    "7002 support files copied and source/destination SHA256 matched",
+    "final checksum inventory matches every delivered volume/support path and size",
+    "9 core unit tests passed; real training-case patch GPU smoke passed for 3M and 6M"
+  ],
+  "limits": [
+    "No formal training or full real-volume validation run on 3090 yet",
+    "Exact duplicate detection does not establish clinical patient identity or exclude near-duplicates"
+  ]
+}

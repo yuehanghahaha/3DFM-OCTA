@@ -1,0 +1,16 @@
+{
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "platform": "Linux-5.15.0-198-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "numpy": "1.26.4",
+    "monai": "1.4.0",
+    "torchio": "0.20.4",
+    "scikit-image": "0.25.2",
+    "PyWavelets": "1.8.0",
+    "SimpleITK": "2.5.6"
+  },
+  "device": "cuda:1",
+  "cuda_runtime": "12.1",
+  "gpu": "NVIDIA GeForce RTX 3090"
+}

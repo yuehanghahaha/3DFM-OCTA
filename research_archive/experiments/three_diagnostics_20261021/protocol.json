@@ -1,0 +1,141 @@
+{
+  "created": "2026-10-21T21:49:39.785351+08:00",
+  "seed": 20261021,
+  "physical_gpu": 0,
+  "checkpoints": {
+    "voxel": {
+      "checkpoint": "/srv/oct_research/three_diagnostics_20261021/snapshots/voxel.pt",
+      "sha256": "ba73fe2e8aadda4130c2e8ac67d52e0aa565b3f57f67ba804ffa8d7978a449da",
+      "original": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01/best.pt",
+      "epoch": 106,
+      "config": {
+        "manifest": "/srv/oct_research/OCTA500_common_v1/split_3M_z256.csv",
+        "fov": "3M",
+        "output": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01",
+        "axis_order": "ZYX",
+        "intensity_scale": 255.0,
+        "depth": 256,
+        "patch": [
+          256,
+          64,
+          64
+        ],
+        "base_channels": 16,
+        "condition": true,
+        "batch_size": 1,
+        "epochs": 200,
+        "window_best_every": 10,
+        "steps_per_epoch": 200,
+        "lr": 0.0002,
+        "val_every": 1,
+        "ode_steps": 8,
+        "overlap": 0.5,
+        "seed": 2026,
+        "workers": 0,
+        "device": "cuda",
+        "amp": true,
+        "resume": true,
+        "manifest_sha256": "652544a427071b8350d346deb941c03182ae4e248659b1117a45fcb870bc253b"
+      }
+    },
+    "haar": {
+      "checkpoint": "/srv/oct_research/three_diagnostics_20261021/snapshots/haar.pt",
+      "sha256": "b1cb22db701c5a6704417bf96990118d4520417e9a468312a551028fdc1fd342",
+      "original": "/srv/oct_research/fm3d_wavelet_200/runs/fm3d_haar3d_3M_200/best.pt",
+      "epoch": 195,
+      "config": {
+        "manifest": "/srv/oct_research/OCTA500_common_v1/split_3M_z256.csv",
+        "fov": "3M",
+        "output": "/srv/oct_research/fm3d_wavelet_200/runs/fm3d_haar3d_3M_200",
+        "axis_order": "ZYX",
+        "intensity_scale": 255.0,
+        "depth": 256,
+        "patch": [
+          256,
+          64,
+          64
+        ],
+        "base_channels": 16,
+        "representation": "haar3d",
+        "condition": true,
+        "batch_size": 1,
+        "epochs": 200,
+        "save_every": 50,
+        "steps_per_epoch": 200,
+        "lr": 0.0002,
+        "val_every": 5,
+        "ode_steps": 8,
+        "overlap": 0.5,
+        "seed": 2026,
+        "workers": 0,
+        "device": "cuda",
+        "amp": true,
+        "resume": false,
+        "manifest_sha256": "652544a427071b8350d346deb941c03182ae4e248659b1117a45fcb870bc253b"
+      }
+    }
+  },
+  "sample_selection": "First two IDs in train and validation; each at Z=0,Y=X=64 and 120; no test cases",
+  "patch_ZYX": [
+    256,
+    64,
+    64
+  ],
+  "times": [
+    0.0,
+    0.001,
+    0.01,
+    0.05,
+    0.1,
+    0.5,
+    0.9,
+    1.0
+  ],
+  "noise_seeds": [
+    20261021,
+    20261022,
+    20261023
+  ],
+  "noise_path_scope": "Out-of-training-distribution probe: these checkpoints were trained with OCT source, not Gaussian noise",
+  "supervised": {
+    "model": "Plain 3D U-Net, base16, two downsamplings; OCT input, OCTA output; no time, wavelets or FM",
+    "loss": "Unclamped full-voxel MSE only",
+    "updates": 2400,
+    "lr": "2e-4 through update1600; 5e-5 thereafter",
+    "optimizer": "Adam, no weight decay",
+    "precision": "FP32; TF32 disabled",
+    "selection": "Only first train ID, Y=X=64",
+    "diagnostic_success": "Training full-Z max-projection PCC>=0.90, SSIM>=0.80, MSE<=10% of target-mean predictor; descriptive threshold, not a generalization claim"
+  },
+  "solver_scope": "Direct fixed patches; Euler1/8/32, plus Euler128 and Heun8/32 on first train/validation patch; production sampler separately checked with an analytic oracle",
+  "projection_scope": "Full-Z maximum intensity projection; not ILM-OPL or a vessel segmentation metric",
+  "source_hashes": {
+    "source/haar/fm3d/__init__.py": "b7a5e3f1150f7a71f4f2273fdf7e5c63ebc5243f3eb582ff33cc0f7466e82c93",
+    "source/haar/fm3d/benchmark.py": "aa08ee0b8b2ad3768caca50bd5bb8d6d4ea9af797799daf6478c3ea11c2d9114",
+    "source/haar/fm3d/data.py": "692792101f3983cf6acf88a82b7057cd320c282eb813909e8c18192136abbe54",
+    "source/haar/fm3d/evaluate.py": "0fd8662fd965a288d1b2b5efd9b9ac1750ee3eb9d01385b3b1ffb85403373efb",
+    "source/haar/fm3d/inference.py": "cf043091231609a36cbe315a1b8f00790b797fdb08e4ba8608c73e79aa00ebac",
+    "source/haar/fm3d/model.py": "a5c4f97614423c2db07d3e5addddb5d884c4bbd752829f241a7aef97518e2026",
+    "source/haar/fm3d/snapshot_watch.py": "029c00deeb73372966d48977edb59e8016f36d7e7f1ef6062940dcaa70c185e7",
+    "source/haar/fm3d/test_core.py": "3279433c5718944aeb666135a3bac18de5f14536183f9a913adaec0bc4ce0fb1",
+    "source/haar/fm3d/test_wavelet.py": "3a3c8342c64eda241f99c9b2751186c8239a2a48f24ef1a29a4328920b541bdc",
+    "source/haar/fm3d/train.py": "3b2d0a9997a386a72b3f887bf84da27a30aa76acd33bac59c31b91b2e24014e8",
+    "source/haar/fm3d/train_wavelet.py": "f17669fbe0dd6c6b44be41bd569111d68ea19ad2eba6cd7728f3aa85bf5b58bb",
+    "source/haar/fm3d/wavelets.py": "20c6791a5ae3344b5fc062e3d242bd833872dbce78e511c0e4a40fa80c5dde98",
+    "source/voxel/fm3d/__init__.py": "b7a5e3f1150f7a71f4f2273fdf7e5c63ebc5243f3eb582ff33cc0f7466e82c93",
+    "source/voxel/fm3d/benchmark.py": "5199e34a244d4ec5ca80f41982ab6da024cc73e4ba495a98b5d72c614c22f6bd",
+    "source/voxel/fm3d/data.py": "692792101f3983cf6acf88a82b7057cd320c282eb813909e8c18192136abbe54",
+    "source/voxel/fm3d/diagnose_start_fit.py": "0ec49046626e3ba32f27e6c0c418a726d347ada1d4d3f4b9e7e3fd7c4f6a0152",
+    "source/voxel/fm3d/diagnose_voxel.py": "6e6049b8ffc654dc55bba16c14c1c34b0d2dc085024d35dbb70528cabf1f1367",
+    "source/voxel/fm3d/evaluate.py": "0cc24fef5fa6e620e67d5afe81f199f2a786db8f8f142563b1d20bf2ca722603",
+    "source/voxel/fm3d/fid_projection.py": "2cbae41b8a00f7adee6f828cce6fa9c4ac26f6bb49d2328012b5f696672c55ac",
+    "source/voxel/fm3d/inference.py": "550cd3b2d95aa38d8455ce2b00718c066469208163e73c0bea5da471c1d23f4e",
+    "source/voxel/fm3d/metrics_suite.py": "0e794258f3eb6d4d69813e0841fdf76a642b6fd283df74f4acd63b52859a41d1",
+    "source/voxel/fm3d/model.py": "a0d9a161b964de0760290df3f140cef24a16d3f2802e280b56777eed58d273ce",
+    "source/voxel/fm3d/projection_report.py": "8901e7f18ef730bc573fe83fb6d3d49c2f6e346bca8a8c5f6d50e078ee402d40",
+    "source/voxel/fm3d/test_core.py": "3279433c5718944aeb666135a3bac18de5f14536183f9a913adaec0bc4ce0fb1",
+    "source/voxel/fm3d/test_metrics_suite.py": "b7e92794b9a9789c8e5504933306c1e86772dc383ad3ad894229fbea96d81d44",
+    "source/voxel/fm3d/train.py": "dee78ba90ee06155874fc98adbda1249069d9171b57ee0e76b7870f3dd78f841",
+    "source/voxel/fm3d/visualize.py": "71f3c7b27f19001896840c7310561cdc3032f6e163c2349f8fbaaf1e2dc3adbe"
+  }
+}

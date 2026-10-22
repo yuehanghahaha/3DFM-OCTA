@@ -1,0 +1,7 @@
+{
+  "start_epoch": 101,
+  "end_epoch": 110,
+  "selected_epoch": 106,
+  "mae": 0.012990249151668704,
+  "checkpoint": "best_window_0101_0110.pt"
+}

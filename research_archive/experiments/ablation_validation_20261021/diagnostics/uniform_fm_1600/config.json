@@ -1,0 +1,13 @@
+{
+  "kind": "uniform3d",
+  "original_checkpoint": "/srv/oct_research/fm3d_validation_20261021/01_fm3d/one_case/latest.pt",
+  "original_sha256": "6d36f3b500acfabc4fa62a2aa1de0383ac4767a16a0078c03d4488240052f11e",
+  "start_updates": 400,
+  "target_updates": 1600,
+  "new_updates": 1200,
+  "case_id": "10301",
+  "patch_id": "y064_x064",
+  "selection_sha256": "bac002ac2c30b72c594b5ef58ac717dbcd9f5c873ee2b6305c16bbd6c67548fd",
+  "source_sha256": "8c30a73f3e44cb7d884146adc0ffde50a73aeb77bdbfbf7c71213d9ee3ff0f1d",
+  "policy": "Restore original model/optimizer/scaler at400. Same fixed training block; no changes to original checkpoint or loss."
+}

@@ -1,0 +1,21 @@
+{
+  "manifest": "/srv/oct_research/OCTA500_common_v1/split_3M_z256.csv",
+  "same_manifest_as_baseline": true,
+  "manifest_sha256": "652544a427071b8350d346deb941c03182ae4e248659b1117a45fcb870bc253b",
+  "paired_volumes": 200,
+  "first_training_case_shape_CZYX": [
+    1,
+    256,
+    304,
+    304
+  ],
+  "pair_shapes_equal": true,
+  "epochs": 200,
+  "patch_ZYX": [
+    256,
+    64,
+    64
+  ],
+  "steps_per_epoch": 200,
+  "training_started": false
+}

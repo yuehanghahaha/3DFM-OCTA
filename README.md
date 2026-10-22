@@ -1,5 +1,10 @@
 # 3DFM-OCTA
 
+**统一查看先前所有实验：[实验总览与比较表](docs/experiments/README.md)**
+
+现已归档完整训练、小样本消融、原生 FlowOCT 对照、3D FlowOCT 完整模块、起点监督、长预算续训和机制诊断。
+每个系列都可查看代码、配置、数字记录、曲线和全部已保存结果图；[完整归档目录](research_archive/) 保留历史与阶段快照。
+
 用于 OCT → OCTA 的 **3D Flow Matching 基线**与 **3D Flow Matching + 三维 Haar 小波**代码。
 两种方法共享数据加载、3D U-Net、训练与全体积推理实现，使用不同训练入口。
 
@@ -8,7 +13,7 @@
 | 3DFM 基线 | `python -m fm3d.train` | 原始三维体素 | [基线说明](fm3d/README.md) |
 | 3DFM + 3D Haar 小波 | `python -m fm3d.train_wavelet` | 三维 Haar 八子带 | [小波说明](fm3d/WAVELET.md) |
 
-本仓库发布源代码、测试、依赖、操作说明，以及少量用于审阅的结果图与派生指标。
+本仓库发布源代码、测试、依赖、操作说明，以及用于审阅的实验记录、结果图与派生指标。
 模型权重、原始医学体积、患者名单和完整运行输出由使用者在本地管理。
 源代码快照整理于 2026-10-22。既有说明中的服务器路径、压缩包名和结果目录属于历史运行示例，运行时替换为自己的路径。
 这是独立研究实现，方法源于 FlowOCT 的配对直线路径思路；FlowOCT 官方代码见 [cnu-medilab/FlowOCT](https://github.com/cnu-medilab/FlowOCT)。
@@ -134,6 +139,8 @@ fm3d/
   test_*.py                现有验证测试
 tools/                     数据准备与评价辅助工具
 docs/review/               冻结结果、五例对比图、指标表与审阅指南
+docs/experiments/          所有实验总览、按系列比较表与训练记录总览
+research_archive/          原实验代码、配置、结果、图像与服务器轻量快照
 snapshots/baseline_resume_200/
                            基线 200 轮续训训练脚本快照
 ```

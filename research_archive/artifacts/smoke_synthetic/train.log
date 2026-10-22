@@ -1,0 +1,41 @@
+----------------- Options ---------------
+               batch_size: 1                             
+                     beta: 0.5                           
+          checkpoints_dir: /workspace/FlowOCT\artifacts\smoke_synthetic\checkpoint	[default: ./checkpoint]
+           continue_train: False                         
+                crop_size: 32                            	[default: 256]
+                 dataroot: /workspace/FlowOCT\artifacts\smoke_synthetic\data	[default: None]
+             dataset_name: unaligned                     
+                    epoch: latest                        
+              epoch_count: 1                             
+                  gpu_ids: 0                             
+                 input_nc: 1                             
+                  isTrain: True                          	[default: None]
+                load_size: 32                            	[default: 400]
+                       lr: 0.0002                        
+                    model: model                         
+                 n_epochs: 1                             	[default: 400]
+                     name: smoke_synthetic               	[default: experiment_name]
+              num_threads: 0                             	[default: 4]
+                output_nc: 1                             
+                    phase: train                         
+               print_freq: 1                             	[default: 90]
+          save_epoch_freq: 1                             
+           val_epoch_freq: 1                             
+----------------- End -------------------
+[Dataset] train: 2 volumes
+[Dataset] validation: 1 volumes
+Training images = 2
+Validation images = 1
+[Compute Cost] FlowOCT model parameters: 2.33M (2,330,180)
+Epoch 1/1 [Train]:   0%|          | 0/2 [00:00<?, ?it/s]D:\software\anaconda3\envs\flowoct\lib\site-packages\torchio\data\image.py:248: UserWarning: Using TorchIO images without a torchio.SubjectsLoader in PyTorch >= 2.3 might have unexpected consequences, e.g., the collated batches will be instances of torchio.Subject with 5D images. Replace your PyTorch DataLoader with a torchio.SubjectsLoader so that the collated batch becomes a dictionary, as expected. See https://github.com/fepegar/torchio/issues/1179 for more context about this issue.
+  warnings.warn(message, stacklevel=1)
+Epoch 1/1 [Train]:  50%|█████     | 1/2 [00:01<00:01,  1.48s/it]Epoch 1/1 [Train]: 100%|██████████| 2/2 [00:01<00:00,  1.36it/s]Epoch 1/1 [Train]: 100%|██████████| 2/2 [00:01<00:00,  1.18it/s]
+[Train] epoch: 1, iters: 1, time: 1.481s, vloss: 0.21418, L1loss: 0.14444, contrastloss: 2.92991, proj_loss: 0.32322
+[Train] epoch: 1, iters: 2, time: 1.697s, vloss: 0.20886, L1loss: 0.15083, contrastloss: 2.93140, proj_loss: 0.28257
+Epoch 1/1 [Val]:   0%|          | 0/1 [00:00<?, ?it/s]Epoch 1/1 [Val]: 100%|██████████| 1/1 [00:00<00:00,  4.29it/s]Epoch 1/1 [Val]: 100%|██████████| 1/1 [00:00<00:00,  4.29it/s]
+[Val] epoch: 1, time: 0.23s, mae: 0.41411, psnr: 6.857, ssim: 0.0891
+[Compute Cost] Epoch 1: Validation time = 0.23s
+Saving checkpoint: current_epoch_001_psnr_6.8567_ssim_0.0891
+Saving best model: best_epoch_001_psnr_6.8567_ssim_0.0891
+End of epoch 1 / 1

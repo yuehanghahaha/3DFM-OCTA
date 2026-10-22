@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "arm": "01_fm3d",
+      "stage": "one_case",
+      "updates": 400,
+      "amp_skipped": 0,
+      "predictions": 9
+    },
+    {
+      "arm": "02_fm3d_wavelet",
+      "stage": "one_case",
+      "updates": 400,
+      "amp_skipped": 0,
+      "predictions": 9
+    },
+    {
+      "arm": "03_fm3d_zproj",
+      "stage": "one_case",
+      "updates": 400,
+      "amp_skipped": 0,
+      "predictions": 9
+    },
+    {
+      "arm": "04_fm3d_wavelet_zproj",
+      "stage": "one_case",
+      "updates": 400,
+      "amp_skipped": 0,
+      "predictions": 9
+    },
+    {
+      "arm": "05_fm3d_wavelet_zproj_reconstruction",
+      "stage": "one_case",
+      "updates": 400,
+      "amp_skipped": 0,
+      "predictions": 9
+    },
+    {
+      "arm": "01_fm3d",
+      "stage": "few_case",
+      "updates": 800,
+      "amp_skipped": 0,
+      "predictions": 16
+    },
+    {
+      "arm": "02_fm3d_wavelet",
+      "stage": "few_case",
+      "updates": 800,
+      "amp_skipped": 0,
+      "predictions": 16
+    },
+    {
+      "arm": "03_fm3d_zproj",
+      "stage": "few_case",
+      "updates": 800,
+      "amp_skipped": 0,
+      "predictions": 16
+    },
+    {
+      "arm": "04_fm3d_wavelet_zproj",
+      "stage": "few_case",
+      "updates": 800,
+      "amp_skipped": 0,
+      "predictions": 16
+    },
+    {
+      "arm": "05_fm3d_wavelet_zproj_reconstruction",
+      "stage": "few_case",
+      "updates": 800,
+      "amp_skipped": 0,
+      "predictions": 16
+    }
+  ],
+  "total_successful_updates": 6000,
+  "checked_predictions": 125,
+  "controls": "Identical per-stage cases, crop IDs, training schedule, times and update counts across five arms",
+  "outputs": "All predictions finite in [0,1]; cached GT exactly equal; saved volume MAE independently recomputed",
+  "scope": "Pipeline and control-variable verification; does not establish clinical efficacy or generalization"
+}

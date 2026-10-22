@@ -1,0 +1,13 @@
+{
+  "fid": 271.685523910106,
+  "independent_lowrank_check": 271.68554600498544,
+  "n_prediction": 50,
+  "n_reference": 50,
+  "feature_dimension": 2048,
+  "unit": "One ILM_OPL layer maximum projection per patient,50 patients; no Bscan pooling",
+  "preprocessing": "Raw[0,1] -> round(255*x)uint8 -> replicatedRGB PNG -> clean-fid PIL bicubic299x299; no contrast enhancement",
+  "network": "NVIDIA/StyleGAN2-ADA InceptionV3; clean-fid clean mode",
+  "weights_sha256": "f58cb9b6ec323ed63459aa4fb441fe750cfe39fafad6da5cb504a16f19e958f4",
+  "clean_fid_version": "0.1.35",
+  "limitation": "Exploratory: n50 much smaller than2048 feature dimensions; rank-deficient covariance; not a clinical or fine-vessel accuracy metric. Not directly comparable to paper FID using different sample/preprocessing protocols."
+}

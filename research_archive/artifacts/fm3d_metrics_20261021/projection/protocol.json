@@ -1,0 +1,43 @@
+{
+  "version": "fm3d_three_levels_v1",
+  "mode": "projection",
+  "n": 50,
+  "range": [
+    0,
+    1
+  ],
+  "manifest_sha256": "24e12fdb4dece29f27c565b4515ba0b31417505b3af893f99e61a416b05ad4da",
+  "ssim": {
+    "data_range": 1.0,
+    "win_size": 7,
+    "gaussian_weights": false,
+    "use_sample_covariance": true,
+    "K1": 0.01,
+    "K2": 0.03,
+    "channel_axis": null
+  },
+  "aggregation": "Within patient first; equal patient macro mean and sample SD",
+  "reference": "Paired Z256 OCTA; raw normalized intensities; no contrast stretch",
+  "psnr": "-10log10(max(MSE,1e-12)); capped at120dB for exact equality",
+  "bscan": "volume[:, y, :] => 304 ZX slices per patient; no resize",
+  "projection": "FULL Z-mean; ILM_OPL and OPL_BM annotated layer maxima; inherited frozen projection protocol",
+  "vessels": "ILM_OPL only; GT_LargeVessel OR GT_Capillary >0; BMP orientation unchanged [X,Y]",
+  "weighted": "Multiply BOTH images by weight1 on annotation,0.1 elsewhere; data_range stays1",
+  "density": "Each image independently thresholded strictly above its global mean; VDE absolute occupancy difference; VDC Pearson over nonoverlapping16x16 occupancy patches",
+  "topology": "Hard2D skeletonize Zhang clDice + Dice/IoU; threshold-derived prediction vs official annotation; NOT a learned vessel segmenter or3D topology result",
+  "empty_masks": "Both empty Dice/IoU/clDice=1; only one empty=0; undefined Pearson=null",
+  "lpips": "AlexNet pretrained ImageNet + LPIPS v0.1 learned weights; grayscale replicatedRGB;[0,1] to[-1,1]; no resize; eval FP32",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "scikit-image": "0.25.2",
+    "torch": "2.5.1+cu121",
+    "Pillow": "12.3.0",
+    "lpips": "0.1.4",
+    "torchvision": "0.20.1+cu121"
+  },
+  "lpips_weights": {
+    "alexnet_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02",
+    "linear_sha256": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0"
+  }
+}

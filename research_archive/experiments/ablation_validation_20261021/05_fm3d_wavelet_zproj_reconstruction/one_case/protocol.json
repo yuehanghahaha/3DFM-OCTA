@@ -1,0 +1,60 @@
+{
+  "suite": {
+    "schema": "fm3d_small_patient_ablation_v1",
+    "seed": 20261021,
+    "patch_ZYX": [
+      256,
+      64,
+      64
+    ],
+    "base_channels": 16,
+    "condition": true,
+    "intensity_scale": 255,
+    "axis_order": "ZYX",
+    "lr": 0.0002,
+    "weight_decay": 0.0,
+    "grad_clip": 1.0,
+    "amp": true,
+    "ode_steps": 8,
+    "checkpoint_rollout": false,
+    "eval_every": 200,
+    "batch_size": 1,
+    "time_sampling": "uniform [0,1); same precomputed sequence for all arms",
+    "selection_metric": "validation patient-macro ILM-OPL SSIM; equal-budget last checkpoints also reported",
+    "stages": [
+      {
+        "name": "one_case",
+        "updates": 400,
+        "seed": 20261022
+      },
+      {
+        "name": "few_case",
+        "updates": 800,
+        "seed": 20261023
+      }
+    ],
+    "comparison": "Each stage starts from scratch; one_case and few_case are independent, not continued training"
+  },
+  "arm": {
+    "name": "05_fm3d_wavelet_zproj_reconstruction",
+    "representation": "haar3d",
+    "lambda_projection": 0.1,
+    "lambda_reconstruction": 1.0
+  },
+  "stage": {
+    "name": "one_case",
+    "updates": 400,
+    "seed": 20261022
+  },
+  "selection_sha256": "bac002ac2c30b72c594b5ef58ac717dbcd9f5c873ee2b6305c16bbd6c67548fd",
+  "source_sha256": {
+    "engine.py": "d296fb5a495398384e2998b01dcba653633ef562704420f39958cf08e8d46ac4",
+    "run.py": "4b40416f3f25e065b83256143d9d4762a65685be98d0434d3a628cc8cd92acaf",
+    "prepare.py": "8bbf9036d8aa1ba22af6e513c84ca9654405d98870e50f963be4c3358580bed3",
+    "source/fm3d/__init__.py": "b7a5e3f1150f7a71f4f2273fdf7e5c63ebc5243f3eb582ff33cc0f7466e82c93",
+    "source/fm3d/data.py": "692792101f3983cf6acf88a82b7057cd320c282eb813909e8c18192136abbe54",
+    "source/fm3d/inference.py": "cf043091231609a36cbe315a1b8f00790b797fdb08e4ba8608c73e79aa00ebac",
+    "source/fm3d/model.py": "725d6907eaa89212d339436589fdb9323a014543ca8d84d2bcc899e9c66f74af",
+    "source/fm3d/wavelets.py": "20c6791a5ae3344b5fc062e3d242bd833872dbce78e511c0e4a40fa80c5dde98"
+  }
+}

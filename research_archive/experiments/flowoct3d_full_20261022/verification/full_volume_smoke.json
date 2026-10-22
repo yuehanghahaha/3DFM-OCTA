@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "case_id": "10319",
+  "split": "validation",
+  "shape": [
+    256,
+    304,
+    304
+  ],
+  "source_sha256": "3d20046bcd6229302b4ba8cf0548c08893fc3524d6215882609ec5c94ca0b7d2",
+  "prediction_sha256": "b469d21fb79c8c19eba3b70ee46cbbcf0ba22f0dfc04ed7a3e9d90fba3f58466",
+  "checkpoint_sha256": "99b6ec7fcb4eb06bc3ca2353db69fb6c11ff90ae851e0a369589f0d5c82e47a7",
+  "metrics": {
+    "volume_mae": 0.02636265752708498,
+    "volume_psnr": 26.31591757204262,
+    "volume_pcc": 0.5952001795217765,
+    "volume_ssim": 0.3743492988730425,
+    "zmean_mae": 0.009813999051770618,
+    "zmean_psnr": 37.811312674598696,
+    "zmean_pcc": 0.08093243146284845,
+    "zmean_ssim": 0.8939461443730553,
+    "zmax_mae": 0.12014866577799321,
+    "zmax_psnr": 16.795920956118632,
+    "zmax_pcc": 0.1907134197979589,
+    "zmax_ssim": 0.19182640010119806,
+    "ilm_opl_mae": 0.08297233613100564,
+    "ilm_opl_psnr": 19.081192448650228,
+    "ilm_opl_pcc": 0.3439650269558977,
+    "ilm_opl_ssim": 0.18108125100492034,
+    "ilm_opl_empty_rays": 0,
+    "opl_bm_mae": 0.08125310739877142,
+    "opl_bm_psnr": 19.044720576864307,
+    "opl_bm_pcc": -0.10997490673287788,
+    "opl_bm_ssim": 0.07236432415528947,
+    "opl_bm_empty_rays": 0,
+    "bscan_ssim": 0.358029562607006,
+    "prediction_std": 0.042222391813993454,
+    "target_std": 0.05898582935333252
+  },
+  "scope": "One additional complete real validation volume, OCT-only 8-step coefficient-grid sliding inference. Not the patch comparison table or a full test-set evaluation."
+}

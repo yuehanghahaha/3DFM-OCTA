@@ -1,0 +1,775 @@
+{
+  "summary": {
+    "FULL": {
+      "mean_display_mae_255": 0.005132228185595568,
+      "mean_exact_fraction": 0.9948677718144044
+    },
+    "ILM_OPL": {
+      "mean_display_mae_255": 0.012604960180055403,
+      "mean_exact_fraction": 0.9893289040858726
+    },
+    "OPL_BM": {
+      "mean_display_mae_255": 3.93628181267313,
+      "mean_exact_fraction": 0.3342494806094182
+    }
+  },
+  "cases": {
+    "FULL": [
+      {
+        "case_id": "10305",
+        "display_mae_255": 0.002229051246537396,
+        "exact_fraction": 0.9977709487534626
+      },
+      {
+        "case_id": "10307",
+        "display_mae_255": 0.006697974376731302,
+        "exact_fraction": 0.9933020256232687
+      },
+      {
+        "case_id": "10317",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10318",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10321",
+        "display_mae_255": 0.008028912742382271,
+        "exact_fraction": 0.9919710872576177
+      },
+      {
+        "case_id": "10322",
+        "display_mae_255": 0.005637551939058172,
+        "exact_fraction": 0.9943624480609419
+      },
+      {
+        "case_id": "10325",
+        "display_mae_255": 0.0019368940443213296,
+        "exact_fraction": 0.9980631059556787
+      },
+      {
+        "case_id": "10326",
+        "display_mae_255": 0.006892745844875346,
+        "exact_fraction": 0.9931072541551247
+      },
+      {
+        "case_id": "10327",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10328",
+        "display_mae_255": 0.011015408587257618,
+        "exact_fraction": 0.9889845914127424
+      },
+      {
+        "case_id": "10330",
+        "display_mae_255": 0.0095654432132964,
+        "exact_fraction": 0.9904345567867036
+      },
+      {
+        "case_id": "10331",
+        "display_mae_255": 0.005096520083102493,
+        "exact_fraction": 0.9949034799168975
+      },
+      {
+        "case_id": "10332",
+        "display_mae_255": 0.0032570117728531857,
+        "exact_fraction": 0.9967429882271468
+      },
+      {
+        "case_id": "10341",
+        "display_mae_255": 0.010853099030470914,
+        "exact_fraction": 0.9891469009695291
+      },
+      {
+        "case_id": "10342",
+        "display_mae_255": 0.0018936114958448753,
+        "exact_fraction": 0.9981063885041551
+      },
+      {
+        "case_id": "10347",
+        "display_mae_255": 0.00705505540166205,
+        "exact_fraction": 0.9929449445983379
+      },
+      {
+        "case_id": "10351",
+        "display_mae_255": 0.006643871191135734,
+        "exact_fraction": 0.9933561288088643
+      },
+      {
+        "case_id": "10355",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10356",
+        "display_mae_255": 0.006578947368421052,
+        "exact_fraction": 0.993421052631579
+      },
+      {
+        "case_id": "10358",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10359",
+        "display_mae_255": 0.013504155124653739,
+        "exact_fraction": 0.9864958448753463
+      },
+      {
+        "case_id": "10362",
+        "display_mae_255": 0.010734072022160665,
+        "exact_fraction": 0.9892659279778393
+      },
+      {
+        "case_id": "10363",
+        "display_mae_255": 0.0069901315789473685,
+        "exact_fraction": 0.9930098684210527
+      },
+      {
+        "case_id": "10365",
+        "display_mae_255": 0.0032786530470914127,
+        "exact_fraction": 0.9967213469529086
+      },
+      {
+        "case_id": "10367",
+        "display_mae_255": 0.0021857686980609418,
+        "exact_fraction": 0.997814231301939
+      },
+      {
+        "case_id": "10379",
+        "display_mae_255": 0.004468923130193906,
+        "exact_fraction": 0.9955310768698061
+      },
+      {
+        "case_id": "10394",
+        "display_mae_255": 0.012595221606648199,
+        "exact_fraction": 0.9874047783933518
+      },
+      {
+        "case_id": "10395",
+        "display_mae_255": 0.008158760387811635,
+        "exact_fraction": 0.9918412396121884
+      },
+      {
+        "case_id": "10404",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10410",
+        "display_mae_255": 0.006643871191135734,
+        "exact_fraction": 0.9933561288088643
+      },
+      {
+        "case_id": "10415",
+        "display_mae_255": 0.004101021468144044,
+        "exact_fraction": 0.9958989785318559
+      },
+      {
+        "case_id": "10420",
+        "display_mae_255": 0.005053237534626039,
+        "exact_fraction": 0.994946762465374
+      },
+      {
+        "case_id": "10421",
+        "display_mae_255": 0.00405773891966759,
+        "exact_fraction": 0.9959422610803325
+      },
+      {
+        "case_id": "10423",
+        "display_mae_255": 0.005377856648199446,
+        "exact_fraction": 0.9946221433518005
+      },
+      {
+        "case_id": "10425",
+        "display_mae_255": 0.010398632271468145,
+        "exact_fraction": 0.9896013677285319
+      },
+      {
+        "case_id": "10430",
+        "display_mae_255": 0.0025969529085872575,
+        "exact_fraction": 0.9974030470914127
+      },
+      {
+        "case_id": "10433",
+        "display_mae_255": 0.004349896121883657,
+        "exact_fraction": 0.9956501038781164
+      },
+      {
+        "case_id": "10446",
+        "display_mae_255": 0.00023805401662049862,
+        "exact_fraction": 0.9997619459833795
+      },
+      {
+        "case_id": "10448",
+        "display_mae_255": 0.004901748614958449,
+        "exact_fraction": 0.9950982513850416
+      },
+      {
+        "case_id": "10454",
+        "display_mae_255": 0.008515841412742382,
+        "exact_fraction": 0.9914841585872576
+      },
+      {
+        "case_id": "10460",
+        "display_mae_255": 0.005529345567867036,
+        "exact_fraction": 0.994470654432133
+      },
+      {
+        "case_id": "10467",
+        "display_mae_255": 0.006048736149584488,
+        "exact_fraction": 0.9939512638504155
+      },
+      {
+        "case_id": "10472",
+        "display_mae_255": 0.002099203601108033,
+        "exact_fraction": 0.997900796398892
+      },
+      {
+        "case_id": "10475",
+        "display_mae_255": 0.0032570117728531857,
+        "exact_fraction": 0.9967429882271468
+      },
+      {
+        "case_id": "10476",
+        "display_mae_255": 0.006373355263157895,
+        "exact_fraction": 0.9936266447368421
+      },
+      {
+        "case_id": "10484",
+        "display_mae_255": 0.00027051592797783935,
+        "exact_fraction": 0.9997294840720221
+      },
+      {
+        "case_id": "10494",
+        "display_mae_255": 0.005648372576177285,
+        "exact_fraction": 0.9943516274238227
+      },
+      {
+        "case_id": "10497",
+        "display_mae_255": 0.003873788088642659,
+        "exact_fraction": 0.9961262119113573
+      },
+      {
+        "case_id": "10498",
+        "display_mae_255": 0.007563625346260388,
+        "exact_fraction": 0.9924363746537396
+      },
+      {
+        "case_id": "10499",
+        "display_mae_255": 0.004414819944598338,
+        "exact_fraction": 0.9955851800554016
+      }
+    ],
+    "ILM_OPL": [
+      {
+        "case_id": "10305",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10307",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10317",
+        "display_mae_255": 0.02020212950138504,
+        "exact_fraction": 0.9966023199445984
+      },
+      {
+        "case_id": "10318",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10321",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10322",
+        "display_mae_255": 0.0054644217451523544,
+        "exact_fraction": 0.9994589681440443
+      },
+      {
+        "case_id": "10325",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10326",
+        "display_mae_255": 0.014759349030470914,
+        "exact_fraction": 0.9852406509695291
+      },
+      {
+        "case_id": "10327",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10328",
+        "display_mae_255": 0.011166897506925207,
+        "exact_fraction": 0.9888331024930748
+      },
+      {
+        "case_id": "10330",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10331",
+        "display_mae_255": 0.09563279085872577,
+        "exact_fraction": 0.9043672091412742
+      },
+      {
+        "case_id": "10332",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10341",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10342",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10347",
+        "display_mae_255": 0.027787396121883655,
+        "exact_fraction": 0.9734136945983379
+      },
+      {
+        "case_id": "10351",
+        "display_mae_255": 0.044288867728531855,
+        "exact_fraction": 0.9557111322714681
+      },
+      {
+        "case_id": "10355",
+        "display_mae_255": 0.029908240997229916,
+        "exact_fraction": 0.9700917590027701
+      },
+      {
+        "case_id": "10356",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10358",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10359",
+        "display_mae_255": 0.18205721952908588,
+        "exact_fraction": 0.8179427804709142
+      },
+      {
+        "case_id": "10362",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10363",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10365",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10367",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10379",
+        "display_mae_255": 0.038889369806094184,
+        "exact_fraction": 0.9946978878116344
+      },
+      {
+        "case_id": "10394",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10395",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10404",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10410",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10415",
+        "display_mae_255": 0.04554406163434903,
+        "exact_fraction": 0.9946329639889196
+      },
+      {
+        "case_id": "10420",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10421",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10423",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10425",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10430",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10433",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10446",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10448",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10454",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10460",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10467",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10472",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10475",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10476",
+        "display_mae_255": 0.030654864958448755,
+        "exact_fraction": 0.9693451350415513
+      },
+      {
+        "case_id": "10484",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10494",
+        "display_mae_255": 0.01574402700831025,
+        "exact_fraction": 0.9842559729916898
+      },
+      {
+        "case_id": "10497",
+        "display_mae_255": 0.06814837257617729,
+        "exact_fraction": 0.9318516274238227
+      },
+      {
+        "case_id": "10498",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      },
+      {
+        "case_id": "10499",
+        "display_mae_255": 0.0,
+        "exact_fraction": 1.0
+      }
+    ],
+    "OPL_BM": [
+      {
+        "case_id": "10305",
+        "display_mae_255": 4.042016533933518,
+        "exact_fraction": 0.31147203947368424
+      },
+      {
+        "case_id": "10307",
+        "display_mae_255": 5.137108292936288,
+        "exact_fraction": 0.06945766966759002
+      },
+      {
+        "case_id": "10317",
+        "display_mae_255": 0.9447822887811634,
+        "exact_fraction": 0.9201328774238227
+      },
+      {
+        "case_id": "10318",
+        "display_mae_255": 6.441005886426593,
+        "exact_fraction": 0.025179622576177285
+      },
+      {
+        "case_id": "10321",
+        "display_mae_255": 4.037677458448753,
+        "exact_fraction": 0.2310963469529086
+      },
+      {
+        "case_id": "10322",
+        "display_mae_255": 2.461251298476454,
+        "exact_fraction": 0.847374913434903
+      },
+      {
+        "case_id": "10325",
+        "display_mae_255": 2.8533262638504153,
+        "exact_fraction": 0.372143351800554
+      },
+      {
+        "case_id": "10326",
+        "display_mae_255": 4.168250086565097,
+        "exact_fraction": 0.11434167243767313
+      },
+      {
+        "case_id": "10327",
+        "display_mae_255": 2.158046225761773,
+        "exact_fraction": 0.8288824445983379
+      },
+      {
+        "case_id": "10328",
+        "display_mae_255": 4.493172177977839,
+        "exact_fraction": 0.3518654778393352
+      },
+      {
+        "case_id": "10330",
+        "display_mae_255": 3.602774411357341,
+        "exact_fraction": 0.7310638850415513
+      },
+      {
+        "case_id": "10331",
+        "display_mae_255": 4.713274757617729,
+        "exact_fraction": 0.10863919667590027
+      },
+      {
+        "case_id": "10332",
+        "display_mae_255": 2.039646814404432,
+        "exact_fraction": 0.2527809037396122
+      },
+      {
+        "case_id": "10341",
+        "display_mae_255": 3.868053150969529,
+        "exact_fraction": 0.7539819944598338
+      },
+      {
+        "case_id": "10342",
+        "display_mae_255": 4.545738833102493,
+        "exact_fraction": 0.16615088296398892
+      },
+      {
+        "case_id": "10347",
+        "display_mae_255": 4.380529345567867,
+        "exact_fraction": 0.14829683171745153
+      },
+      {
+        "case_id": "10351",
+        "display_mae_255": 4.287082323407202,
+        "exact_fraction": 0.22667070637119113
+      },
+      {
+        "case_id": "10355",
+        "display_mae_255": 3.4508743074792245,
+        "exact_fraction": 0.11723078254847645
+      },
+      {
+        "case_id": "10356",
+        "display_mae_255": 4.99487101800554,
+        "exact_fraction": 0.19415469182825484
+      },
+      {
+        "case_id": "10358",
+        "display_mae_255": 4.3167416897506925,
+        "exact_fraction": 0.09930098684210527
+      },
+      {
+        "case_id": "10359",
+        "display_mae_255": 2.2930877770083105,
+        "exact_fraction": 0.23403956024930747
+      },
+      {
+        "case_id": "10362",
+        "display_mae_255": 3.5621537396121883,
+        "exact_fraction": 0.047426852493074795
+      },
+      {
+        "case_id": "10363",
+        "display_mae_255": 2.586868074792244,
+        "exact_fraction": 0.8028912742382271
+      },
+      {
+        "case_id": "10365",
+        "display_mae_255": 4.5517442867036015,
+        "exact_fraction": 0.25840763504155123
+      },
+      {
+        "case_id": "10367",
+        "display_mae_255": 4.439458535318559,
+        "exact_fraction": 0.04188668628808864
+      },
+      {
+        "case_id": "10379",
+        "display_mae_255": 5.285556613573407,
+        "exact_fraction": 0.06054146468144044
+      },
+      {
+        "case_id": "10394",
+        "display_mae_255": 7.124047783933518,
+        "exact_fraction": 0.04637725069252078
+      },
+      {
+        "case_id": "10395",
+        "display_mae_255": 4.80980566135734,
+        "exact_fraction": 0.05954596606648199
+      },
+      {
+        "case_id": "10404",
+        "display_mae_255": 5.39941135734072,
+        "exact_fraction": 0.12733725761772854
+      },
+      {
+        "case_id": "10410",
+        "display_mae_255": 3.0086240477839334,
+        "exact_fraction": 0.7725718490304709
+      },
+      {
+        "case_id": "10415",
+        "display_mae_255": 6.3167416897506925,
+        "exact_fraction": 0.06682825484764543
+      },
+      {
+        "case_id": "10420",
+        "display_mae_255": 4.206966326177286,
+        "exact_fraction": 0.28010301246537395
+      },
+      {
+        "case_id": "10421",
+        "display_mae_255": 4.322768784626039,
+        "exact_fraction": 0.04132401315789474
+      },
+      {
+        "case_id": "10423",
+        "display_mae_255": 5.917178843490305,
+        "exact_fraction": 0.025460959141274237
+      },
+      {
+        "case_id": "10425",
+        "display_mae_255": 4.785740564404432,
+        "exact_fraction": 0.5557046398891967
+      },
+      {
+        "case_id": "10430",
+        "display_mae_255": 3.5211218836565097,
+        "exact_fraction": 0.04154042590027701
+      },
+      {
+        "case_id": "10433",
+        "display_mae_255": 3.1924991343490303,
+        "exact_fraction": 0.3479700484764543
+      },
+      {
+        "case_id": "10446",
+        "display_mae_255": 4.59484288434903,
+        "exact_fraction": 0.6840482167590027
+      },
+      {
+        "case_id": "10448",
+        "display_mae_255": 2.616733033240997,
+        "exact_fraction": 0.7760885560941828
+      },
+      {
+        "case_id": "10454",
+        "display_mae_255": 4.403133656509695,
+        "exact_fraction": 0.12385301246537396
+      },
+      {
+        "case_id": "10460",
+        "display_mae_255": 2.658846952908587,
+        "exact_fraction": 0.7676051765927978
+      },
+      {
+        "case_id": "10467",
+        "display_mae_255": 2.883396814404432,
+        "exact_fraction": 0.30177674861495846
+      },
+      {
+        "case_id": "10472",
+        "display_mae_255": 5.631308431440443,
+        "exact_fraction": 0.027690010387811635
+      },
+      {
+        "case_id": "10475",
+        "display_mae_255": 1.6132487880886426,
+        "exact_fraction": 0.8703687673130194
+      },
+      {
+        "case_id": "10476",
+        "display_mae_255": 2.0384673649584486,
+        "exact_fraction": 0.8437283587257618
+      },
+      {
+        "case_id": "10484",
+        "display_mae_255": 1.3753137984764543,
+        "exact_fraction": 0.8820766966759003
+      },
+      {
+        "case_id": "10494",
+        "display_mae_255": 2.846898805401662,
+        "exact_fraction": 0.2854808691135734
+      },
+      {
+        "case_id": "10497",
+        "display_mae_255": 4.481626558171745,
+        "exact_fraction": 0.1118421052631579
+      },
+      {
+        "case_id": "10498",
+        "display_mae_255": 6.6812456717451525,
+        "exact_fraction": 0.02860976454293629
+      },
+      {
+        "case_id": "10499",
+        "display_mae_255": 2.729029605263158,
+        "exact_fraction": 0.32913131925207756
+      }
+    ]
+  },
+  "note": "Diagnostic agreement only; no rule was optimized on test cases. OPL-BM is explicitly a reconstruction using annotated closed boundaries, not a pixel-exact reproduction."
+}

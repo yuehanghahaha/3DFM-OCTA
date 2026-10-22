@@ -1,0 +1,62 @@
+{
+  "checkpoint_epoch": 195,
+  "protocol": "First case by ID in train and validation; fixed 256x64x64 patch at Y=X=64; max-Z projection; teacher paths contain true OCTA and are not generation scores.",
+  "cases": [
+    {
+      "case_id": "10301",
+      "split": "train",
+      "teacher_t_0.0": {
+        "volume_mae": 0.015038269571959972,
+        "max_projection_pcc": 0.131480572956153,
+        "max_projection_p99": 0.25923579037189487,
+        "target_max_projection_p99": 0.5392156839370728
+      },
+      "teacher_t_0.05": {
+        "volume_mae": 0.0065527851693332195,
+        "max_projection_pcc": 0.8962426098759765,
+        "max_projection_p99": 0.41660250425338746,
+        "target_max_projection_p99": 0.5392156839370728
+      },
+      "teacher_t_0.5": {
+        "volume_mae": 0.0015542565379291773,
+        "max_projection_pcc": 0.9932046246817027,
+        "max_projection_p99": 0.5259957909584045,
+        "target_max_projection_p99": 0.5392156839370728
+      },
+      "free_rollout_8": {
+        "volume_mae": 0.013767709024250507,
+        "max_projection_pcc": 0.12924263809919243,
+        "max_projection_p99": 0.2655997693538666,
+        "target_max_projection_p99": 0.5392156839370728
+      }
+    },
+    {
+      "case_id": "10302",
+      "split": "validation",
+      "teacher_t_0.0": {
+        "volume_mae": 0.015099973417818546,
+        "max_projection_pcc": 0.0634541293132477,
+        "max_projection_p99": 0.25239862054586415,
+        "target_max_projection_p99": 0.5578431487083435
+      },
+      "teacher_t_0.05": {
+        "volume_mae": 0.006567415315657854,
+        "max_projection_pcc": 0.9113055968730501,
+        "max_projection_p99": 0.4195838481187823,
+        "target_max_projection_p99": 0.5578431487083435
+      },
+      "teacher_t_0.5": {
+        "volume_mae": 0.0014344766968861222,
+        "max_projection_pcc": 0.9948594327899501,
+        "max_projection_p99": 0.5419588893651963,
+        "target_max_projection_p99": 0.5578431487083435
+      },
+      "free_rollout_8": {
+        "volume_mae": 0.01424825843423605,
+        "max_projection_pcc": 0.0766062670065477,
+        "max_projection_p99": 0.25736232697963723,
+        "target_max_projection_p99": 0.5578431487083435
+      }
+    }
+  ]
+}

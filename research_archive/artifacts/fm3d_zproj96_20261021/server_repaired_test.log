@@ -1,0 +1,6 @@
+test_duplicate_group_repair_preserves_counts (fm3d.test_core.CoreTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.101s
+
+OK

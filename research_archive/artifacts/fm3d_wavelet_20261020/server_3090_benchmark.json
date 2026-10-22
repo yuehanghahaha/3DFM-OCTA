@@ -1,0 +1,31 @@
+{
+  "scope": "Synthetic GPU/CPU resource check only; not patient performance",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "torch": "2.5.1+cu121",
+  "patch_ZYX": [
+    256,
+    64,
+    64
+  ],
+  "batch_size": 1,
+  "base_channels": 16,
+  "amp": true,
+  "representation": "haar3d",
+  "network_patch_ZYX": [
+    128,
+    32,
+    32
+  ],
+  "parameters": 2106600,
+  "optimizer_updates_including_warmup": 4,
+  "amp_skipped_updates": 0,
+  "mean_update_seconds_after_warmup": 0.03602558362763375,
+  "peak_allocated_bytes": 325121024,
+  "peak_reserved_bytes": 398458880,
+  "losses": [
+    0.29010021686553955,
+    0.23499763011932373,
+    0.19895149767398834,
+    0.18025708198547363
+  ]
+}

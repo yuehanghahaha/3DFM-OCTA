@@ -1,0 +1,6 @@
+{
+  "name": "04_fm3d_wavelet_zproj",
+  "representation": "haar3d",
+  "lambda_projection": 0.1,
+  "lambda_reconstruction": 0.0
+}

@@ -1,0 +1,58 @@
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading model from: /srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/lpips/weights/v0.1/alex.pth
+/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/lpips/lpips.py:107: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(model_path, map_location='cpu'), strict=False)
+volume 1/50 10305
+volume 2/50 10307
+volume 3/50 10317
+volume 4/50 10318
+volume 5/50 10321
+volume 6/50 10322
+volume 7/50 10325
+volume 8/50 10326
+volume 9/50 10327
+volume 10/50 10328
+volume 11/50 10330
+volume 12/50 10331
+volume 13/50 10332
+volume 14/50 10341
+volume 15/50 10342
+volume 16/50 10347
+volume 17/50 10351
+volume 18/50 10355
+volume 19/50 10356
+volume 20/50 10358
+volume 21/50 10359
+volume 22/50 10362
+volume 23/50 10363
+volume 24/50 10365
+volume 25/50 10367
+volume 26/50 10379
+volume 27/50 10394
+volume 28/50 10395
+volume 29/50 10404
+volume 30/50 10410
+volume 31/50 10415
+volume 32/50 10420
+volume 33/50 10421
+volume 34/50 10423
+volume 35/50 10425
+volume 36/50 10430
+volume 37/50 10433
+volume 38/50 10446
+volume 39/50 10448
+volume 40/50 10454
+volume 41/50 10460
+volume 42/50 10467
+volume 43/50 10472
+volume 44/50 10475
+volume 45/50 10476
+volume 46/50 10484
+volume 47/50 10494
+volume 48/50 10497
+volume 49/50 10498
+volume 50/50 10499

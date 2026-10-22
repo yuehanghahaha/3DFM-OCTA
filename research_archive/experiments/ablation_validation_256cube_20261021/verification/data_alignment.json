@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "patients": 5,
+  "previous_patches_checked": 10,
+  "exact_array_comparisons": 40,
+  "fields": [
+    "oct",
+    "octa",
+    "layers",
+    "vessel_mask"
+  ],
+  "description": "Both old64 regions are exact subsets of new central256 cubes; no lateral resampling."
+}

@@ -1,0 +1,43 @@
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 10, "target": 400, "seconds": 20.439597212942317, "last_loss": 0.5386918783187866}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 20, "target": 400, "seconds": 40.277069643954746, "last_loss": 0.29119741916656494}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 30, "target": 400, "seconds": 60.22717796592042, "last_loss": 0.1652616560459137}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 40, "target": 400, "seconds": 80.05876403592993, "last_loss": 0.08313756436109543}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 50, "target": 400, "seconds": 99.69160753593314, "last_loss": 0.04770830273628235}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 60, "target": 400, "seconds": 119.12880227400456, "last_loss": 0.03148997202515602}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 70, "target": 400, "seconds": 137.7555923629552, "last_loss": 0.024249903857707977}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 80, "target": 400, "seconds": 157.57700094394386, "last_loss": 0.02131142094731331}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 90, "target": 400, "seconds": 177.4791126640048, "last_loss": 0.01992095448076725}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 100, "target": 400, "seconds": 197.26535686396528, "last_loss": 0.03971844166517258}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 110, "target": 400, "seconds": 217.15289440692868, "last_loss": 0.02027175948023796}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 120, "target": 400, "seconds": 236.96298672398552, "last_loss": 0.01821785792708397}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 130, "target": 400, "seconds": 256.8368936670013, "last_loss": 0.018560344353318214}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 140, "target": 400, "seconds": 276.75374631991144, "last_loss": 0.019784318283200264}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 150, "target": 400, "seconds": 296.3713509629015, "last_loss": 0.016874052584171295}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 160, "target": 400, "seconds": 315.9341908089118, "last_loss": 0.01841786876320839}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 170, "target": 400, "seconds": 335.21655579889193, "last_loss": 0.017589204013347626}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 180, "target": 400, "seconds": 354.63345653994475, "last_loss": 0.01715151220560074}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 190, "target": 400, "seconds": 374.0144454499241, "last_loss": 0.016618512570858}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 200, "target": 400, "seconds": 393.3696194560034, "last_loss": 0.014994609169661999}
+{"evaluated": 200, "train": 0.526325437521056, "validation": 0.46131626358477495}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 210, "target": 400, "seconds": 484.36263460095506, "last_loss": 0.016287904232740402}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 220, "target": 400, "seconds": 503.8221354949055, "last_loss": 0.01524079404771328}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 230, "target": 400, "seconds": 523.221830563969, "last_loss": 0.01739010587334633}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 240, "target": 400, "seconds": 542.7245618869783, "last_loss": 0.014797348529100418}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 250, "target": 400, "seconds": 561.801155185909, "last_loss": 0.014182418584823608}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 260, "target": 400, "seconds": 580.8623749569524, "last_loss": 0.014657385647296906}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 270, "target": 400, "seconds": 599.4260353769641, "last_loss": 0.014610370621085167}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 280, "target": 400, "seconds": 618.8703593479004, "last_loss": 0.013876300305128098}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 290, "target": 400, "seconds": 638.4289672978921, "last_loss": 0.017155582085251808}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 300, "target": 400, "seconds": 658.0065379469888, "last_loss": 0.014148348942399025}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 310, "target": 400, "seconds": 677.576876057894, "last_loss": 0.014053326100111008}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 320, "target": 400, "seconds": 697.2856622309191, "last_loss": 0.014148140326142311}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 330, "target": 400, "seconds": 716.887394721969, "last_loss": 0.013899602927267551}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 340, "target": 400, "seconds": 736.6739686839283, "last_loss": 0.013122783973813057}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 350, "target": 400, "seconds": 756.4862832200015, "last_loss": 0.0279155895113945}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 360, "target": 400, "seconds": 776.3025242879521, "last_loss": 0.06171977147459984}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 370, "target": 400, "seconds": 795.9679878589232, "last_loss": 0.02500884234905243}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 380, "target": 400, "seconds": 815.6765216579661, "last_loss": 0.0213349387049675}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 390, "target": 400, "seconds": 835.5027815699577, "last_loss": 0.0184676181524992}
+{"status": "running", "arm": "08_flowoct_wavelet_only", "updates": 400, "target": 400, "seconds": 855.2843045019545, "last_loss": 0.018122483044862747}
+{"evaluated": 400, "train": 0.4869281182766155, "validation": 0.4429626798473977}
+{"status": "complete", "arm": "08_flowoct_wavelet_only", "updates": 400, "attempts": 400, "amp_skipped": 0, "seconds": 1069.0517862059642, "peak_allocated_bytes": 3423036416}

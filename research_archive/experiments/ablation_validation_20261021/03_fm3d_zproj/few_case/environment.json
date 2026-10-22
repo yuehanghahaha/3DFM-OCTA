@@ -1,0 +1,10 @@
+{
+  "torch": "2.5.1+cu121",
+  "numpy": "1.26.4",
+  "platform": "Linux-5.15.0-198-generic-x86_64-with-glibc2.35",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "cuda_visible_devices": "0",
+  "parameters": 2097521,
+  "device": "cuda",
+  "warning": "Small fixed training/validation patches. Not full-volume or held-out test performance."
+}

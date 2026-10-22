@@ -1,0 +1,217 @@
+{
+  "case_id": "10301",
+  "split": "train",
+  "patch_yx": 64,
+  "updates_per_arm": 120,
+  "protocol": "Both arms start from epoch90 with fresh AdamW lr1e-4, no weight decay, clip1; same fixed training patch, FP32. Original uniform-t versus alternating exactt0/uniform-t. No test cases; measures memorization only, not generalization.",
+  "arms": [
+    {
+      "name": "uniform",
+      "history": [
+        {
+          "updates": 0,
+          "direct_t0": {
+            "mae": 0.014741167426109314,
+            "mse": 0.0017790376441553235,
+            "psnr": 27.498148622162635,
+            "pred_mean": 0.011056753806769848,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.026164472103118896,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.011293882504105568,
+            "mean_projection_corr": 0.1805542072933481,
+            "mean_projection_std_ratio": 0.4488600492477417,
+            "max_projection_mae": 0.1934935748577118,
+            "max_projection_corr": 0.07095926910506459,
+            "max_projection_std_ratio": 0.2827780246734619
+          },
+          "rollout8": {
+            "mae": 0.014346037060022354,
+            "mse": 0.0016786175547167659,
+            "psnr": 27.75048239416195,
+            "pred_mean": 0.011815656907856464,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.02799195609986782,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.010610288009047508,
+            "mean_projection_corr": 0.18009389586607694,
+            "mean_projection_std_ratio": 0.4942242503166199,
+            "max_projection_mae": 0.18488112092018127,
+            "max_projection_corr": 0.07652110084633365,
+            "max_projection_std_ratio": 0.3200302720069885
+          }
+        },
+        {
+          "updates": 40,
+          "direct_t0": {
+            "mae": 0.014345154166221619,
+            "mse": 0.0012676374753937125,
+            "psnr": 28.97004930166402,
+            "pred_mean": 0.02022622711956501,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.03743550553917885,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.0054525043815374374,
+            "mean_projection_corr": 0.24281646160097564,
+            "mean_projection_std_ratio": 0.5553082227706909,
+            "max_projection_mae": 0.14986124634742737,
+            "max_projection_corr": 0.11772180929533023,
+            "max_projection_std_ratio": 0.2910355031490326
+          },
+          "rollout8": {
+            "mae": 0.01341175939887762,
+            "mse": 0.0011242034379392862,
+            "psnr": 29.491550909201685,
+            "pred_mean": 0.021587897092103958,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.04204252362251282,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.0053124334663152695,
+            "mean_projection_corr": 0.26259182831949157,
+            "mean_projection_std_ratio": 0.5691471695899963,
+            "max_projection_mae": 0.12305119633674622,
+            "max_projection_corr": 0.11934299197042372,
+            "max_projection_std_ratio": 0.3649015426635742
+          }
+        },
+        {
+          "updates": 120,
+          "direct_t0": {
+            "mae": 0.015106843784451485,
+            "mse": 0.0012184312799945474,
+            "psnr": 29.141989601688554,
+            "pred_mean": 0.022136371582746506,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.0386473648250103,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.005207735579460859,
+            "mean_projection_corr": 0.27084298612425256,
+            "mean_projection_std_ratio": 0.43997880816459656,
+            "max_projection_mae": 0.14183205366134644,
+            "max_projection_corr": 0.10736449357192582,
+            "max_projection_std_ratio": 0.2816449999809265
+          },
+          "rollout8": {
+            "mae": 0.01407059095799923,
+            "mse": 0.0011481704423204064,
+            "psnr": 29.399936374913693,
+            "pred_mean": 0.021423865109682083,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.03968710079789162,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.005101955495774746,
+            "mean_projection_corr": 0.30120130768539183,
+            "mean_projection_std_ratio": 0.4163309633731842,
+            "max_projection_mae": 0.13205502927303314,
+            "max_projection_corr": 0.12691488364516787,
+            "max_projection_std_ratio": 0.31718796491622925
+          }
+        }
+      ]
+    },
+    {
+      "name": "half_t0",
+      "history": [
+        {
+          "updates": 0,
+          "direct_t0": {
+            "mae": 0.014741167426109314,
+            "mse": 0.0017790376441553235,
+            "psnr": 27.498148622162635,
+            "pred_mean": 0.011056753806769848,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.026164472103118896,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.011293882504105568,
+            "mean_projection_corr": 0.1805542072933481,
+            "mean_projection_std_ratio": 0.4488600492477417,
+            "max_projection_mae": 0.1934935748577118,
+            "max_projection_corr": 0.07095926910506459,
+            "max_projection_std_ratio": 0.2827780246734619
+          },
+          "rollout8": {
+            "mae": 0.014346037060022354,
+            "mse": 0.0016786175547167659,
+            "psnr": 27.75048239416195,
+            "pred_mean": 0.011815656907856464,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.02799195609986782,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.010610288009047508,
+            "mean_projection_corr": 0.18009389586607694,
+            "mean_projection_std_ratio": 0.4942242503166199,
+            "max_projection_mae": 0.18488112092018127,
+            "max_projection_corr": 0.07652110084633365,
+            "max_projection_std_ratio": 0.3200302720069885
+          }
+        },
+        {
+          "updates": 40,
+          "direct_t0": {
+            "mae": 0.013003933243453503,
+            "mse": 0.0009393736254423857,
+            "psnr": 30.27161637558809,
+            "pred_mean": 0.023882657289505005,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.047931309789419174,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.005173441022634506,
+            "mean_projection_corr": 0.41242195629981254,
+            "mean_projection_std_ratio": 0.4586385190486908,
+            "max_projection_mae": 0.07856912910938263,
+            "max_projection_corr": 0.096215734992527,
+            "max_projection_std_ratio": 0.4154004752635956
+          },
+          "rollout8": {
+            "mae": 0.01279238611459732,
+            "mse": 0.0009239021455869079,
+            "psnr": 30.343740243233015,
+            "pred_mean": 0.023635102435946465,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.04775550216436386,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.005072532221674919,
+            "mean_projection_corr": 0.429894630626686,
+            "mean_projection_std_ratio": 0.4571785032749176,
+            "max_projection_mae": 0.07828745245933533,
+            "max_projection_corr": 0.17102817747743299,
+            "max_projection_std_ratio": 0.41483962535858154
+          }
+        },
+        {
+          "updates": 120,
+          "direct_t0": {
+            "mae": 0.012111667543649673,
+            "mse": 0.0008603635942563415,
+            "psnr": 30.65317974793278,
+            "pred_mean": 0.02364380657672882,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.049637701362371445,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.004917185753583908,
+            "mean_projection_corr": 0.48158691979145046,
+            "mean_projection_std_ratio": 0.5045357942581177,
+            "max_projection_mae": 0.06890325248241425,
+            "max_projection_corr": 0.2362467785744604,
+            "max_projection_std_ratio": 0.41283848881721497
+          },
+          "rollout8": {
+            "mae": 0.011787082068622112,
+            "mse": 0.0008542946889065206,
+            "psnr": 30.683922936086645,
+            "pred_mean": 0.023438522592186928,
+            "target_mean": 0.022233113646507263,
+            "pred_std": 0.050138920545578,
+            "target_std": 0.057970236986875534,
+            "mean_projection_mae": 0.004828997887670994,
+            "mean_projection_corr": 0.49340088782641445,
+            "mean_projection_std_ratio": 0.5330201983451843,
+            "max_projection_mae": 0.06830230355262756,
+            "max_projection_corr": 0.26979787311066866,
+            "max_projection_std_ratio": 0.45191895961761475
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+test_train_resume_and_source_only_prediction (flowoct3d.test_cli.CLITests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 19.161s
+
+OK

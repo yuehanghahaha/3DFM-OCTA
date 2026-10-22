@@ -1,0 +1,11 @@
+{
+  "created": "2026-10-21T21:57:40.021204+08:00",
+  "reason": "Additional control avoids confounding the no-FM comparison with the reduced parameter count and changed architecture of the plain U-Net. The original compact control and all its results are retained.",
+  "formula": "prediction=OCT+network(OCT,t=0,OCT); loss=MSE(prediction,OCTA). No FM path, random t, target-containing state, or ODE is used.",
+  "model": "Exact frozen production voxel U-Net; random initialization; not a fine-tune",
+  "seed": 20261021,
+  "successful_updates": 2400,
+  "optimizer": "AdamW, lr2e-4, weight_decay0, clip1, AMP FP16 with dynamic scaler init1024",
+  "update_schedule": "Constant lr; no validation-based selection",
+  "scope": "Single training patch only. This control tests the existing backbone at t=0; it is not a trained multi-step FM model."
+}

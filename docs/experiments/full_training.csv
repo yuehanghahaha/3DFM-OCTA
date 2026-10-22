@@ -1,0 +1,5 @@
+experiment,target_epochs,last_completed_epoch,selected_epoch,validation_mae,validation_psnr,status,source_file
+基线原 100 轮,100,100,90,0.013699754575843756,28.102417253594915,complete,research_archive/analysis/haar3d_200_2026-10-21/baseline_history.jsonl
+基线续训至 200 轮,200,200,106,0.012990249151668704,28.76036301381067,complete,research_archive/server_runs/fm3d_ubuntu/runs/fm3d_3M_run01/history.jsonl
+三维 Haar 200 轮,200,200,195,0.014347735892618679,28.806652253631377,complete,research_archive/server_runs/fm3d_wavelet_200/runs/fm3d_haar3d_3M_200/history.jsonl
+Z 投影 + 横向 96 体块,200,105,37,0.013751397867441947,28.302283355711417,partial_snapshot,research_archive/server_runs/fm3d_zproj_96_200/runs/fm3d_zproj_3M_96_200/history.jsonl

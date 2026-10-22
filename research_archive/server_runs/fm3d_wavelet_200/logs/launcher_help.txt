@@ -1,0 +1,47 @@
+usage: train_wavelet.py [-h] --manifest MANIFEST --fov {3M,6M} --output OUTPUT
+                        --axis-order AXIS_ORDER --intensity-scale
+                        INTENSITY_SCALE [--depth DEPTH] [--patch Z Y X]
+                        [--base-channels BASE_CHANNELS]
+                        [--representation {voxel,haar3d}]
+                        [--condition | --no-condition]
+                        [--batch-size BATCH_SIZE] [--epochs EPOCHS]
+                        [--save-every SAVE_EVERY]
+                        [--steps-per-epoch STEPS_PER_EPOCH] [--lr LR]
+                        [--val-every VAL_EVERY] [--ode-steps ODE_STEPS]
+                        [--overlap OVERLAP] [--seed SEED] [--workers WORKERS]
+                        [--device DEVICE] [--amp | --no-amp] [--resume]
+
+Train a paired 3D voxel or Haar flow; full-volume validation, checkpoints and
+resume.
+
+options:
+  -h, --help            show this help message and exit
+  --manifest MANIFEST
+  --fov {3M,6M}
+  --output OUTPUT
+  --axis-order AXIS_ORDER
+                        NPZ axes, e.g. ZYX or YXZ; never inferred
+  --intensity-scale INTENSITY_SCALE
+                        255 for native uint8, 1 for verified [0,1]
+  --depth DEPTH         Resample axial Z only; 0 preserves native depth
+  --patch Z Y X
+  --base-channels BASE_CHANNELS
+  --representation {voxel,haar3d}
+  --condition, --no-condition
+  --batch-size BATCH_SIZE
+  --epochs EPOCHS
+  --save-every SAVE_EVERY
+                        Keep epoch and best-so-far snapshots every N epochs; 0
+                        disables
+  --steps-per-epoch STEPS_PER_EPOCH
+                        Training batches; random cases with replacement; AMP-
+                        skipped updates logged
+  --lr LR
+  --val-every VAL_EVERY
+  --ode-steps ODE_STEPS
+  --overlap OVERLAP
+  --seed SEED
+  --workers WORKERS
+  --device DEVICE
+  --amp, --no-amp
+  --resume              Resume local latest.pt at next epoch

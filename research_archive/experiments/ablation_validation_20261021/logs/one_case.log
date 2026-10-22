@@ -1,0 +1,90 @@
+01_fm3d one_case 25/400 loss=0.002958
+01_fm3d one_case 50/400 loss=0.002109
+01_fm3d one_case 75/400 loss=0.001690
+01_fm3d one_case 100/400 loss=0.001340
+01_fm3d one_case 125/400 loss=0.001127
+01_fm3d one_case 150/400 loss=0.001428
+01_fm3d one_case 175/400 loss=0.000864
+01_fm3d one_case 200/400 loss=0.000704
+Validated 01_fm3d one_case update=200 train PCC=0.2745908125379278 validation SSIM=0.1986
+01_fm3d one_case 225/400 loss=0.000683
+01_fm3d one_case 250/400 loss=0.000577
+01_fm3d one_case 275/400 loss=0.000763
+01_fm3d one_case 300/400 loss=0.001004
+01_fm3d one_case 325/400 loss=0.000765
+01_fm3d one_case 350/400 loss=0.000423
+01_fm3d one_case 375/400 loss=0.000443
+01_fm3d one_case 400/400 loss=0.000365
+Validated 01_fm3d one_case update=400 train PCC=0.25115185666489553 validation SSIM=0.2016
+02_fm3d_wavelet one_case 25/400 loss=0.006150
+02_fm3d_wavelet one_case 50/400 loss=0.003703
+02_fm3d_wavelet one_case 75/400 loss=0.002748
+02_fm3d_wavelet one_case 100/400 loss=0.002418
+02_fm3d_wavelet one_case 125/400 loss=0.002198
+02_fm3d_wavelet one_case 150/400 loss=0.002174
+02_fm3d_wavelet one_case 175/400 loss=0.001987
+02_fm3d_wavelet one_case 200/400 loss=0.001854
+Validated 02_fm3d_wavelet one_case update=200 train PCC=0.23396499336231208 validation SSIM=0.1678
+02_fm3d_wavelet one_case 225/400 loss=0.001817
+02_fm3d_wavelet one_case 250/400 loss=0.001747
+02_fm3d_wavelet one_case 275/400 loss=0.001746
+02_fm3d_wavelet one_case 300/400 loss=0.001763
+02_fm3d_wavelet one_case 325/400 loss=0.001651
+02_fm3d_wavelet one_case 350/400 loss=0.001538
+02_fm3d_wavelet one_case 375/400 loss=0.001519
+02_fm3d_wavelet one_case 400/400 loss=0.001452
+Validated 02_fm3d_wavelet one_case update=400 train PCC=0.2908924374957609 validation SSIM=0.1861
+03_fm3d_zproj one_case 25/400 loss=0.003868
+03_fm3d_zproj one_case 50/400 loss=0.002827
+03_fm3d_zproj one_case 75/400 loss=0.002304
+03_fm3d_zproj one_case 100/400 loss=0.002041
+03_fm3d_zproj one_case 125/400 loss=0.001867
+03_fm3d_zproj one_case 150/400 loss=0.001948
+03_fm3d_zproj one_case 175/400 loss=0.001492
+03_fm3d_zproj one_case 200/400 loss=0.001344
+Validated 03_fm3d_zproj one_case update=200 train PCC=0.2915449019825283 validation SSIM=0.1967
+03_fm3d_zproj one_case 225/400 loss=0.001347
+03_fm3d_zproj one_case 250/400 loss=0.001251
+03_fm3d_zproj one_case 275/400 loss=0.001343
+03_fm3d_zproj one_case 300/400 loss=0.001612
+03_fm3d_zproj one_case 325/400 loss=0.001174
+03_fm3d_zproj one_case 350/400 loss=0.000994
+03_fm3d_zproj one_case 375/400 loss=0.001083
+03_fm3d_zproj one_case 400/400 loss=0.000867
+Validated 03_fm3d_zproj one_case update=400 train PCC=0.2683088598291322 validation SSIM=0.1958
+04_fm3d_wavelet_zproj one_case 25/400 loss=0.008668
+04_fm3d_wavelet_zproj one_case 50/400 loss=0.004934
+04_fm3d_wavelet_zproj one_case 75/400 loss=0.003714
+04_fm3d_wavelet_zproj one_case 100/400 loss=0.003087
+04_fm3d_wavelet_zproj one_case 125/400 loss=0.002799
+04_fm3d_wavelet_zproj one_case 150/400 loss=0.002751
+04_fm3d_wavelet_zproj one_case 175/400 loss=0.002549
+04_fm3d_wavelet_zproj one_case 200/400 loss=0.002448
+Validated 04_fm3d_wavelet_zproj one_case update=200 train PCC=0.21755785550293713 validation SSIM=0.1695
+04_fm3d_wavelet_zproj one_case 225/400 loss=0.002459
+04_fm3d_wavelet_zproj one_case 250/400 loss=0.002343
+04_fm3d_wavelet_zproj one_case 275/400 loss=0.002347
+04_fm3d_wavelet_zproj one_case 300/400 loss=0.002423
+04_fm3d_wavelet_zproj one_case 325/400 loss=0.002272
+04_fm3d_wavelet_zproj one_case 350/400 loss=0.002181
+04_fm3d_wavelet_zproj one_case 375/400 loss=0.002149
+04_fm3d_wavelet_zproj one_case 400/400 loss=0.002085
+Validated 04_fm3d_wavelet_zproj one_case update=400 train PCC=0.264943519280571 validation SSIM=0.1928
+05_fm3d_wavelet_zproj_reconstruction one_case 25/400 loss=0.051835
+05_fm3d_wavelet_zproj_reconstruction one_case 50/400 loss=0.038613
+05_fm3d_wavelet_zproj_reconstruction one_case 75/400 loss=0.033504
+05_fm3d_wavelet_zproj_reconstruction one_case 100/400 loss=0.032243
+05_fm3d_wavelet_zproj_reconstruction one_case 125/400 loss=0.030418
+05_fm3d_wavelet_zproj_reconstruction one_case 150/400 loss=0.029681
+05_fm3d_wavelet_zproj_reconstruction one_case 175/400 loss=0.029230
+05_fm3d_wavelet_zproj_reconstruction one_case 200/400 loss=0.028485
+Validated 05_fm3d_wavelet_zproj_reconstruction one_case update=200 train PCC=0.25227327003726724 validation SSIM=0.1828
+05_fm3d_wavelet_zproj_reconstruction one_case 225/400 loss=0.028124
+05_fm3d_wavelet_zproj_reconstruction one_case 250/400 loss=0.027466
+05_fm3d_wavelet_zproj_reconstruction one_case 275/400 loss=0.027350
+05_fm3d_wavelet_zproj_reconstruction one_case 300/400 loss=0.027163
+05_fm3d_wavelet_zproj_reconstruction one_case 325/400 loss=0.026744
+05_fm3d_wavelet_zproj_reconstruction one_case 350/400 loss=0.026097
+05_fm3d_wavelet_zproj_reconstruction one_case 375/400 loss=0.026645
+05_fm3d_wavelet_zproj_reconstruction one_case 400/400 loss=0.025775
+Validated 05_fm3d_wavelet_zproj_reconstruction one_case update=400 train PCC=0.28861739258407737 validation SSIM=0.1861

@@ -1,0 +1,7 @@
+{
+  "zip_sha256": "121b6d4dace477d8ed3067e1dd94e148788466e1971531f16eac170f9b387edf",
+  "all_71_manifest_file_hashes_verified": true,
+  "isolated_extraction_tests": 12,
+  "passed": true,
+  "test_scope": "Core gradients/math plus production train/resume/model and optimizer exact replay, OCT-only inference and evaluation in extracted package"
+}

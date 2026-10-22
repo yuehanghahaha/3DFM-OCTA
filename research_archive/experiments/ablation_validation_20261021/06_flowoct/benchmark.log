@@ -1,0 +1,22 @@
+{
+  "seconds_per_update": 1.0378504586406052,
+  "peak_allocated_bytes": 1247591936,
+  "generator_parameters": 2330180,
+  "losses": {
+    "vloss": 0.08283467590808868,
+    "L1loss": 0.09518160670995712,
+    "contrastloss": 3.5204079151153564,
+    "proj_loss": 0.24999751150608063
+  },
+  "tensor_YXZ": [
+    1,
+    1,
+    64,
+    64,
+    256
+  ],
+  "sampled_slices": 16,
+  "full_batch": true,
+  "network_chunk": 0,
+  "amp": false
+}

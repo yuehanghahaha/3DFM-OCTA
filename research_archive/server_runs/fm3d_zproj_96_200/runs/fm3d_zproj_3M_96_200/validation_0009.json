@@ -1,0 +1,103 @@
+{
+  "metrics": {
+    "mae": 0.0177039156760679,
+    "psnr": 27.187507503239665,
+    "z_projection_mae": 0.012148596075040721,
+    "z_projection_psnr": 37.29803629949909,
+    "z_projection_pcc": 0.33842029223951137
+  },
+  "cases": [
+    {
+      "case_id": "10302",
+      "patient_id": "10302",
+      "mae": 0.017643474766917605,
+      "psnr": 26.017352886220706,
+      "z_projection_mae": 0.013069436610184768,
+      "z_projection_psnr": 36.27235077263507,
+      "z_projection_pcc": 0.3695921643775659
+    },
+    {
+      "case_id": "10319",
+      "patient_id": "10319",
+      "mae": 0.015867051648956437,
+      "psnr": 26.74626786376478,
+      "z_projection_mae": 0.012292602258571794,
+      "z_projection_psnr": 36.94134708430238,
+      "z_projection_pcc": 0.22452298480954438
+    },
+    {
+      "case_id": "10338",
+      "patient_id": "10338",
+      "mae": 0.021137775864970842,
+      "psnr": 25.405037825600786,
+      "z_projection_mae": 0.01321713922310125,
+      "z_projection_psnr": 36.27771938010326,
+      "z_projection_pcc": 0.3513953083120631
+    },
+    {
+      "case_id": "10357",
+      "patient_id": "10357",
+      "mae": 0.014932006537454332,
+      "psnr": 26.847471360263317,
+      "z_projection_mae": 0.011607407172537942,
+      "z_projection_psnr": 37.377356598940786,
+      "z_projection_pcc": 0.30335862601410685
+    },
+    {
+      "case_id": "10396",
+      "patient_id": "10396",
+      "mae": 0.01628072631041985,
+      "psnr": 26.410656392489543,
+      "z_projection_mae": 0.013895060853451406,
+      "z_projection_psnr": 36.036499736809546,
+      "z_projection_pcc": 0.4053584849290712
+    },
+    {
+      "case_id": "10422",
+      "patient_id": "10422",
+      "mae": 0.013937970064517042,
+      "psnr": 27.466957166756952,
+      "z_projection_mae": 0.009760264149280528,
+      "z_projection_psnr": 38.42552776682665,
+      "z_projection_pcc": 0.39583574088211926
+    },
+    {
+      "case_id": "10447",
+      "patient_id": "10447",
+      "mae": 0.028765064900786508,
+      "psnr": 27.469291478188357,
+      "z_projection_mae": 0.01964232971797118,
+      "z_projection_psnr": 33.479732277536925,
+      "z_projection_pcc": 0.381264861811925
+    },
+    {
+      "case_id": "10456",
+      "patient_id": "10456",
+      "mae": 0.02406574346802043,
+      "psnr": 27.37332749695717,
+      "z_projection_mae": 0.011420941021199641,
+      "z_projection_psnr": 37.67131685993134,
+      "z_projection_pcc": 0.25450817533573905
+    },
+    {
+      "case_id": "10495",
+      "patient_id": "10495",
+      "mae": 0.00910204308852424,
+      "psnr": 31.159864547376195,
+      "z_projection_mae": 0.006365607491509,
+      "z_projection_psnr": 42.27318382983291,
+      "z_projection_pcc": 0.2865822875362032
+    },
+    {
+      "case_id": "10500",
+      "patient_id": "10500",
+      "mae": 0.015307300110111707,
+      "psnr": 26.978848014778837,
+      "z_projection_mae": 0.010215172252599717,
+      "z_projection_psnr": 38.225328688072075,
+      "z_projection_pcc": 0.4117842883867762
+    }
+  ],
+  "patients": 10,
+  "protocol": "full preprocessed volume; range=1; final clamp; patient macro mean; PSNR MSE floor=1e-12"
+}

@@ -1,0 +1,31 @@
+{
+  "source_epoch": 100,
+  "source_best_epoch": 90,
+  "files": [
+    {
+      "file": "best.pt",
+      "source": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01/best.pt",
+      "sha256": "d3433e6fca9567b38ed26e2fcfaeb6cde220abd65ffd9a5987ee40a5be0723ec"
+    },
+    {
+      "file": "latest.pt",
+      "source": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01/latest.pt",
+      "sha256": "bb670e2ea63a7bb53bd5289bc50435e7eaed785d33fa25fb7eeefbb269eaab15"
+    },
+    {
+      "file": "config.json",
+      "source": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01/config.json",
+      "sha256": "522c1e31a881c4f3b6b91667f5b3b85f899d953f54645aee15a9e41fd5ddd002"
+    },
+    {
+      "file": "history.jsonl",
+      "source": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01/history.jsonl",
+      "sha256": "c0e80f1b5ec9b2f86970c57b0e73669f071f7f30d5554e767ed2cbe8e76111d0"
+    },
+    {
+      "file": "original_train.py",
+      "source": "/srv/oct_research/fm3d_ubuntu/fm3d/train.py",
+      "sha256": "9be12ce0e8d0831e0c67cdb2276a72dba789502587f407775ce18397d0edc2b7"
+    }
+  ]
+}

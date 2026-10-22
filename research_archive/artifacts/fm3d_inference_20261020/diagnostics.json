@@ -1,0 +1,125 @@
+{
+  "cases": [
+    {
+      "case_id": "10302",
+      "pred_mean": 0.013077296316623688,
+      "gt_mean": 0.02549148164689541,
+      "zero_mae": 0.02549149348918841,
+      "zero_psnr": 22.897770871284692,
+      "projection_correlation": 0.27430495989899095,
+      "projection_mae": 0.01261212583631277,
+      "pred_max": 0.2872793674468994,
+      "gt_max": 1.0
+    },
+    {
+      "case_id": "10319",
+      "pred_mean": 0.015333335846662521,
+      "gt_mean": 0.02266412228345871,
+      "zero_mae": 0.022664125689315983,
+      "zero_psnr": 23.987107827358418,
+      "projection_correlation": 0.15620642181775538,
+      "projection_mae": 0.008173785172402859,
+      "pred_max": 0.34090036153793335,
+      "gt_max": 0.9470587968826294
+    },
+    {
+      "case_id": "10338",
+      "pred_mean": 0.015783268958330154,
+      "gt_mean": 0.029066376388072968,
+      "zero_mae": 0.029066392850644687,
+      "zero_psnr": 22.1755329726801,
+      "projection_correlation": 0.23896128319475285,
+      "projection_mae": 0.013391325250267982,
+      "pred_max": 0.2704784572124481,
+      "gt_max": 1.0
+    },
+    {
+      "case_id": "10357",
+      "pred_mean": 0.010712866671383381,
+      "gt_mean": 0.020344676449894905,
+      "zero_mae": 0.02034469836204093,
+      "zero_psnr": 24.32428571523673,
+      "projection_correlation": 0.20663008544146144,
+      "projection_mae": 0.009855429641902447,
+      "pred_max": 0.2932766079902649,
+      "gt_max": 0.9970588088035583
+    },
+    {
+      "case_id": "10396",
+      "pred_mean": 0.011431251652538776,
+      "gt_mean": 0.02224041149020195,
+      "zero_mae": 0.022240431470853694,
+      "zero_psnr": 24.027510336446916,
+      "projection_correlation": 0.33120720347200966,
+      "projection_mae": 0.010954614728689194,
+      "pred_max": 0.2694953680038452,
+      "gt_max": 0.9784313440322876
+    },
+    {
+      "case_id": "10422",
+      "pred_mean": 0.01156154740601778,
+      "gt_mean": 0.019570352509617805,
+      "zero_mae": 0.019570348426183007,
+      "zero_psnr": 24.751764235924867,
+      "projection_correlation": 0.29157752714125657,
+      "projection_mae": 0.008534050546586514,
+      "pred_max": 0.27694031596183777,
+      "gt_max": 0.9617646932601929
+    },
+    {
+      "case_id": "10447",
+      "pred_mean": 0.02109082043170929,
+      "gt_mean": 0.017730945721268654,
+      "zero_mae": 0.017730968710055826,
+      "zero_psnr": 25.39237096013298,
+      "projection_correlation": 0.35055518541882746,
+      "projection_mae": 0.007709920406341553,
+      "pred_max": 0.3788265585899353,
+      "gt_max": 1.0
+    },
+    {
+      "case_id": "10456",
+      "pred_mean": 0.019906949251890182,
+      "gt_mean": 0.021786609664559364,
+      "zero_mae": 0.021786622687923158,
+      "zero_psnr": 23.69912635304589,
+      "projection_correlation": 0.1915340193033679,
+      "projection_mae": 0.007080483715981245,
+      "pred_max": 0.32560497522354126,
+      "gt_max": 1.0
+    },
+    {
+      "case_id": "10495",
+      "pred_mean": 0.011075446382164955,
+      "gt_mean": 0.012966305017471313,
+      "zero_mae": 0.012966317624565137,
+      "zero_psnr": 28.36447187614906,
+      "projection_correlation": 0.22249005644901595,
+      "projection_mae": 0.003828309942036867,
+      "pred_max": 0.25859886407852173,
+      "gt_max": 0.9539215564727783
+    },
+    {
+      "case_id": "10500",
+      "pred_mean": 0.01141688134521246,
+      "gt_mean": 0.020343363285064697,
+      "zero_mae": 0.02034336306090978,
+      "zero_psnr": 24.340830674848043,
+      "projection_correlation": 0.3306877932517475,
+      "projection_mae": 0.009164087474346161,
+      "pred_max": 0.2549223303794861,
+      "gt_max": 1.0
+    }
+  ],
+  "case_mean": {
+    "pred_mean": 0.014138966426253318,
+    "gt_mean": 0.021220464445650577,
+    "zero_mae": 0.021220476237168058,
+    "zero_psnr": 24.39607718231077,
+    "projection_correlation": 0.25941545353891854,
+    "projection_mae": 0.009130413271486759,
+    "pred_max": 0.2956323206424713,
+    "gt_max": 0.9838235199451446
+  },
+  "note": "Zero output is a diagnostic reference, not a competitive method. Projection correlation uses full-depth Z mean. No thresholded vessel mask."
+}

@@ -1,0 +1,85 @@
+{
+  "train": {
+    "patches": 4,
+    "oracle": {
+      "0": {
+        "mse": 0.001944136543897912,
+        "endpoint_pcc": 0.05541632608261081
+      },
+      "0.05": {
+        "mse": 0.0005468110684887506,
+        "endpoint_pcc": 0.9310841465560079
+      },
+      "0.5": {
+        "mse": 0.0002498168068996165,
+        "endpoint_pcc": 0.9959735238318645
+      }
+    },
+    "rollout": {
+      "1": {
+        "mae": 0.012376836035400629,
+        "psnr": 28.446647844036548,
+        "max_projection_corr": 0.05541632608261081
+      },
+      "8": {
+        "mae": 0.011945194099098444,
+        "psnr": 28.823018870557377,
+        "max_projection_corr": 0.07004670926465591
+      },
+      "32": {
+        "mae": 0.011748242774046957,
+        "psnr": 29.12452223781852,
+        "max_projection_corr": 0.06667018547800235
+      },
+      "128": {
+        "mae": 0.011693148757331073,
+        "psnr": 29.244541034667854,
+        "max_projection_corr": 0.06558281155501453
+      }
+    },
+    "amp_mean_abs_difference": 8.431062087765895e-05
+  },
+  "validation": {
+    "patches": 4,
+    "oracle": {
+      "0": {
+        "mse": 0.001724473899230361,
+        "endpoint_pcc": 0.09840525061317934
+      },
+      "0.05": {
+        "mse": 0.000465197728772182,
+        "endpoint_pcc": 0.9292182221270082
+      },
+      "0.5": {
+        "mse": 0.0002027841328526847,
+        "endpoint_pcc": 0.9965077365870154
+      }
+    },
+    "rollout": {
+      "1": {
+        "mae": 0.012243243400007486,
+        "psnr": 28.498364138655074,
+        "max_projection_corr": 0.09840525061317934
+      },
+      "8": {
+        "mae": 0.01207535876892507,
+        "psnr": 28.63212128866122,
+        "max_projection_corr": 0.11316867063563066
+      },
+      "32": {
+        "mae": 0.011976704932749271,
+        "psnr": 28.779454323373166,
+        "max_projection_corr": 0.11211589176480992
+      },
+      "128": {
+        "mae": 0.011948823230341077,
+        "psnr": 28.841556457295468,
+        "max_projection_corr": 0.11379701988570769
+      }
+    },
+    "amp_mean_abs_difference": 9.204960588249378e-05
+  },
+  "scope": "2 train and2 validation patients,2 fixed patches each; local full-depth maximum projections; NOT whole-volume ILM_OPL final test metrics",
+  "signal_fraction": 0.06603825092315674,
+  "signal_error_fraction_t0": 0.7021241709589958
+}

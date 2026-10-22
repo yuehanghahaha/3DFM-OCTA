@@ -1,0 +1,396 @@
+{
+  "verdict": "\u5728\u8fd9\u4e00\u56fa\u5b9a\u8bad\u7ec3\u5757\u4e0e\u79cd\u5b50\u4e0b\uff0c\u589e\u52a0\u8d77\u70b9\u65f6\u95f4\u91c7\u6837\u4f7f\u771f\u6b63\u76848\u6b65\u81ea\u7531\u751f\u6210\u6709\u6240\u6539\u5584\uff1aILM\u2013OPL PCC \u6bd4\u539f FM \u9ad8 0.5618\uff0cSSIM \u9ad8 0.6915\u3002 \u6309\u534f\u8bae\u9884\u5148\u8bb0\u5f55\u7684\u5168Z\u6700\u5927\u6295\u5f71\u9608\u503c\uff08PCC\u22650.90\u3001SSIM\u22650.80\uff09\uff0c\u6df7\u5408\u7ec4\u4ecd\u672a\u540c\u65f6\u901a\u8fc7\uff0c\u4e0d\u80fd\u79f0\u4e3a\u5df2\u7ecf\u4fee\u590d\u3002",
+  "validation": "\u4fdd\u7559\u7684\u4e24\u4f4d\u9a8c\u8bc1\u60a3\u8005\u4e0a\uff0c\u6df7\u5408\u7ec4\u76f8\u5bf9\u539f FM \u7684 ILM\u2013OPL PCC \u5dee\u503c\u4e3a +0.0319\u3001SSIM \u5dee\u503c\u4e3a +0.0454\u3002\u4e24\u4f4d\u60a3\u8005\u4e0d\u8db3\u4ee5\u652f\u6301\u7a33\u5b9a\u6cdb\u5316\u7ed3\u8bba\u3002",
+  "arms": {
+    "fm_uniform": {
+      "primary_steps": 8,
+      "successful_updates": 2400,
+      "amp_skipped_updates": 0,
+      "zero_time_updates": 0,
+      "peak_allocated_bytes": 2373292544,
+      "elapsed_seconds": 238.22837425302714,
+      "train_primary": {
+        "mae": 0.021857795473254504,
+        "mse": 0.0012403688476468203,
+        "psnr": 29.06449149775069,
+        "max_projection_pcc": 0.19583234123442514,
+        "max_projection_ssim": 0.18618722088524936,
+        "high_signal_mae": 0.07435531222550389,
+        "fraction_outside_0_1": 0.0,
+        "ilm_opl_pcc": 0.31674386051259235,
+        "ilm_opl_ssim": 0.14540130516827576,
+        "ilm_opl_mae": 0.08213893534480121,
+        "empty_rays": 0
+      },
+      "train_outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.023018542596166758,
+            "mse": 0.0013151623880492459,
+            "psnr": 28.810206198893646,
+            "max_projection_pcc": 0.21743993724813448,
+            "max_projection_ssim": 0.19080747482581936,
+            "high_signal_mae": 0.0764819485274751,
+            "fraction_outside_0_1": 0.04395484924316406
+          },
+          "final_clamp": {
+            "mae": 0.022721363067266798,
+            "mse": 0.0013097700318924455,
+            "psnr": 28.82804950640029,
+            "max_projection_pcc": 0.21743993724813448,
+            "max_projection_ssim": 0.19080747482581936,
+            "high_signal_mae": 0.07647311497137999,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.32965659479649645,
+            "ilm_opl_ssim": 0.1501448665375685,
+            "ilm_opl_mae": 0.08063229008325834,
+            "empty_rays": 0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.022300537003730247,
+            "mse": 0.0012498732024605252,
+            "psnr": 29.03134043203839,
+            "max_projection_pcc": 0.19583234123442514,
+            "max_projection_ssim": 0.18618722088524936,
+            "high_signal_mae": 0.07437628504371999,
+            "fraction_outside_0_1": 0.05329418182373047
+          },
+          "final_clamp": {
+            "mae": 0.021857795473254504,
+            "mse": 0.0012403688476468203,
+            "psnr": 29.06449149775069,
+            "max_projection_pcc": 0.19583234123442514,
+            "max_projection_ssim": 0.18618722088524936,
+            "high_signal_mae": 0.07435531222550389,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.31674386051259235,
+            "ilm_opl_ssim": 0.14540130516827576,
+            "ilm_opl_mae": 0.08213893534480121,
+            "empty_rays": 0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.02208710329352226,
+            "mse": 0.0012422422364783748,
+            "psnr": 29.057937087423312,
+            "max_projection_pcc": 0.195600820885936,
+            "max_projection_ssim": 0.18589877455286397,
+            "high_signal_mae": 0.07358123197866835,
+            "fraction_outside_0_1": 0.0589752197265625
+          },
+          "final_clamp": {
+            "mae": 0.021577406159720813,
+            "mse": 0.0012304183980334366,
+            "psnr": 29.099471836344335,
+            "max_projection_pcc": 0.195600820885936,
+            "max_projection_ssim": 0.18589877455286397,
+            "high_signal_mae": 0.07354941538414424,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.3103863166446548,
+            "ilm_opl_ssim": 0.1449551133610038,
+            "ilm_opl_mae": 0.08185630406069322,
+            "empty_rays": 0
+          }
+        }
+      },
+      "train_teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.0013151622842997313
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.0011637737043201923
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.0007432131678797305
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.0004921494401060045
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 0.000173821987118572
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 0.00016521688667126
+        }
+      ],
+      "held_out_patient_macro": {
+        "mae": 0.0274196294463587,
+        "psnr": 28.238052195584434,
+        "max_projection_pcc": 0.1541597083057511,
+        "max_projection_ssim": 0.1708327585075981,
+        "ilm_opl_pcc": 0.29664432366434956,
+        "ilm_opl_ssim": 0.1946629277210764,
+        "ilm_opl_mae": 0.07558547422307527
+      }
+    },
+    "direct_t0": {
+      "primary_steps": 1,
+      "successful_updates": 2400,
+      "amp_skipped_updates": 0,
+      "zero_time_updates": 2400,
+      "peak_allocated_bytes": 1949492224,
+      "elapsed_seconds": 232.66813671402633,
+      "train_primary": {
+        "mae": 0.005001633590258403,
+        "mse": 0.0001238347684814876,
+        "psnr": 39.071574034603834,
+        "max_projection_pcc": 0.9220778977526339,
+        "max_projection_ssim": 0.9123461785838096,
+        "high_signal_mae": 0.022104341956038602,
+        "fraction_outside_0_1": 0.0,
+        "ilm_opl_pcc": 0.9654857813665065,
+        "ilm_opl_ssim": 0.9537440465052262,
+        "ilm_opl_mae": 0.020106876609816027,
+        "empty_rays": 0
+      },
+      "train_outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.0062417260643855554,
+            "mse": 0.00013450890699985866,
+            "psnr": 38.71248956309822,
+            "max_projection_pcc": 0.9220778977526339,
+            "max_projection_ssim": 0.9123461785838096,
+            "high_signal_mae": 0.022104341956038602,
+            "fraction_outside_0_1": 0.43027210235595703
+          },
+          "final_clamp": {
+            "mae": 0.005001633590258403,
+            "mse": 0.0001238347684814876,
+            "psnr": 39.071574034603834,
+            "max_projection_pcc": 0.9220778977526339,
+            "max_projection_ssim": 0.9123461785838096,
+            "high_signal_mae": 0.022104341956038602,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.9654857813665065,
+            "ilm_opl_ssim": 0.9537440465052262,
+            "ilm_opl_mae": 0.020106876609816027,
+            "empty_rays": 0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.021818282459398097,
+            "mse": 0.0015117978350121495,
+            "psnr": 28.205062809306195,
+            "max_projection_pcc": 0.3208310910824319,
+            "max_projection_ssim": 0.3152392133919124,
+            "high_signal_mae": 0.08155763451597357,
+            "fraction_outside_0_1": 0.11035442352294922
+          },
+          "final_clamp": {
+            "mae": 0.020390701673518197,
+            "mse": 0.0014100776116869214,
+            "psnr": 28.507569828058017,
+            "max_projection_pcc": 0.3208310910824319,
+            "max_projection_ssim": 0.3152392133919124,
+            "high_signal_mae": 0.08079541649384524,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.5169160408987618,
+            "ilm_opl_ssim": 0.4313587287793871,
+            "ilm_opl_mae": 0.07063189166615302,
+            "empty_rays": 0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.023061677369362155,
+            "mse": 0.0016721260075522033,
+            "psnr": 27.767309982351623,
+            "max_projection_pcc": 0.2833803437300495,
+            "max_projection_ssim": 0.2884205953853344,
+            "high_signal_mae": 0.08556110183152955,
+            "fraction_outside_0_1": 0.11817550659179688
+          },
+          "final_clamp": {
+            "mae": 0.021453407466211938,
+            "mse": 0.0015493942649814872,
+            "psnr": 28.098380558893048,
+            "max_projection_pcc": 0.2833803437300495,
+            "max_projection_ssim": 0.2884205953853344,
+            "high_signal_mae": 0.08454630310034966,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.46221158290996384,
+            "ilm_opl_ssim": 0.378326753779806,
+            "ilm_opl_mae": 0.0738235211074425,
+            "empty_rays": 0
+          }
+        }
+      },
+      "train_teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.00013450891128741205
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.00032107633887790143
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.0003209412971045822
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.0005909591563977301
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 0.004152403678745031
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 0.011025666259229183
+        }
+      ],
+      "held_out_patient_macro": {
+        "mae": 0.021343370591120542,
+        "psnr": 26.501828666419225,
+        "max_projection_pcc": 0.12703406726252775,
+        "max_projection_ssim": 0.14233006586653632,
+        "ilm_opl_pcc": 0.2410535492111461,
+        "ilm_opl_ssim": 0.15940024620312765,
+        "ilm_opl_mae": 0.08352050280275591
+      }
+    },
+    "fm_half_start": {
+      "primary_steps": 8,
+      "successful_updates": 2400,
+      "amp_skipped_updates": 0,
+      "zero_time_updates": 1200,
+      "peak_allocated_bytes": 1949819904,
+      "elapsed_seconds": 237.63101265195291,
+      "train_primary": {
+        "mae": 0.008927311859421416,
+        "mse": 0.0003330532833781965,
+        "psnr": 34.77486280529855,
+        "max_projection_pcc": 0.7607361623850584,
+        "max_projection_ssim": 0.7410462917881828,
+        "high_signal_mae": 0.037707866508078045,
+        "fraction_outside_0_1": 0.0,
+        "ilm_opl_pcc": 0.8785341686682689,
+        "ilm_opl_ssim": 0.8369033086633002,
+        "ilm_opl_mae": 0.036984164794148455,
+        "empty_rays": 0
+      },
+      "train_outputs": {
+        "1": {
+          "raw": {
+            "mae": 0.009040490260956102,
+            "mse": 0.0003135217484070377,
+            "psnr": 35.037323276065955,
+            "max_projection_pcc": 0.7702610472927106,
+            "max_projection_ssim": 0.7425531881654305,
+            "high_signal_mae": 0.035966792516628106,
+            "fraction_outside_0_1": 0.2759408950805664
+          },
+          "final_clamp": {
+            "mae": 0.008125472711730919,
+            "mse": 0.00030395675049191197,
+            "psnr": 35.171882070456775,
+            "max_projection_pcc": 0.7702610472927106,
+            "max_projection_ssim": 0.7425531881654305,
+            "high_signal_mae": 0.03596640207287724,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.8891207194584526,
+            "ilm_opl_ssim": 0.8415564890778164,
+            "ilm_opl_mae": 0.035758914488496885,
+            "empty_rays": 0
+          }
+        },
+        "8": {
+          "raw": {
+            "mae": 0.009790937082065576,
+            "mse": 0.00034537047991828015,
+            "psnr": 34.617147859245655,
+            "max_projection_pcc": 0.7607361623850584,
+            "max_projection_ssim": 0.7410462917881828,
+            "high_signal_mae": 0.03770891022855092,
+            "fraction_outside_0_1": 0.2314472198486328
+          },
+          "final_clamp": {
+            "mae": 0.008927311859421416,
+            "mse": 0.0003330532833781965,
+            "psnr": 34.77486280529855,
+            "max_projection_pcc": 0.7607361623850584,
+            "max_projection_ssim": 0.7410462917881828,
+            "high_signal_mae": 0.037707866508078045,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.8785341686682689,
+            "ilm_opl_ssim": 0.8369033086633002,
+            "ilm_opl_mae": 0.036984164794148455,
+            "empty_rays": 0
+          }
+        },
+        "32": {
+          "raw": {
+            "mae": 0.010166357929017766,
+            "mse": 0.00037232431172807515,
+            "psnr": 34.290786046502014,
+            "max_projection_pcc": 0.7484757049262639,
+            "max_projection_ssim": 0.7310409970430926,
+            "high_signal_mae": 0.03890301850145815,
+            "fraction_outside_0_1": 0.24952125549316406
+          },
+          "final_clamp": {
+            "mae": 0.009176998156943061,
+            "mse": 0.00035704313613146605,
+            "psnr": 34.472793114727914,
+            "max_projection_pcc": 0.7484757049262639,
+            "max_projection_ssim": 0.7310409970430926,
+            "high_signal_mae": 0.038900327905569104,
+            "fraction_outside_0_1": 0.0,
+            "ilm_opl_pcc": 0.8689432330712237,
+            "ilm_opl_ssim": 0.8292517756930288,
+            "ilm_opl_mae": 0.03780195796139196,
+            "empty_rays": 0
+          }
+        }
+      },
+      "train_teacher": [
+        {
+          "time": 0.0,
+          "velocity_mse": 0.00031352174119092524
+        },
+        {
+          "time": 0.01,
+          "velocity_mse": 0.00030322372913360596
+        },
+        {
+          "time": 0.05,
+          "velocity_mse": 0.0002414373157080263
+        },
+        {
+          "time": 0.1,
+          "velocity_mse": 0.00018361648835707456
+        },
+        {
+          "time": 0.5,
+          "velocity_mse": 7.028342952253297e-05
+        },
+        {
+          "time": 0.9,
+          "velocity_mse": 8.421308302786201e-05
+        }
+      ],
+      "held_out_patient_macro": {
+        "mae": 0.019609937441083386,
+        "psnr": 28.588652506453464,
+        "max_projection_pcc": 0.19606589237959002,
+        "max_projection_ssim": 0.20474736215406528,
+        "ilm_opl_pcc": 0.3284956109080529,
+        "ilm_opl_ssim": 0.24005626738303995,
+        "ilm_opl_mae": 0.07106832518222461
+      }
+    }
+  }
+}

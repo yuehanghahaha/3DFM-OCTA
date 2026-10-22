@@ -1,0 +1,166 @@
+{
+  "status": "passed",
+  "n": 16,
+  "records": [
+    {
+      "case": "10301",
+      "split": "train",
+      "patch": "y064_x064",
+      "target_mean": 0.02223312109708786,
+      "target_std": 0.057970188558101654,
+      "target_projection_std": 0.09351126104593277,
+      "annotation_occupancy": 0.45361328125,
+      "empty_rays": 0
+    },
+    {
+      "case": "10301",
+      "split": "train",
+      "patch": "y120_x120",
+      "target_mean": 0.015372950583696365,
+      "target_std": 0.049879640340805054,
+      "target_projection_std": 0.07027450948953629,
+      "annotation_occupancy": 0.149169921875,
+      "empty_rays": 0
+    },
+    {
+      "case": "10304",
+      "split": "train",
+      "patch": "y064_x064",
+      "target_mean": 0.022568276152014732,
+      "target_std": 0.05943188816308975,
+      "target_projection_std": 0.11215346306562424,
+      "annotation_occupancy": 0.373291015625,
+      "empty_rays": 0
+    },
+    {
+      "case": "10304",
+      "split": "train",
+      "patch": "y120_x120",
+      "target_mean": 0.01638793759047985,
+      "target_std": 0.0518609955906868,
+      "target_projection_std": 0.06767123192548752,
+      "annotation_occupancy": 0.088623046875,
+      "empty_rays": 0
+    },
+    {
+      "case": "10310",
+      "split": "train",
+      "patch": "y064_x064",
+      "target_mean": 0.04148917272686958,
+      "target_std": 0.09782584011554718,
+      "target_projection_std": 0.09128437936306,
+      "annotation_occupancy": 0.435302734375,
+      "empty_rays": 0
+    },
+    {
+      "case": "10310",
+      "split": "train",
+      "patch": "y120_x120",
+      "target_mean": 0.03989246115088463,
+      "target_std": 0.08688122779130936,
+      "target_projection_std": 0.08153305947780609,
+      "annotation_occupancy": 0.279052734375,
+      "empty_rays": 0
+    },
+    {
+      "case": "10439",
+      "split": "train",
+      "patch": "y064_x064",
+      "target_mean": 0.013140725903213024,
+      "target_std": 0.03958337381482124,
+      "target_projection_std": 0.07148124277591705,
+      "annotation_occupancy": 0.239990234375,
+      "empty_rays": 0
+    },
+    {
+      "case": "10439",
+      "split": "train",
+      "patch": "y120_x120",
+      "target_mean": 0.006601282395422459,
+      "target_std": 0.024202555418014526,
+      "target_projection_std": 0.04759972169995308,
+      "annotation_occupancy": 0.111083984375,
+      "empty_rays": 0
+    },
+    {
+      "case": "10319",
+      "split": "validation",
+      "patch": "y064_x064",
+      "target_mean": 0.021397139877080917,
+      "target_std": 0.055525410920381546,
+      "target_projection_std": 0.09860546141862869,
+      "annotation_occupancy": 0.475830078125,
+      "empty_rays": 0
+    },
+    {
+      "case": "10319",
+      "split": "validation",
+      "patch": "y120_x120",
+      "target_mean": 0.01468401774764061,
+      "target_std": 0.045372799038887024,
+      "target_projection_std": 0.08144541084766388,
+      "annotation_occupancy": 0.18017578125,
+      "empty_rays": 0
+    },
+    {
+      "case": "10447",
+      "split": "validation",
+      "patch": "y064_x064",
+      "target_mean": 0.013375278562307358,
+      "target_std": 0.041089028120040894,
+      "target_projection_std": 0.11219514906406403,
+      "annotation_occupancy": 0.262451171875,
+      "empty_rays": 0
+    },
+    {
+      "case": "10447",
+      "split": "validation",
+      "patch": "y120_x120",
+      "target_mean": 0.011056305840611458,
+      "target_std": 0.0391252301633358,
+      "target_projection_std": 0.0990496575832367,
+      "annotation_occupancy": 0.076171875,
+      "empty_rays": 0
+    },
+    {
+      "case": "10456",
+      "split": "validation",
+      "patch": "y064_x064",
+      "target_mean": 0.02383842132985592,
+      "target_std": 0.06321031600236893,
+      "target_projection_std": 0.11591940373182297,
+      "annotation_occupancy": 0.46728515625,
+      "empty_rays": 0
+    },
+    {
+      "case": "10456",
+      "split": "validation",
+      "patch": "y120_x120",
+      "target_mean": 0.01240862999111414,
+      "target_std": 0.044586099684238434,
+      "target_projection_std": 0.08336682617664337,
+      "annotation_occupancy": 0.15673828125,
+      "empty_rays": 0
+    },
+    {
+      "case": "10302",
+      "split": "validation",
+      "patch": "y064_x064",
+      "target_mean": 0.022381948307156563,
+      "target_std": 0.058940012007951736,
+      "target_projection_std": 0.09943462163209915,
+      "annotation_occupancy": 0.462158203125,
+      "empty_rays": 0
+    },
+    {
+      "case": "10302",
+      "split": "validation",
+      "patch": "y120_x120",
+      "target_mean": 0.01800493523478508,
+      "target_std": 0.053159862756729126,
+      "target_projection_std": 0.10092189162969589,
+      "annotation_occupancy": 0.347900390625,
+      "empty_rays": 0
+    }
+  ]
+}

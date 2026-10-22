@@ -1,0 +1,60 @@
+{
+  "arm": "08_flowoct_wavelet_only",
+  "config": {
+    "schema": "flowoct_velocity_only_256cube_v1",
+    "seed": 20261021,
+    "step_seed_base": 202610220000,
+    "updates": 400,
+    "eval_every": 200,
+    "training_case": "10301",
+    "validation_cases": [
+      "10319",
+      "10447",
+      "10456",
+      "10302"
+    ],
+    "shape_ZYX": [
+      256,
+      256,
+      256
+    ],
+    "arms": {
+      "07_flowoct_fm_only": "pixel",
+      "08_flowoct_wavelet_only": "haar2d"
+    },
+    "lr": 0.0002,
+    "beta": 0.5,
+    "train_slices": 0,
+    "network_chunk": 8,
+    "inference_chunk": 16,
+    "pixel_network_chunk": 2,
+    "pixel_inference_chunk": 4,
+    "velocity_weight": 10.0,
+    "velocity_roi": "Unchanged author _cropped_l2_loss; prediction/target bounding-box union",
+    "auxiliary_losses": {
+      "reconstruction": 0,
+      "contrastive": 0,
+      "projection": 0
+    },
+    "amp": false,
+    "gradient_clipping": false,
+    "data_protocol": "Reuse frozen central256 cubes, /255, no resize/minmax/augmentation",
+    "solvers": [
+      "native3",
+      "shared8"
+    ],
+    "comparison_boundary": "Same backbone defaults; pixel 1-channel full-resolution input versus Haar 4-channel half-resolution input. No parameter-count or compute matching."
+  },
+  "selection_sha256": "756211a481c96fc286f62915d6eb8c171778d3648d6e694e87fb2743d31c3759",
+  "sources": {
+    "run_flowoct_ablation.py": "abc6ee5b1c419314732efe6903b250e61b17ab555a5c1b2e1a7093c1743b786b",
+    "flowoct_velocity_only.py": "ed4315a1a6620435c7ccf45bdd58bf6fa98a5f76d2a1b98a016d8d3fed9dd13c",
+    "engine.py": "d296fb5a495398384e2998b01dcba653633ef562704420f39958cf08e8d46ac4",
+    "flowoct_control.py": "50812c54975a03679314786d4dc425f472c15ac89142443bc3c34376cbc049f1",
+    "source/flowoct/__init__.py": "c5d9125502b98e89d98e94b99a0675b085dd010e9ae7e194d5199651125b8741",
+    "source/flowoct/model.py": "9c4e1350dd2926120f7f00e2b569313c08369e6d893a45ae1d1a4f8a860dae1e",
+    "source/flowoct/roi.py": "1c729065c592c28d1a86d328dbae7ebd883d2f7153c910d0db13f5a149dd30e0",
+    "source/flowoct/wavelet_functions.py": "33623b3e9b8d59df0227a840f88db4789095d3449e820e6454a31499ed3d156f",
+    "source/flowoct/wavelets.py": "02625d63ff997de3af1633f0fa511021d74212dabbc984162218e0bf8f594768"
+  }
+}

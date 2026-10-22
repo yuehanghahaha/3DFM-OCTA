@@ -1,0 +1,226 @@
+[
+  {
+    "id": "train_10301_y064_x064",
+    "case_id": "10301",
+    "patient_id": "10301",
+    "split": "train",
+    "origin_ZYX": [
+      0,
+      64,
+      64
+    ],
+    "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10301_y064_x064.npz",
+    "sha256": "078eb3c16579c634b8594517c287e44738df2f973853bc2c5606f3397179858f",
+    "shape": [
+      1,
+      1,
+      256,
+      64,
+      64
+    ],
+    "oct_range": [
+      0.1039215698838234,
+      0.9058823585510254
+    ],
+    "octa_range": [
+      0.0,
+      0.6764705777168274
+    ]
+  },
+  {
+    "id": "train_10301_y120_x120",
+    "case_id": "10301",
+    "patient_id": "10301",
+    "split": "train",
+    "origin_ZYX": [
+      0,
+      120,
+      120
+    ],
+    "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10301_y120_x120.npz",
+    "sha256": "d2fbe7824e06e0b109c6937f5f7456051d37768b5fb9a76a38f340c916044c6f",
+    "shape": [
+      1,
+      1,
+      256,
+      64,
+      64
+    ],
+    "oct_range": [
+      0.1147058829665184,
+      0.9813725352287292
+    ],
+    "octa_range": [
+      0.0,
+      0.704901933670044
+    ]
+  },
+  {
+    "id": "train_10303_y064_x064",
+    "case_id": "10303",
+    "patient_id": "10303",
+    "split": "train",
+    "origin_ZYX": [
+      0,
+      64,
+      64
+    ],
+    "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10303_y064_x064.npz",
+    "sha256": "96a66d9112d96d9464add4446ebef9eb3e9dc6edc737446e1d50933f725695e8",
+    "shape": [
+      1,
+      1,
+      256,
+      64,
+      64
+    ],
+    "oct_range": [
+      0.13137255609035492,
+      0.9333333373069763
+    ],
+    "octa_range": [
+      0.0,
+      0.7941176295280457
+    ]
+  },
+  {
+    "id": "train_10303_y120_x120",
+    "case_id": "10303",
+    "patient_id": "10303",
+    "split": "train",
+    "origin_ZYX": [
+      0,
+      120,
+      120
+    ],
+    "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10303_y120_x120.npz",
+    "sha256": "11e2de90636ee2e4dd3d50c6d3b36d5aa478770b26a678bc5fc8c00183e86880",
+    "shape": [
+      1,
+      1,
+      256,
+      64,
+      64
+    ],
+    "oct_range": [
+      0.11666666716337204,
+      0.949999988079071
+    ],
+    "octa_range": [
+      0.0,
+      0.6421568393707275
+    ]
+  },
+  {
+    "id": "validation_10302_y064_x064",
+    "case_id": "10302",
+    "patient_id": "10302",
+    "split": "validation",
+    "origin_ZYX": [
+      0,
+      64,
+      64
+    ],
+    "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10302_y064_x064.npz",
+    "sha256": "80071c905c58ec5963443a5e9abc3ad57a2daf0119308aa9a780eebb38849fbe",
+    "shape": [
+      1,
+      1,
+      256,
+      64,
+      64
+    ],
+    "oct_range": [
+      0.1147058829665184,
+      0.9450980424880981
+    ],
+    "octa_range": [
+      0.0,
+      0.9882352948188782
+    ]
+  },
+  {
+    "id": "validation_10302_y120_x120",
+    "case_id": "10302",
+    "patient_id": "10302",
+    "split": "validation",
+    "origin_ZYX": [
+      0,
+      120,
+      120
+    ],
+    "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10302_y120_x120.npz",
+    "sha256": "38c8d5093dafaa5ad3fbe1bd9ea650c62cd321bc3be33d83c417d3c9d6b08fcd",
+    "shape": [
+      1,
+      1,
+      256,
+      64,
+      64
+    ],
+    "oct_range": [
+      0.12254901975393295,
+      0.9215686321258545
+    ],
+    "octa_range": [
+      0.0,
+      0.699999988079071
+    ]
+  },
+  {
+    "id": "validation_10319_y064_x064",
+    "case_id": "10319",
+    "patient_id": "10319",
+    "split": "validation",
+    "origin_ZYX": [
+      0,
+      64,
+      64
+    ],
+    "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10319_y064_x064.npz",
+    "sha256": "7cd6eba6c1cc9bb8964f063ac85952bd0649560f0a1affbdbcdd79b489053a3b",
+    "shape": [
+      1,
+      1,
+      256,
+      64,
+      64
+    ],
+    "oct_range": [
+      0.09607843309640884,
+      0.8303921818733215
+    ],
+    "octa_range": [
+      0.0,
+      0.7745097875595093
+    ]
+  },
+  {
+    "id": "validation_10319_y120_x120",
+    "case_id": "10319",
+    "patient_id": "10319",
+    "split": "validation",
+    "origin_ZYX": [
+      0,
+      120,
+      120
+    ],
+    "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10319_y120_x120.npz",
+    "sha256": "13b418f543cca1f9909ea62c64e499939dab3ce71b633e6d3a9c69a49980dba6",
+    "shape": [
+      1,
+      1,
+      256,
+      64,
+      64
+    ],
+    "oct_range": [
+      0.09607843309640884,
+      0.9558823704719543
+    ],
+    "octa_range": [
+      0.0,
+      0.658823549747467
+    ]
+  }
+]

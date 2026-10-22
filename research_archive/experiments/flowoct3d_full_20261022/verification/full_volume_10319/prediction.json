@@ -1,0 +1,25 @@
+{
+  "checkpoint": "D:\\data\\code\\keyan_fuxian\\FlowOCT\\experiments\\flowoct3d_full_20261022\\03_full\\few_case\\latest.pt",
+  "checkpoint_sha256": "99b6ec7fcb4eb06bc3ca2353db69fb6c11ff90ae851e0a369589f0d5c82e47a7",
+  "updates": 800,
+  "config": {
+    "axis_order": "ZYX",
+    "intensity_scale": 255.0,
+    "depth": 256,
+    "layers_dir": null,
+    "losses": {
+      "native_depth": 640
+    }
+  },
+  "ode_steps": 8,
+  "patch": [
+    256,
+    64,
+    64
+  ],
+  "overlap": 0.5,
+  "amp": true,
+  "source_only_generation": true,
+  "cases": [],
+  "summary": null
+}

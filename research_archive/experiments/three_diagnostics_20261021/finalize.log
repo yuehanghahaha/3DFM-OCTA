@@ -1,0 +1,15 @@
+{
+  "snapshot_hashes_unchanged": true,
+  "copied_production_source_hashes_unchanged": true,
+  "no_test_cases": true,
+  "completed": "2026-10-21T22:07:13.210807+08:00",
+  "original_production_python_sources_unchanged": true,
+  "stages_complete": {
+    "experiment1_supervised": true,
+    "experiment1_same_backbone": true,
+    "experiment2_velocity": true,
+    "experiment3_formulas": true,
+    "posthoc_layers": true
+  },
+  "gpu_state": "index, memory.used [MiB], utilization.gpu [%]\n0, 1 MiB, 0 %\n1, 11825 MiB, 77 %\n"
+}

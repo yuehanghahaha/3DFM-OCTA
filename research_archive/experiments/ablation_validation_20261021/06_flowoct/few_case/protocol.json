@@ -1,0 +1,82 @@
+{
+  "config": {
+    "name": "06_flowoct",
+    "model": "FlowOCT public 2D code",
+    "axis_adapter": "ZYX -> YXZ; inverse after generation",
+    "normalization": "Use frozen [0,1] tensors exactly; no new minmax/resize/crop/flip",
+    "lr": 0.0002,
+    "beta": 0.5,
+    "train_slices": 0,
+    "network_chunk": 0,
+    "inference_chunk": 16,
+    "amp": false,
+    "grad_clip": null,
+    "weights": {
+      "velocity": 10.0,
+      "reconstruction": 0.5,
+      "contrastive": 0.005,
+      "projection": 0.1
+    },
+    "native_solver": {
+      "steps": 3,
+      "clamp": "each Euler step"
+    },
+    "shared_solver": {
+      "steps": 8,
+      "clamp": "final only"
+    },
+    "eval_every": 200,
+    "seed": 20261021
+  },
+  "suite": {
+    "schema": "fm3d_small_patient_ablation_v1",
+    "seed": 20261021,
+    "patch_ZYX": [
+      256,
+      64,
+      64
+    ],
+    "base_channels": 16,
+    "condition": true,
+    "intensity_scale": 255,
+    "axis_order": "ZYX",
+    "lr": 0.0002,
+    "weight_decay": 0.0,
+    "grad_clip": 1.0,
+    "amp": true,
+    "ode_steps": 8,
+    "checkpoint_rollout": false,
+    "eval_every": 200,
+    "batch_size": 1,
+    "time_sampling": "uniform [0,1); same precomputed sequence for all arms",
+    "selection_metric": "validation patient-macro ILM-OPL SSIM; equal-budget last checkpoints also reported",
+    "stages": [
+      {
+        "name": "one_case",
+        "updates": 400,
+        "seed": 20261022
+      },
+      {
+        "name": "few_case",
+        "updates": 800,
+        "seed": 20261023
+      }
+    ],
+    "comparison": "Each stage starts from scratch; one_case and few_case are independent, not continued training"
+  },
+  "stage": {
+    "name": "few_case",
+    "updates": 800,
+    "seed": 20261023
+  },
+  "selection_sha256": "bac002ac2c30b72c594b5ef58ac717dbcd9f5c873ee2b6305c16bbd6c67548fd",
+  "source_sha256": {
+    "flowoct_control.py": "50812c54975a03679314786d4dc425f472c15ac89142443bc3c34376cbc049f1",
+    "engine.py": "d296fb5a495398384e2998b01dcba653633ef562704420f39958cf08e8d46ac4",
+    "source/flowoct/__init__.py": "c5d9125502b98e89d98e94b99a0675b085dd010e9ae7e194d5199651125b8741",
+    "source/flowoct/model.py": "9c4e1350dd2926120f7f00e2b569313c08369e6d893a45ae1d1a4f8a860dae1e",
+    "source/flowoct/roi.py": "1c729065c592c28d1a86d328dbae7ebd883d2f7153c910d0db13f5a149dd30e0",
+    "source/flowoct/wavelet_functions.py": "33623b3e9b8d59df0227a840f88db4789095d3449e820e6454a31499ed3d156f",
+    "source/flowoct/wavelets.py": "02625d63ff997de3af1633f0fa511021d74212dabbc984162218e0bf8f594768"
+  }
+}

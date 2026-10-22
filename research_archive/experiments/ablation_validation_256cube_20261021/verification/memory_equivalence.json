@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "status": "passed",
+      "forward_and_all_parameter_gradients_match": true
+    },
+    {
+      "representation": "voxel",
+      "free8_full_loss_and_gradients_match": true
+    },
+    {
+      "representation": "haar3d",
+      "free8_full_loss_and_gradients_match": true
+    }
+  ]
+}

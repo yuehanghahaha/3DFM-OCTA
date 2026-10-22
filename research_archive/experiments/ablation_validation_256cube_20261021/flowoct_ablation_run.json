@@ -1,0 +1,21 @@
+{
+  "state": "running",
+  "host": "research-server.example.org",
+  "remote_directory": "/srv/oct_research/fm3d_validation_256cube_20261021",
+  "tmux_session": "lyh_flowoct_ablation256_20261022",
+  "physical_gpu": 0,
+  "arms": [
+    "07_flowoct_fm_only",
+    "08_flowoct_wavelet_only"
+  ],
+  "updates_per_arm": 400,
+  "planned_successful_updates": 800,
+  "expected_new_predictions": 20,
+  "training_case": "10301",
+  "validation_cases": [
+    "10319",
+    "10447",
+    "10456",
+    "10302"
+  ]
+}

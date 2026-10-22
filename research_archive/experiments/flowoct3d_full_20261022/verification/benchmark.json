@@ -1,0 +1,50 @@
+[
+  {
+    "arm": "01_voxel_fm",
+    "updates": 3,
+    "attempts": 3,
+    "seconds_per_update": 0.4948925666685682,
+    "peak_allocated_bytes": 1945025024,
+    "losses": {
+      "loss": 0.01631418615579605,
+      "fm": 0.01631418615579605,
+      "reconstruction": 0.0,
+      "projection": 0.0,
+      "rdca": 0.0,
+      "foreground_fraction": 1.0,
+      "rdca_planes": 0.0
+    }
+  },
+  {
+    "arm": "02_haar_fm",
+    "updates": 3,
+    "attempts": 3,
+    "seconds_per_update": 0.05585906666722925,
+    "peak_allocated_bytes": 317295616,
+    "losses": {
+      "loss": 0.06752470880746841,
+      "fm": 0.06752470880746841,
+      "reconstruction": 0.0,
+      "projection": 0.0,
+      "rdca": 0.0,
+      "foreground_fraction": 1.0,
+      "rdca_planes": 0.0
+    }
+  },
+  {
+    "arm": "03_full",
+    "updates": 3,
+    "attempts": 3,
+    "seconds_per_update": 0.21019833333169421,
+    "peak_allocated_bytes": 375926784,
+    "losses": {
+      "loss": 0.2785758674144745,
+      "fm": 0.13805195689201355,
+      "reconstruction": 0.18590159714221954,
+      "projection": 0.3059726357460022,
+      "rdca": 3.3951706886291504,
+      "foreground_fraction": 0.16407299041748047,
+      "rdca_planes": 32.0
+    }
+  }
+]

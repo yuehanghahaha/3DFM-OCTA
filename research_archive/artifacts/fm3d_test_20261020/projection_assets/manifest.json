@@ -1,0 +1,720 @@
+{
+  "split": "test",
+  "case_ids": [
+    "10305",
+    "10307",
+    "10317",
+    "10318",
+    "10321",
+    "10322",
+    "10325",
+    "10326",
+    "10327",
+    "10328",
+    "10330",
+    "10331",
+    "10332",
+    "10341",
+    "10342",
+    "10347",
+    "10351",
+    "10355",
+    "10356",
+    "10358",
+    "10359",
+    "10362",
+    "10363",
+    "10365",
+    "10367",
+    "10379",
+    "10394",
+    "10395",
+    "10404",
+    "10410",
+    "10415",
+    "10420",
+    "10421",
+    "10423",
+    "10425",
+    "10430",
+    "10433",
+    "10446",
+    "10448",
+    "10454",
+    "10460",
+    "10467",
+    "10472",
+    "10475",
+    "10476",
+    "10484",
+    "10494",
+    "10497",
+    "10498",
+    "10499"
+  ],
+  "cases": [
+    {
+      "case_id": "10305",
+      "source_sha256": {
+        "layers": "a0eaf4bd6ce56d7f4ad4fad7600aee96df0158b41ed6c0d42dc2a111ae405151",
+        "FULL": "06d3b404fff5eb085f8ae49d3e632a63f5e098f96c878dd5238e1f214b1fdc1a",
+        "ILM_OPL": "252db7b38992838b3af44a092cccbf5546333522e78495dbbe466d1c94829d7d",
+        "OPL_BM": "8d03190b20968d6039ce854ca1e5a0f6577e917025643b56b50b6752159b4f74"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10307",
+      "source_sha256": {
+        "layers": "2884bf5d4d6b89e736928bf7b5dc12da9eb9fbd61b2aa35c31dc487312f7159f",
+        "FULL": "87df87176b5bf6eec31c87c3d62f1ac5299518430aa7c4367e80e1e4589cbaf9",
+        "ILM_OPL": "bfe5b3a7c41fc74cbb64f9d7ef762c36096fb5bb68ba7f0dfac40145e4e0365d",
+        "OPL_BM": "f781108a1cb97d06f2252deb7ed71e028e507968989acaf14bd9be3775e6a859"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10317",
+      "source_sha256": {
+        "layers": "213e075e3a7a28993939ec9c0e7e3f37346a6779db94e766270fe10758cc152f",
+        "FULL": "77d545014ddce5d3a4eb2e78e65ff7517a7dd8b7216cf01e8f2e5c22422019cd",
+        "ILM_OPL": "aea4f0c3d1ee3ca61205df4cc617edc0c05e91d71933d992ecace5260f781064",
+        "OPL_BM": "f68832e4a33461bf386ef52bfa240e67693d0a69cd1ab912dba0bf50a54bd20f"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10318",
+      "source_sha256": {
+        "layers": "d1b53d3c88ae9615d8119e91b5bc63bb853e85db05e8d68a6dfe6dff51ffe851",
+        "FULL": "4a90cf6a623979b889c2b9a5403578ed1fb3cef7dde68b29b2686d7af6cc359c",
+        "ILM_OPL": "fd6f3324cfbfccc1fc41df3cdc2ef178cd62db080ec8b21e4ea998c881627e6e",
+        "OPL_BM": "d63ee2d1e30c9c8a346de0ccf3786001577454894754c2140ea5d71c2bbbc07f"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10321",
+      "source_sha256": {
+        "layers": "855d4d7c85810226163cd71ab06aecf9e25a36db536ff4ee4023c042906e0ef2",
+        "FULL": "ec6afa586f4cdb5f9e77b62d381a9b38af80ab48f2c75fbfa52c0d85f26cc82f",
+        "ILM_OPL": "78ca787324b4842c7622dd481a4865a6fc53a79cdda87d08130db41123aef1ee",
+        "OPL_BM": "e170739a4d56c06c99eea3e6ad9a8d5092746c03146bd7d99026aacc0feb16b1"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10322",
+      "source_sha256": {
+        "layers": "c6354c995c7ebe539bf356b8a83f4194d1cc759c657a369428dc5a1b465b4d43",
+        "FULL": "33c1dae0e133b54d13c3689fd8e9a7fa455594f20a3de469819fdc533a6c7cba",
+        "ILM_OPL": "ca8cc290b34aaf73ba0f0b6e18af7f44c5500946f9ef1bf6ebba4a54639ef291",
+        "OPL_BM": "c2d628b80aac1ea32860ecf3aaa5fe67e3d049bfa9fb89d207c5410b4ca440f0"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10325",
+      "source_sha256": {
+        "layers": "b39098413e8329395543e92eb2782a48ea1d613f4500cfd263c8b8ebb7c5dda7",
+        "FULL": "50b8654a2ba71d756e350838a3aee3f4be532029c367def807f1a600c9a434b5",
+        "ILM_OPL": "efd731673e511f6d23ad6a84ced008e64f915bcd5c2b8e12163b5c03b9fc62e7",
+        "OPL_BM": "bec9df27986adc391d2dae76ca68e743073462e866fff6feea2448d815e525dd"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10326",
+      "source_sha256": {
+        "layers": "d441214842730cb03f50686bb811aa9c9aa1b46d58494e8f69bcbc042680bea0",
+        "FULL": "3d78d37ab4e65b8670a052de98150e6199520033ac0bb24b2eb55ce2703f3ce9",
+        "ILM_OPL": "2881e651f1afa17b07a59eb11c20129e49d1a28456e091a2f51a5d2476692ff1",
+        "OPL_BM": "f4e413e595b0f01169daacc1ca9d1836a67c8436290f45c13c3791cfeb21f03d"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10327",
+      "source_sha256": {
+        "layers": "2e5a09353f710ddf4e9a671aa3b3be5a34ba06a585123d542f13ae2cbe8e9aab",
+        "FULL": "d2c89bd391d9af1faad389b63582a5fbd29491814774c906ea136af3b72dc1d8",
+        "ILM_OPL": "0b88fa148fc0544a60f18fe72a64f4730105d607a578a184f5f0f4063dd5e727",
+        "OPL_BM": "7c8fbf68d3d31fdd3d2c81ed90095c9a8293e120f29f774c068552adbab0cf7c"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10328",
+      "source_sha256": {
+        "layers": "ff814de0c88eb7d4ea62b61aa1e52a15385b31b65e989150b1b7c7ae07c679bc",
+        "FULL": "ee3af2ba2f8922842e22aecd69b644c9517dba5932cb2b43565b53dace74c67b",
+        "ILM_OPL": "234270b08c3e5d4eaca76e55a3d3fd34ed0a18b266751aed46fe6cd546e3978e",
+        "OPL_BM": "bbaa610df363ca84fc47d33db4e4db60aae954239f1c51a04bf85e6612e05ecd"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10330",
+      "source_sha256": {
+        "layers": "fa67d5518baadf738d68894675f2dc0c876b2e958e47c65d587e3afc1db521e1",
+        "FULL": "ff961b019150aa82704b1950292fdc559334cfaaa65d47cad5a6110114d50e5f",
+        "ILM_OPL": "8a1b3cb1126a12f23807bc9209e044f40d579d8688af60dc9f368ca96efdcfef",
+        "OPL_BM": "c81e76fed88404ab8eac4a1d0c6a6a8017cd0f786bdd75130919c19fc594b125"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10331",
+      "source_sha256": {
+        "layers": "ef152ed5829ec694cab65437cd5a1c990d8524b4cc4dc9d620efabde82267d45",
+        "FULL": "2a6e05d3616521cdd261d89e596e56777fe6f79de5451694c556a0c0a3d6ca2b",
+        "ILM_OPL": "36271ae99abcea65834b3fd96ce84b395daf028d84bb12dbf09dfaaad30bed1c",
+        "OPL_BM": "97796151669635fd3f4acbe4fa21783ccccfce5573003d45a8868e2c253f024c"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10332",
+      "source_sha256": {
+        "layers": "db430ac4691327628d080521da2d8e2d60a8b132acf5a8687256dcae50a40f3c",
+        "FULL": "532ce50d6afa5ac585a66daae83eec1533c0451a4ee13915e3ca2fac9cb5c53c",
+        "ILM_OPL": "65e950c9d869808af4d6a0ff52a33f4656eaf65748b92e04ed8adb15ecb1661e",
+        "OPL_BM": "6aa6a4a9e547d6f961693d3a3bb1692922ea8f26343bd2ff37d56c6679f90001"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10341",
+      "source_sha256": {
+        "layers": "442bc6b8feee35628c3981d0cc5f655cc4b0d8c0af71ad3f4ba11137fd764908",
+        "FULL": "9949bc3208ea867daf77d5b2758a25b48bf494b0f1dac6ce546140520f8ce02f",
+        "ILM_OPL": "23e3fec3595360b4c4b5c2874080b940b61d390baf6ef4bf334e25f753e22fe9",
+        "OPL_BM": "686afa0cf93c37ae1ce21a9ce780c3bfd77c0e7a7c9377dae95a8d7723d9a8c9"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10342",
+      "source_sha256": {
+        "layers": "bc5a13d3591ff77294ee7a4ad5f7ded6ba53c6a265e36cba871927deaf3afe8c",
+        "FULL": "1fd00d5a4a762d792be15d1cd7bf8218dd61bc983c6362c7df66ebc7f97cdb25",
+        "ILM_OPL": "276f4da34446dbdcddf4f3685791e5695d89acc5fdbc403f9925c90863cf8839",
+        "OPL_BM": "a2dc616330c825fff3478df81ff50a100151d774a683d2f4dec4e44fdc949477"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10347",
+      "source_sha256": {
+        "layers": "2f8c963e5695b1efb1b4fab03f09897650e47f973751138bcae40c9ff5571231",
+        "FULL": "2a3bbaa7a72097bd10fac814eeed486c1a2177a1b4828788b981dd9a8e411308",
+        "ILM_OPL": "d128666ac8438b837e88350760a4fdae1d17f80641f85156b3b75bd5b0cd0fc8",
+        "OPL_BM": "f7d39a0d17c4384682a3a1bc8332180167e6330fac548c22353b9d7ae9cfe3ef"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10351",
+      "source_sha256": {
+        "layers": "66a5b83680b86f389e3a6556aa34767e7d9334c8ab85df838e76fe54ecdd1c32",
+        "FULL": "a6abdb11e3d15d1e5ba1e9a707d7348f6af9c5130c281dcb54ee0fff69a5c1f8",
+        "ILM_OPL": "898ef160342a190182b7828548e5f970e072ff7e4e0db1a33b5f64b9261182cb",
+        "OPL_BM": "78cd5e4cc446676f05fd30b0e0a7febd53d3c84cc208f91ace2233777aa0382d"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10355",
+      "source_sha256": {
+        "layers": "2eb139214cac26b4cba8107573bbe01d94aacec303b26bd211f45ef8a6abcf57",
+        "FULL": "1bb44ae8709d778d775581a907c9fc7572fd9ffd16bf4096157e6ab902a0349e",
+        "ILM_OPL": "c20c927a2b632cf18260fd4869f8c2ea9cdf3a34eb9c4263de87af8e6eb994f5",
+        "OPL_BM": "e65852cc75388fc8c5b571a0a94d77d08fdd83fda6a63f66cc553ea278c0aa6c"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10356",
+      "source_sha256": {
+        "layers": "c277f3ee41ce9460dc7bc309609af7a94373bf4f7c688d63261881481e7085a5",
+        "FULL": "693d35f0288bdebf96ea1763a956bab986e5606a9c85b7d0e6848b3eb0b9af35",
+        "ILM_OPL": "670f59dedb127f3488c16abd5eca7f51631b0f290a857ac6fcff3dcd856ed2ae",
+        "OPL_BM": "763ec6d7d602576497f829bd6c95df8f59a451a4dce2a97e4bd5c48f8b290a6c"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10358",
+      "source_sha256": {
+        "layers": "07a648eb7c639e0af48488d0f34755f233c877b451e5ee8c9b2855ad0ddf96dd",
+        "FULL": "c64afd7a2eae786d5fd5b66ecada0d4bea90cb67f55d2af4c37cd9c2e4b1ead5",
+        "ILM_OPL": "5d391579bd1956c947e15c278218a888855a5e74c7ed6d2adba22d448a2ddd3c",
+        "OPL_BM": "aecd0b7bac4b84f84a4ce501ff0448c325c95d2c75fd4c33eef4cc95420fdc36"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10359",
+      "source_sha256": {
+        "layers": "308aa268922a59b8dbad3e058d3b92fa7b453aa8f2adcc86895103b84318bf09",
+        "FULL": "ebcb8b627a0a42dccbcfd349eddfd9f499ae1dc72f2d8d28c8de7eae555fdfd0",
+        "ILM_OPL": "01de647485d10aed5abfcbb356f47fadf5221de7c22ac63473e32f16f6510399",
+        "OPL_BM": "4374d24fd239aa7a76f1ca30b9abd8d4be9a142f99c46ec13beccf930453446c"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10362",
+      "source_sha256": {
+        "layers": "9f578102c3a318ee0e400efddf5e0b94771132204cc3a980752d30ebf5985445",
+        "FULL": "b94fd8cc6021d716dd03b7c8bc2425cecba4bec576ad68bb45404daebd7f2829",
+        "ILM_OPL": "6fcdf71b13dc35738d072e7b8668635f311d4a35711c85ae54c4ba94efe55402",
+        "OPL_BM": "de24d126d0e7c953b234ff8616ccbc39b5bcc12fa7aa8ce9d144369fc6a7c710"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10363",
+      "source_sha256": {
+        "layers": "d4f993503e4e52f22c3991c5f31cc9b297d891fccf5adfd390a15804e623e190",
+        "FULL": "b32aefb69ef246d816b4796326ac575391aa53a25a401a5fd248334a9f144c9d",
+        "ILM_OPL": "02d41d1a9f2c9bf858ba893567661e0ad8a783a05a38b2cf16ba2bf884e2ee47",
+        "OPL_BM": "09388f08770efbef5da6ff08be41bc3877d9855a96864046a1c9c6eccda86b3d"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10365",
+      "source_sha256": {
+        "layers": "935c493b4dbbce162a8e2bf837db802cced60337e48cb801559cb098137a741a",
+        "FULL": "ab13f5c1d142c4207165e0b3bf04b3a0ad6d1f762b5aa9b20885e2b0f5c226be",
+        "ILM_OPL": "81560ec89bb8d07cc974267a40766ab99fd6e71b58f7ba91fbccc210234d4d17",
+        "OPL_BM": "744483e63bf06be5c88425119f0ab8d80b14c72bc3417662221d3e1b86d54261"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10367",
+      "source_sha256": {
+        "layers": "1c7b96eb5d6cf4246557506b726ff3a4d764c486559b0f61e6432dc789e28a0e",
+        "FULL": "2b399f900f765611154983e5f1b3217afcf05e45ffc8c8177b0ec77240e89ac7",
+        "ILM_OPL": "3286ebccb7086366270348c3160b3cf63642498b72de1b8f0b03434a0870e6b4",
+        "OPL_BM": "b58fd5038ff0d9bcb0d8f20789c25eabb3dee97f633c56a18e219a44d778619a"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10379",
+      "source_sha256": {
+        "layers": "d41d5a3b9d274c5a95f499055403ed42a46939473f08df3181e65c7c84516f34",
+        "FULL": "5e6a28ff40e6bd888ed855c6c0e6f0975b0dd4ca7697d5795fa9f9fb99471205",
+        "ILM_OPL": "91aa2698720b2d7e8c3a4b80826afa6c7b11a055478fce0cd970e27aa649e953",
+        "OPL_BM": "eb4e52667d462850335a66e753b9dfc9e2116e37172fb1d9c87cfd9f8efb5653"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10394",
+      "source_sha256": {
+        "layers": "81c5eab47340e4a634f422c9056b62912d618bc5e8217e02785f3bf7fc26b830",
+        "FULL": "99011f8dd1db2805449c4476b2f77b0c41a9e8af20416d22fe7125be66baf2ef",
+        "ILM_OPL": "d96777c2a127e4849e3bd7732ea5382a916d899bb8627cfbdb30da35e9b89d98",
+        "OPL_BM": "fa1c60c1df37b37abea6f37eda022f4e2d015f418bc7d068e89e8e5c66a15988"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10395",
+      "source_sha256": {
+        "layers": "ea5235c07c85e9bcdaad45f4cbdcf4754959fa9728c408f5a189306735e2f2d8",
+        "FULL": "60f0423da4ecd998252ebb61d7e65cfe7ce3f3d0e9bd4cddeeed2bcffca1514c",
+        "ILM_OPL": "12986a4d7a8d54b5204d00bafcc709907a226771722c8ae978b3e4c0a276799e",
+        "OPL_BM": "31dac9326f43d1e00a5958af94031201e6c24cf365d4fc3a615f9745f734d087"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10404",
+      "source_sha256": {
+        "layers": "dd5237c3b65530b7258bbd5a4be33332ef741679a2efbdab8aea6bdb82fef2ee",
+        "FULL": "9469de9ee285b8bb81e17a22ac7c424e06721e02a5a9b3e81e38020f4c1eb9e3",
+        "ILM_OPL": "d035c668ec01e3fd4a2fd936c223750554e08475ddca8749f73246a584d383d2",
+        "OPL_BM": "77b7435e20ea09be9a8e3abd66e2b7ae18ca2aa5ff60a85ebc65c2d118e4ee7f"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10410",
+      "source_sha256": {
+        "layers": "7cd92994f3e98687753c20899dbff3d40c8b003851ead6463af9da8918219f20",
+        "FULL": "59890aaab485195b76046d67dbb7d66b7bf2eb90fd498a1ebb86d6458cc8f7bd",
+        "ILM_OPL": "ac39a1ee619a9ebeea71ba99a9c7a21d5f9c61ba5fa1e9a16d8587311cac1f7f",
+        "OPL_BM": "4519d77395bafdabe23b6ad4030a6df276e69852f49a5ad1e895ca2cf30fb840"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10415",
+      "source_sha256": {
+        "layers": "fa9d0b21ca65c93026e5b7e0b40fa1210dfc24f2e48476bcb1b64159829b893a",
+        "FULL": "8403ab48b62ecbd67376767bab2c78faa5388c97f5d6215dde5aba117daa59f9",
+        "ILM_OPL": "3d91af466bc97485eb815afd955bede6cab8b6d3df82e1ede7b9e8086ca63f9c",
+        "OPL_BM": "1783adcdde0c1f98a9407fe2cce48b80f171be0d09786ddf7e5e280df1286df8"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10420",
+      "source_sha256": {
+        "layers": "8da6045f3e7dd3c69ef4b2dc8ceeda35d0f235aa92cbee5c8b5757eda4622d91",
+        "FULL": "cb3537394b74d7de9feab882a0392577f6c7c6e0c84dfeede7b13688c66d925d",
+        "ILM_OPL": "2fd72f995d2bbfd6cd79ea49a5908ea2439c65fa9459b9003da6c0ac0c0b390e",
+        "OPL_BM": "75ac9cfa2fdc60b8a24fb38628dfb1f1fe4749e82851bc1b20e50aba06e8d00b"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10421",
+      "source_sha256": {
+        "layers": "d07fb76e97f45e37424827031b2b732d791a26045c017f14c290de12c137685b",
+        "FULL": "5879eeafd93256a9fba14f8696bd6c8c78931f198449b0446473f5d12ce9326e",
+        "ILM_OPL": "56fae241427a883c5384049f1e767b3f145e1081add8ce562561b289e4408f05",
+        "OPL_BM": "25b8a8287ad1eb11dd78547e513e3534ee01e0be839e8b8e4194153ecf79437b"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10423",
+      "source_sha256": {
+        "layers": "86ce5b0641004fde9205d522aebe95234eb7372baea5c5fda47d26ce46b31bf8",
+        "FULL": "c9835e5ff35a05d5c6c86b3b6b389067fa803d1dcc7c7a56685cd5cbc6020242",
+        "ILM_OPL": "aeab7d97c1d525945772323e368911d23a020a94ff92279e292cba0f9459d3ea",
+        "OPL_BM": "46a9eea110388b076d5ac07c3b39b4bfc6fcceb605128a13c4a4350c08e3bc33"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10425",
+      "source_sha256": {
+        "layers": "ec3b9613021db00fb2848035f563217dcc671d09b76c330e8153f5b8ee905acb",
+        "FULL": "32c8e7d4b35b96c9d460be0427f1a503b95791d71946d27f11fa0c62b14d0a30",
+        "ILM_OPL": "746770a884143cb2f47b725f448f4eff288ee37550813c25cbd352ab5f317e67",
+        "OPL_BM": "3c415ae13b05ddd1f63e567da38373b7992a64e4a4fc9de9ff7d1ee559c6ffb5"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10430",
+      "source_sha256": {
+        "layers": "3af29fbba993076f024c622861a434b2327296c2a25ed0da11f313651973a65b",
+        "FULL": "3c5d1574b2d510be97edaa21da45d9893a574ef696287dc7a1ac6b8dc32e0639",
+        "ILM_OPL": "d2821d12525df0907f18e5613488702a9386c19a471a010fb4562c62179a2894",
+        "OPL_BM": "d8478b29e5292cf44e230aedd040c1c5aed3d465fe2178d0cb98324e3d373c38"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10433",
+      "source_sha256": {
+        "layers": "d9a087eb8af78b7979fb7d99728c7b8241c1c109804288225114085d89655d9c",
+        "FULL": "3fd15da10c3396e38d7d2adcf7cd5f230985f189de00ff4619895bb0ef85c0b7",
+        "ILM_OPL": "e37a82e49f69711f2c645ca7a9a4e1f9567df206df812928fba49ec76045c009",
+        "OPL_BM": "2c2abf0735f864c2bdbe1f323b8757c5bf7ef6b34605b90ad926af4c54866426"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10446",
+      "source_sha256": {
+        "layers": "9280ef50961792ddc49dd1e1b27da8ed7a4612d4f298498cce40501d3d2777fc",
+        "FULL": "0e78c079aa4ab9d5549b1ab1c84856165e1a94c9eae523fb65f8d79c82124a93",
+        "ILM_OPL": "ab34870d915cc0342e6d66384ac739e89a236eea502cfadaeca9559bf711c5ba",
+        "OPL_BM": "b213baded50e4b3a38340fadc91eb0adf5878da5824d4aec56ef07b3dadee352"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10448",
+      "source_sha256": {
+        "layers": "d47b336320bf6dd72961e1e47fe9c2afeaef67d385774f8e5066fea961d841af",
+        "FULL": "39864f655aa46f8a682614ef795ad2a0794a9a1c18b1d8a27a6d6f8de4d28b95",
+        "ILM_OPL": "6301359eea93d6c95d0e91c604b04f456e0b707fb0b32232bc45284064147581",
+        "OPL_BM": "6c0ccaaa1584234a5ed6acad632f1a96b25fb8760309ef26e63aa990a90aeaf5"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10454",
+      "source_sha256": {
+        "layers": "c61bb411f1b2adb343fa123b2c003919fda92f9fbf20f19d718d804f578afec4",
+        "FULL": "8e9b6ac296a847ba2faa2b6f37e05ed030dd31a149f3a498b66effbac8c44b62",
+        "ILM_OPL": "c84d9bb1fbf3f0b51f742e13908c57b7c571a21c5e2230658f8e5414c3857eb2",
+        "OPL_BM": "263412db0e3dc8e6b99be539ed69a6555666f30a6224182c53e623a166721415"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10460",
+      "source_sha256": {
+        "layers": "500a757a93b4e059aa9853ff001e2737280c006c4d6068900ee0585a5a682989",
+        "FULL": "d2ad1b62be3d7b951d59d6b209bdbc5cd70ea6ffab24387b9ad242163ed395aa",
+        "ILM_OPL": "716f667b61fab958016848ce0674e7d33402c3f133e2c3a1dab26ee2931eaa8e",
+        "OPL_BM": "c4ccc14ca307a904bc0d8f5ded140bab1094587113e86418b0e1aabcb79804b2"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10467",
+      "source_sha256": {
+        "layers": "2e180dae350626df81454947e049608671e6af67c94901d878858f3b1eb89fc6",
+        "FULL": "f995f8d960620bcf8a067dfab8aad6b7105edef674e2b1fd3add10b4fd8e09bf",
+        "ILM_OPL": "19eeac19b72b28a7505ba47a3de18dd66b0202f28baaae4f8f18506dba3cde77",
+        "OPL_BM": "f389acb8cba983ce0b7bf83f1931f86661a8a5deb5b63d8155e3434bc9b5df1b"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10472",
+      "source_sha256": {
+        "layers": "6d47ec97ecaceb2c58077fe6c1cc0de46c3cc11ccec02d5ac3990fdb0b07e583",
+        "FULL": "4fa6d5218c98ee6a8dfd0dec0d2249efc3bd121ade3855246f138e801d5be549",
+        "ILM_OPL": "5dbc242ac90239dc557b2e6a30090f422b02e698a50fffcea6078b859907e030",
+        "OPL_BM": "663ce1d863e002bc9407f4e9a65d0b92e3509e61ce5a027817586d323aeca96d"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10475",
+      "source_sha256": {
+        "layers": "fca4518a897005b3258dc4fdc499acd0cdf14290fb66454e3ee1d9ad52affcca",
+        "FULL": "df37455883b77f78ea3cf51b3e164f3cc91fb6a232f87a1c6a19264b68e50138",
+        "ILM_OPL": "a355cdb225102b6bf60de2afeb45e8ad69ae27d90243cdb324384c373a99f7d3",
+        "OPL_BM": "5d2ef9e6d3544c0dc3eaa5d4f8b63027056f7f78213d4e57272640b722071a6f"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10476",
+      "source_sha256": {
+        "layers": "d050cc26723fbfab9ca79e48c178fab3a23b1939795213998dda288ef4dffb9d",
+        "FULL": "c9374c67128b7dea81ce23ebebcdaf432548ec9fdbd0e1e2a981f10e02d4b772",
+        "ILM_OPL": "2107fadd59482e6c1aa58e6badd4c748323598d564735d41abc3abc59eb2c04f",
+        "OPL_BM": "0ef62e878902b90e785c314346acaa2961a9fb0016c4c9e00451937e38d64aee"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10484",
+      "source_sha256": {
+        "layers": "ea31a89b94a74b7c8cc8af3163a6ff174f3462bd9a7aafe213ff19ffe580c6f2",
+        "FULL": "540046d472704c991a1c786a75c45de837389b125536dcb6d6bb13f5fd8ac3d1",
+        "ILM_OPL": "fd3eb62669a8ae9dd0eabc696aa3ed5a040eb76ac58fcfdbe0aba3fce794f2b7",
+        "OPL_BM": "2f0b308426867a5c033b3af7671c52d1da64c298bc98e1e218590de5eb3ad9a2"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10494",
+      "source_sha256": {
+        "layers": "7c6a74f5715182d4bc1f33ef5841eaa84ea3abcbdd22c28b9b99ef62f11b321a",
+        "FULL": "9a8a5f6cad3f6b592dd814ab42aaf128a89f7e81edfe1d074890dbdb024d611f",
+        "ILM_OPL": "6d217f1ee79c862dd6377127f8545b08436b17ad92f4a7dcc78bdc34f3a3564d",
+        "OPL_BM": "3f3bafa0491993b846006bb130aa42116a3c9aaf3825d512d7436eeb123661e6"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10497",
+      "source_sha256": {
+        "layers": "be329d6471941f0b8ec172449d0f007ba5c76100a7d74904c362d7c61f9882be",
+        "FULL": "7a4ac92847735f1d282f975236c35ff2dfe79c0fe012a7d4b463e2b8a27a5495",
+        "ILM_OPL": "d32cc99001fba10954685540513a7f4caac1800dafa70f83a97989be42509b83",
+        "OPL_BM": "6a438c0fab092ca2389837cca855fa640647fb521c8a190f82bbcf44256b55eb"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10498",
+      "source_sha256": {
+        "layers": "c5babcca5565cc6d426ad5127058a9bad5c625d8a8da118ab8d68e96cda0160c",
+        "FULL": "2835a3ce8b75b5b7757c026b04d5949581e875e0493af25617a2f3c4bde5eac6",
+        "ILM_OPL": "d40c81249bd6862a7fe52caf6d635f566402d0d69e6b020803577ae334485110",
+        "OPL_BM": "c6a0e602d9b998317fb2b9a946d3a5768b134d4095d4b136fc35d9d2c46eb234"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    },
+    {
+      "case_id": "10499",
+      "source_sha256": {
+        "layers": "a7c318d9781361d14a5e320b0eafb6170c3a7a62cfd56a7206b3b53ae684428f",
+        "FULL": "57c67e3963ffa6c710da6f9f36b01be484bd8da995544f07b3f0ff9d9df9caf3",
+        "ILM_OPL": "725162579a718f0fe894c0e44248bb921a5ee32e8b0f46af7130943a87c8fbd7",
+        "OPL_BM": "1731cddb60871f3348ee588cf8ba301da11a6068ea6e8b7ff52d4cce183d0c54"
+      },
+      "native_empty_rays": {
+        "ILM_OPL": 0,
+        "OPL_BM": 0
+      }
+    }
+  ],
+  "source": "D:\\data\\code\\keyan_fuxian\\FlowOCT\\data\\OCTA500_common_v1",
+  "source_native_depth": 640,
+  "layer_order": [
+    "ILM",
+    "IPL",
+    "OPL",
+    "ISOS",
+    "RPE",
+    "BM"
+  ],
+  "layer_coordinates": "MATLAB 1-based, shape 6YX; inclusive boundaries",
+  "orientation": "Projection arrays XY, matching official BMP",
+  "usage": "Ground-truth annotations for post-hoc evaluation only, not generator inputs"
+}

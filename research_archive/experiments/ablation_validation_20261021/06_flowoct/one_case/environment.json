@@ -1,0 +1,24 @@
+{
+  "torch": "2.5.1+cu121",
+  "numpy": "1.26.4",
+  "monai": "1.4.0",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "cuda_visible_devices": "0",
+  "generator_parameters": 2330180,
+  "contrast_head_parameters": 8960,
+  "generator_defaults": "(spatial_dims: 'int', in_channels: 'int', out_channels: 'int', num_res_blocks: 'Sequence[int] | int' = (2, 2, 2, 2), channels: 'Sequence[int]' = (32, 64, 64, 64), attention_levels: 'Sequence[bool]' = (False, False, True, True), norm_num_groups: 'int' = 32, norm_eps: 'float' = 1e-06, resblock_updown: 'bool' = False, num_head_channels: 'int | Sequence[int]' = 8, with_conditioning: 'bool' = False, transformer_num_layers: 'int' = 1, cross_attention_dim: 'int | None' = None, num_class_embeds: 'int | None' = None, upcast_attention: 'bool' = False, dropout_cattn: 'float' = 0.0, include_fc: 'bool' = True, use_combined_linear: 'bool' = False, use_flash_attention: 'bool' = False) -> 'None'",
+  "input_voxels_ZYX": [
+    256,
+    64,
+    64
+  ],
+  "model_tensor_YXZ": [
+    64,
+    64,
+    256
+  ],
+  "sampled_Bscans_per_update": 16,
+  "amp": false,
+  "gradient_clipping": false,
+  "comparison": "Same tensors/case order/successful updates. Native 2D slice/time sampling, Adam and losses differ by method."
+}

@@ -1,0 +1,246 @@
+--- baseline/model.py
++++ fm3d/model.py
+@@ -89,3 +89,24 @@
+     state = (1 - t) * source + t * target
+     velocity = model(state, time, source)
+     return F.mse_loss(velocity.float(), (target - source).float())
++
++
++def z_mean_projection(volume):
++    """Full-depth en-face mean: [B,C,Z,Y,X] -> [B,C,Y,X], accumulated in FP32."""
++    if volume.ndim != 5:
++        raise ValueError('Z projection requires [B,C,Z,Y,X]')
++    return volume.mean(dim=2, dtype=torch.float32)
++
++
++def z_projection_loss(model, source, target):
++    """L1 projection supervision on the source-only one-step endpoint at t=0.
++
++    No target is supplied to the network on this branch. This is an auxiliary
++    one-step estimate, not the multi-step ODE result used for validation.
++    Keep the estimate unclamped so out-of-range predictions retain gradients.
++    """
++    if source.shape != target.shape or source.ndim != 5 or source.shape[1] != 1:
++        raise ValueError('Projection supervision requires paired [B,1,Z,Y,X] voxels')
++    time = torch.zeros(source.shape[0], device=source.device)
++    endpoint = source.float() + model(source, time, source).float()
++    return F.l1_loss(z_mean_projection(endpoint), z_mean_projection(target))
+--- baseline/train.py
++++ fm3d/train.py
+@@ -15,7 +15,7 @@
+ 
+ from .data import COUNTS, VolumeDataset, read_rows, validate_manifest
+ from .inference import generate_volume
+-from .model import make_model, flow_loss
++from .model import make_model, flow_loss, z_mean_projection, z_projection_loss
+ from .wavelets import SUBBANDS, validate_wavelet_patch
+ 
+ 
+@@ -65,6 +65,14 @@
+         record = {'case_id': sample['case_id'], 'patient_id': dataset.rows[index]['patient_id'],
+                   'mae': err.abs().mean(dtype=torch.float64).item(),
+                   'psnr': -10 * math.log10(max(mse, 1e-12))}
++        if config.get('lambda_projection', 0) > 0:
++            pred_map, target_map = [z_mean_projection(v).double() for v in (prediction, target)]
++            projection_err = pred_map - target_map
++            a, b = pred_map - pred_map.mean(), target_map - target_map.mean()
++            denominator = (a.square().sum() * b.square().sum()).sqrt().item()
++            record.update(z_projection_mae=projection_err.abs().mean().item(),
++                          z_projection_psnr=-10 * math.log10(max(projection_err.square().mean().item(), 1e-12)),
++                          z_projection_pcc=(a * b).sum().item() / denominator if denominator > 0 else None)
+         records.append(record)
+         if output is not None:
+             np.savez_compressed(output / f'{sample["case_id"]}.npz',
+@@ -75,8 +83,14 @@
+     patients = defaultdict(list)
+     for row in records:
+         patients[row['patient_id']].append(row)
+-    metrics = {key: float(np.mean([np.mean([r[key] for r in scans])
+-                                   for scans in patients.values()])) for key in ('mae', 'psnr')}
++    keys = ['mae', 'psnr']
++    if config.get('lambda_projection', 0) > 0:
++        keys += ['z_projection_mae', 'z_projection_psnr', 'z_projection_pcc']
++    metrics = {}
++    for key in keys:
++        values = [[r[key] for r in scans if r[key] is not None] for scans in patients.values()]
++        patient_values = [float(np.mean(v)) for v in values if v]
++        metrics[key] = float(np.mean(patient_values)) if patient_values else None
+     return {'metrics': metrics, 'cases': records, 'patients': len(patients),
+             'protocol': 'full preprocessed volume; range=1; final clamp; patient macro mean; PSNR MSE floor=1e-12'}
+ 
+@@ -87,7 +101,8 @@
+     temporary.replace(path)
+ 
+ 
+-def parse_args(default_representation='voxel', default_epochs=100, default_save_every=0):
++def parse_args(default_representation='voxel', default_epochs=100, default_save_every=0,
++               default_patch=(256, 64, 64), default_lambda_projection=0.0):
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--manifest', type=Path, required=True)
+     parser.add_argument('--fov', choices=COUNTS, required=True)
+@@ -95,7 +110,7 @@
+     parser.add_argument('--axis-order', required=True, help='NPZ axes, e.g. ZYX or YXZ; never inferred')
+     parser.add_argument('--intensity-scale', type=float, required=True, help='255 for native uint8, 1 for verified [0,1]')
+     parser.add_argument('--depth', type=int, default=256, help='Resample axial Z only; 0 preserves native depth')
+-    parser.add_argument('--patch', type=int, nargs=3, default=[256, 64, 64], metavar=('Z', 'Y', 'X'))
++    parser.add_argument('--patch', type=int, nargs=3, default=list(default_patch), metavar=('Z', 'Y', 'X'))
+     parser.add_argument('--base-channels', type=int, default=16)
+     parser.add_argument('--representation', choices=['voxel', 'haar3d'], default=default_representation)
+     parser.add_argument('--condition', action=argparse.BooleanOptionalAction, default=True)
+@@ -105,6 +120,8 @@
+                         help='Keep epoch and best-so-far snapshots every N epochs; 0 disables')
+     parser.add_argument('--steps-per-epoch', type=int, default=200, help='Training batches; random cases with replacement; AMP-skipped updates logged')
+     parser.add_argument('--lr', type=float, default=2e-4)
++    parser.add_argument('--lambda-projection', type=float, default=default_lambda_projection,
++                        help='Weight of full-Z mean projection L1 at the source-only one-step endpoint; 0 disables (voxel only)')
+     parser.add_argument('--val-every', type=int, default=5)
+     parser.add_argument('--ode-steps', type=int, default=8)
+     parser.add_argument('--overlap', type=float, default=0.5)
+@@ -116,14 +133,20 @@
+     return parser.parse_args()
+ 
+ 
+-def main(default_representation='voxel', default_epochs=100, default_save_every=0):
+-    args = parse_args(default_representation, default_epochs, default_save_every)
++def main(default_representation='voxel', default_epochs=100, default_save_every=0,
++         default_patch=(256, 64, 64), default_lambda_projection=0.0):
++    args = parse_args(default_representation, default_epochs, default_save_every,
++                      default_patch, default_lambda_projection)
+     if min(args.patch) < 8 or args.depth < 0 or (args.depth and args.patch[0] > args.depth):
+         raise ValueError('Invalid patch/depth: patch>=8; depth=0 or depth>=patch Z')
+     if min(args.epochs, args.steps_per_epoch, args.val_every, args.ode_steps, args.batch_size) < 1:
+         raise ValueError('Epoch/step/frequency/batch counts must be positive')
+     if args.save_every < 0:
+         raise ValueError('save-every must be nonnegative')
++    if not math.isfinite(args.lambda_projection) or args.lambda_projection < 0:
++        raise ValueError('lambda-projection must be finite and nonnegative')
++    if args.lambda_projection and args.representation != 'voxel':
++        raise ValueError('Z projection supervision currently requires representation=voxel')
+     if args.representation == 'haar3d':
+         validate_wavelet_patch(args.patch)
+     if not 0 <= args.overlap < 1 or args.workers < 0 or not math.isfinite(args.lr) or args.lr <= 0:
+@@ -147,8 +170,9 @@
+         # Load only checkpoints created by this run (contains optimizer/config, not just weights).
+         checkpoint = torch.load(latest, map_location='cpu', weights_only=False)
+         mutable = {'epochs', 'workers', 'device', 'resume', 'save_every'}
++        legacy_defaults = {'representation': 'voxel', 'lambda_projection': 0.0}
+         for key, value in config.items():
+-            previous = checkpoint['config'].get(key, 'voxel' if key == 'representation' else None)
++            previous = checkpoint['config'].get(key, legacy_defaults.get(key))
+             if key not in mutable and previous != value:
+                 raise ValueError(f'Resume configuration changed: {key}')
+         model.load_state_dict(checkpoint['model'])
+@@ -172,12 +196,15 @@
+         'state_channels': model.channels,
+         'network_patch_ZYX': [p // 2 for p in args.patch] if args.representation == 'haar3d' else args.patch,
+         'subbands_ZYX': SUBBANDS if args.representation == 'haar3d' else None,
++        'projection_supervision': ('full-Z mean L1 on OCT + v(OCT,0,OCT); unclamped; extra source-only forward'
++                                   if args.lambda_projection else None),
+         'reproducibility': 'Epoch-specific RNG seeds; bitwise determinism across GPU/software not guaranteed'
+     }, indent=2), encoding='utf-8')
+     training = make_dataset(rows, 'train', config, training=True)
+     validation = make_dataset(rows, 'validation', config)
+     print(f'representation={args.representation} epochs={start_epoch}..{args.epochs} '
+           f'batches_per_epoch={args.steps_per_epoch} voxel_patch={args.patch} '
++          f'lambda_projection={args.lambda_projection} '
+           f'parameters={sum(p.numel() for p in model.parameters())}', flush=True)
+     for epoch in range(start_epoch, args.epochs + 1):
+         seed_all(args.seed + epoch)
+@@ -186,21 +213,30 @@
+                             num_workers=args.workers, worker_init_fn=seed_worker,
+                             pin_memory=device.type == 'cuda')
+         model.train()
+-        losses, tick, skipped_updates = [], time.perf_counter(), 0
++        losses, fm_losses, projection_losses = [], [], []
++        tick, skipped_updates = time.perf_counter(), 0
+         if device.type == 'cuda':
+             torch.cuda.reset_peak_memory_stats(device)
+         for step, sample in enumerate(loader, 1):
+             source, target = sample['oct'].to(device), sample['octa'].to(device)
+             optimizer.zero_grad(set_to_none=True)
+             with torch.autocast(device_type=device.type, enabled=args.amp and device.type == 'cuda'):
+-                loss = flow_loss(model, source, target, representation=args.representation)
++                fm = flow_loss(model, source, target, representation=args.representation)
++                projection = (z_projection_loss(model, source, target) if args.lambda_projection
++                              else fm.new_zeros(()))
++                loss = fm + args.lambda_projection * projection
+             skipped_updates += int(apply_update(loss, model, optimizer, scaler))
+             losses.append(loss.item())
++            fm_losses.append(fm.item())
++            projection_losses.append(projection.item())
+             if step == 1 or step % 20 == 0 or step == args.steps_per_epoch:
+-                print(f'epoch={epoch} step={step}/{args.steps_per_epoch} FM={loss.item():.6f}', flush=True)
++                print(f'epoch={epoch} step={step}/{args.steps_per_epoch} loss={loss.item():.6f} '
++                      f'FM={fm.item():.6f} Zproj={projection.item():.6f}', flush=True)
+         if skipped_updates == args.steps_per_epoch:
+             raise FloatingPointError('All AMP updates skipped; inspect gradients or retry with --no-amp')
+-        record = {'epoch': epoch, 'fm_loss': float(np.mean(losses)), 'train_seconds': time.perf_counter() - tick,
++        record = {'epoch': epoch, 'loss': float(np.mean(losses)),
++                  'fm_loss': float(np.mean(fm_losses)), 'z_projection_loss': float(np.mean(projection_losses)),
++                  'train_seconds': time.perf_counter() - tick,
+                   'optimizer_updates': args.steps_per_epoch - skipped_updates,
+                   'amp_skipped_updates': skipped_updates, 'amp_scale': scaler.get_scale(),
+                   'peak_allocated_bytes': torch.cuda.max_memory_allocated(device) if device.type == 'cuda' else None}
+--- baseline/benchmark.py
++++ fm3d/benchmark.py
+@@ -1,12 +1,13 @@
+ """Measure synthetic forward/backward/Adam memory on the actual training GPU."""
+ import argparse
+ import json
++import math
+ import time
+ from pathlib import Path
+ 
+ import torch
+ 
+-from .model import make_model, flow_loss
++from .model import make_model, flow_loss, z_projection_loss
+ from .train import apply_update
+ from .wavelets import validate_wavelet_patch
+ 
+@@ -16,6 +17,7 @@
+     parser.add_argument('--patch', type=int, nargs=3, default=[256, 64, 64])
+     parser.add_argument('--base-channels', type=int, default=16)
+     parser.add_argument('--representation', choices=['voxel', 'haar3d'], default='voxel')
++    parser.add_argument('--lambda-projection', type=float, default=0.0)
+     parser.add_argument('--batch-size', type=int, default=1)
+     parser.add_argument('--steps', type=int, default=3)
+     parser.add_argument('--device', default='cuda')
+@@ -26,6 +28,10 @@
+         raise ValueError('patch>=8, steps>=1, batch_size>=1 required')
+     if args.representation == 'haar3d':
+         validate_wavelet_patch(args.patch)
++    if not math.isfinite(args.lambda_projection) or args.lambda_projection < 0:
++        raise ValueError('lambda-projection must be finite and nonnegative')
++    if args.lambda_projection and args.representation != 'voxel':
++        raise ValueError('Z projection supervision currently requires representation=voxel')
+     device = torch.device(args.device)
+     torch.manual_seed(2026)
+     model = make_model(args.base_channels, representation=args.representation).to(device)
+@@ -41,6 +47,8 @@
+         optimizer.zero_grad(set_to_none=True)
+         with torch.autocast(device_type=device.type, enabled=args.amp and device.type == 'cuda'):
+             loss = flow_loss(model, source, target, representation=args.representation)
++            if args.lambda_projection:
++                loss = loss + args.lambda_projection * z_projection_loss(model, source, target)
+         skipped_updates += int(apply_update(loss, model, optimizer, scaler))
+         if device.type == 'cuda':
+             torch.cuda.synchronize(device)
+@@ -52,6 +60,7 @@
+               'torch': torch.__version__, 'patch_ZYX': args.patch, 'batch_size': args.batch_size,
+               'base_channels': args.base_channels, 'amp': args.amp and device.type == 'cuda',
+               'representation': args.representation,
++              'lambda_projection': args.lambda_projection,
+               'network_patch_ZYX': [p // 2 for p in args.patch] if args.representation == 'haar3d' else args.patch,
+               'parameters': sum(p.numel() for p in model.parameters()),
+               'optimizer_updates_including_warmup': args.steps + 1 - skipped_updates,
+--- baseline/README.md
++++ fm3d/README.md
+@@ -1,4 +1,7 @@
+ # OCT → OCTA：体素空间 3D Flow Matching 起步实现
++
++**2026-10-21 新实验：** 体素 FM 增加全 Z 均值投影 L1 监督，横向块扩大为
++`256×96×96`，独立入口默认训练 200 轮；见 [PROJECTION.md](PROJECTION.md)。
+ 
+ **2026-10-20 新实验：** 已增加可独立启动的三维 Haar 小波域 FM，默认 200 轮。
+ 服务器启动、续训、100/200 轮预算对比见 [WAVELET.md](WAVELET.md)。

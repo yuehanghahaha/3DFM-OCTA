@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-10-21T07:52:41.447191+00:00",
+  "source_files_verified": 31,
+  "archive_sha256": "bb5d71e135e0b5430ce0c3afeac7ad1505e0a81ed29d5315240de59b057c9a36",
+  "server_tests": "21 passed, 1 optional PyWavelets check skipped; shared-data test passed after helper was included",
+  "deployment_repair": "Added unchanged tools/prepare_common_octa500.py, required by existing duplicate-group test",
+  "synthetic_optimizer_updates": 4,
+  "real_training_updates": 3,
+  "physical_gpu": 1,
+  "benchmark_peak_allocated_bytes": 8108194304,
+  "real_peak_allocated_bytes": 8109112832
+}

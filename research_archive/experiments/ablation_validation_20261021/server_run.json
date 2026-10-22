@@ -1,0 +1,48 @@
+{
+  "host": "research-server.example.org",
+  "remote_directory": "/srv/oct_research/fm3d_validation_20261021",
+  "tmux_session": "lyh_fm3d_validate5_20261021",
+  "physical_gpu": 0,
+  "python": "/srv/oct_research/conda_envs/lyh_fm3d/bin/python",
+  "setup_sha256": "001797fade6d99a2c00469f3ad97bce2ae8faa6e677defc5a862417f37deb95a",
+  "state": "complete",
+  "original_training_pids_at_launch": [
+    272550,
+    279725
+  ],
+  "result_storage": "Full .pt and 3D prediction NPZ on server; all small metrics, logs, PNG images and reports copied locally.",
+  "completed_stages": [
+    "one_case",
+    "few_case"
+  ],
+  "completed_runs": 10,
+  "total_successful_updates": 6000,
+  "amp_skipped_updates": 0,
+  "checked_3d_predictions": 125,
+  "server_checkpoints": 20,
+  "gpu0_released": true,
+  "original_training_pids_confirmed_running": [
+    272550,
+    279725
+  ],
+  "completed_at_client": "2026-10-21T20:45:14+08:00",
+  "scope": "Original five ablation arms; later FlowOCT controls recorded below.",
+  "flowoct_followup": {
+    "state": "complete",
+    "physical_gpu": 0,
+    "flowoct_python": "/srv/oct_research/conda_envs/lyh_flowoct/bin/python",
+    "flowoct_added_updates": 1200,
+    "short_diagnostic_updates": 2000,
+    "long_added_updates": 2400,
+    "total_added_updates": 5600,
+    "checked_3d_predictions": 95,
+    "server_checkpoints": 8,
+    "large_artifacts": 103,
+    "original_checkpoints_hash_unchanged": 20,
+    "original_training_sources_unchanged": true,
+    "audit": "verification/flowoct_followup_audit.json",
+    "artifacts": "flowoct_followup_artifacts.json",
+    "latest_report": "reports/FLOWOCT_DIAGNOSIS.md",
+    "gpu0_released": true
+  }
+}

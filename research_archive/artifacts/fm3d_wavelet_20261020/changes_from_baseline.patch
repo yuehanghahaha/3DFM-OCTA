@@ -1,0 +1,847 @@
+--- a/fm3d/benchmark.py
++++ b/fm3d/benchmark.py
+@@ -6,14 +6,16 @@
+ 
+ import torch
+ 
+-from .model import VelocityUNet3D, flow_loss
++from .model import make_model, flow_loss
+ from .train import apply_update
++from .wavelets import validate_wavelet_patch
+ 
+ 
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--patch', type=int, nargs=3, default=[256, 64, 64])
+     parser.add_argument('--base-channels', type=int, default=16)
++    parser.add_argument('--representation', choices=['voxel', 'haar3d'], default='voxel')
+     parser.add_argument('--batch-size', type=int, default=1)
+     parser.add_argument('--steps', type=int, default=3)
+     parser.add_argument('--device', default='cuda')
+@@ -22,9 +24,11 @@
+     args = parser.parse_args()
+     if min(args.patch) < 8 or min(args.steps, args.batch_size) < 1:
+         raise ValueError('patch>=8, steps>=1, batch_size>=1 required')
++    if args.representation == 'haar3d':
++        validate_wavelet_patch(args.patch)
+     device = torch.device(args.device)
+     torch.manual_seed(2026)
+-    model = VelocityUNet3D(args.base_channels).to(device)
++    model = make_model(args.base_channels, representation=args.representation).to(device)
+     optimizer = torch.optim.AdamW(model.parameters(), lr=2e-4, weight_decay=0)
+     scaler = torch.amp.GradScaler('cuda', init_scale=1024, enabled=args.amp and device.type == 'cuda')
+     source = torch.rand(args.batch_size, 1, *args.patch, device=device)
+@@ -36,7 +40,7 @@
+         tick = time.perf_counter()
+         optimizer.zero_grad(set_to_none=True)
+         with torch.autocast(device_type=device.type, enabled=args.amp and device.type == 'cuda'):
+-            loss = flow_loss(model, source, target)
++            loss = flow_loss(model, source, target, representation=args.representation)
+         skipped_updates += int(apply_update(loss, model, optimizer, scaler))
+         if device.type == 'cuda':
+             torch.cuda.synchronize(device)
+@@ -47,6 +51,8 @@
+               'gpu': torch.cuda.get_device_name(device) if device.type == 'cuda' else None,
+               'torch': torch.__version__, 'patch_ZYX': args.patch, 'batch_size': args.batch_size,
+               'base_channels': args.base_channels, 'amp': args.amp and device.type == 'cuda',
++              'representation': args.representation,
++              'network_patch_ZYX': [p // 2 for p in args.patch] if args.representation == 'haar3d' else args.patch,
+               'parameters': sum(p.numel() for p in model.parameters()),
+               'optimizer_updates_including_warmup': args.steps + 1 - skipped_updates,
+               'amp_skipped_updates': skipped_updates,
+--- a/fm3d/evaluate.py
++++ b/fm3d/evaluate.py
+@@ -6,7 +6,7 @@
+ import torch
+ 
+ from .data import validate_manifest
+-from .model import VelocityUNet3D
++from .model import make_model
+ from .train import evaluate, make_dataset
+ 
+ 
+@@ -27,7 +27,8 @@
+         if args.ode_steps < 1:
+             raise ValueError('ode-steps must be positive')
+         config['ode_steps'] = args.ode_steps
+-    model = VelocityUNet3D(config['base_channels'], config['condition']).to(args.device)
++    model = make_model(config['base_channels'], config['condition'],
++                       config.get('representation', 'voxel')).to(args.device)
+     model.load_state_dict(checkpoint['model'])
+     dataset = make_dataset(rows, args.split, config)
+     args.output.mkdir(parents=True, exist_ok=True)
+--- a/fm3d/inference.py
++++ b/fm3d/inference.py
+@@ -3,6 +3,8 @@
+ 
+ import torch
+ from torch.nn import functional as F
++
++from .wavelets import haar_dwt3d, haar_idwt3d, validate_wavelet_patch
+ 
+ 
+ def window_starts(length, patch, overlap):
+@@ -14,18 +16,33 @@
+ 
+ 
+ @torch.inference_mode()
+-def generate_volume(model, source, patch, steps=8, overlap=0.5, amp=False):
+-    """source [1,1,Z,Y,X]; keep full states on CPU, transfer one window to model device."""
++def generate_volume(model, source, patch, steps=8, overlap=0.5, amp=False, representation='voxel'):
++    """Voxel input/output; patch is always in voxels, even for coefficient-domain ODE.
++
++    Haar inference transforms the whole padded volume ONCE and slides on that
++    coefficient grid, so all windows share the same wavelet phase and state.
++    Full states stay on CPU; only one window at a time is transferred to the GPU.
++    """
+     if source.ndim != 5 or source.shape[:2] != (1, 1):
+         raise ValueError('Full-volume inference supports one single-channel case at a time')
+     if steps < 1 or len(patch) != 3 or min(patch) < 8 or not 0 <= overlap < 1:
+         raise ValueError('steps>=1, patch dimensions>=8, overlap in [0,1) required')
++    if representation == 'haar3d':
++        validate_wavelet_patch(patch)
++    elif representation != 'voxel':
++        raise ValueError(f'Unknown representation: {representation}')
+     device = next(model.parameters()).device
+     original = source.shape[2:]
+     pad = []
+     for n, p in reversed(list(zip(original, patch))):
+-        pad.extend([0, max(0, p - n)])
++        padded = max(n, p)
++        if representation == 'haar3d':
++            padded += padded % 2
++        pad.extend([0, padded - n])
+     source = F.pad(source.detach().to('cpu', dtype=torch.float32), pad, mode='replicate')
++    if representation == 'haar3d':
++        source = haar_dwt3d(source)
++        patch = tuple(p // 2 for p in patch)
+     starts = [window_starts(n, p, overlap) for n, p in zip(source.shape[2:], patch)]
+     regions = [(slice(None), slice(None)) + tuple(slice(s, s + p) for s, p in zip(pos, patch))
+                for pos in product(*starts)]
+@@ -51,6 +68,8 @@
+                 velocity[region] += v.float().cpu() * weight
+             state.add_(velocity / counts, alpha=1 / steps)
+         # No stepwise clamping: the learned ODE may pass outside the image range.
++        if representation == 'haar3d':
++            state = haar_idwt3d(state)
+         state = state[:, :, :original[0], :original[1], :original[2]]
+         return state.clamp(0, 1)
+     finally:
+--- a/fm3d/model.py
++++ b/fm3d/model.py
+@@ -1,9 +1,11 @@
+-"""Small residual 3D U-Net with continuous-time conditioning, without wavelets."""
++"""Shared time-conditioned 3D U-Net for voxel and Haar coefficient velocities."""
+ import math
+ 
+ import torch
+ from torch import nn
+ from torch.nn import functional as F
++
++from .wavelets import haar_dwt3d, validate_wavelet_patch
+ 
+ 
+ class TimeBlock(nn.Module):
+@@ -24,15 +26,18 @@
+ 
+ class VelocityUNet3D(nn.Module):
+     """Input/output: [B,C,Z,Y,X]. Fixed OCT conditioning is an explicit design choice."""
+-    def __init__(self, base_channels=16, condition=True):
++    def __init__(self, base_channels=16, condition=True, channels=1):
+         super().__init__()
+         if base_channels < 4 or base_channels % 4:
+             raise ValueError('base_channels must be a positive multiple of 4')
++        if channels < 1:
++            raise ValueError('channels must be positive')
++        self.channels = channels
+         self.condition = condition
+         b, tc = base_channels, base_channels * 4
+         self.register_buffer('frequencies', torch.exp(-math.log(10000) * torch.arange(32) / 31))
+         self.time_mlp = nn.Sequential(nn.Linear(64, tc), nn.SiLU(), nn.Linear(tc, tc))
+-        self.stem = nn.Conv3d(2 if condition else 1, b, 3, padding=1)
++        self.stem = nn.Conv3d(channels * (2 if condition else 1), b, 3, padding=1)
+         self.enc0 = TimeBlock(b, b, tc)
+         self.down0 = nn.Conv3d(b, 2 * b, 3, stride=2, padding=1)
+         self.enc1 = TimeBlock(2 * b, 2 * b, tc)
+@@ -43,11 +48,11 @@
+         self.dec2 = TimeBlock(12 * b, 4 * b, tc)
+         self.dec1 = TimeBlock(6 * b, 2 * b, tc)
+         self.dec0 = TimeBlock(3 * b, b, tc)
+-        self.output = nn.Sequential(nn.GroupNorm(4, b), nn.SiLU(), nn.Conv3d(b, 1, 3, padding=1))
++        self.output = nn.Sequential(nn.GroupNorm(4, b), nn.SiLU(), nn.Conv3d(b, channels, 3, padding=1))
+ 
+     def forward(self, state, time, source):
+-        if state.ndim != 5 or state.shape[1] != 1 or state.shape != source.shape:
+-            raise ValueError('state/source must have equal [B,1,Z,Y,X] shapes')
++        if state.ndim != 5 or state.shape[1] != self.channels or state.shape != source.shape:
++            raise ValueError(f'state/source must have equal [B,{self.channels},Z,Y,X] shapes')
+         if min(state.shape[2:]) < 8 or time.shape != (state.shape[0],):
+             raise ValueError('spatial dimensions must be >=8; time must have shape [B]')
+         angles = time.float()[:, None] * 1000 * self.frequencies[None]
+@@ -63,10 +68,21 @@
+         return self.output(h)  # Signed velocity: no sigmoid/clamp here.
+ 
+ 
+-def flow_loss(model, source, target, time=None):
+-    """Paired straight path x_t=(1-t)*OCT+t*OCTA, target velocity OCTA-OCT."""
++def make_model(base_channels=16, condition=True, representation='voxel'):
++    if representation not in ('voxel', 'haar3d'):
++        raise ValueError(f'Unknown representation: {representation}')
++    return VelocityUNet3D(base_channels, condition, channels=8 if representation == 'haar3d' else 1)
++
++
++def flow_loss(model, source, target, time=None, representation='voxel'):
++    """Straight paired flow; equal-weight MSE over all voxels or all eight bands."""
+     if source.shape != target.shape:
+         raise ValueError('OCT and OCTA must have equal shapes')
++    if representation == 'haar3d':
++        validate_wavelet_patch(source.shape[2:])
++        source, target = haar_dwt3d(source), haar_dwt3d(target)
++    elif representation != 'voxel':
++        raise ValueError(f'Unknown representation: {representation}')
+     if time is None:
+         time = torch.rand(source.shape[0], device=source.device)
+     t = time[:, None, None, None, None]
+--- a/fm3d/README.md
++++ b/fm3d/README.md
+@@ -1,4 +1,8 @@
+ # OCT → OCTA：体素空间 3D Flow Matching 起步实现
++
++**2026-10-20 新实验：** 已增加可独立启动的三维 Haar 小波域 FM，默认 200 轮。
++服务器启动、续训、100/200 轮预算对比见 [WAVELET.md](WAVELET.md)。
++以下文档描述原体素基线；原入口的默认模型、损失与超参数保持不变。
+ 
+ 本目录是独立的、可以训练和测试的 3D FM 基础实现。保留 FlowOCT 的配对直线路径思路，但使用新的三维网络与输入协议。不是作者官方实现，也未完成患者数据上的性能验证。`upstream/`、`working/` 和其他基线目录未被修改。
+ 
+--- a/fm3d/train.py
++++ b/fm3d/train.py
+@@ -1,9 +1,10 @@
+-"""Train a paired 3D voxel flow; full-volume validation, checkpointing and resume."""
++"""Train a paired 3D voxel or Haar flow; full-volume validation, checkpoints and resume."""
+ import argparse
+ import hashlib
+ import json
+ import math
+ import random
++import shutil
+ import time
+ from collections import defaultdict
+ from pathlib import Path
+@@ -14,7 +15,8 @@
+ 
+ from .data import COUNTS, VolumeDataset, read_rows, validate_manifest
+ from .inference import generate_volume
+-from .model import VelocityUNet3D, flow_loss
++from .model import make_model, flow_loss
++from .wavelets import SUBBANDS, validate_wavelet_patch
+ 
+ 
+ def seed_all(seed):
+@@ -57,7 +59,7 @@
+         sample = dataset[index]
+         source, target = sample['oct'][None], sample['octa'][None]
+         prediction = generate_volume(model, source, config['patch'], config['ode_steps'],
+-                                     config['overlap'], config['amp'])
++                                     config['overlap'], config['amp'], config.get('representation', 'voxel'))
+         err = prediction - target
+         mse = err.square().mean(dtype=torch.float64).item()
+         record = {'case_id': sample['case_id'], 'patient_id': dataset.rows[index]['patient_id'],
+@@ -85,7 +87,7 @@
+     temporary.replace(path)
+ 
+ 
+-def parse_args():
++def parse_args(default_representation='voxel', default_epochs=100, default_save_every=0):
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('--manifest', type=Path, required=True)
+     parser.add_argument('--fov', choices=COUNTS, required=True)
+@@ -95,9 +97,12 @@
+     parser.add_argument('--depth', type=int, default=256, help='Resample axial Z only; 0 preserves native depth')
+     parser.add_argument('--patch', type=int, nargs=3, default=[256, 64, 64], metavar=('Z', 'Y', 'X'))
+     parser.add_argument('--base-channels', type=int, default=16)
++    parser.add_argument('--representation', choices=['voxel', 'haar3d'], default=default_representation)
+     parser.add_argument('--condition', action=argparse.BooleanOptionalAction, default=True)
+     parser.add_argument('--batch-size', type=int, default=1)
+-    parser.add_argument('--epochs', type=int, default=100)
++    parser.add_argument('--epochs', type=int, default=default_epochs)
++    parser.add_argument('--save-every', type=int, default=default_save_every,
++                        help='Keep epoch and best-so-far snapshots every N epochs; 0 disables')
+     parser.add_argument('--steps-per-epoch', type=int, default=200, help='Training batches; random cases with replacement; AMP-skipped updates logged')
+     parser.add_argument('--lr', type=float, default=2e-4)
+     parser.add_argument('--val-every', type=int, default=5)
+@@ -111,12 +116,16 @@
+     return parser.parse_args()
+ 
+ 
+-def main():
+-    args = parse_args()
++def main(default_representation='voxel', default_epochs=100, default_save_every=0):
++    args = parse_args(default_representation, default_epochs, default_save_every)
+     if min(args.patch) < 8 or args.depth < 0 or (args.depth and args.patch[0] > args.depth):
+         raise ValueError('Invalid patch/depth: patch>=8; depth=0 or depth>=patch Z')
+     if min(args.epochs, args.steps_per_epoch, args.val_every, args.ode_steps, args.batch_size) < 1:
+         raise ValueError('Epoch/step/frequency/batch counts must be positive')
++    if args.save_every < 0:
++        raise ValueError('save-every must be nonnegative')
++    if args.representation == 'haar3d':
++        validate_wavelet_patch(args.patch)
+     if not 0 <= args.overlap < 1 or args.workers < 0 or not math.isfinite(args.lr) or args.lr <= 0:
+         raise ValueError('Invalid overlap, workers or learning rate')
+     if sorted(args.axis_order.upper()) != ['X', 'Y', 'Z'] or not math.isfinite(args.intensity_scale) or args.intensity_scale <= 0:
+@@ -129,7 +138,7 @@
+     config = {k: str(v.resolve()) if isinstance(v, Path) else v for k, v in config.items()}
+     config['manifest_sha256'] = hashlib.sha256(json.dumps(rows, sort_keys=True).encode()).hexdigest()
+     seed_all(args.seed)
+-    model = VelocityUNet3D(args.base_channels, args.condition).to(device)
++    model = make_model(args.base_channels, args.condition, args.representation).to(device)
+     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=0)
+     scaler = torch.amp.GradScaler('cuda', init_scale=1024, enabled=args.amp and device.type == 'cuda')
+     start_epoch, best_mae = 1, float('inf')
+@@ -137,9 +146,10 @@
+     if args.resume:
+         # Load only checkpoints created by this run (contains optimizer/config, not just weights).
+         checkpoint = torch.load(latest, map_location='cpu', weights_only=False)
+-        mutable = {'epochs', 'workers', 'device', 'resume'}
++        mutable = {'epochs', 'workers', 'device', 'resume', 'save_every'}
+         for key, value in config.items():
+-            if key not in mutable and checkpoint['config'].get(key) != value:
++            previous = checkpoint['config'].get(key, 'voxel' if key == 'representation' else None)
++            if key not in mutable and previous != value:
+                 raise ValueError(f'Resume configuration changed: {key}')
+         model.load_state_dict(checkpoint['model'])
+         optimizer.load_state_dict(checkpoint['optimizer'])
+@@ -158,10 +168,17 @@
+         'torch': torch.__version__, 'numpy': np.__version__, 'device': str(device),
+         'gpu': torch.cuda.get_device_name(device) if device.type == 'cuda' else None,
+         'parameters': sum(p.numel() for p in model.parameters()),
++        'representation': args.representation,
++        'state_channels': model.channels,
++        'network_patch_ZYX': [p // 2 for p in args.patch] if args.representation == 'haar3d' else args.patch,
++        'subbands_ZYX': SUBBANDS if args.representation == 'haar3d' else None,
+         'reproducibility': 'Epoch-specific RNG seeds; bitwise determinism across GPU/software not guaranteed'
+     }, indent=2), encoding='utf-8')
+     training = make_dataset(rows, 'train', config, training=True)
+     validation = make_dataset(rows, 'validation', config)
++    print(f'representation={args.representation} epochs={start_epoch}..{args.epochs} '
++          f'batches_per_epoch={args.steps_per_epoch} voxel_patch={args.patch} '
++          f'parameters={sum(p.numel() for p in model.parameters())}', flush=True)
+     for epoch in range(start_epoch, args.epochs + 1):
+         seed_all(args.seed + epoch)
+         sampler = RandomSampler(training, replacement=True, num_samples=args.steps_per_epoch * args.batch_size)
+@@ -176,7 +193,7 @@
+             source, target = sample['oct'].to(device), sample['octa'].to(device)
+             optimizer.zero_grad(set_to_none=True)
+             with torch.autocast(device_type=device.type, enabled=args.amp and device.type == 'cuda'):
+-                loss = flow_loss(model, source, target)
++                loss = flow_loss(model, source, target, representation=args.representation)
+             skipped_updates += int(apply_update(loss, model, optimizer, scaler))
+             losses.append(loss.item())
+             if step == 1 or step % 20 == 0 or step == args.steps_per_epoch:
+@@ -199,6 +216,15 @@
+         save_checkpoint(latest, payload)
+         if improved:
+             save_checkpoint(args.output / 'best.pt', payload)
++        if args.save_every and (epoch % args.save_every == 0 or epoch == args.epochs):
++            save_checkpoint(args.output / f'epoch_{epoch:04d}.pt', payload)
++            # Preserve the validation-selected model within each training budget.
++            best_path = args.output / 'best.pt'
++            if best_path.is_file():
++                snapshot = args.output / f'best_through_{epoch:04d}.pt'
++                temporary = snapshot.with_suffix('.tmp')
++                shutil.copyfile(best_path, temporary)
++                temporary.replace(snapshot)
+         with (args.output / 'history.jsonl').open('a', encoding='utf-8') as stream:
+             stream.write(json.dumps(record) + '\n')
+         print(json.dumps(record), flush=True)
+--- /dev/null
++++ b/fm3d/wavelets.py
+@@ -0,0 +1,61 @@
++"""Differentiable, orthonormal, single-level 3D Haar transforms in Z,Y,X order.
++
++No learned compression, band dropping, coefficient clipping or extra dependency.
++High pass is (even - odd)/sqrt(2), matching PyWavelets' Haar convention.
++"""
++import math
++
++import torch
++
++
++SUBBANDS = ('LLL', 'LLH', 'LHL', 'LHH', 'HLL', 'HLH', 'HHL', 'HHH')
++INV_SQRT2 = 1 / math.sqrt(2)
++
++
++def validate_wavelet_patch(patch):
++    """Arguments describe voxel patches; the network sees half of each dimension."""
++    if len(patch) != 3 or any(p < 16 or p % 2 for p in patch):
++        raise ValueError('haar3d requires even voxel patch dimensions >=16 (coefficient dimensions >=8)')
++
++
++def haar_dwt3d(volume):
++    """[B,C,Z,Y,X] -> [B,8*C,Z/2,Y/2,X/2], band-major channels.
++
++    Spatial sizes must be even. Whole-volume inference pads odd edges once before
++    transforming; training uses even patches. Half inputs are promoted for precision.
++    """
++    if volume.ndim != 5 or min(volume.shape) < 1 or any(n % 2 for n in volume.shape[2:]):
++        raise ValueError('Haar DWT expects nonempty [B,C,Z,Y,X] with even spatial dimensions')
++    if not volume.is_floating_point():
++        raise ValueError('Haar DWT expects floating point intensities')
++    if volume.dtype in (torch.float16, torch.bfloat16):
++        volume = volume.float()
++    bands = [volume]
++    for axis in (2, 3, 4):
++        transformed = []
++        for band in bands:
++            even_slice, odd_slice = [slice(None)] * 5, [slice(None)] * 5
++            even_slice[axis], odd_slice[axis] = slice(0, None, 2), slice(1, None, 2)
++            even, odd = band[tuple(even_slice)], band[tuple(odd_slice)]
++            transformed.extend(((even + odd) * INV_SQRT2, (even - odd) * INV_SQRT2))
++        bands = transformed
++    return torch.cat(bands, dim=1)
++
++
++def haar_idwt3d(coefficients):
++    """Inverse of haar_dwt3d; returns the even, padded voxel grid without clipping."""
++    if coefficients.ndim != 5 or min(coefficients.shape) < 1 or coefficients.shape[1] % 8:
++        raise ValueError('Haar IDWT expects nonempty [B,8*C,Z,Y,X]')
++    if not coefficients.is_floating_point():
++        raise ValueError('Haar IDWT expects floating point coefficients')
++    if coefficients.dtype in (torch.float16, torch.bfloat16):
++        coefficients = coefficients.float()
++    bands = list(coefficients.chunk(8, dim=1))
++    for axis in (4, 3, 2):
++        reconstructed = []
++        for index in range(0, len(bands), 2):
++            low, high = bands[index:index + 2]
++            even, odd = (low + high) * INV_SQRT2, (low - high) * INV_SQRT2
++            reconstructed.append(torch.stack((even, odd), dim=axis + 1).flatten(axis, axis + 1))
++        bands = reconstructed
++    return bands[0]
+--- /dev/null
++++ b/fm3d/train_wavelet.py
+@@ -0,0 +1,6 @@
++"""Train the 3D Haar flow experiment: 200 epochs, milestone snapshots every 50."""
++from .train import main
++
++
++if __name__ == '__main__':
++    main(default_representation='haar3d', default_epochs=200, default_save_every=50)
+--- /dev/null
++++ b/fm3d/test_wavelet.py
+@@ -0,0 +1,201 @@
++"""Mathematical and training/inference checks for the 3D Haar experiment."""
++import csv
++import json
++import math
++import os
++import subprocess
++import sys
++import tempfile
++import unittest
++from pathlib import Path
++
++import numpy as np
++import torch
++from torch import nn
++
++from .data import make_splits
++from .inference import generate_volume
++from .model import flow_loss, make_model
++from .wavelets import SUBBANDS, haar_dwt3d, haar_idwt3d, validate_wavelet_patch
++
++
++class SourceVelocity(nn.Module):
++    def __init__(self, value):
++        super().__init__()
++        self.value = nn.Parameter(torch.tensor(float(value)))
++
++    def forward(self, state, time, source):
++        return self.value * source
++
++
++class ConstantVoxelVelocity(SourceVelocity):
++    def forward(self, state, time, source):
++        # A spatially constant voxel field has only LLL coefficients.
++        result = torch.zeros_like(state)
++        result[:, 0] = self.value * math.sqrt(8)
++        return result
++
++
++class ExcursionVelocity(ConstantVoxelVelocity):
++    def forward(self, state, time, source):
++        sign = torch.where(time < 0.5, -1., 1.)[:, None, None, None, None]
++        return sign * super().forward(state, time, source)
++
++
++class WaveletTests(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        torch.set_num_threads(1)
++
++    def test_inverse_energy_and_gradient(self):
++        volume = torch.randn(2, 3, 16, 18, 20, dtype=torch.float64, requires_grad=True)
++        coefficients = haar_dwt3d(volume)
++        self.assertEqual(coefficients.shape, (2, 24, 8, 9, 10))
++        torch.testing.assert_close(haar_idwt3d(coefficients), volume, atol=1e-12, rtol=1e-12)
++        torch.testing.assert_close(coefficients.square().sum(), volume.square().sum())
++        gradient, = torch.autograd.grad(coefficients.square().sum(), volume)
++        torch.testing.assert_close(gradient, 2 * volume, atol=1e-12, rtol=1e-12)
++        small = torch.randn(1, 1, 2, 2, 2, dtype=torch.float64, requires_grad=True)
++        self.assertTrue(torch.autograd.gradcheck(lambda x: haar_idwt3d(haar_dwt3d(x)), (small,)))
++
++    def test_all_eight_band_axes_and_signs(self):
++        for band_index, band in enumerate(SUBBANDS):
++            axes = [torch.tensor([1., 1.] if symbol == 'L' else [1., -1.]) for symbol in band]
++            volume = (axes[0][:, None, None] * axes[1][None, :, None] * axes[2][None, None, :])[None, None]
++            actual = haar_dwt3d(volume).flatten()
++            expected = torch.zeros(8)
++            expected[band_index] = math.sqrt(8)
++            torch.testing.assert_close(actual, expected)
++
++    def test_matches_pywavelets_if_installed(self):
++        try:
++            import pywt
++        except ImportError:
++            self.skipTest('Optional reference check; PyWavelets is not a runtime dependency')
++        volume = torch.randn(2, 2, 6, 8, 10, dtype=torch.float64)
++        actual = haar_dwt3d(volume)
++        for batch in range(2):
++            for channel in range(2):
++                reference = pywt.dwtn(volume[batch, channel].numpy(), 'haar', axes=(0, 1, 2))
++                for index, band in enumerate(SUBBANDS):
++                    key = band.lower().replace('l', 'a').replace('h', 'd')
++                    np.testing.assert_allclose(actual[batch, index * 2 + channel].numpy(),
++                                               reference[key], atol=1e-12, rtol=1e-12)
++
++    def test_flow_oracle_and_mse_scaling(self):
++        source = torch.rand(2, 1, 16, 16, 16)
++        target = 0.6 * source
++        for time in (torch.zeros(2), torch.ones(2), torch.tensor([0.2, 0.7])):
++            loss = flow_loss(SourceVelocity(-0.4), source, target, time, representation='haar3d')
++            self.assertLess(loss.item(), 1e-12)
++        # Equal weights and orthonormal scaling must preserve voxel-space MSE.
++        loss = flow_loss(SourceVelocity(0.3), source, target, representation='haar3d')
++        torch.testing.assert_close(loss, (0.3 * source - (target - source)).square().mean())
++
++    def test_conditioned_and_unconditioned_gradients(self):
++        source = torch.rand(2, 1, 16, 32, 16)
++        for condition in (True, False):
++            model = make_model(4, condition, 'haar3d')
++            self.assertEqual(model.stem.in_channels, 16 if condition else 8)
++            self.assertEqual(model.output[-1].out_channels, 8)
++            original = model.stem.weight.detach().clone()
++            optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3)
++            loss = flow_loss(model, source, source * 0.7, representation='haar3d')
++            loss.backward()
++            self.assertTrue(torch.isfinite(loss))
++            for parameter in model.parameters():
++                self.assertIsNotNone(parameter.grad)
++                self.assertTrue(torch.isfinite(parameter.grad).all())
++            optimizer.step()
++            self.assertFalse(torch.equal(original, model.stem.weight))
++
++    def test_global_coefficient_stitching_padding_and_fixed_condition(self):
++        for shape in ((17, 23, 31), (8, 9, 10)):
++            source = torch.rand(1, 1, *shape) * 0.5
++            for model, expected in ((ConstantVoxelVelocity(0.2), source + 0.2),
++                                    (SourceVelocity(0.2), source * 1.2)):
++                prediction = generate_volume(model, source, (16, 16, 16), steps=3,
++                                             overlap=0.6, representation='haar3d')
++                torch.testing.assert_close(prediction, expected, atol=1e-6, rtol=1e-6)
++                self.assertTrue(model.training)
++        # Signed coefficients and intermediate states must not be clamped.
++        source = torch.full((1, 1, 16, 16, 16), 0.2)
++        prediction = generate_volume(ExcursionVelocity(0.8), source, (16, 16, 16),
++                                     steps=2, representation='haar3d')
++        torch.testing.assert_close(prediction, source, atol=1e-6, rtol=1e-6)
++
++    def test_invalid_shapes_fail_explicitly(self):
++        for patch in ((16, 16, 15), (8, 16, 16), (16, 16)):
++            with self.assertRaises(ValueError):
++                validate_wavelet_patch(patch)
++        with self.assertRaises(ValueError):
++            haar_dwt3d(torch.rand(1, 1, 17, 16, 16))
++        with self.assertRaises(ValueError):
++            haar_idwt3d(torch.rand(1, 7, 8, 8, 8))
++        with self.assertRaises(ValueError):
++            haar_dwt3d(torch.zeros(1, 1, 2, 2, 2, dtype=torch.uint8))
++
++    def test_train_resume_milestones_and_evaluate_cli(self):
++        with tempfile.TemporaryDirectory() as folder:
++            root = Path(folder)
++            rng = np.random.default_rng(21)
++            rows = []
++            for index in range(200):
++                source = rng.random((16, 16, 16), dtype=np.float32)
++                np.savez(root / f'{index}.npz', oct=source, octa=0.6 * source, axis_order=np.array('ZYX'))
++                rows.append({'case_id': str(index), 'patient_id': str(index), 'path': f'{index}.npz'})
++            inventory = root / 'inventory.csv'
++            with inventory.open('w', newline='') as stream:
++                writer = csv.DictWriter(stream, fieldnames=['case_id', 'patient_id', 'path'])
++                writer.writeheader()
++                writer.writerows(rows)
++            manifest = root / 'split.csv'
++            make_splits(inventory, manifest, '3M', 2026)
++            env = {**os.environ, 'OMP_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1'}
++
++            def run(*args, error=None):
++                result = subprocess.run([sys.executable, *map(str, args)], capture_output=True,
++                                        text=True, env=env, timeout=120)
++                output = result.stdout + result.stderr
++                if error is None:
++                    self.assertEqual(result.returncode, 0, output)
++                else:
++                    self.assertNotEqual(result.returncode, 0, output)
++                    self.assertIn(error, output)
++
++            common = ['-m', 'fm3d.train_wavelet', '--manifest', manifest, '--fov', '3M',
++                      '--axis-order', 'ZYX', '--intensity-scale', '1', '--depth', '0',
++                      '--patch', '16', '16', '16', '--base-channels', '4', '--steps-per-epoch', '2',
++                      '--ode-steps', '2', '--val-every', '1', '--save-every', '1',
++                      '--device', 'cpu', '--no-amp']
++            run(*common, '--output', root / 'resumed', '--epochs', '1')
++            run(*common, '--output', root / 'resumed', '--epochs', '2', '--resume')
++            run(*common, '--output', root / 'continuous', '--epochs', '2')
++            resumed = torch.load(root / 'resumed/latest.pt', weights_only=False)
++            continuous = torch.load(root / 'continuous/latest.pt', weights_only=False)
++            self.assertEqual(resumed['epoch'], 2)
++            self.assertEqual(resumed['config']['representation'], 'haar3d')
++            for key in resumed['model']:
++                torch.testing.assert_close(resumed['model'][key], continuous['model'][key], rtol=0, atol=0)
++            for epoch in (1, 2):
++                epoch_ckpt = torch.load(root / f'resumed/epoch_{epoch:04d}.pt', weights_only=False)
++                best_ckpt = torch.load(root / f'resumed/best_through_{epoch:04d}.pt', weights_only=False)
++                self.assertEqual(epoch_ckpt['epoch'], epoch)
++                self.assertLessEqual(best_ckpt['epoch'], epoch)
++                self.assertEqual(best_ckpt['best_mae'], epoch_ckpt['best_mae'])
++            run(*common, '--output', root / 'resumed', '--epochs', '3', '--resume',
++                '--representation', 'voxel', error='Resume configuration changed: representation')
++            run('-m', 'fm3d.evaluate', '--checkpoint', root / 'resumed/best.pt',
++                '--split', 'test', '--output', root / 'predictions', '--device', 'cpu')
++            self.assertEqual(len(list((root / 'predictions').glob('*.npz'))), 50)
++            with np.load(next((root / 'predictions').glob('*.npz'))) as data:
++                self.assertEqual(data['octa'].shape, (16, 16, 16))
++                self.assertTrue(np.isfinite(data['octa']).all())
++                self.assertEqual(str(data['axis_order']), 'ZYX')
++            metrics = json.loads((root / 'predictions/metrics.json').read_text())
++            self.assertEqual(metrics['config']['representation'], 'haar3d')
++            self.assertEqual(metrics['patients'], 50)
++
++
++if __name__ == '__main__':
++    unittest.main()
+--- /dev/null
++++ b/fm3d/scripts/train_wavelet_200.sh
+@@ -0,0 +1,29 @@
++#!/usr/bin/env bash
++set -euo pipefail
++
++if [[ $# -lt 3 ]]; then
++  echo "Usage: bash fm3d/scripts/train_wavelet_200.sh MANIFEST {3M|6M} OUTPUT [extra training args]" >&2
++  exit 2
++fi
++manifest=$1
++fov=$2
++output=$3
++shift 3
++if [[ "$fov" != "3M" && "$fov" != "6M" ]]; then
++  echo "FOV must be 3M or 6M" >&2
++  exit 2
++fi
++
++# Call from the code root, so relative dataset/output paths have their usual meaning.
++if [[ ! -f fm3d/train_wavelet.py ]]; then
++  echo "Run from the directory containing fm3d/." >&2
++  exit 2
++fi
++exec "${PYTHON:-python}" -u -m fm3d.train_wavelet \
++  --manifest "$manifest" --fov "$fov" --output "$output" \
++  --axis-order ZYX --intensity-scale 255 --depth 256 \
++  --patch 256 64 64 --base-channels 16 --condition \
++  --batch-size 1 --epochs 200 --steps-per-epoch 200 \
++  --lr 2e-4 --val-every 5 --ode-steps 8 --overlap 0.5 \
++  --seed 2026 --workers 0 --device cuda --amp --save-every 50 \
++  "$@"
+--- /dev/null
++++ b/fm3d/WAVELET.md
+@@ -0,0 +1,180 @@
++# 3D FM + 三维 Haar 小波：200 轮实验
++
++这是在现有 `fm3d` 基线上增加的**一级三维 Haar 小波域条件 Flow Matching**。复用数据读取、病例划分、时间条件 U-Net、优化器和完整体积评价；训练与 ODE 状态改为 8 个小波子带。新入口为 `python -m fm3d.train_wavelet`，默认从头训练 200 轮。
++
++## 1. 服务器直接运行
++
++将 `fm3d_wavelet_ubuntu.zip` 解压到一个新代码目录，进入包含 `fm3d/` 的目录，激活**原来基线已能运行的 Python 环境**。代码包不含数据与权重，继续使用服务器原有数据；不需要再次预处理、划分病例或安装小波库。保留压缩包中的 `tools/prepare_common_octa500.py`，它供一项原有数据协议测试使用。
++
++以下 `/data/OCTA500_common_v1` 是示例数据位置，换成服务器上基线使用的实际目录。CSV 必须与基线相同。
++
++```bash
++# 在包含 fm3d/ 的代码根目录执行
++python -m unittest fm3d.test_core fm3d.test_wavelet -v
++
++# 先测服务器自身的显存和优化更新；--patch 始终填写原始体素尺寸
++python -m fm3d.benchmark --representation haar3d --device cuda \
++  --patch 256 64 64 --base-channels 16 --batch-size 1 \
++  --output runs/haar3d_gpu_check.json
++
++# 3M：新实验，从头训练到 200 轮
++bash fm3d/scripts/train_wavelet_200.sh \
++  /data/OCTA500_common_v1/split_3M_z256.csv \
++  3M runs/fm3d_haar3d_3M_200
++```
++
++6M 使用另一个输出目录：
++
++```bash
++bash fm3d/scripts/train_wavelet_200.sh \
++  /data/OCTA500_common_v1/split_6M_z256.csv \
++  6M runs/fm3d_haar3d_6M_200
++```
++
++后台运行并保存日志：
++
++```bash
++mkdir -p logs
++nohup bash fm3d/scripts/train_wavelet_200.sh \
++  /data/OCTA500_common_v1/split_3M_z256.csv \
++  3M runs/fm3d_haar3d_3M_200 \
++  > logs/fm3d_haar3d_3M_200.log 2>&1 &
++
++tail -f logs/fm3d_haar3d_3M_200.log
++```
++
++日志放在 `logs/`，不要预先放进训练输出目录，否则防覆盖检查会拒绝启动。正式训练目录须为空或不存在。原有基线权重留在原运行目录。
++
++也可先做真实数据流程短跑；它会进行 2 个训练批次和全部验证病例的 1 步 ODE，仍可能需要数分钟：
++
++```bash
++bash fm3d/scripts/train_wavelet_200.sh \
++  /data/OCTA500_common_v1/split_3M_z256.csv \
++  3M runs/fm3d_haar3d_pipeline_check \
++  --epochs 1 --steps-per-epoch 2 --val-every 1 --ode-steps 1
++```
++
++正式实验用上面的新目录从头训练，不从短跑续训。
++
++## 2. 具体改了什么
++
++轴序仍为 `[B,C,Z,Y,X]`；子带字母依次表示 **Z、Y、X** 上的低通或高通：
++
++```text
++W = 一级正交 3D Haar DWT
++子带顺序 = LLL, LLH, LHL, LHH, HLL, HLH, HHL, HHH
++低通 = (偶数位置 + 奇数位置)/sqrt(2)
++高通 = (偶数位置 - 奇数位置)/sqrt(2)
++
++c_w = W(OCT)                         [B,8,128,32,32]
++y_w = W(OCTA)                        [B,8,128,32,32]
++t ~ Uniform(0,1)                     [B]
++x_t = (1-t)c_w + t*y_w
++u = y_w - c_w
++v = UNet3D(concat(x_t,c_w), t)        输入16通道，输出8通道
++L_FM = mean((v-u)^2)                 所有子带等权
++
++推理：从 x_0=c_w 开始，Euler 积分8步
++输出：clamp(W^{-1}(x_1), 0, 1)        [B,1,256,64,64]（单块示意）
++```
++
++8 个子带全部保留；不做系数阈值、截断、额外归一化或高频加权。高频系数可为负；LLL 也可超过 1，不能对系数使用 `[0,1]` 裁剪。正交变换在偶数网格上保持能量，全部子带等权 MSE 与逆变换后的体素速度 MSE 等价；该实验改变的是网络表示，不是额外添加一种血管损失。
++
++三维单级变换与逆变换的定义可参照 [PyWavelets 官方 nD DWT 文档](https://pywavelets.readthedocs.io/en/latest/ref/nd-dwt-and-idwt.html)。本实现使用可求导的 PyTorch 运算，并用 PyWavelets 作可选的独立数值核对；运行实验不依赖 PyWavelets。
++
++空间尺寸各减半，U-Net 的内部特征图体素数减少。8 个子带的**总元素数没有减少**，因此这是可逆表示变换，不能声称压缩丢弃了 7/8 信息，也不能保证显存或时间恰好降为 1/8。相同网络层数在原始体素上的感受野也会变化，应将本实验描述为“小波域建模方案”的对比。
++
++训练仍对原来的随机配对体块做 DWT。全卷推理先在 CPU 上对整卷补边并做一次 DWT，再在统一的小波网格上滑窗，逐步拼接速度、更新全卷状态。不会让不同窗口使用不同的全卷小波原点；最后做一次 IDWT、去除补边、裁剪最终强度。奇数体积尺寸在末端复制补到偶数；训练 patch 各维必须是至少 16 的偶数。命令中的 patch 总是**体素空间**大小，无需手动填写减半尺寸。
++
++## 3. 固定实验配置
++
++| 项目 | 小波实验默认值 |
++|---|---|
++| 数据 | 同基线 CSV；3M/6M 分别训练 |
++| 输入协议 | ZYX，固定除以 255，深度 256 |
++| 原始体块 | `256×64×64` |
++| 小波体块 | `8×128×32×32` |
++| 网络 | 原残差 3D U-Net，base=16，时间嵌入，显式 OCT 条件 |
++| 优化器 | AdamW，lr=`2e-4`，weight_decay=0，梯度范数上限 1 |
++| batch / AMP | 1 / CUDA AMP |
++| 轮数 | 200 |
++| 每轮训练批次 | 200，随机有放回取病例与体块 |
++| 总训练预算 | 40,000 批次；AMP 跳过的更新单独记录 |
++| 验证 | 每 5 轮及最后一轮，完整验证体积 |
++| 推理 | Euler 8 步、50% 滑窗重叠 |
++| 模型选择 | 最低验证集患者宏平均 MAE |
++| 种子 / workers | 2026 / 0 |
++
++沿用固定学习率，没有额外引入调度器、EMA、拓扑损失或增强，以便解释第一轮消融结果。`workers=0` 沿用原来的稳妥设置；若服务器读取成为瓶颈，可追加 `--workers 2`，并注意每个 worker 会读取完整体积占用主机内存。
++
++200 轮是本次预算，不是已证明最优的轮数。现有 100 轮日志中，第 90 轮验证 MAE 为 0.01369975，第 100 轮为 0.01766786；后者更差，所以应使用验证最优权重判断效果，而非默认取最后一轮。此前日志不能预测新小波实验的收敛位置。
++
++## 4. 断点、快照和测试
++
++中断后，使用同一条命令追加 `--resume`：
++
++```bash
++bash fm3d/scripts/train_wavelet_200.sh \
++  /data/OCTA500_common_v1/split_3M_z256.csv \
++  3M runs/fm3d_haar3d_3M_200 --resume
++```
++
++恢复模型、优化器、AMP 状态和已记录的最佳 MAE，从上一个完成的 epoch 后继续。`--epochs 200` 表示**总计 200 轮**，不表示再追加 200 轮；未完成的 epoch 会重跑。数据、模型表示和主要训练配置变化会被拒绝。checkpoint 记录数据绝对路径，续训时保持服务器数据与输出位置不变。
++
++| 文件 | 用途 |
++|---|---|
++| `latest.pt` | 最近完成轮次，用于续训 |
++| `best.pt` | 全程验证 MAE 最低的权重，用于最终评价 |
++| `epoch_0050.pt`、`epoch_0100.pt`、… | 每 50 轮的当前权重 |
++| `best_through_0100.pt` | 前 100 轮内验证最优权重，用于与已有 100 轮基线比较 |
++| `best_through_0200.pt` | 前 200 轮内验证最优权重 |
++| `history.jsonl`、`validation_*.json` | 每轮训练记录与逐病例验证分数 |
++| `config.json`、`environment.json` | 超参数、表示类型、网络尺寸、设备与参数量 |
++| `manifest_snapshot.json` | 本次使用的固定病例清单 |
++
++`best_through_0100.pt` 内部的 `epoch` 可能是 90 等较早轮次，这是正常的验证模型选择，不是保存错误。恢复到超过 200 轮时，原 100/200 轮快照仍保留。
++
++评价入口会自动根据 checkpoint 选择体素模型或小波模型：
++
++```bash
++# 与已有 100 轮基线比较时用前 100 轮内的最佳模型
++python -m fm3d.evaluate \
++  --checkpoint runs/fm3d_haar3d_3M_200/best_through_0100.pt \
++  --split test --device cuda --output runs/fm3d_haar3d_3M_test100
++
++# 200 轮预算的最终结果
++python -m fm3d.evaluate \
++  --checkpoint runs/fm3d_haar3d_3M_200/best_through_0200.pt \
++  --split test --device cuda --output runs/fm3d_haar3d_3M_test200
++```
++
++测试集仅用于预先确定方案的最终报告；不要依据这两次测试结果再选择超参数。输出仍为全卷 NPZ（`octa`、`octa_gt`、`axis_order=ZYX`）与 `metrics.json`。评价协议保持 MAE/PSNR，与原基线相同。
++
++## 5. 怎样比较才公平
++
++优先比较“基线 100 轮”与“小波前 100 轮最佳”。如要把 200 轮结果作为主对比，基线也应在原运行目录续训至 200 轮：原命令保持主要配置，改为 `--epochs 200 --resume --save-every 50`；延长前另存其当前 `best.pt`，保留原 100 轮结果。旧 checkpoint 没有 `representation` 字段时会按 `voxel` 处理。
++
++小波实验的首尾卷积从 2→1 通道改成 16→8，不能直接把体素基线的 `latest.pt` 当作小波续训文件。这里“在基线上添加小波”指复用基线方法与训练协议，默认重新初始化训练；没有进行未经定义的部分权重迁移。参数量会因首尾通道数略有增加，具体值写入 `environment.json`。
++
++保持数据、patch、每轮批次、推理步数、评价协议一致。当前代码保留原随机裁块规则；不因显存减少立即扩大 patch，以免第一次对比同时改变多个因素。单次实验有随机性，正式结论仍需重复种子验证。
++
++## 6. 代码入口与检查范围
++
++| 文件 | 职责 |
++|---|---|
++| `wavelets.py` | 三维正交 Haar DWT / IDWT，固定子带轴序 |
++| `model.py` | 复用 U-Net，按表示选择 1 或 8 个状态通道，小波域 FM 损失 |
++| `inference.py` | 在统一体素/小波网格上进行完整体积 ODE 积分 |
++| `train_wavelet.py` | 默认 200 轮的小波实验入口 |
++| `scripts/train_wavelet_200.sh` | Ubuntu/服务器启动脚本 |
++| `train.py`、`evaluate.py`、`benchmark.py` | 共享训练、评价、显存检查；旧入口默认仍为体素基线 |
++| `test_wavelet.py` | 可逆性、能量、8 子带轴序、参考数值、梯度、滑窗、断点恢复、测试集导出 |
++
++2026-10-20 本地验证使用 PyTorch 2.5.1+cu121、RTX 3060 Laptop：
++
++- 原基线与小波共 17 项自动测试通过；另补测了 ODE 中间状态越界后返回的情况，确认不会逐步裁剪。
++- 使用改动前代码生成的旧 checkpoint，成功用新入口评价、续训；CPU 参数与旧代码连续训练的结果逐项完全一致。
++- 默认 `256×64×64`、base16、batch1、AMP 的合成训练完成 1 次预热与 3 次更新，无 AMP 跳过。峰值 allocated 约 **0.302 GiB**，reserved 约 **0.348 GiB**；网络参数 2,106,600。
++- 真实 3M 训练病例完成 2 次体块更新与 **1 步完整 `256×304×304` 体积推理**，输出尺寸和数值检查通过；Haar 往返最大误差约 `2.98e-7`。这只是流程验证，没有使用测试病例调参，也未形成训练完成后的效果结果。
++
++具体记录随代码包放在 `verification/`。这些检查不代表服务器 3090 的速度或正式医学图像质量；200 轮正式训练需要在服务器启动后完成。

@@ -1,0 +1,360 @@
+one_case 01_voxel_fm: 25/400 loss=0.002954
+one_case 01_voxel_fm: 50/400 loss=0.002112
+one_case 01_voxel_fm: 75/400 loss=0.001691
+one_case 01_voxel_fm: 100/400 loss=0.001339
+one_case 01_voxel_fm: 125/400 loss=0.001127
+one_case 01_voxel_fm: 150/400 loss=0.001430
+one_case 01_voxel_fm: 175/400 loss=0.000867
+one_case 01_voxel_fm: 200/400 loss=0.000704
+Validation ILM-OPL SSIM=0.1989; train PCC=0.2752
+one_case 01_voxel_fm: 225/400 loss=0.000682
+one_case 01_voxel_fm: 250/400 loss=0.000577
+one_case 01_voxel_fm: 275/400 loss=0.000769
+one_case 01_voxel_fm: 300/400 loss=0.001006
+one_case 01_voxel_fm: 325/400 loss=0.000814
+one_case 01_voxel_fm: 350/400 loss=0.000422
+one_case 01_voxel_fm: 375/400 loss=0.000421
+one_case 01_voxel_fm: 400/400 loss=0.000359
+Validation ILM-OPL SSIM=0.2014; train PCC=0.2546
+one_case 02_haar_fm: 25/400 loss=0.006148
+one_case 02_haar_fm: 50/400 loss=0.003703
+one_case 02_haar_fm: 75/400 loss=0.002748
+one_case 02_haar_fm: 100/400 loss=0.002417
+one_case 02_haar_fm: 125/400 loss=0.002198
+one_case 02_haar_fm: 150/400 loss=0.002172
+one_case 02_haar_fm: 175/400 loss=0.001990
+one_case 02_haar_fm: 200/400 loss=0.001853
+Validation ILM-OPL SSIM=0.1677; train PCC=0.2341
+one_case 02_haar_fm: 225/400 loss=0.001816
+one_case 02_haar_fm: 250/400 loss=0.001747
+one_case 02_haar_fm: 275/400 loss=0.001746
+one_case 02_haar_fm: 300/400 loss=0.001764
+one_case 02_haar_fm: 325/400 loss=0.001652
+one_case 02_haar_fm: 350/400 loss=0.001538
+one_case 02_haar_fm: 375/400 loss=0.001515
+one_case 02_haar_fm: 400/400 loss=0.001451
+Validation ILM-OPL SSIM=0.1861; train PCC=0.2912
+one_case 03_full: 25/400 loss=0.060648
+one_case 03_full: 50/400 loss=0.046126
+one_case 03_full: 75/400 loss=0.036272
+one_case 03_full: 100/400 loss=0.024165
+one_case 03_full: 125/400 loss=0.025944
+one_case 03_full: 150/400 loss=0.045065
+one_case 03_full: 175/400 loss=0.017522
+one_case 03_full: 200/400 loss=0.018340
+Validation ILM-OPL SSIM=0.1726; train PCC=0.3024
+one_case 03_full: 225/400 loss=0.032500
+one_case 03_full: 250/400 loss=0.026611
+one_case 03_full: 275/400 loss=0.034793
+one_case 03_full: 300/400 loss=0.038992
+one_case 03_full: 325/400 loss=0.033508
+one_case 03_full: 350/400 loss=0.024526
+one_case 03_full: 375/400 loss=0.013237
+one_case 03_full: 400/400 loss=0.020021
+Validation ILM-OPL SSIM=0.1941; train PCC=0.3464
+one_case 08_full_half_start: 25/400 loss=0.073307
+one_case 08_full_half_start: 50/400 loss=0.045368
+one_case 08_full_half_start: 75/400 loss=0.050576
+one_case 08_full_half_start: 100/400 loss=0.050010
+one_case 08_full_half_start: 125/400 loss=0.028237
+one_case 08_full_half_start: 150/400 loss=0.040860
+one_case 08_full_half_start: 175/400 loss=0.045547
+one_case 08_full_half_start: 200/400 loss=0.044791
+Validation ILM-OPL SSIM=0.1770; train PCC=0.3017
+one_case 08_full_half_start: 225/400 loss=0.044060
+one_case 08_full_half_start: 250/400 loss=0.044616
+one_case 08_full_half_start: 275/400 loss=0.035727
+one_case 08_full_half_start: 300/400 loss=0.044471
+one_case 08_full_half_start: 325/400 loss=0.034554
+one_case 08_full_half_start: 350/400 loss=0.041965
+one_case 08_full_half_start: 375/400 loss=0.042211
+one_case 08_full_half_start: 400/400 loss=0.021429
+Validation ILM-OPL SSIM=0.1936; train PCC=0.3482
+few_case 01_voxel_fm: 25/800 loss=0.004992
+few_case 01_voxel_fm: 50/800 loss=0.004022
+few_case 01_voxel_fm: 75/800 loss=0.003533
+few_case 01_voxel_fm: 100/800 loss=0.001698
+few_case 01_voxel_fm: 125/800 loss=0.001219
+few_case 01_voxel_fm: 150/800 loss=0.001949
+few_case 01_voxel_fm: 175/800 loss=0.002283
+few_case 01_voxel_fm: 200/800 loss=0.001782
+Validation ILM-OPL SSIM=0.1969; train PCC=0.2982
+few_case 01_voxel_fm: 225/800 loss=0.000604
+few_case 01_voxel_fm: 250/800 loss=0.000889
+few_case 01_voxel_fm: 275/800 loss=0.001069
+few_case 01_voxel_fm: 300/800 loss=0.000437
+few_case 01_voxel_fm: 325/800 loss=0.001163
+few_case 01_voxel_fm: 350/800 loss=0.001568
+few_case 01_voxel_fm: 375/800 loss=0.001227
+few_case 01_voxel_fm: 400/800 loss=0.001053
+Validation ILM-OPL SSIM=0.2144; train PCC=0.3064
+few_case 01_voxel_fm: 425/800 loss=0.000912
+few_case 01_voxel_fm: 450/800 loss=0.001404
+few_case 01_voxel_fm: 475/800 loss=0.000294
+few_case 01_voxel_fm: 500/800 loss=0.002288
+few_case 01_voxel_fm: 525/800 loss=0.000407
+few_case 01_voxel_fm: 550/800 loss=0.000835
+few_case 01_voxel_fm: 575/800 loss=0.001587
+few_case 01_voxel_fm: 600/800 loss=0.000971
+Validation ILM-OPL SSIM=0.1861; train PCC=0.3012
+few_case 01_voxel_fm: 625/800 loss=0.000840
+few_case 01_voxel_fm: 650/800 loss=0.000564
+few_case 01_voxel_fm: 675/800 loss=0.000851
+few_case 01_voxel_fm: 700/800 loss=0.001345
+few_case 01_voxel_fm: 725/800 loss=0.001580
+few_case 01_voxel_fm: 750/800 loss=0.001131
+few_case 01_voxel_fm: 775/800 loss=0.000250
+few_case 01_voxel_fm: 800/800 loss=0.000399
+Validation ILM-OPL SSIM=0.1968; train PCC=0.2563
+few_case 02_haar_fm: 25/800 loss=0.009477
+few_case 02_haar_fm: 50/800 loss=0.005888
+few_case 02_haar_fm: 75/800 loss=0.003150
+few_case 02_haar_fm: 100/800 loss=0.003147
+few_case 02_haar_fm: 125/800 loss=0.003691
+few_case 02_haar_fm: 150/800 loss=0.002750
+few_case 02_haar_fm: 175/800 loss=0.002870
+few_case 02_haar_fm: 200/800 loss=0.002844
+Validation ILM-OPL SSIM=0.1855; train PCC=0.2128
+few_case 02_haar_fm: 225/800 loss=0.001421
+few_case 02_haar_fm: 250/800 loss=0.001958
+few_case 02_haar_fm: 275/800 loss=0.001533
+few_case 02_haar_fm: 300/800 loss=0.001203
+few_case 02_haar_fm: 325/800 loss=0.001746
+few_case 02_haar_fm: 350/800 loss=0.003284
+few_case 02_haar_fm: 375/800 loss=0.002062
+few_case 02_haar_fm: 400/800 loss=0.002050
+Validation ILM-OPL SSIM=0.2087; train PCC=0.2885
+few_case 02_haar_fm: 425/800 loss=0.002786
+few_case 02_haar_fm: 450/800 loss=0.002659
+few_case 02_haar_fm: 475/800 loss=0.001137
+few_case 02_haar_fm: 500/800 loss=0.004053
+few_case 02_haar_fm: 525/800 loss=0.001367
+few_case 02_haar_fm: 550/800 loss=0.001500
+few_case 02_haar_fm: 575/800 loss=0.001575
+few_case 02_haar_fm: 600/800 loss=0.002570
+Validation ILM-OPL SSIM=0.2040; train PCC=0.3516
+few_case 02_haar_fm: 625/800 loss=0.002361
+few_case 02_haar_fm: 650/800 loss=0.001576
+few_case 02_haar_fm: 675/800 loss=0.001078
+few_case 02_haar_fm: 700/800 loss=0.001418
+few_case 02_haar_fm: 725/800 loss=0.001083
+few_case 02_haar_fm: 750/800 loss=0.001757
+few_case 02_haar_fm: 775/800 loss=0.000867
+few_case 02_haar_fm: 800/800 loss=0.000967
+Validation ILM-OPL SSIM=0.1904; train PCC=0.3259
+few_case 03_full: 25/800 loss=0.053252
+few_case 03_full: 50/800 loss=0.037502
+few_case 03_full: 75/800 loss=0.024874
+few_case 03_full: 100/800 loss=0.029432
+few_case 03_full: 125/800 loss=0.034597
+few_case 03_full: 150/800 loss=0.047054
+few_case 03_full: 175/800 loss=0.027362
+few_case 03_full: 200/800 loss=0.031270
+Validation ILM-OPL SSIM=0.1892; train PCC=0.2608
+few_case 03_full: 225/800 loss=0.023379
+few_case 03_full: 250/800 loss=0.035986
+few_case 03_full: 275/800 loss=0.028631
+few_case 03_full: 300/800 loss=0.029315
+few_case 03_full: 325/800 loss=0.014022
+few_case 03_full: 350/800 loss=0.045606
+few_case 03_full: 375/800 loss=0.031586
+few_case 03_full: 400/800 loss=0.028064
+Validation ILM-OPL SSIM=0.2096; train PCC=0.3020
+few_case 03_full: 425/800 loss=0.015939
+few_case 03_full: 450/800 loss=0.023313
+few_case 03_full: 475/800 loss=0.017045
+few_case 03_full: 500/800 loss=0.054507
+few_case 03_full: 525/800 loss=0.013024
+few_case 03_full: 550/800 loss=0.013973
+few_case 03_full: 575/800 loss=0.033586
+few_case 03_full: 600/800 loss=0.036154
+Validation ILM-OPL SSIM=0.1924; train PCC=0.3364
+few_case 03_full: 625/800 loss=0.018027
+few_case 03_full: 650/800 loss=0.031027
+few_case 03_full: 675/800 loss=0.031858
+few_case 03_full: 700/800 loss=0.016808
+few_case 03_full: 725/800 loss=0.023113
+few_case 03_full: 750/800 loss=0.023452
+few_case 03_full: 775/800 loss=0.015325
+few_case 03_full: 800/800 loss=0.033036
+Validation ILM-OPL SSIM=0.1929; train PCC=0.2544
+few_case 04_no_rdca: 25/800 loss=0.036710
+few_case 04_no_rdca: 50/800 loss=0.022970
+few_case 04_no_rdca: 75/800 loss=0.010533
+few_case 04_no_rdca: 100/800 loss=0.016436
+few_case 04_no_rdca: 125/800 loss=0.020624
+few_case 04_no_rdca: 150/800 loss=0.033687
+few_case 04_no_rdca: 175/800 loss=0.015332
+few_case 04_no_rdca: 200/800 loss=0.019028
+Validation ILM-OPL SSIM=0.1914; train PCC=0.2647
+few_case 04_no_rdca: 225/800 loss=0.009994
+few_case 04_no_rdca: 250/800 loss=0.023454
+few_case 04_no_rdca: 275/800 loss=0.016527
+few_case 04_no_rdca: 300/800 loss=0.016209
+few_case 04_no_rdca: 325/800 loss=0.004017
+few_case 04_no_rdca: 350/800 loss=0.034618
+few_case 04_no_rdca: 375/800 loss=0.018001
+few_case 04_no_rdca: 400/800 loss=0.017535
+Validation ILM-OPL SSIM=0.2009; train PCC=0.2877
+few_case 04_no_rdca: 425/800 loss=0.005588
+few_case 04_no_rdca: 450/800 loss=0.015811
+few_case 04_no_rdca: 475/800 loss=0.006278
+few_case 04_no_rdca: 500/800 loss=0.044940
+few_case 04_no_rdca: 525/800 loss=0.003305
+few_case 04_no_rdca: 550/800 loss=0.003270
+few_case 04_no_rdca: 575/800 loss=0.025314
+few_case 04_no_rdca: 600/800 loss=0.025190
+Validation ILM-OPL SSIM=0.2108; train PCC=0.3348
+few_case 04_no_rdca: 625/800 loss=0.007036
+few_case 04_no_rdca: 650/800 loss=0.020787
+few_case 04_no_rdca: 675/800 loss=0.015913
+few_case 04_no_rdca: 700/800 loss=0.006354
+few_case 04_no_rdca: 725/800 loss=0.014235
+few_case 04_no_rdca: 750/800 loss=0.014026
+few_case 04_no_rdca: 775/800 loss=0.004845
+few_case 04_no_rdca: 800/800 loss=0.017866
+Validation ILM-OPL SSIM=0.1693; train PCC=0.2059
+few_case 05_no_projection: 25/800 loss=0.048708
+few_case 05_no_projection: 50/800 loss=0.035132
+few_case 05_no_projection: 75/800 loss=0.023541
+few_case 05_no_projection: 100/800 loss=0.026454
+few_case 05_no_projection: 125/800 loss=0.031083
+few_case 05_no_projection: 150/800 loss=0.042834
+few_case 05_no_projection: 175/800 loss=0.025393
+few_case 05_no_projection: 200/800 loss=0.027767
+Validation ILM-OPL SSIM=0.1844; train PCC=0.2506
+few_case 05_no_projection: 225/800 loss=0.022383
+few_case 05_no_projection: 250/800 loss=0.030925
+few_case 05_no_projection: 275/800 loss=0.025361
+few_case 05_no_projection: 300/800 loss=0.025851
+few_case 05_no_projection: 325/800 loss=0.014160
+few_case 05_no_projection: 350/800 loss=0.039646
+few_case 05_no_projection: 375/800 loss=0.027890
+few_case 05_no_projection: 400/800 loss=0.025806
+Validation ILM-OPL SSIM=0.2003; train PCC=0.2768
+few_case 05_no_projection: 425/800 loss=0.015696
+few_case 05_no_projection: 450/800 loss=0.021571
+few_case 05_no_projection: 475/800 loss=0.015857
+few_case 05_no_projection: 500/800 loss=0.046459
+few_case 05_no_projection: 525/800 loss=0.013745
+few_case 05_no_projection: 550/800 loss=0.013396
+few_case 05_no_projection: 575/800 loss=0.033287
+few_case 05_no_projection: 600/800 loss=0.030638
+Validation ILM-OPL SSIM=0.1767; train PCC=0.3205
+few_case 05_no_projection: 625/800 loss=0.017982
+few_case 05_no_projection: 650/800 loss=0.027774
+few_case 05_no_projection: 675/800 loss=0.029433
+few_case 05_no_projection: 700/800 loss=0.017296
+few_case 05_no_projection: 725/800 loss=0.021397
+few_case 05_no_projection: 750/800 loss=0.021354
+few_case 05_no_projection: 775/800 loss=0.014513
+few_case 05_no_projection: 800/800 loss=0.027763
+Validation ILM-OPL SSIM=0.1541; train PCC=0.1925
+few_case 06_no_structure: 25/800 loss=0.045774
+few_case 06_no_structure: 50/800 loss=0.030289
+few_case 06_no_structure: 75/800 loss=0.021200
+few_case 06_no_structure: 100/800 loss=0.024938
+few_case 06_no_structure: 125/800 loss=0.029727
+few_case 06_no_structure: 150/800 loss=0.042798
+few_case 06_no_structure: 175/800 loss=0.023242
+few_case 06_no_structure: 200/800 loss=0.026621
+Validation ILM-OPL SSIM=0.1887; train PCC=0.2488
+few_case 06_no_structure: 225/800 loss=0.022838
+few_case 06_no_structure: 250/800 loss=0.036971
+few_case 06_no_structure: 275/800 loss=0.025850
+few_case 06_no_structure: 300/800 loss=0.029076
+few_case 06_no_structure: 325/800 loss=0.014216
+few_case 06_no_structure: 350/800 loss=0.034909
+few_case 06_no_structure: 375/800 loss=0.027897
+few_case 06_no_structure: 400/800 loss=0.025455
+Validation ILM-OPL SSIM=0.2105; train PCC=0.2955
+few_case 06_no_structure: 425/800 loss=0.014377
+few_case 06_no_structure: 450/800 loss=0.022764
+few_case 06_no_structure: 475/800 loss=0.018331
+few_case 06_no_structure: 500/800 loss=0.040478
+few_case 06_no_structure: 525/800 loss=0.014042
+few_case 06_no_structure: 550/800 loss=0.014234
+few_case 06_no_structure: 575/800 loss=0.045582
+few_case 06_no_structure: 600/800 loss=0.031664
+Validation ILM-OPL SSIM=0.2103; train PCC=0.2999
+few_case 06_no_structure: 625/800 loss=0.015501
+few_case 06_no_structure: 650/800 loss=0.027047
+few_case 06_no_structure: 675/800 loss=0.033651
+few_case 06_no_structure: 700/800 loss=0.015923
+few_case 06_no_structure: 725/800 loss=0.026051
+few_case 06_no_structure: 750/800 loss=0.021176
+few_case 06_no_structure: 775/800 loss=0.015991
+few_case 06_no_structure: 800/800 loss=0.030869
+Validation ILM-OPL SSIM=0.1924; train PCC=0.3399
+few_case 07_no_reconstruction: 25/800 loss=0.035210
+few_case 07_no_reconstruction: 50/800 loss=0.028114
+few_case 07_no_reconstruction: 75/800 loss=0.022528
+few_case 07_no_reconstruction: 100/800 loss=0.021399
+few_case 07_no_reconstruction: 125/800 loss=0.021650
+few_case 07_no_reconstruction: 150/800 loss=0.025608
+few_case 07_no_reconstruction: 175/800 loss=0.020231
+few_case 07_no_reconstruction: 200/800 loss=0.021426
+Validation ILM-OPL SSIM=0.1824; train PCC=0.2834
+few_case 07_no_reconstruction: 225/800 loss=0.017613
+few_case 07_no_reconstruction: 250/800 loss=0.020455
+few_case 07_no_reconstruction: 275/800 loss=0.018633
+few_case 07_no_reconstruction: 300/800 loss=0.019007
+few_case 07_no_reconstruction: 325/800 loss=0.014178
+few_case 07_no_reconstruction: 350/800 loss=0.023979
+few_case 07_no_reconstruction: 375/800 loss=0.018988
+few_case 07_no_reconstruction: 400/800 loss=0.019374
+Validation ILM-OPL SSIM=0.1801; train PCC=0.3252
+few_case 07_no_reconstruction: 425/800 loss=0.015696
+few_case 07_no_reconstruction: 450/800 loss=0.017538
+few_case 07_no_reconstruction: 475/800 loss=0.014401
+few_case 07_no_reconstruction: 500/800 loss=0.028412
+few_case 07_no_reconstruction: 525/800 loss=0.013292
+few_case 07_no_reconstruction: 550/800 loss=0.012776
+few_case 07_no_reconstruction: 575/800 loss=0.019142
+few_case 07_no_reconstruction: 600/800 loss=0.020244
+Validation ILM-OPL SSIM=0.1998; train PCC=0.3735
+few_case 07_no_reconstruction: 625/800 loss=0.016467
+few_case 07_no_reconstruction: 650/800 loss=0.018288
+few_case 07_no_reconstruction: 675/800 loss=0.018071
+few_case 07_no_reconstruction: 700/800 loss=0.014340
+few_case 07_no_reconstruction: 725/800 loss=0.015727
+few_case 07_no_reconstruction: 750/800 loss=0.015639
+few_case 07_no_reconstruction: 775/800 loss=0.012912
+few_case 07_no_reconstruction: 800/800 loss=0.021426
+Validation ILM-OPL SSIM=0.1806; train PCC=0.2430
+few_case 08_full_half_start: 25/800 loss=0.092333
+few_case 08_full_half_start: 50/800 loss=0.040339
+few_case 08_full_half_start: 75/800 loss=0.023352
+few_case 08_full_half_start: 100/800 loss=0.056530
+few_case 08_full_half_start: 125/800 loss=0.036245
+few_case 08_full_half_start: 150/800 loss=0.051658
+few_case 08_full_half_start: 175/800 loss=0.076122
+few_case 08_full_half_start: 200/800 loss=0.059763
+Validation ILM-OPL SSIM=0.1885; train PCC=0.2286
+few_case 08_full_half_start: 225/800 loss=0.043493
+few_case 08_full_half_start: 250/800 loss=0.047719
+few_case 08_full_half_start: 275/800 loss=0.043269
+few_case 08_full_half_start: 300/800 loss=0.041185
+few_case 08_full_half_start: 325/800 loss=0.015115
+few_case 08_full_half_start: 350/800 loss=0.050551
+few_case 08_full_half_start: 375/800 loss=0.050394
+few_case 08_full_half_start: 400/800 loss=0.029249
+Validation ILM-OPL SSIM=0.1949; train PCC=0.2701
+few_case 08_full_half_start: 425/800 loss=0.059023
+few_case 08_full_half_start: 450/800 loss=0.051363
+few_case 08_full_half_start: 475/800 loss=0.018613
+few_case 08_full_half_start: 500/800 loss=0.051665
+few_case 08_full_half_start: 525/800 loss=0.040267
+few_case 08_full_half_start: 550/800 loss=0.014196
+few_case 08_full_half_start: 575/800 loss=0.040830
+few_case 08_full_half_start: 600/800 loss=0.040661
+Validation ILM-OPL SSIM=0.2152; train PCC=0.3569
+few_case 08_full_half_start: 625/800 loss=0.019097
+few_case 08_full_half_start: 650/800 loss=0.033285
+few_case 08_full_half_start: 675/800 loss=0.036817
+few_case 08_full_half_start: 700/800 loss=0.039401
+few_case 08_full_half_start: 725/800 loss=0.035662
+few_case 08_full_half_start: 750/800 loss=0.024662
+few_case 08_full_half_start: 775/800 loss=0.016894
+few_case 08_full_half_start: 800/800 loss=0.034566
+Validation ILM-OPL SSIM=0.2052; train PCC=0.3638

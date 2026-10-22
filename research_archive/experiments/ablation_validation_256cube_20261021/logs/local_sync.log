@@ -1,0 +1,5 @@
+{"state": "sync_retry", "error": "ssh: connect to host research-server.example.org port 42030: Connection timed out\n", "utc": "2026-10-22T02:16:36.953247+00:00"}
+{"state": "sync_retry", "error": "ssh: connect to host research-server.example.org port 42030: Connection timed out\n", "utc": "2026-10-22T02:17:37.031309+00:00"}
+{"state": "sync_retry", "error": "ssh: connect to host research-server.example.org port 42030: Connection timed out\n", "utc": "2026-10-22T02:18:37.110559+00:00"}
+{"state": "sync_retry", "error": "/srv/oct_research/conda_envs/lyh_flowoct/bin/python: can't open file '/srv/oct_research/fm3d_validation_256cube_20261021/peek256.py': [Errno 2] No such file or directory\n", "utc": "2026-10-22T02:19:25.079590+00:00"}
+{"state": "sync_retry", "error": "/srv/oct_research/conda_envs/lyh_flowoct/bin/python: can't open file '/srv/oct_research/fm3d_validation_256cube_20261021/peek256.py': [Errno 2] No such file or directory\n", "utc": "2026-10-22T02:20:12.821644+00:00"}

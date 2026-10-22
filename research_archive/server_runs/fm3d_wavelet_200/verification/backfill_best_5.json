@@ -1,0 +1,157 @@
+{
+  "basis": "Copied only when retained checkpoint epoch and best_mae match the validation-selected model exactly",
+  "created": [
+    {
+      "through_epoch": 45,
+      "best_epoch": 45,
+      "source": "best_through_0050.pt"
+    },
+    {
+      "through_epoch": 55,
+      "best_epoch": 45,
+      "source": "best_through_0050.pt"
+    },
+    {
+      "through_epoch": 75,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 80,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 85,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 90,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 95,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 105,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 110,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 115,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 120,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 125,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 130,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 135,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 140,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 145,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 155,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 160,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 165,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 170,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    },
+    {
+      "through_epoch": 175,
+      "best_epoch": 75,
+      "source": "best_through_0100.pt"
+    }
+  ],
+  "not_recoverable_from_retained_weights": [
+    {
+      "through_epoch": 5,
+      "best_epoch": 5
+    },
+    {
+      "through_epoch": 10,
+      "best_epoch": 5
+    },
+    {
+      "through_epoch": 15,
+      "best_epoch": 5
+    },
+    {
+      "through_epoch": 20,
+      "best_epoch": 20
+    },
+    {
+      "through_epoch": 25,
+      "best_epoch": 20
+    },
+    {
+      "through_epoch": 30,
+      "best_epoch": 30
+    },
+    {
+      "through_epoch": 35,
+      "best_epoch": 30
+    },
+    {
+      "through_epoch": 40,
+      "best_epoch": 30
+    },
+    {
+      "through_epoch": 60,
+      "best_epoch": 60
+    },
+    {
+      "through_epoch": 65,
+      "best_epoch": 65
+    },
+    {
+      "through_epoch": 70,
+      "best_epoch": 65
+    }
+  ],
+  "original_5_epoch_current_weights_not_recoverable": true
+}

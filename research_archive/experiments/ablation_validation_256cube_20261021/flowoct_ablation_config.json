@@ -1,0 +1,29 @@
+{
+  "schema": "flowoct_velocity_only_256cube_v1",
+  "seed": 20261021,
+  "step_seed_base": 202610220000,
+  "updates": 400,
+  "eval_every": 200,
+  "training_case": "10301",
+  "validation_cases": ["10319", "10447", "10456", "10302"],
+  "shape_ZYX": [256, 256, 256],
+  "arms": {
+    "07_flowoct_fm_only": "pixel",
+    "08_flowoct_wavelet_only": "haar2d"
+  },
+  "lr": 0.0002,
+  "beta": 0.5,
+  "train_slices": 0,
+  "network_chunk": 8,
+  "inference_chunk": 16,
+  "pixel_network_chunk": 2,
+  "pixel_inference_chunk": 4,
+  "velocity_weight": 10.0,
+  "velocity_roi": "Unchanged author _cropped_l2_loss; prediction/target bounding-box union",
+  "auxiliary_losses": {"reconstruction": 0, "contrastive": 0, "projection": 0},
+  "amp": false,
+  "gradient_clipping": false,
+  "data_protocol": "Reuse frozen central256 cubes, /255, no resize/minmax/augmentation",
+  "solvers": ["native3", "shared8"],
+  "comparison_boundary": "Same backbone defaults; pixel 1-channel full-resolution input versus Haar 4-channel half-resolution input. No parameter-count or compute matching."
+}

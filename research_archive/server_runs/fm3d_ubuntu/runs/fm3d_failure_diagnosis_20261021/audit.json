@@ -1,0 +1,13 @@
+{
+  "files_sha256": {
+    "fm3d\\diagnose_voxel.py": "6e6049b8ffc654dc55bba16c14c1c34b0d2dc085024d35dbb70528cabf1f1367",
+    "fm3d\\diagnose_start_fit.py": "0ec49046626e3ba32f27e6c0c418a726d347ada1d4d3f4b9e7e3fd7c4f6a0152",
+    "artifacts\\fm3d_failure_diagnosis_20261021\\server\\diagnosis.json": "6c70c1417929ec23680d188407a6468fd4bc76762593e9ce3a5dc5aa3bed9291",
+    "artifacts\\fm3d_failure_diagnosis_20261021\\start_fit\\fit.json": "ea08c2b821efb69179e1deaed3e02431cbedf4383391f793ed1579eae645db29"
+  },
+  "checkpoint_sha256": "d3433e6fca9567b38ed26e2fcfaeb6cde220abd65ffd9a5987ee40a5be0723ec",
+  "test_cases_used_in_new_diagnostics": 0,
+  "gpu": "server CUDA_VISIBLE_DEVICES=0",
+  "production_model_modified": false,
+  "limits": "2train+2validation patients;2 patches each;120update single-training-patch two-arm probe;not generalization results"
+}

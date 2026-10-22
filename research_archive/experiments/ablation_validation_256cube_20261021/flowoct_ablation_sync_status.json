@@ -1,0 +1,30 @@
+{
+  "state": "running",
+  "remote": {
+    "arms": [
+      {
+        "arm": "07_flowoct_fm_only",
+        "status": "final_evaluation",
+        "updates": 400,
+        "target": 400,
+        "solver": "native3",
+        "last_loss": 0.008934411220252514
+      },
+      {
+        "arm": "08_flowoct_wavelet_only",
+        "status": "complete",
+        "updates": 400,
+        "target": 400,
+        "attempts": 400,
+        "amp_skipped": 0,
+        "seconds": 1069.0517862059642,
+        "peak_allocated_bytes": 3423036416,
+        "last_loss": 0.018122483044862747
+      }
+    ],
+    "worker_alive": true,
+    "package": null,
+    "audit": null
+  },
+  "utc": "2026-10-22T04:55:42.691363+00:00"
+}

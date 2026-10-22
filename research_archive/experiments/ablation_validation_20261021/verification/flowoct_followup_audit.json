@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "flowoct_added_updates": 1200,
+  "short_diagnostic_updates": 2000,
+  "long_added_updates": 2400,
+  "total_added_updates": 5600,
+  "new_3d_predictions_checked": 95,
+  "original_checkpoints_hash_unchanged": 20,
+  "original_training_sources_unchanged": true,
+  "controls": "Same frozen data and case order. FlowOCT retains its native sampling/loss/optimizer; not a dimensionality-only ablation.",
+  "outputs": "All new GT arrays exactly match the frozen cache; finite [0,1] predictions; independently recomputed saved volume MAE."
+}

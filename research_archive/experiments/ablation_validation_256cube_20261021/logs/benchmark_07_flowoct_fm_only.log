@@ -1,0 +1,44 @@
+Traceback (most recent call last):
+  File "/srv/oct_research/fm3d_validation_256cube_20261021/run_flowoct_ablation.py", line 187, in <module>
+    main()
+  File "/srv/oct_research/fm3d_validation_256cube_20261021/run_flowoct_ablation.py", line 179, in main
+    run(args)
+  File "/srv/oct_research/fm3d_validation_256cube_20261021/run_flowoct_ablation.py", line 68, in run
+    model.forward()
+  File "/srv/oct_research/fm3d_validation_256cube_20261021/flowoct_velocity_only.py", line 75, in forward
+    self.loss.backward()
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/_tensor.py", line 581, in backward
+    torch.autograd.backward(
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 1125, in unpack_hook
+    frame.recompute_fn(*args)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/utils/checkpoint.py", line 1519, in recompute_fn
+    fn(*args, **kwargs)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/srv/oct_research/conda_envs/lyh_flowoct/lib/python3.10/site-packages/monai/networks/nets/diffusion_model_unet.py", line 1800, in forward
+    h = upsample_block(hidden_states=h, res_hidden_states_list=res_samples, temb=emb, context=context)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/srv/oct_research/conda_envs/lyh_flowoct/lib/python3.10/site-packages/monai/networks/nets/diffusion_model_unet.py", line 1159, in forward
+    hidden_states = attn(hidden_states).contiguous()
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/srv/oct_research/conda_envs/lyh_flowoct/lib/python3.10/site-packages/monai/networks/blocks/spatialattention.py", line 94, in forward
+    x = self.attn(x)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/srv/oct_research/conda_envs/lyh_flowoct/lib/python3.10/site-packages/monai/networks/blocks/selfattention.py", line 182, in forward
+    att_mat = torch.einsum("blxd,blyd->blxy", q, k) * self.scale
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has a total capacity of 23.56 GiB of which 2.51 GiB is free. Including non-PyTorch memory, this process has 21.04 GiB memory in use. Of the allocated memory 19.79 GiB is allocated by PyTorch, and 916.90 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,152 @@
+{
+  "validation": {
+    "voxel": {
+      "epochs": 100,
+      "best_mae_epoch": 90,
+      "best_checkpoint_metrics": {
+        "mae": 0.013699754575843756,
+        "psnr": 28.102417253594915
+      },
+      "final_metrics": {
+        "mae": 0.017667858982914928,
+        "psnr": 27.67486792812904
+      }
+    },
+    "haar3d": {
+      "epochs": 200,
+      "best_mae_epoch": 195,
+      "best_checkpoint_metrics": {
+        "mae": 0.014347735892618679,
+        "psnr": 28.806652253631377
+      },
+      "final_metrics": {
+        "mae": 0.0171727491962681,
+        "psnr": 28.39930404500256
+      }
+    }
+  },
+  "test": {
+    "patients": 50,
+    "baseline_checkpoint_epoch": 90,
+    "haar3d_checkpoint_epoch": 195,
+    "mae": {
+      "baseline": 0.013878257593864725,
+      "haar3d": 0.014593939360023137,
+      "difference_haar3d_minus_baseline": 0.0007156817661584106,
+      "paired_bootstrap_95pct_ci": [
+        0.0002370077581201733,
+        0.0012163024786765403
+      ],
+      "haar3d_better_patients": 21,
+      "relative_difference_pct": 5.156856048520082
+    },
+    "psnr": {
+      "baseline": 28.321992873735304,
+      "haar3d": 28.89825615719358,
+      "difference_haar3d_minus_baseline": 0.5762632834582759,
+      "paired_bootstrap_95pct_ci": [
+        0.27464743303335004,
+        0.8441351248240704
+      ],
+      "haar3d_better_patients": 41
+    }
+  },
+  "projection": {
+    "FULL": {
+      "mae": {
+        "baseline": 0.00828380263034157,
+        "haar3d": 0.007387915326094464,
+        "difference_haar3d_minus_baseline": -0.0008958873042471088,
+        "paired_bootstrap_95pct_ci": [
+          -0.0017946243921047873,
+          3.1746984623119675e-05
+        ],
+        "haar3d_better_patients": 30
+      },
+      "psnr": {
+        "baseline": 39.75451608633401,
+        "haar3d": 40.95070496744994,
+        "difference_haar3d_minus_baseline": 1.1961888811159307,
+        "paired_bootstrap_95pct_ci": [
+          0.3858788724389796,
+          1.9723618215919905
+        ],
+        "haar3d_better_patients": 33
+      },
+      "correlation": {
+        "baseline": 0.2726451311474996,
+        "haar3d": 0.3051794727716477,
+        "difference_haar3d_minus_baseline": 0.03253434162414806,
+        "paired_bootstrap_95pct_ci": [
+          0.02684193250782643,
+          0.038028391201299847
+        ],
+        "haar3d_better_patients": 47
+      }
+    },
+    "ILM_OPL": {
+      "mae": {
+        "baseline": 0.10086924157938947,
+        "haar3d": 0.0847526901166915,
+        "difference_haar3d_minus_baseline": -0.016116551462697973,
+        "paired_bootstrap_95pct_ci": [
+          -0.01855489514732967,
+          -0.013445541064658137
+        ],
+        "haar3d_better_patients": 47
+      },
+      "psnr": {
+        "baseline": 17.591586002202153,
+        "haar3d": 19.05535512568998,
+        "difference_haar3d_minus_baseline": 1.4637691234878258,
+        "paired_bootstrap_95pct_ci": [
+          1.262516257935654,
+          1.6206404550138036
+        ],
+        "haar3d_better_patients": 48
+      },
+      "correlation": {
+        "baseline": 0.37058144295101253,
+        "haar3d": 0.39774444781259305,
+        "difference_haar3d_minus_baseline": 0.02716300486158053,
+        "paired_bootstrap_95pct_ci": [
+          0.020919759997890735,
+          0.03328614627718683
+        ],
+        "haar3d_better_patients": 43
+      }
+    },
+    "OPL_BM": {
+      "mae": {
+        "baseline": 0.08315370145391476,
+        "haar3d": 0.07931866783595339,
+        "difference_haar3d_minus_baseline": -0.0038350336179613564,
+        "paired_bootstrap_95pct_ci": [
+          -0.005373678232941141,
+          -0.0021272508228402922
+        ],
+        "haar3d_better_patients": 40
+      },
+      "psnr": {
+        "baseline": 19.01468379927334,
+        "haar3d": 19.49069581299895,
+        "difference_haar3d_minus_baseline": 0.4760120137256103,
+        "paired_bootstrap_95pct_ci": [
+          0.2997218359718786,
+          0.6164358104234834
+        ],
+        "haar3d_better_patients": 46
+      },
+      "correlation": {
+        "baseline": 0.06171518014266837,
+        "haar3d": 0.02337202402057684,
+        "difference_haar3d_minus_baseline": -0.038343156122091535,
+        "paired_bootstrap_95pct_ci": [
+          -0.05084807036948912,
+          -0.02542083464808054
+        ],
+        "haar3d_better_patients": 9
+      }
+    }
+  }
+}

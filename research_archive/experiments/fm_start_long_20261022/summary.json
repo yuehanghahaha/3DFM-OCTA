@@ -1,0 +1,1174 @@
+{
+  "protocol": {
+    "created": "2026-10-22T11:02:30.535448+08:00",
+    "seed": 20261021,
+    "updates": 7200,
+    "arms": [
+      "fm_uniform",
+      "direct_t0",
+      "fm_half_start"
+    ],
+    "physical_gpu": 0,
+    "training_patch": "train_10301_y064_x064",
+    "inputs": [
+      {
+        "id": "train_10301_y064_x064",
+        "case_id": "10301",
+        "patient_id": "10301",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/fm_start_control_20261022/inputs/train_10301_y064_x064.npz",
+        "sha256": "078eb3c16579c634b8594517c287e44738df2f973853bc2c5606f3397179858f",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.1039215698838234,
+          0.9058823585510254
+        ],
+        "octa_range": [
+          0.0,
+          0.6764705777168274
+        ],
+        "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/train_10301_y064_x064.npz",
+        "annotation_sha256": "36684d39646bb48bc6332f89d593b4d25bc44f3141bdef824a8728006122d68e",
+        "cached_input_exact_match": true,
+        "cached_reference_sha256": "78db6998ca49173e885a011d90648f0f7666210961f1e0693d8602ae4fb6526e"
+      },
+      {
+        "id": "train_10301_y120_x120",
+        "case_id": "10301",
+        "patient_id": "10301",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/fm_start_control_20261022/inputs/train_10301_y120_x120.npz",
+        "sha256": "d2fbe7824e06e0b109c6937f5f7456051d37768b5fb9a76a38f340c916044c6f",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.1147058829665184,
+          0.9813725352287292
+        ],
+        "octa_range": [
+          0.0,
+          0.704901933670044
+        ],
+        "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/train_10301_y120_x120.npz",
+        "annotation_sha256": "91b452d2a05ff25ae1b6f63eded8e763f169d232221d44c796728efd49834ed7",
+        "cached_input_exact_match": true,
+        "cached_reference_sha256": "d6a8dc3e57ca1a0d88d6130e8be211ffc5692b1502d9aa132728ecf21125251f"
+      },
+      {
+        "id": "train_10303_y064_x064",
+        "case_id": "10303",
+        "patient_id": "10303",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/fm_start_control_20261022/inputs/train_10303_y064_x064.npz",
+        "sha256": "96a66d9112d96d9464add4446ebef9eb3e9dc6edc737446e1d50933f725695e8",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.13137255609035492,
+          0.9333333373069763
+        ],
+        "octa_range": [
+          0.0,
+          0.7941176295280457
+        ]
+      },
+      {
+        "id": "train_10303_y120_x120",
+        "case_id": "10303",
+        "patient_id": "10303",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/fm_start_control_20261022/inputs/train_10303_y120_x120.npz",
+        "sha256": "11e2de90636ee2e4dd3d50c6d3b36d5aa478770b26a678bc5fc8c00183e86880",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.11666666716337204,
+          0.949999988079071
+        ],
+        "octa_range": [
+          0.0,
+          0.6421568393707275
+        ]
+      },
+      {
+        "id": "validation_10302_y064_x064",
+        "case_id": "10302",
+        "patient_id": "10302",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/fm_start_control_20261022/inputs/validation_10302_y064_x064.npz",
+        "sha256": "80071c905c58ec5963443a5e9abc3ad57a2daf0119308aa9a780eebb38849fbe",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.1147058829665184,
+          0.9450980424880981
+        ],
+        "octa_range": [
+          0.0,
+          0.9882352948188782
+        ],
+        "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/validation_10302_y064_x064.npz",
+        "annotation_sha256": "379117a64a6a68378e471370e3a5ed6222e069603e2bb2d388b013e1345098cd",
+        "cached_input_exact_match": true,
+        "cached_reference_sha256": "214e59453d34a61ea6db646df88632715eb701847b7c14c36dfd6fa0b354365a"
+      },
+      {
+        "id": "validation_10302_y120_x120",
+        "case_id": "10302",
+        "patient_id": "10302",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/fm_start_control_20261022/inputs/validation_10302_y120_x120.npz",
+        "sha256": "38c8d5093dafaa5ad3fbe1bd9ea650c62cd321bc3be33d83c417d3c9d6b08fcd",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.12254901975393295,
+          0.9215686321258545
+        ],
+        "octa_range": [
+          0.0,
+          0.699999988079071
+        ],
+        "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/validation_10302_y120_x120.npz",
+        "annotation_sha256": "20d2a20a4353c4c81038472095c993de94316668e887da488643bc687c74b766",
+        "cached_input_exact_match": true,
+        "cached_reference_sha256": "20a806e9564520cb20315fa8a572f0929e11c5151aff22ce1bb131dc22df77d7"
+      },
+      {
+        "id": "validation_10319_y064_x064",
+        "case_id": "10319",
+        "patient_id": "10319",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/fm_start_control_20261022/inputs/validation_10319_y064_x064.npz",
+        "sha256": "7cd6eba6c1cc9bb8964f063ac85952bd0649560f0a1affbdbcdd79b489053a3b",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.09607843309640884,
+          0.8303921818733215
+        ],
+        "octa_range": [
+          0.0,
+          0.7745097875595093
+        ],
+        "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/validation_10319_y064_x064.npz",
+        "annotation_sha256": "c5c53704c36b0740e243a6c8be86cb420fe9b151e04c7a4cd7a8ce9456a82281",
+        "cached_input_exact_match": true,
+        "cached_reference_sha256": "a82952844fac1cf8cc286b44427194c0660bc53c05e5d66b135793f34fcd43f0"
+      },
+      {
+        "id": "validation_10319_y120_x120",
+        "case_id": "10319",
+        "patient_id": "10319",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/fm_start_control_20261022/inputs/validation_10319_y120_x120.npz",
+        "sha256": "13b418f543cca1f9909ea62c64e499939dab3ce71b633e6d3a9c69a49980dba6",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.09607843309640884,
+          0.9558823704719543
+        ],
+        "octa_range": [
+          0.0,
+          0.658823549747467
+        ],
+        "annotation": "/srv/oct_research/fm_start_control_20261022/annotations/validation_10319_y120_x120.npz",
+        "annotation_sha256": "d0a941a40afda44e9b51b8166ecb325a6763ca09577bfcb9e3dd90839ac31da6",
+        "cached_input_exact_match": true,
+        "cached_reference_sha256": "e8b4a0f8fd501315c74d4cd856f47e0c7cd186330035bee3ff23c46f6b06024b"
+      }
+    ],
+    "model": "Exact previously frozen voxel VelocityUNet3D(base16, condition=True)",
+    "parameter_count": 2097521,
+    "initial_state_sha256": "39ed864e077193dddd4ef16dfaa3fc0ed0cc6e5d03e2736143eaeb111d37d1ba",
+    "initial_file_sha256": "2d9b217d8cf75f9e675b0a4af8d0abf25671e75e8626587dce42e5d3b392d340",
+    "schedule_sha256": "2e18076a8d9626c562322dcd0242c28a6197339cee16d1e4dbbaacb30ce4bc37",
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 0.0002,
+      "weight_decay": 0,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "clip_norm": 1.0
+    },
+    "precision": "FP16 AMP, GradScaler initial1024; FP32 loss and evaluation; TF32 disabled",
+    "objective": "All groups use MSE(v,(OCTA-OCT)) at state=(1-t)*OCT+t*OCTA; only t schedule differs",
+    "arm_definitions": {
+      "fm_uniform": "2400 uniform times",
+      "direct_t0": "2400 times t=0; algebraically direct endpoint MSE",
+      "fm_half_start": "Exactly 1200 t=0 updates alternating with 1200 uniform updates; reuse baseline uniform times at corresponding indices"
+    },
+    "compute_control": "One network forward/backward per training attempt; identical successful updates, optimizer and initial weights",
+    "primary_inference": {
+      "fm_uniform": "Euler8 from OCT",
+      "direct_t0": "One direct source-only step",
+      "fm_half_start": "Euler8 from OCT"
+    },
+    "diagnostic_inference": "All arms additionally evaluated with direct1 and Euler8/32. Direct_t0 has no training at t>0; its Euler output is not its intended inference.",
+    "selection": "Compare fixed2400/4800/7200 for all arms; no validation selection or early stopping",
+    "criteria": "Descriptive memorization threshold on primary output: full-Z max PCC>=.90 and SSIM>=.80; also report ILM-OPL separately. Not a statistical test.",
+    "limitations": "One seed, one training patch, two original validation patients. Runtime is shared-GPU time, not a fair throughput benchmark.",
+    "dependencies": {
+      "/srv/oct_research/three_diagnostics_20261021/run_diagnostics.py": "b1562f5f821ddecdcfd70d95b7b46a2a84c10f4a83e7bbde20d758033a2d3649",
+      "/srv/oct_research/three_diagnostics_20261021/layer_view.py": "465af25cb46551ff87d747e2bcdd971500e1880236f6f05a6288b6782fcca3cb",
+      "/srv/oct_research/three_diagnostics_20261021/same_backbone_control.py": "6add80e147be76f82682149098ed692d5e33425757d251c11b70304208f4dc56",
+      "/srv/oct_research/three_diagnostics_20261021/source/voxel/fm3d/model.py": "a0d9a161b964de0760290df3f140cef24a16d3f2802e280b56777eed58d273ce",
+      "/srv/oct_research/three_diagnostics_20261021/source/voxel/fm3d/__init__.py": "b7a5e3f1150f7a71f4f2273fdf7e5c63ebc5243f3eb582ff33cc0f7466e82c93",
+      "/srv/oct_research/fm_start_control_20261022/run_control.py": "fc7ac7d4ab0788943716b3e01fe5dfb5183cd920540486cf257a0eb854c7af6e",
+      "/srv/oct_research/fm_start_control_20261022/protocol.json": "72cd16bfe1abbbd93f07ca28511a578ac696c309bc75d6f525d0a719955b3d49",
+      "/srv/oct_research/fm_start_control_20261022/schedule.npz": "2e11c64fe6e34e7ce35dc6d164f37db3aa179c074aae2f297658f1444d468b94",
+      "/srv/oct_research/fm_start_control_20261022/final_audit.json": "4bc28780f70a64ec14382ba4e8125a23afd466c149ba17e9dbda651214f1ee64",
+      "/srv/oct_research/fm_start_control_20261022/verification.json": "2857ee4631cda1422383775d5778a7f9ed2fa85faf65b8adbd9aebfdb3c46443"
+    },
+    "environment": {
+      "pytorch": "2.5.1+cu121",
+      "numpy": "1.26.4",
+      "gpu_state_at_setup": "index, memory.used [MiB], utilization.gpu [%]\n0, 1 MiB, 0 %\n1, 9170 MiB, 95 %\n",
+      "existing_jobs": [
+        " 279725    18:29:04 /srv/oct_research/conda_envs/lyh_fm3d/bin/python -u -m fm3d.train_projection --manifest /srv/oct_research/OCTA500_common_v1/split_3M_z256.csv --fov 3M --output /srv/oct_research/fm3d_zproj_96_200/runs/fm3d_zproj_3M_96_200 --axis-order ZYX --intensity-scale 255 --depth 256 --patch 256 96 96 --base-channels 16 --condition --representation voxel --lambda-projection 0.1 --batch-size 1 --epochs 200 --steps-per-epoch 200 --lr 2e-4 --val-every 1 --ode-steps 8 --overlap 0.5 --seed 2026 --workers 0 --device cuda --amp --save-every 5",
+        " 355885       00:17 bash -c cd /srv/oct_research/fm_start_control_20261022 && CUDA_VISIBLE_DEVICES=0 /srv/oct_research/conda_envs/lyh_fm3d/bin/python -u run_control.py --phase prepare && tmux new-session -d -s lyh_fm_start_control_20261022 -c /srv/oct_research/fm_start_control_20261022 bash launch.sh",
+        " 355886       00:17 /srv/oct_research/conda_envs/lyh_fm3d/bin/python -u run_control.py --phase prepare"
+      ]
+    },
+    "start_update": 2400,
+    "stages": [
+      4800,
+      7200
+    ],
+    "original_study": "/srv/oct_research/fm_start_control_20261022",
+    "resume": {
+      "fm_uniform": {
+        "checkpoint": "/srv/oct_research/fm_start_long_20261022/seeds/fm_uniform.pt",
+        "sha256": "68ee48930e81732f19e899a9941f60601dd0f541cb1af833d05d7c2b6d67a205",
+        "original_sha256": "68ee48930e81732f19e899a9941f60601dd0f541cb1af833d05d7c2b6d67a205",
+        "state_sha256": "f8daac98a0607dd9599991b0b65e2349fe3f70b1e7b4c7b7069102d8d6e30f17",
+        "optimizer_step": 2400,
+        "scaler_state": {
+          "scale": 2048.0,
+          "growth_factor": 2.0,
+          "backoff_factor": 0.5,
+          "growth_interval": 2000,
+          "_growth_tracker": 400
+        }
+      },
+      "direct_t0": {
+        "checkpoint": "/srv/oct_research/fm_start_long_20261022/seeds/direct_t0.pt",
+        "sha256": "4bff95df948f80595fed30b30ecfb161a5a08d050e8658a375e858fb700a9970",
+        "original_sha256": "4bff95df948f80595fed30b30ecfb161a5a08d050e8658a375e858fb700a9970",
+        "state_sha256": "638705fb37a9c7d01536beb9a137688634157cf0809e40ab82bff51ada9545df",
+        "optimizer_step": 2400,
+        "scaler_state": {
+          "scale": 2048.0,
+          "growth_factor": 2.0,
+          "backoff_factor": 0.5,
+          "growth_interval": 2000,
+          "_growth_tracker": 400
+        }
+      },
+      "fm_half_start": {
+        "checkpoint": "/srv/oct_research/fm_start_long_20261022/seeds/fm_half_start.pt",
+        "sha256": "1ffdd38210cece30ab097235da0d004b999d9d91799418436f3851bfc68fdd01",
+        "original_sha256": "1ffdd38210cece30ab097235da0d004b999d9d91799418436f3851bfc68fdd01",
+        "state_sha256": "7c809e3c8a420bd318d24f513088d086254236846ec9b07fae39d7ef3b511eea",
+        "optimizer_step": 2400,
+        "scaler_state": {
+          "scale": 2048.0,
+          "growth_factor": 2.0,
+          "backoff_factor": 0.5,
+          "growth_interval": 2000,
+          "_growth_tracker": 400
+        }
+      }
+    },
+    "original_schedule_prefix_verified": true,
+    "training": "Resume model, AdamW state and AMP scaler; no LR changes, resets or extra objectives",
+    "run_script_sha256": "0580358ff948071cd9add6a53b697c0b83f63c6ba850cbce1de82533cf19418d"
+  },
+  "audit": {
+    "passed": true,
+    "completed": "2026-10-22T11:41:15.972814+08:00",
+    "records": [
+      {
+        "arm": "fm_uniform",
+        "budget": 4800,
+        "additional_updates": 2400,
+        "passed": true
+      },
+      {
+        "arm": "direct_t0",
+        "budget": 4800,
+        "additional_updates": 2400,
+        "passed": true
+      },
+      {
+        "arm": "fm_half_start",
+        "budget": 4800,
+        "additional_updates": 2400,
+        "passed": true
+      },
+      {
+        "arm": "fm_uniform",
+        "budget": 7200,
+        "additional_updates": 2400,
+        "passed": true
+      },
+      {
+        "arm": "direct_t0",
+        "budget": 7200,
+        "additional_updates": 2400,
+        "passed": true
+      },
+      {
+        "arm": "fm_half_start",
+        "budget": 7200,
+        "additional_updates": 2400,
+        "passed": true
+      }
+    ],
+    "optimizer_and_scaler_resumed": true,
+    "schedule_prefix_and_continuation_verified": true,
+    "original_study_and_dependencies_unchanged": true,
+    "saved_3d_predictions_verified": 48,
+    "additional_successful_updates": 14400,
+    "total_successful_updates_including_original": 21600
+  },
+  "verification": {
+    "passed": true,
+    "verified_predictions": 48,
+    "independent_projection_recomputation": true,
+    "optimizer_resume_counters_verified": true,
+    "records": [
+      {
+        "budget": 4800,
+        "arm": "fm_uniform",
+        "id": "train_10301_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_uniform",
+        "id": "train_10301_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_uniform",
+        "id": "train_10303_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_uniform",
+        "id": "train_10303_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_uniform",
+        "id": "validation_10302_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_uniform",
+        "id": "validation_10302_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_uniform",
+        "id": "validation_10319_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_uniform",
+        "id": "validation_10319_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "direct_t0",
+        "id": "train_10301_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "direct_t0",
+        "id": "train_10301_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "direct_t0",
+        "id": "train_10303_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "direct_t0",
+        "id": "train_10303_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "direct_t0",
+        "id": "validation_10302_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "direct_t0",
+        "id": "validation_10302_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "direct_t0",
+        "id": "validation_10319_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "direct_t0",
+        "id": "validation_10319_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_half_start",
+        "id": "train_10301_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_half_start",
+        "id": "train_10301_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_half_start",
+        "id": "train_10303_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_half_start",
+        "id": "train_10303_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_half_start",
+        "id": "validation_10302_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_half_start",
+        "id": "validation_10302_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_half_start",
+        "id": "validation_10319_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 4800,
+        "arm": "fm_half_start",
+        "id": "validation_10319_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_uniform",
+        "id": "train_10301_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_uniform",
+        "id": "train_10301_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_uniform",
+        "id": "train_10303_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_uniform",
+        "id": "train_10303_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_uniform",
+        "id": "validation_10302_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_uniform",
+        "id": "validation_10302_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_uniform",
+        "id": "validation_10319_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_uniform",
+        "id": "validation_10319_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "direct_t0",
+        "id": "train_10301_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "direct_t0",
+        "id": "train_10301_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "direct_t0",
+        "id": "train_10303_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "direct_t0",
+        "id": "train_10303_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "direct_t0",
+        "id": "validation_10302_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "direct_t0",
+        "id": "validation_10302_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "direct_t0",
+        "id": "validation_10319_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "direct_t0",
+        "id": "validation_10319_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_half_start",
+        "id": "train_10301_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_half_start",
+        "id": "train_10301_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_half_start",
+        "id": "train_10303_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_half_start",
+        "id": "train_10303_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_half_start",
+        "id": "validation_10302_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_half_start",
+        "id": "validation_10302_y120_x120",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_half_start",
+        "id": "validation_10319_y064_x064",
+        "passed": true
+      },
+      {
+        "budget": 7200,
+        "arm": "fm_half_start",
+        "id": "validation_10319_y120_x120",
+        "passed": true
+      }
+    ]
+  },
+  "budgets": {
+    "2400": {
+      "fm_uniform": {
+        "train": {
+          "mae": 0.021857795473254504,
+          "mse": 0.0012403688476468203,
+          "psnr": 29.06449149775069,
+          "max_projection_pcc": 0.19583234123442514,
+          "max_projection_ssim": 0.18618722088524936,
+          "high_signal_mae": 0.07435531222550389,
+          "fraction_outside_0_1": 0.0,
+          "ilm_opl_pcc": 0.31674386051259235,
+          "ilm_opl_ssim": 0.14540130516827576,
+          "ilm_opl_mae": 0.08213893534480121,
+          "empty_rays": 0
+        },
+        "primary_steps": 8,
+        "train_teacher": [
+          {
+            "time": 0.0,
+            "velocity_mse": 0.0013151622842997313
+          },
+          {
+            "time": 0.01,
+            "velocity_mse": 0.0011637737043201923
+          },
+          {
+            "time": 0.05,
+            "velocity_mse": 0.0007432131678797305
+          },
+          {
+            "time": 0.1,
+            "velocity_mse": 0.0004921494401060045
+          },
+          {
+            "time": 0.5,
+            "velocity_mse": 0.000173821987118572
+          },
+          {
+            "time": 0.9,
+            "velocity_mse": 0.00016521688667126
+          }
+        ],
+        "held_out_patient_macro": {
+          "mae": 0.0274196294463587,
+          "ilm_opl_pcc": 0.29664432366434956,
+          "ilm_opl_ssim": 0.1946629277210764,
+          "ilm_opl_mae": 0.07558547422307527
+        },
+        "amp_skipped_updates": 0,
+        "resumed_metric_error": null
+      },
+      "direct_t0": {
+        "train": {
+          "mae": 0.005001633590258403,
+          "mse": 0.0001238347684814876,
+          "psnr": 39.071574034603834,
+          "max_projection_pcc": 0.9220778977526339,
+          "max_projection_ssim": 0.9123461785838096,
+          "high_signal_mae": 0.022104341956038602,
+          "fraction_outside_0_1": 0.0,
+          "ilm_opl_pcc": 0.9654857813665065,
+          "ilm_opl_ssim": 0.9537440465052262,
+          "ilm_opl_mae": 0.020106876609816027,
+          "empty_rays": 0
+        },
+        "primary_steps": 1,
+        "train_teacher": [
+          {
+            "time": 0.0,
+            "velocity_mse": 0.00013450891128741205
+          },
+          {
+            "time": 0.01,
+            "velocity_mse": 0.00032107633887790143
+          },
+          {
+            "time": 0.05,
+            "velocity_mse": 0.0003209412971045822
+          },
+          {
+            "time": 0.1,
+            "velocity_mse": 0.0005909591563977301
+          },
+          {
+            "time": 0.5,
+            "velocity_mse": 0.004152403678745031
+          },
+          {
+            "time": 0.9,
+            "velocity_mse": 0.011025666259229183
+          }
+        ],
+        "held_out_patient_macro": {
+          "mae": 0.021343370591120542,
+          "ilm_opl_pcc": 0.2410535492111461,
+          "ilm_opl_ssim": 0.15940024620312765,
+          "ilm_opl_mae": 0.08352050280275591
+        },
+        "amp_skipped_updates": 0,
+        "resumed_metric_error": null
+      },
+      "fm_half_start": {
+        "train": {
+          "mae": 0.008927311859421416,
+          "mse": 0.0003330532833781965,
+          "psnr": 34.77486280529855,
+          "max_projection_pcc": 0.7607361623850584,
+          "max_projection_ssim": 0.7410462917881828,
+          "high_signal_mae": 0.037707866508078045,
+          "fraction_outside_0_1": 0.0,
+          "ilm_opl_pcc": 0.8785341686682689,
+          "ilm_opl_ssim": 0.8369033086633002,
+          "ilm_opl_mae": 0.036984164794148455,
+          "empty_rays": 0
+        },
+        "primary_steps": 8,
+        "train_teacher": [
+          {
+            "time": 0.0,
+            "velocity_mse": 0.00031352174119092524
+          },
+          {
+            "time": 0.01,
+            "velocity_mse": 0.00030322372913360596
+          },
+          {
+            "time": 0.05,
+            "velocity_mse": 0.0002414373157080263
+          },
+          {
+            "time": 0.1,
+            "velocity_mse": 0.00018361648835707456
+          },
+          {
+            "time": 0.5,
+            "velocity_mse": 7.028342952253297e-05
+          },
+          {
+            "time": 0.9,
+            "velocity_mse": 8.421308302786201e-05
+          }
+        ],
+        "held_out_patient_macro": {
+          "mae": 0.019609937441083386,
+          "ilm_opl_pcc": 0.3284956109080529,
+          "ilm_opl_ssim": 0.24005626738303995,
+          "ilm_opl_mae": 0.07106832518222461
+        },
+        "amp_skipped_updates": 0,
+        "resumed_metric_error": null
+      }
+    },
+    "4800": {
+      "fm_uniform": {
+        "train": {
+          "mae": 0.013067231748406294,
+          "mse": 0.0010030355086284087,
+          "psnr": 29.986836921755838,
+          "max_projection_pcc": 0.2512152317107032,
+          "max_projection_ssim": 0.20559102574581337,
+          "high_signal_mae": 0.05902637806568658,
+          "fraction_outside_0_1": 0.0,
+          "ilm_opl_pcc": 0.32384206965215734,
+          "ilm_opl_ssim": 0.15684807106752036,
+          "ilm_opl_mae": 0.07327161744137811,
+          "empty_rays": 0
+        },
+        "primary_steps": 8,
+        "train_teacher": [
+          {
+            "time": 0.0,
+            "velocity_mse": 0.001026495941914618
+          },
+          {
+            "time": 0.01,
+            "velocity_mse": 0.0007374458946287632
+          },
+          {
+            "time": 0.05,
+            "velocity_mse": 0.0002483673160895705
+          },
+          {
+            "time": 0.1,
+            "velocity_mse": 0.00013167099677957594
+          },
+          {
+            "time": 0.5,
+            "velocity_mse": 0.00012771913316100836
+          },
+          {
+            "time": 0.9,
+            "velocity_mse": 0.00014361708599608392
+          }
+        ],
+        "held_out_patient_macro": {
+          "mae": 0.01711328587384317,
+          "ilm_opl_pcc": 0.3065719824795725,
+          "ilm_opl_ssim": 0.20614839998111473,
+          "ilm_opl_mae": 0.07169946633628399
+        },
+        "amp_skipped_updates": 0,
+        "resumed_metric_error": 0.0
+      },
+      "direct_t0": {
+        "train": {
+          "mae": 0.0027347634487887573,
+          "mse": 3.077145696892383e-05,
+          "psnr": 45.11851940262653,
+          "max_projection_pcc": 0.9866384580333044,
+          "max_projection_ssim": 0.9856499597766879,
+          "high_signal_mae": 0.009337390797446334,
+          "fraction_outside_0_1": 0.0,
+          "ilm_opl_pcc": 0.9934698047165295,
+          "ilm_opl_ssim": 0.9922763741930657,
+          "ilm_opl_mae": 0.008281739731273774,
+          "empty_rays": 0
+        },
+        "primary_steps": 1,
+        "train_teacher": [
+          {
+            "time": 0.0,
+            "velocity_mse": 3.399014531169087e-05
+          },
+          {
+            "time": 0.01,
+            "velocity_mse": 0.00018530970555730164
+          },
+          {
+            "time": 0.05,
+            "velocity_mse": 0.00020049841259606183
+          },
+          {
+            "time": 0.1,
+            "velocity_mse": 0.0004896080354228616
+          },
+          {
+            "time": 0.5,
+            "velocity_mse": 0.004337940830737352
+          },
+          {
+            "time": 0.9,
+            "velocity_mse": 0.011353888548910618
+          }
+        ],
+        "held_out_patient_macro": {
+          "mae": 0.022286626533278536,
+          "ilm_opl_pcc": 0.2340517772193229,
+          "ilm_opl_ssim": 0.148890456593537,
+          "ilm_opl_mae": 0.08969354881443792
+        },
+        "amp_skipped_updates": 0,
+        "resumed_metric_error": 0.0
+      },
+      "fm_half_start": {
+        "train": {
+          "mae": 0.005595869967964018,
+          "mse": 0.00017419743427045663,
+          "psnr": 37.589582459436755,
+          "max_projection_pcc": 0.9037844026641003,
+          "max_projection_ssim": 0.8994164370824267,
+          "high_signal_mae": 0.02666744237622413,
+          "fraction_outside_0_1": 0.0,
+          "ilm_opl_pcc": 0.9565428052600796,
+          "ilm_opl_ssim": 0.9478185083650664,
+          "ilm_opl_mae": 0.02389000402649799,
+          "empty_rays": 0
+        },
+        "primary_steps": 8,
+        "train_teacher": [
+          {
+            "time": 0.0,
+            "velocity_mse": 0.00016245876031462103
+          },
+          {
+            "time": 0.01,
+            "velocity_mse": 0.0001547335705254227
+          },
+          {
+            "time": 0.05,
+            "velocity_mse": 0.00012990593677386642
+          },
+          {
+            "time": 0.1,
+            "velocity_mse": 0.00010091667354572564
+          },
+          {
+            "time": 0.5,
+            "velocity_mse": 4.180528412689455e-05
+          },
+          {
+            "time": 0.9,
+            "velocity_mse": 3.9789672882761806e-05
+          }
+        ],
+        "held_out_patient_macro": {
+          "mae": 0.019486989785152703,
+          "ilm_opl_pcc": 0.28528691136391104,
+          "ilm_opl_ssim": 0.20714745209283103,
+          "ilm_opl_mae": 0.07750018185140561
+        },
+        "amp_skipped_updates": 0,
+        "resumed_metric_error": 0.0
+      }
+    },
+    "7200": {
+      "fm_uniform": {
+        "train": {
+          "mae": 0.014715851028922144,
+          "mse": 0.0010704995714852616,
+          "psnr": 29.704135022150577,
+          "max_projection_pcc": 0.23314233907263462,
+          "max_projection_ssim": 0.20606879149267382,
+          "high_signal_mae": 0.07472668694346957,
+          "fraction_outside_0_1": 0.0,
+          "ilm_opl_pcc": 0.2554105257437367,
+          "ilm_opl_ssim": 0.13422797795654842,
+          "ilm_opl_mae": 0.08490290778331655,
+          "empty_rays": 0
+        },
+        "primary_steps": 8,
+        "train_teacher": [
+          {
+            "time": 0.0,
+            "velocity_mse": 0.0014126021414995193
+          },
+          {
+            "time": 0.01,
+            "velocity_mse": 0.0011448748409748077
+          },
+          {
+            "time": 0.05,
+            "velocity_mse": 0.0004801928880624473
+          },
+          {
+            "time": 0.1,
+            "velocity_mse": 0.0001890792918857187
+          },
+          {
+            "time": 0.5,
+            "velocity_mse": 3.945377829950303e-05
+          },
+          {
+            "time": 0.9,
+            "velocity_mse": 4.5437831431627274e-05
+          }
+        ],
+        "held_out_patient_macro": {
+          "mae": 0.020167522128378718,
+          "ilm_opl_pcc": 0.26451644608604946,
+          "ilm_opl_ssim": 0.1885975658119149,
+          "ilm_opl_mae": 0.07823049102161406
+        },
+        "amp_skipped_updates": 0,
+        "resumed_metric_error": 0.0
+      },
+      "direct_t0": {
+        "train": {
+          "mae": 0.0019995272523080088,
+          "mse": 2.1328874510073843e-05,
+          "psnr": 46.71032060957537,
+          "max_projection_pcc": 0.9915059520468007,
+          "max_projection_ssim": 0.9908030038249904,
+          "high_signal_mae": 0.007635915577154744,
+          "fraction_outside_0_1": 0.0,
+          "ilm_opl_pcc": 0.995650407650689,
+          "ilm_opl_ssim": 0.9947963031485021,
+          "ilm_opl_mae": 0.006933900417379846,
+          "empty_rays": 0
+        },
+        "primary_steps": 1,
+        "train_teacher": [
+          {
+            "time": 0.0,
+            "velocity_mse": 2.6643367164069787e-05
+          },
+          {
+            "time": 0.01,
+            "velocity_mse": 0.00011497738887555897
+          },
+          {
+            "time": 0.05,
+            "velocity_mse": 0.00014050723984837532
+          },
+          {
+            "time": 0.1,
+            "velocity_mse": 0.0003511799150146544
+          },
+          {
+            "time": 0.5,
+            "velocity_mse": 0.0037856765557080507
+          },
+          {
+            "time": 0.9,
+            "velocity_mse": 0.010471509769558907
+          }
+        ],
+        "held_out_patient_macro": {
+          "mae": 0.02150455569684198,
+          "ilm_opl_pcc": 0.23807140891763356,
+          "ilm_opl_ssim": 0.14353274623920836,
+          "ilm_opl_mae": 0.08949303713357892
+        },
+        "amp_skipped_updates": 0,
+        "resumed_metric_error": 0.0
+      },
+      "fm_half_start": {
+        "train": {
+          "mae": 0.00387903458808625,
+          "mse": 5.537849679076435e-05,
+          "psnr": 42.56658837040001,
+          "max_projection_pcc": 0.9703230350344138,
+          "max_projection_ssim": 0.9702784560275276,
+          "high_signal_mae": 0.013680090691032553,
+          "fraction_outside_0_1": 0.0,
+          "ilm_opl_pcc": 0.9864160649016677,
+          "ilm_opl_ssim": 0.9842771416647398,
+          "ilm_opl_mae": 0.012673011707875048,
+          "empty_rays": 0
+        },
+        "primary_steps": 8,
+        "train_teacher": [
+          {
+            "time": 0.0,
+            "velocity_mse": 4.446995080797933e-05
+          },
+          {
+            "time": 0.01,
+            "velocity_mse": 4.254913073964417e-05
+          },
+          {
+            "time": 0.05,
+            "velocity_mse": 4.125565828871913e-05
+          },
+          {
+            "time": 0.1,
+            "velocity_mse": 3.61005513696e-05
+          },
+          {
+            "time": 0.5,
+            "velocity_mse": 1.87056721188128e-05
+          },
+          {
+            "time": 0.9,
+            "velocity_mse": 2.0835721443290822e-05
+          }
+        ],
+        "held_out_patient_macro": {
+          "mae": 0.01971823484075355,
+          "ilm_opl_pcc": 0.28136989256158973,
+          "ilm_opl_ssim": 0.2037302096828149,
+          "ilm_opl_mae": 0.07400130010404382
+        },
+        "amp_skipped_updates": 0,
+        "resumed_metric_error": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "confirmed_at": "2026-10-21T00:08:10.523106+08:00",
+  "tmux_session": "lyh_fm3d_wavelet200",
+  "pid": 239728,
+  "physical_gpu_index": 1,
+  "epochs": 200,
+  "representation": "haar3d",
+  "patch_ZYX": [
+    256,
+    64,
+    64
+  ],
+  "log": "/srv/oct_research/fm3d_wavelet_200/logs/train_3M_200.log",
+  "output": "/srv/oct_research/fm3d_wavelet_200/runs/fm3d_haar3d_3M_200",
+  "status_at_confirmation": "running"
+}

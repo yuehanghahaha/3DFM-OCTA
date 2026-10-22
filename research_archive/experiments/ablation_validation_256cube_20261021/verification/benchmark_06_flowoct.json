@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "seconds_per_attempt": 2.099047778523527,
+  "peak_allocated_bytes": 4860738560,
+  "peak_reserved_bytes": 5689573376,
+  "updates": [
+    {
+      "losses": {
+        "loss": 1.0013846158981323,
+        "vloss": 0.0873362123966217,
+        "L1loss": 0.15457192063331604,
+        "contrastloss": 5.074958801269531,
+        "proj_loss": 0.253617525100708
+      },
+      "applied": true
+    },
+    {
+      "losses": {
+        "loss": 0.969367265701294,
+        "vloss": 0.0841396227478981,
+        "L1loss": 0.1552031934261322,
+        "contrastloss": 5.0690531730651855,
+        "proj_loss": 0.2502419352531433
+      },
+      "applied": true
+    }
+  ],
+  "arm": "06_flowoct",
+  "shape_ZYX": [
+    256,
+    256,
+    256
+  ],
+  "flowoct": {
+    "lr": 0.0002,
+    "beta": 0.5,
+    "train_slices": 0,
+    "network_chunk": 8
+  },
+  "block_checkpointing": false,
+  "rollout_checkpointing": false
+}

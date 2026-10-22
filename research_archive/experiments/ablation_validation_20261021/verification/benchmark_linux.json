@@ -1,0 +1,62 @@
+[
+  {
+    "arm": "01_fm3d",
+    "parameters": 2097521,
+    "seconds_per_attempt": 0.21890054701361805,
+    "losses": [
+      0.10986951738595963,
+      0.03235363960266113,
+      0.016305511817336082
+    ],
+    "peak_allocated_bytes": 1948559360,
+    "peak_reserved_bytes": 2413821952
+  },
+  {
+    "arm": "02_fm3d_wavelet",
+    "parameters": 2106600,
+    "seconds_per_attempt": 0.035342678000840046,
+    "losses": [
+      0.14600512385368347,
+      0.10143277049064636,
+      0.067536860704422
+    ],
+    "peak_allocated_bytes": 321255936,
+    "peak_reserved_bytes": 377487360
+  },
+  {
+    "arm": "03_fm3d_zproj",
+    "parameters": 2097521,
+    "seconds_per_attempt": 0.6649682629698267,
+    "losses": [
+      0.13774384558200836,
+      0.0415218248963356,
+      0.01517172995954752
+    ],
+    "peak_allocated_bytes": 15367373824,
+    "peak_reserved_bytes": 15942549504
+  },
+  {
+    "arm": "04_fm3d_wavelet_zproj",
+    "parameters": 2106600,
+    "seconds_per_attempt": 0.1337928130136182,
+    "losses": [
+      0.17228427529335022,
+      0.11863637715578079,
+      0.08316957950592041
+    ],
+    "peak_allocated_bytes": 2071506432,
+    "peak_reserved_bytes": 2162163712
+  },
+  {
+    "arm": "05_fm3d_wavelet_zproj_reconstruction",
+    "parameters": 2106600,
+    "seconds_per_attempt": 0.10893426431963842,
+    "losses": [
+      0.47986695170402527,
+      0.35739678144454956,
+      0.27576351165771484
+    ],
+    "peak_allocated_bytes": 2071506432,
+    "peak_reserved_bytes": 2162163712
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "scope": "Synthetic data only: 1 epoch / 2 optimizer updates / validation / checkpoint reload / 3-step test inference",
+  "not_verified": [
+    "OCTA-500 numerical reproduction",
+    "patient-specific vascular fidelity",
+    "full-size training memory"
+  ],
+  "python": "3.10.20 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:13:20) [MSC v.1942 64 bit (AMD64)]",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "total_memory_bytes": 6441926656,
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "monai": "1.4.0",
+    "torchio": "0.20.4",
+    "numpy": "1.26.4",
+    "scikit-image": "0.25.2",
+    "PyWavelets": "1.8.0",
+    "matplotlib": "3.10.3",
+    "opencv-python": "4.11.0.86",
+    "lpips": "0.1.4",
+    "clean-fid": "0.1.35"
+  },
+  "commit": "2309126956d2b80a95f2d307d85a50799cc658a6",
+  "checkpoint_label": "best_epoch_001_psnr_6.8567_ssim_0.0891",
+  "elapsed_seconds": 64.10713760001818,
+  "prediction": "D:\\data\\code\\keyan_fuxian\\FlowOCT\\artifacts\\smoke_synthetic\\results\\smoke_synthetic\\best_epoch_001_psnr_6.8567_ssim_0.0891\\synthetic_test_000.npz"
+}

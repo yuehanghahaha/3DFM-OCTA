@@ -1,0 +1,17 @@
+test_baseline_and_full_share_initialization (flowoct3d.test_core.CoreTests) ... ok
+test_checkpoint_resume_exact (flowoct3d.test_core.CoreTests) ... ok
+test_each_module_backpropagates (flowoct3d.test_core.CoreTests) ... ok
+test_exact_velocity_oracle (flowoct3d.test_core.CoreTests) ... ok
+test_haar_inverse_energy_gradient (flowoct3d.test_core.CoreTests) ... ok
+test_layer_projection_batch_and_negative_values (flowoct3d.test_core.CoreTests) ... ok
+test_mask_and_weighted_reduction (flowoct3d.test_core.CoreTests) ... ok
+test_oct_only_rollout_sliding_oracle (flowoct3d.test_core.CoreTests) ... ok
+test_rdca_pairs_depth_batch_one_and_empty (flowoct3d.test_core.CoreTests) ... ok
+test_shape_and_missing_labels_rejected (flowoct3d.test_core.CoreTests) ... ok
+test_shared_schedule_and_half_start (flowoct3d.test_core.CoreTests) ... ok
+test_train_resume_and_source_only_prediction (flowoct3d.test_cli.CLITests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 26.377s
+
+OK

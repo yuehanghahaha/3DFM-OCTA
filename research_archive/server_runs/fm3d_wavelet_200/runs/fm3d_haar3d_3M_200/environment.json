@@ -1,0 +1,25 @@
+{
+  "torch": "2.5.1+cu121",
+  "numpy": "1.26.4",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "parameters": 2106600,
+  "representation": "haar3d",
+  "state_channels": 8,
+  "network_patch_ZYX": [
+    128,
+    32,
+    32
+  ],
+  "subbands_ZYX": [
+    "LLL",
+    "LLH",
+    "LHL",
+    "LHH",
+    "HLL",
+    "HLH",
+    "HHL",
+    "HHH"
+  ],
+  "reproducibility": "Epoch-specific RNG seeds; bitwise determinism across GPU/software not guaranteed"
+}

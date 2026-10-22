@@ -1,0 +1,207 @@
+{
+  "schema": "public_flowoct_and_cumulative_3d_removal_v1",
+  "seed": 20261021,
+  "updates": 2400,
+  "eval_every": 400,
+  "milestones": [
+    800,
+    1600,
+    2400
+  ],
+  "base_channels": 16,
+  "lr": 0.0002,
+  "amp": true,
+  "ode_steps": 8,
+  "condition": true,
+  "inference_chunk": 16,
+  "arms": {
+    "00_flowoct_public": {
+      "kind": "public",
+      "label": "Public FlowOCT",
+      "representation": "haar2d"
+    },
+    "01_full3d": {
+      "kind": "3d",
+      "label": "Full 3D",
+      "representation": "haar3d",
+      "losses": {
+        "fm_weight": 1.0,
+        "reconstruction_weight": 0.5,
+        "projection_weight": 0.1,
+        "rdca_weight": 0.005,
+        "structure": true,
+        "mask_ratio": 0.05,
+        "background_weight": 0.1,
+        "temperature": 0.1,
+        "rdca_slices": 32,
+        "projection": "retinal",
+        "auxiliary": "path",
+        "native_depth": 640
+      },
+      "start_fraction": 0.0
+    },
+    "02_minus_rdca": {
+      "kind": "3d",
+      "label": "- RDCA",
+      "representation": "haar3d",
+      "losses": {
+        "fm_weight": 1.0,
+        "reconstruction_weight": 0.5,
+        "projection_weight": 0.1,
+        "rdca_weight": 0.0,
+        "structure": true,
+        "mask_ratio": 0.05,
+        "background_weight": 0.1,
+        "temperature": 0.1,
+        "rdca_slices": 32,
+        "projection": "retinal",
+        "auxiliary": "path",
+        "native_depth": 640
+      },
+      "start_fraction": 0.0
+    },
+    "03_minus_rdca_projection": {
+      "kind": "3d",
+      "label": "- RDCA - projection",
+      "representation": "haar3d",
+      "losses": {
+        "fm_weight": 1.0,
+        "reconstruction_weight": 0.5,
+        "projection_weight": 0.0,
+        "rdca_weight": 0.0,
+        "structure": true,
+        "mask_ratio": 0.05,
+        "background_weight": 0.1,
+        "temperature": 0.1,
+        "rdca_slices": 32,
+        "projection": "retinal",
+        "auxiliary": "path",
+        "native_depth": 640
+      },
+      "start_fraction": 0.0
+    },
+    "04_minus_rdca_projection_structure": {
+      "kind": "3d",
+      "label": "- RDCA - projection - structure",
+      "representation": "haar3d",
+      "losses": {
+        "fm_weight": 1.0,
+        "reconstruction_weight": 0.5,
+        "projection_weight": 0.0,
+        "rdca_weight": 0.0,
+        "structure": false,
+        "mask_ratio": 0.05,
+        "background_weight": 0.1,
+        "temperature": 0.1,
+        "rdca_slices": 32,
+        "projection": "retinal",
+        "auxiliary": "path",
+        "native_depth": 640
+      },
+      "start_fraction": 0.0
+    },
+    "05_haar_fm_only": {
+      "kind": "3d",
+      "label": "Haar FM only",
+      "representation": "haar3d",
+      "losses": {
+        "fm_weight": 1.0,
+        "reconstruction_weight": 0.0,
+        "projection_weight": 0.0,
+        "rdca_weight": 0.0,
+        "structure": false,
+        "mask_ratio": 0.05,
+        "background_weight": 0.1,
+        "temperature": 0.1,
+        "rdca_slices": 32,
+        "projection": "retinal",
+        "auxiliary": "path",
+        "native_depth": 640
+      },
+      "start_fraction": 0.0
+    },
+    "06_voxel_fm_only": {
+      "kind": "3d",
+      "label": "Voxel FM only",
+      "representation": "voxel",
+      "losses": {
+        "fm_weight": 1.0,
+        "reconstruction_weight": 0.0,
+        "projection_weight": 0.0,
+        "rdca_weight": 0.0,
+        "structure": false,
+        "mask_ratio": 0.05,
+        "background_weight": 0.1,
+        "temperature": 0.1,
+        "rdca_slices": 32,
+        "projection": "retinal",
+        "auxiliary": "path",
+        "native_depth": 640
+      },
+      "start_fraction": 0.0
+    },
+    "07_full_half_start": {
+      "kind": "3d",
+      "label": "Full 3D + 50% t=0",
+      "representation": "haar3d",
+      "losses": {
+        "fm_weight": 1.0,
+        "reconstruction_weight": 0.5,
+        "projection_weight": 0.1,
+        "rdca_weight": 0.005,
+        "structure": true,
+        "mask_ratio": 0.05,
+        "background_weight": 0.1,
+        "temperature": 0.1,
+        "rdca_slices": 32,
+        "projection": "retinal",
+        "auxiliary": "path",
+        "native_depth": 640
+      },
+      "start_fraction": 0.5
+    }
+  },
+  "prior_study": "D:\\data\\code\\keyan_fuxian\\FlowOCT\\experiments\\flowoct3d_full_20261022",
+  "prior_prefix_sha256": "f10a371370bf8584de5f7a659bd1156f5fa161238d9882bbb49621f0b8095256",
+  "schedule_sha256": "fe98cfaf08b0305c7ad52b2c85874bcd41754848293fd58678d5017e63a55b1a",
+  "selection_sha256": "22bab92cb78e816d1681bced0919a8983f648ef315cb77d69140ff727bf9385c",
+  "scope": "Four training/four validation patients, two full-Z fixed patches each, one seed, no test images",
+  "comparison": "Cumulative removal along a fixed path, not independent component main effects. Public FlowOCT is a method control with its own optimizer and slice/time sampling.",
+  "public": {
+    "commit": "2309126956d2b80a95f2d307d85a50799cc658a6",
+    "weights": [
+      10.0,
+      0.5,
+      0.005,
+      0.1
+    ],
+    "optimizer": "Adam beta1=0.5 beta2=0.999",
+    "amp": false,
+    "gradient_clipping": null,
+    "network_chunk": 0,
+    "train_slices": 16,
+    "native_solver": "Euler3 with per-step clamp",
+    "common_solver": "Euler8 with final clamp",
+    "preprocessing": "Exactly the frozen [0,1] tensors; lossless ZYX <-> YXZ only"
+  },
+  "source_sha256": {
+    "source/flowoct/__init__.py": "c5d9125502b98e89d98e94b99a0675b085dd010e9ae7e194d5199651125b8741",
+    "source/flowoct/model.py": "9c4e1350dd2926120f7f00e2b569313c08369e6d893a45ae1d1a4f8a860dae1e",
+    "source/flowoct/roi.py": "1c729065c592c28d1a86d328dbae7ebd883d2f7153c910d0db13f5a149dd30e0",
+    "source/flowoct/wavelet_functions.py": "33623b3e9b8d59df0227a840f88db4789095d3449e820e6454a31499ed3d156f",
+    "source/flowoct/wavelets.py": "02625d63ff997de3af1633f0fa511021d74212dabbc984162218e0bf8f594768",
+    "source/flowoct3d/__init__.py": "a2c6e0bfc71954982e2609460830f9f5465df6b3ab2c654dc799be912488e3fc",
+    "source/flowoct3d/losses.py": "4c971c265316fc4f45038e2daab3ca79283c12f02c7d1de42ab13c210c1f488d",
+    "source/flowoct3d/metrics.py": "ce3e5870f4cf40043f337098b9bd784eecf02ee6a4c4d7034593a8df537838db",
+    "source/flowoct3d/model.py": "2a317c2d5a7a739367ce9a046394e43e9cbe5124a7065e87f38c8e63a1a992c5",
+    "source/flowoct3d/small_data.py": "e54d9c18cda1e41e5d009cf469c0914980b4c59fdb89120a11075b60d83a8c50",
+    "source/flowoct3d/study.py": "2ee25a238ff0ddeb1ddb1b5d00f66f4916a472a549e01becbff6ffecbb9243c9",
+    "source/flowoct3d/test_core.py": "537217fb949c7f9a27f4a04f0f3b250010805fe118c02c5fcc1238483aa240b8",
+    "source/flowoct3d/utils.py": "80cbe179b2ef963d542ef4a9d8d23923263e1357f22547d775d3e3e1ca5cd756",
+    "source/fm3d/__init__.py": "b7a5e3f1150f7a71f4f2273fdf7e5c63ebc5243f3eb582ff33cc0f7466e82c93",
+    "source/fm3d/data.py": "692792101f3983cf6acf88a82b7057cd320c282eb813909e8c18192136abbe54",
+    "source/fm3d/inference.py": "cf043091231609a36cbe315a1b8f00790b797fdb08e4ba8608c73e79aa00ebac",
+    "source/fm3d/model.py": "725d6907eaa89212d339436589fdb9323a014543ca8d84d2bcc899e9c66f74af",
+    "source/fm3d/wavelets.py": "20c6791a5ae3344b5fc062e3d242bd833872dbce78e511c0e4a40fa80c5dde98"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "metrics": {
+    "mae": 0.013699754575843756,
+    "psnr": 28.102417253594915
+  },
+  "cases": [
+    {
+      "case_id": "10302",
+      "patient_id": "10302",
+      "mae": 0.016267173276775865,
+      "psnr": 26.32381388627229
+    },
+    {
+      "case_id": "10319",
+      "patient_id": "10319",
+      "mae": 0.013313176178912018,
+      "psnr": 28.075034112098443
+    },
+    {
+      "case_id": "10338",
+      "patient_id": "10338",
+      "mae": 0.018488473161167238,
+      "psnr": 25.736768992210685
+    },
+    {
+      "case_id": "10357",
+      "patient_id": "10357",
+      "mae": 0.013083333527424242,
+      "psnr": 27.68728660739374
+    },
+    {
+      "case_id": "10396",
+      "patient_id": "10396",
+      "mae": 0.014212105602101765,
+      "psnr": 27.350393207234077
+    },
+    {
+      "case_id": "10422",
+      "patient_id": "10422",
+      "mae": 0.012104394283608776,
+      "psnr": 28.310957466137843
+    },
+    {
+      "case_id": "10447",
+      "patient_id": "10447",
+      "mae": 0.014375030059437183,
+      "psnr": 28.965191457448718
+    },
+    {
+      "case_id": "10456",
+      "patient_id": "10456",
+      "mae": 0.014581828902005904,
+      "psnr": 27.810417708922095
+    },
+    {
+      "case_id": "10495",
+      "patient_id": "10495",
+      "mae": 0.007472718606460657,
+      "psnr": 33.03355755557727
+    },
+    {
+      "case_id": "10500",
+      "patient_id": "10500",
+      "mae": 0.013099312160543912,
+      "psnr": 27.730751542653977
+    }
+  ],
+  "patients": 10,
+  "protocol": "full preprocessed volume; range=1; final clamp; patient macro mean; PSNR MSE floor=1e-12",
+  "config": {
+    "manifest": "/srv/oct_research/OCTA500_common_v1/split_3M_z256.csv",
+    "fov": "3M",
+    "output": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01",
+    "axis_order": "ZYX",
+    "intensity_scale": 255.0,
+    "depth": 256,
+    "patch": [
+      256,
+      64,
+      64
+    ],
+    "base_channels": 16,
+    "condition": true,
+    "batch_size": 1,
+    "epochs": 100,
+    "steps_per_epoch": 200,
+    "lr": 0.0002,
+    "val_every": 5,
+    "ode_steps": 8,
+    "overlap": 0.5,
+    "seed": 2026,
+    "workers": 0,
+    "device": "cuda",
+    "amp": true,
+    "resume": false,
+    "manifest_sha256": "652544a427071b8350d346deb941c03182ae4e248659b1117a45fcb870bc253b"
+  },
+  "checkpoint": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01/best.pt",
+  "checkpoint_epoch": 90,
+  "split": "validation"
+}

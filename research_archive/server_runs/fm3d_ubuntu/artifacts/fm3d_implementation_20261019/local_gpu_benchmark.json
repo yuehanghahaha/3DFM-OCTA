@@ -1,0 +1,23 @@
+{
+  "scope": "Synthetic GPU/CPU resource check only; not patient performance",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "torch": "2.5.1+cu121",
+  "patch_ZYX": [
+    256,
+    64,
+    64
+  ],
+  "batch_size": 1,
+  "base_channels": 16,
+  "amp": true,
+  "parameters": 2097521,
+  "mean_update_seconds_after_warmup": 0.1603641999924245,
+  "peak_allocated_bytes": 1949082112,
+  "peak_reserved_bytes": 2413821952,
+  "losses": [
+    0.25203096866607666,
+    0.2125190943479538,
+    0.24731823801994324,
+    0.18215805292129517
+  ]
+}

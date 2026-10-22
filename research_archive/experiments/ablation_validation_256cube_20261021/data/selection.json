@@ -1,0 +1,174 @@
+{
+  "schema": "central_256cube_single_patient_v1",
+  "patch_ZYX": [
+    256,
+    256,
+    256
+  ],
+  "policy": "Central crop in original XY; no lateral resize, augmentation or minmax; full preprocessed Z.",
+  "one_case_patch": "10301_y024_x024_256",
+  "patients": [
+    {
+      "case_id": "10301",
+      "patient_id": "10301",
+      "split": "train",
+      "disease": "NORMAL",
+      "source_npz_sha256": "ff57c09f868f763b6099805b37a066e9dbc357386972791134f0888aae0291ce",
+      "layers_sha256": "aee0b5c40215ff86db105375413d13ac843085e3e68ebb7096b3ea0caeeb90fc",
+      "masks_sha256": {
+        "GT_LargeVessel": "3ea995d730b1581b28e9788e94a77d285ab1ed697a7aff57e6cd59a5be12a9a1",
+        "GT_Capillary": "3bb92bbeac0a2787e4e6c76dd3db4f5dfd4edf86879918fa17da115bbf8bab80"
+      }
+    },
+    {
+      "case_id": "10319",
+      "patient_id": "10319",
+      "split": "validation",
+      "disease": "NORMAL",
+      "source_npz_sha256": "3d20046bcd6229302b4ba8cf0548c08893fc3524d6215882609ec5c94ca0b7d2",
+      "layers_sha256": "3e04634f2c5bbd5e8f4e32424ffc22ab214496a3dc2b764d6d8b04be110ea0f5",
+      "masks_sha256": {
+        "GT_LargeVessel": "0d032df320b045f14e5a2f493cbac122aacd0152dbe27c7a08ef686750067ebd",
+        "GT_Capillary": "20d732f97a5a021da5d16848a0b8dd7cc8dec7c6e3e98ad750bd3860fd92513e"
+      }
+    },
+    {
+      "case_id": "10447",
+      "patient_id": "10447",
+      "split": "validation",
+      "disease": "DR",
+      "source_npz_sha256": "4ba0dae6b65632f2404a716f045aeceb3bc7b1c1cbcda3df6738d33875d832ff",
+      "layers_sha256": "515c4dc7e2995d3b39987d7b5a038b2b796ade4756bd9405adc5a34857dddf40",
+      "masks_sha256": {
+        "GT_LargeVessel": "8db1dd137fa3462fc63ef554e78878600d02fdf73853451d6ce78ffa030c95e9",
+        "GT_Capillary": "01a4819542a71000c5882149c24a3cbcf1731e67e2d0b84fb7c3b9d910e8de8f"
+      }
+    },
+    {
+      "case_id": "10456",
+      "patient_id": "10456",
+      "split": "validation",
+      "disease": "AMD",
+      "source_npz_sha256": "5b7a95860c0080a9a6228b959d5c77f0b23d5afba249ac9f6e39e508611128d1",
+      "layers_sha256": "708d0e8a0b79af0f1d514c15222f760c3c9afc1f24eafd6280dd480443592b50",
+      "masks_sha256": {
+        "GT_LargeVessel": "ec184c03920b520c710eab7b70564d710782f2fa9767db2f32b9774752a2bf18",
+        "GT_Capillary": "d2acafad4443a5b16f18e124b73a794af2b1301da33bd1f90226883c9c767585"
+      }
+    },
+    {
+      "case_id": "10302",
+      "patient_id": "10302",
+      "split": "validation",
+      "disease": "CNV",
+      "source_npz_sha256": "e743d1cf8ae5fcf5228498b07aa89a733abd9c121517d48f4f131c7996effb84",
+      "layers_sha256": "ce9a01d3dd98c8f0b19672c02386ca7c24bbfd8915298a72fe5e69aed62d9def",
+      "masks_sha256": {
+        "GT_LargeVessel": "1f04317a3a3b77caa8095e2607334847701405ecc97272349a4f1aabd732d388",
+        "GT_Capillary": "42dbbae2f80b3cb0fb959e91dc2cc39719b8ece4ac630f59fbdbfee13259ea00"
+      }
+    }
+  ],
+  "patches": [
+    {
+      "case_id": "10301",
+      "patient_id": "10301",
+      "split": "train",
+      "disease": "NORMAL",
+      "patch_id": "y024_x024_256",
+      "origin_ZYX": [
+        0,
+        24,
+        24
+      ],
+      "source_shape_ZYX": [
+        256,
+        304,
+        304
+      ],
+      "source_npz_sha256": "ff57c09f868f763b6099805b37a066e9dbc357386972791134f0888aae0291ce",
+      "file": "data/patches/10301_y024_x024_256.npz",
+      "sha256": "a5b52f5cbaa04d279a355c1f2e471b57b01b5da843e5d0100df7ed7c721de258"
+    },
+    {
+      "case_id": "10319",
+      "patient_id": "10319",
+      "split": "validation",
+      "disease": "NORMAL",
+      "patch_id": "y024_x024_256",
+      "origin_ZYX": [
+        0,
+        24,
+        24
+      ],
+      "source_shape_ZYX": [
+        256,
+        304,
+        304
+      ],
+      "source_npz_sha256": "3d20046bcd6229302b4ba8cf0548c08893fc3524d6215882609ec5c94ca0b7d2",
+      "file": "data/patches/10319_y024_x024_256.npz",
+      "sha256": "da2e43f5d0fe2791faff3b817f4ff6ed2f53aa58c96c14084d697c2b426282da"
+    },
+    {
+      "case_id": "10447",
+      "patient_id": "10447",
+      "split": "validation",
+      "disease": "DR",
+      "patch_id": "y024_x024_256",
+      "origin_ZYX": [
+        0,
+        24,
+        24
+      ],
+      "source_shape_ZYX": [
+        256,
+        304,
+        304
+      ],
+      "source_npz_sha256": "4ba0dae6b65632f2404a716f045aeceb3bc7b1c1cbcda3df6738d33875d832ff",
+      "file": "data/patches/10447_y024_x024_256.npz",
+      "sha256": "ae6ff5b92af7d0b9c2f14ec9833a2d4dc632db18928178793a719ac79ebbdf27"
+    },
+    {
+      "case_id": "10456",
+      "patient_id": "10456",
+      "split": "validation",
+      "disease": "AMD",
+      "patch_id": "y024_x024_256",
+      "origin_ZYX": [
+        0,
+        24,
+        24
+      ],
+      "source_shape_ZYX": [
+        256,
+        304,
+        304
+      ],
+      "source_npz_sha256": "5b7a95860c0080a9a6228b959d5c77f0b23d5afba249ac9f6e39e508611128d1",
+      "file": "data/patches/10456_y024_x024_256.npz",
+      "sha256": "d4f68ef35cf84730300c4f6607154a017ce3193379dd8f57f020a26945f40da7"
+    },
+    {
+      "case_id": "10302",
+      "patient_id": "10302",
+      "split": "validation",
+      "disease": "CNV",
+      "patch_id": "y024_x024_256",
+      "origin_ZYX": [
+        0,
+        24,
+        24
+      ],
+      "source_shape_ZYX": [
+        256,
+        304,
+        304
+      ],
+      "source_npz_sha256": "e743d1cf8ae5fcf5228498b07aa89a733abd9c121517d48f4f131c7996effb84",
+      "file": "data/patches/10302_y024_x024_256.npz",
+      "sha256": "9481f7ddd2232be3816480e6ee7c7dbf02a746d85cbe3f2f873cc70a81c792e6"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+test_global_coefficient_stitching_padding_and_fixed_condition (fm3d.test_wavelet.WaveletTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.159s
+
+OK

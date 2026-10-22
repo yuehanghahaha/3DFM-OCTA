@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "verified_predictions": 24,
+  "projection_metric_and_saved_image_recomputation": true,
+  "schedule_and_nonzero_finite_gradients_verified": true,
+  "same_initial_source_only_predictions_verified": true,
+  "run_script_sha256": "fc7ac7d4ab0788943716b3e01fe5dfb5183cd920540486cf257a0eb854c7af6e",
+  "completed": "2026-10-22T10:35:40.951140+08:00",
+  "gpu_state": "index, memory.used [MiB], utilization.gpu [%]\n0, 524 MiB, 0 %\n1, 9170 MiB, 0 %\n"
+}

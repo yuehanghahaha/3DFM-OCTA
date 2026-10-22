@@ -1,0 +1,16 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<title>3DFM 推理结果</title><style>body{font:17px system-ui;max-width:1140px;margin:30px auto;
+padding:0 20px;color:#172536}img{width:100%}td,th{padding:8px 25px;border-bottom:1px solid #ddd}
+section{margin-top:40px}code{overflow-wrap:anywhere}</style>
+<h1>3DFM 推理结果</h1>
+<p>集合：validation；模型轮次：90；
+病例数：10；患者数：10；Euler步数：8。</p>
+<p>患者宏平均 MAE：<b>0.013700</b>；
+PSNR：<b>28.102 dB</b>。</p>
+<p>指标在完整预处理三维体上计算，强度范围为[0,1]。图像仅用于查看，显示窗口不改变指标。
+左列为预测、中列为真实OCTA、右列为绝对差值。第一行是全深度平均投影，并非分层血管投影；
+其余三行是固定25%、50%、75%位置的B-scan。所有病例使用相同显示窗口，未逐图调整对比度。
+图像面板按固定大小显示，不代表真实物理比例。点击图片可放大。</p>
+<p><a href="per_case_metrics.csv">下载逐病例指标</a> · <a href="metrics.json">完整评价配置和指标</a></p>
+<table><tr><th>病例</th><th>MAE ↓</th><th>PSNR ↑</th></tr><tr><td>10302</td><td>0.016267</td><td>26.324</td></tr><tr><td>10319</td><td>0.013313</td><td>28.075</td></tr><tr><td>10338</td><td>0.018488</td><td>25.737</td></tr><tr><td>10357</td><td>0.013083</td><td>27.687</td></tr><tr><td>10396</td><td>0.014212</td><td>27.350</td></tr><tr><td>10422</td><td>0.012104</td><td>28.311</td></tr><tr><td>10447</td><td>0.014375</td><td>28.965</td></tr><tr><td>10456</td><td>0.014582</td><td>27.810</td></tr><tr><td>10495</td><td>0.007473</td><td>33.034</td></tr><tr><td>10500</td><td>0.013099</td><td>27.731</td></tr></table>
+<section><h2>10302</h2><a href="10302.png"><img loading="lazy" src="10302.png"></a></section><section><h2>10319</h2><a href="10319.png"><img loading="lazy" src="10319.png"></a></section><section><h2>10338</h2><a href="10338.png"><img loading="lazy" src="10338.png"></a></section><section><h2>10357</h2><a href="10357.png"><img loading="lazy" src="10357.png"></a></section><section><h2>10396</h2><a href="10396.png"><img loading="lazy" src="10396.png"></a></section><section><h2>10422</h2><a href="10422.png"><img loading="lazy" src="10422.png"></a></section><section><h2>10447</h2><a href="10447.png"><img loading="lazy" src="10447.png"></a></section><section><h2>10456</h2><a href="10456.png"><img loading="lazy" src="10456.png"></a></section><section><h2>10495</h2><a href="10495.png"><img loading="lazy" src="10495.png"></a></section><section><h2>10500</h2><a href="10500.png"><img loading="lazy" src="10500.png"></a></section></html>

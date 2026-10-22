@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "html": [
+    {
+      "file": "index.html",
+      "links": 38,
+      "missing": 0
+    },
+    {
+      "file": "flowoct_comparison.html",
+      "links": 36,
+      "missing": 0
+    }
+  ],
+  "metadata_matches_server_audit": true,
+  "figures_visually_reviewed": [
+    "flowoct_matched1600.png",
+    "flowoct_learning_curves.png"
+  ]
+}

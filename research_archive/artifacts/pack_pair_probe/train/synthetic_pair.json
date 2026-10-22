@@ -1,0 +1,20 @@
+{
+  "patient_id": "SYNTHETIC_PROBE",
+  "split": "train",
+  "source_oct": "D:\\data\\code\\keyan_fuxian\\FlowOCT\\artifacts\\pack_pair_probe\\oct.npy",
+  "source_octa": "D:\\data\\code\\keyan_fuxian\\FlowOCT\\artifacts\\pack_pair_probe\\octa.npy",
+  "source_shape": [
+    32,
+    32,
+    32
+  ],
+  "transpose": [
+    2,
+    0,
+    1
+  ],
+  "output_axis_description": "synthetic index axes permuted 2 0 1",
+  "slice_names": [],
+  "normalization": "none; upstream performs crop min-max",
+  "registration": "not performed; must be verified by user"
+}

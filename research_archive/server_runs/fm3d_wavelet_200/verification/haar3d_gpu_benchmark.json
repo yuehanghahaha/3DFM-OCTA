@@ -1,0 +1,31 @@
+{
+  "scope": "Synthetic GPU/CPU resource check only; not patient performance",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "torch": "2.5.1+cu121",
+  "patch_ZYX": [
+    256,
+    64,
+    64
+  ],
+  "batch_size": 1,
+  "base_channels": 16,
+  "amp": true,
+  "representation": "haar3d",
+  "network_patch_ZYX": [
+    128,
+    32,
+    32
+  ],
+  "parameters": 2106600,
+  "optimizer_updates_including_warmup": 4,
+  "amp_skipped_updates": 0,
+  "mean_update_seconds_after_warmup": 0.20562803331995383,
+  "peak_allocated_bytes": 324072448,
+  "peak_reserved_bytes": 373293056,
+  "losses": [
+    0.2947409749031067,
+    0.24843844771385193,
+    0.19960537552833557,
+    0.18248820304870605
+  ]
+}

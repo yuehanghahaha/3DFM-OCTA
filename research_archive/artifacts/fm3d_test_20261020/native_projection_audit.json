@@ -1,0 +1,422 @@
+[
+  {
+    "case": "10302",
+    "slab": "ILM_OPL",
+    "variants": [
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 0.0021965893351800552,
+        "correlation": 0.9972635749572356,
+        "exact_fraction": 0.9998701523545707
+      },
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 0.0021965893351800552,
+        "correlation": 0.9972635749572356,
+        "exact_fraction": 0.9998701523545707
+      },
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 1.096043975069252,
+        "correlation": 0.9954012995298305,
+        "exact_fraction": 0.8435335872576177
+      },
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 1.4185206024930748,
+        "correlation": 0.994227563693667,
+        "exact_fraction": 0.8226713988919667
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 8.77661876731302,
+        "correlation": 0.9150378571229618,
+        "exact_fraction": 0.2455310768698061
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 9.595492122576177,
+        "correlation": 0.9104483981421054,
+        "exact_fraction": 0.07869849376731301
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 9.622164993074792,
+        "correlation": 0.9102856971602646,
+        "exact_fraction": 0.07862274930747923
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 10.124924255540167,
+        "correlation": 0.904662879553527,
+        "exact_fraction": 0.07827648891966758
+      }
+    ]
+  },
+  {
+    "case": "10302",
+    "slab": "OPL_BM",
+    "variants": [
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 2.3300943559556786,
+        "correlation": 0.9883991081861208,
+        "exact_fraction": 0.7971455159279779
+      },
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 3.5386188538781163,
+        "correlation": 0.9872593593754834,
+        "exact_fraction": 0.2556700138504155
+      },
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 3.701198926592798,
+        "correlation": 0.9831454612542548,
+        "exact_fraction": 0.0918347472299169
+      },
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 4.4956392832409975,
+        "correlation": 0.9803869004357781,
+        "exact_fraction": 0.08233422783933518
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 28.022517745844876,
+        "correlation": 0.6617719848084004,
+        "exact_fraction": 0.07077778739612188
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 28.82666421398892,
+        "correlation": 0.6505973160755405,
+        "exact_fraction": 0.07052891274238227
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 28.910697281855956,
+        "correlation": 0.6533470825224397,
+        "exact_fraction": 0.0695983379501385
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 29.77296139196676,
+        "correlation": 0.6423095231019202,
+        "exact_fraction": 0.02658630540166205
+      }
+    ]
+  },
+  {
+    "case": "10319",
+    "slab": "ILM_OPL",
+    "variants": [
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 0.0,
+        "correlation": 0.9973037579428522,
+        "exact_fraction": 1.0
+      },
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 4.3282548476454294e-05,
+        "correlation": 0.9973037287313564,
+        "exact_fraction": 0.9999891793628809
+      },
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 0.5626406682825484,
+        "correlation": 0.996192356410859,
+        "exact_fraction": 0.9193321502770083
+      },
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 0.712560595567867,
+        "correlation": 0.9956994810374051,
+        "exact_fraction": 0.9065962603878116
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 52.77992988227147,
+        "correlation": 0.3203800580718808,
+        "exact_fraction": 0.010247143351800554
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 52.95593836565097,
+        "correlation": 0.3203213642774468,
+        "exact_fraction": 0.009868421052631578
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 53.06812673130194,
+        "correlation": 0.31895057006277255,
+        "exact_fraction": 0.01032288781163435
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 53.25256449099723,
+        "correlation": 0.3188591554266941,
+        "exact_fraction": 0.010041551246537396
+      }
+    ]
+  },
+  {
+    "case": "10319",
+    "slab": "OPL_BM",
+    "variants": [
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 2.7541443040166205,
+        "correlation": 0.9854408533141984,
+        "exact_fraction": 0.21845784279778394
+      },
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 3.357492209141274,
+        "correlation": 0.9844179841801902,
+        "exact_fraction": 0.20221606648199447
+      },
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 3.581284626038781,
+        "correlation": 0.9779888343029145,
+        "exact_fraction": 0.21020169667590027
+      },
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 3.7388980263157894,
+        "correlation": 0.9749585091575013,
+        "exact_fraction": 0.7417330332409973
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 55.72719009695291,
+        "correlation": 0.20538385196920048,
+        "exact_fraction": 0.021305834487534626
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 55.913478185595565,
+        "correlation": 0.20317967252491,
+        "exact_fraction": 0.020862188365650968
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 56.0205483898892,
+        "correlation": 0.1996702537931021,
+        "exact_fraction": 0.02107860110803324
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 56.21231172091413,
+        "correlation": 0.19746094383163612,
+        "exact_fraction": 0.020515927977839334
+      }
+    ]
+  },
+  {
+    "case": "10495",
+    "slab": "ILM_OPL",
+    "variants": [
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 0.0,
+        "correlation": 0.9967842926610678,
+        "exact_fraction": 1.0
+      },
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 0.0,
+        "correlation": 0.9967842926610678,
+        "exact_fraction": 1.0
+      },
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 0.8712885214681441,
+        "correlation": 0.9952187317480844,
+        "exact_fraction": 0.8834292763157895
+      },
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 1.0945399065096952,
+        "correlation": 0.9944542774435027,
+        "exact_fraction": 0.8697519909972299
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 50.98596563365651,
+        "correlation": 0.3448584041344489,
+        "exact_fraction": 0.009771035318559556
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 51.18188408933518,
+        "correlation": 0.3450058598437461,
+        "exact_fraction": 0.009868421052631578
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 51.837235976454295,
+        "correlation": 0.3436295981497782,
+        "exact_fraction": 0.011123614958448753
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 52.03706068213297,
+        "correlation": 0.34375866045598746,
+        "exact_fraction": 0.010993767313019391
+      }
+    ]
+  },
+  {
+    "case": "10495",
+    "slab": "OPL_BM",
+    "variants": [
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 3.253917070637119,
+        "correlation": 0.9865106083376233,
+        "exact_fraction": 0.1340027700831025
+      },
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 3.945669581024931,
+        "correlation": 0.9809635025377618,
+        "exact_fraction": 0.12925251038781163
+      },
+      {
+        "layer_transpose": false,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 4.647755799861496,
+        "correlation": 0.9849169509747406,
+        "exact_fraction": 0.03773156163434903
+      },
+      {
+        "layer_transpose": false,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 4.742198320637119,
+        "correlation": 0.9748194388903837,
+        "exact_fraction": 0.6427350242382271
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": false,
+        "mae": 53.01037699099723,
+        "correlation": 0.2582352744520579,
+        "exact_fraction": 0.009803497229916898
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": false,
+        "mae": 53.14647896468144,
+        "correlation": 0.25687255964072386,
+        "exact_fraction": 0.009446416204986149
+      },
+      {
+        "layer_transpose": true,
+        "offset": -1,
+        "upper_inclusive": true,
+        "mae": 53.18270645775623,
+        "correlation": 0.25711023735987204,
+        "exact_fraction": 0.009554622576177285
+      },
+      {
+        "layer_transpose": true,
+        "offset": 0,
+        "upper_inclusive": true,
+        "mae": 53.32787612534626,
+        "correlation": 0.25563931336624,
+        "exact_fraction": 0.009468057479224377
+      }
+    ]
+  }
+]

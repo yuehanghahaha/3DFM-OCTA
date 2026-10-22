@@ -1,0 +1,29 @@
+{
+  "name": "06_flowoct",
+  "model": "FlowOCT public 2D code",
+  "axis_adapter": "ZYX -> YXZ; inverse after generation",
+  "normalization": "Use frozen [0,1] tensors exactly; no new minmax/resize/crop/flip",
+  "lr": 0.0002,
+  "beta": 0.5,
+  "train_slices": 0,
+  "network_chunk": 0,
+  "inference_chunk": 16,
+  "amp": false,
+  "grad_clip": null,
+  "weights": {
+    "velocity": 10.0,
+    "reconstruction": 0.5,
+    "contrastive": 0.005,
+    "projection": 0.1
+  },
+  "native_solver": {
+    "steps": 3,
+    "clamp": "each Euler step"
+  },
+  "shared_solver": {
+    "steps": 8,
+    "clamp": "final only"
+  },
+  "eval_every": 200,
+  "seed": 20261021
+}

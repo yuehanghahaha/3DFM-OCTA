@@ -1,0 +1,10 @@
+test_axis_adapter_is_lossless_and_preserves_Bscan_axis (__main__.FlowControlTests) ... ok
+test_real_author_model_update_and_projection_loss_are_finite (__main__.FlowControlTests) ... /workspace/FlowOCT\experiments\ablation_validation_20261021\source\flowoct\wavelet_functions.py:108: DeprecationWarning: 'saved_variables' is deprecated; use 'saved_tensors'
+  matrix_Low_0, matrix_Low_1, matrix_High_0, matrix_High_1 = ctx.saved_variables
+ok
+test_two_solver_adapters_use_only_oct (__main__.FlowControlTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.005s
+
+OK

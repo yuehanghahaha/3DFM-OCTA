@@ -1,0 +1,1727 @@
+{
+  "checkpoints": {
+    "voxel": {
+      "checkpoint": "/srv/oct_research/three_diagnostics_20261021/snapshots/voxel.pt",
+      "sha256": "ba73fe2e8aadda4130c2e8ac67d52e0aa565b3f57f67ba804ffa8d7978a449da",
+      "original": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01/best.pt",
+      "epoch": 106,
+      "config": {
+        "manifest": "/srv/oct_research/OCTA500_common_v1/split_3M_z256.csv",
+        "fov": "3M",
+        "output": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01",
+        "axis_order": "ZYX",
+        "intensity_scale": 255.0,
+        "depth": 256,
+        "patch": [
+          256,
+          64,
+          64
+        ],
+        "base_channels": 16,
+        "condition": true,
+        "batch_size": 1,
+        "epochs": 200,
+        "window_best_every": 10,
+        "steps_per_epoch": 200,
+        "lr": 0.0002,
+        "val_every": 1,
+        "ode_steps": 8,
+        "overlap": 0.5,
+        "seed": 2026,
+        "workers": 0,
+        "device": "cuda",
+        "amp": true,
+        "resume": true,
+        "manifest_sha256": "652544a427071b8350d346deb941c03182ae4e248659b1117a45fcb870bc253b"
+      }
+    },
+    "haar": {
+      "checkpoint": "/srv/oct_research/three_diagnostics_20261021/snapshots/haar.pt",
+      "sha256": "b1cb22db701c5a6704417bf96990118d4520417e9a468312a551028fdc1fd342",
+      "original": "/srv/oct_research/fm3d_wavelet_200/runs/fm3d_haar3d_3M_200/best.pt",
+      "epoch": 195,
+      "config": {
+        "manifest": "/srv/oct_research/OCTA500_common_v1/split_3M_z256.csv",
+        "fov": "3M",
+        "output": "/srv/oct_research/fm3d_wavelet_200/runs/fm3d_haar3d_3M_200",
+        "axis_order": "ZYX",
+        "intensity_scale": 255.0,
+        "depth": 256,
+        "patch": [
+          256,
+          64,
+          64
+        ],
+        "base_channels": 16,
+        "representation": "haar3d",
+        "condition": true,
+        "batch_size": 1,
+        "epochs": 200,
+        "save_every": 50,
+        "steps_per_epoch": 200,
+        "lr": 0.0002,
+        "val_every": 5,
+        "ode_steps": 8,
+        "overlap": 0.5,
+        "seed": 2026,
+        "workers": 0,
+        "device": "cuda",
+        "amp": true,
+        "resume": false,
+        "manifest_sha256": "652544a427071b8350d346deb941c03182ae4e248659b1117a45fcb870bc253b"
+      }
+    }
+  },
+  "supervised": {
+    "complete": true,
+    "updates": 2400,
+    "successful_updates": 2400,
+    "elapsed_seconds": 368.62028447701596,
+    "parameter_count": 353921,
+    "peak_allocated_bytes": 1373869568,
+    "constant_mean_predictor": {
+      "mae": 0.03445032229373923,
+      "mse": 0.0033605451272273185,
+      "psnr": 24.73590268281587,
+      "max_projection_pcc": null,
+      "max_projection_ssim": 0.021621853267102902,
+      "high_signal_mae": 0.170655929558313,
+      "fraction_outside_0_1": 0.0
+    },
+    "memorization_threshold_passed": false,
+    "evaluation": [
+      {
+        "id": "train_10301_y064_x064",
+        "case_id": "10301",
+        "patient_id": "10301",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10301_y064_x064.npz",
+        "sha256": "078eb3c16579c634b8594517c287e44738df2f973853bc2c5606f3397179858f",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.1039215698838234,
+          0.9058823585510254
+        ],
+        "octa_range": [
+          0.0,
+          0.6764705777168274
+        ],
+        "raw": {
+          "mae": 0.010508230998690693,
+          "mse": 0.0006419423408162786,
+          "psnr": 31.925039784574402,
+          "max_projection_pcc": 0.49499919386958724,
+          "max_projection_ssim": 0.3963796275534405,
+          "high_signal_mae": 0.05575224075449414,
+          "fraction_outside_0_1": 0.34543800354003906
+        },
+        "final_clamp": {
+          "mae": 0.009953936523245166,
+          "mse": 0.0006394495651887001,
+          "psnr": 31.941937036075508,
+          "max_projection_pcc": 0.49499919386958724,
+          "max_projection_ssim": 0.3963796275534405,
+          "high_signal_mae": 0.05575167704466859,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": true
+      },
+      {
+        "id": "train_10301_y120_x120",
+        "case_id": "10301",
+        "patient_id": "10301",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10301_y120_x120.npz",
+        "sha256": "d2fbe7824e06e0b109c6937f5f7456051d37768b5fb9a76a38f340c916044c6f",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.1147058829665184,
+          0.9813725352287292
+        ],
+        "octa_range": [
+          0.0,
+          0.704901933670044
+        ],
+        "raw": {
+          "mae": 0.011733436296858968,
+          "mse": 0.00080804509925221,
+          "psnr": 30.92564399361827,
+          "max_projection_pcc": 0.19792195542580296,
+          "max_projection_ssim": 0.2598348525789939,
+          "high_signal_mae": 0.06467091084776568,
+          "fraction_outside_0_1": 0.40766048431396484
+        },
+        "final_clamp": {
+          "mae": 0.010685434793570425,
+          "mse": 0.0007879429729671503,
+          "psnr": 31.035052132488936,
+          "max_projection_pcc": 0.19792195542580296,
+          "max_projection_ssim": 0.2598348525789939,
+          "high_signal_mae": 0.06458206353413114,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "train_10303_y064_x064",
+        "case_id": "10303",
+        "patient_id": "10303",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10303_y064_x064.npz",
+        "sha256": "96a66d9112d96d9464add4446ebef9eb3e9dc6edc737446e1d50933f725695e8",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.13137255609035492,
+          0.9333333373069763
+        ],
+        "octa_range": [
+          0.0,
+          0.7941176295280457
+        ],
+        "raw": {
+          "mae": 0.015824590187856202,
+          "mse": 0.0016410681840612847,
+          "psnr": 27.8487337425075,
+          "max_projection_pcc": 0.2354337325966125,
+          "max_projection_ssim": 0.20172426252802747,
+          "high_signal_mae": 0.0871663151796966,
+          "fraction_outside_0_1": 0.2145700454711914
+        },
+        "final_clamp": {
+          "mae": 0.01535581069510128,
+          "mse": 0.001623663154781495,
+          "psnr": 27.89504064499566,
+          "max_projection_pcc": 0.2354337325966125,
+          "max_projection_ssim": 0.20172426252802747,
+          "high_signal_mae": 0.0869749105313408,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "train_10303_y120_x120",
+        "case_id": "10303",
+        "patient_id": "10303",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10303_y120_x120.npz",
+        "sha256": "11e2de90636ee2e4dd3d50c6d3b36d5aa478770b26a678bc5fc8c00183e86880",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.11666666716337204,
+          0.949999988079071
+        ],
+        "octa_range": [
+          0.0,
+          0.6421568393707275
+        ],
+        "raw": {
+          "mae": 0.014460534880636478,
+          "mse": 0.0010785306483718992,
+          "psnr": 29.671675091338297,
+          "max_projection_pcc": 0.23420906446357015,
+          "max_projection_ssim": 0.242493390747091,
+          "high_signal_mae": 0.07207018813504154,
+          "fraction_outside_0_1": 0.16784191131591797
+        },
+        "final_clamp": {
+          "mae": 0.013994772022949964,
+          "mse": 0.0010637814809172264,
+          "psnr": 29.73147574464268,
+          "max_projection_pcc": 0.23420906446357015,
+          "max_projection_ssim": 0.242493390747091,
+          "high_signal_mae": 0.07192832294833919,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "validation_10302_y064_x064",
+        "case_id": "10302",
+        "patient_id": "10302",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10302_y064_x064.npz",
+        "sha256": "80071c905c58ec5963443a5e9abc3ad57a2daf0119308aa9a780eebb38849fbe",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.1147058829665184,
+          0.9450980424880981
+        ],
+        "octa_range": [
+          0.0,
+          0.9882352948188782
+        ],
+        "raw": {
+          "mae": 0.014128232448388234,
+          "mse": 0.0012488976439406574,
+          "psnr": 29.03473153694174,
+          "max_projection_pcc": 0.25734509736706723,
+          "max_projection_ssim": 0.22900502056203603,
+          "high_signal_mae": 0.07461359267685978,
+          "fraction_outside_0_1": 0.32648563385009766
+        },
+        "final_clamp": {
+          "mae": 0.013472703476777204,
+          "mse": 0.0012331932746733,
+          "psnr": 29.089688524017724,
+          "max_projection_pcc": 0.25734509736706723,
+          "max_projection_ssim": 0.22900502056203603,
+          "high_signal_mae": 0.07445680780932784,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "validation_10302_y120_x120",
+        "case_id": "10302",
+        "patient_id": "10302",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10302_y120_x120.npz",
+        "sha256": "38c8d5093dafaa5ad3fbe1bd9ea650c62cd321bc3be33d83c417d3c9d6b08fcd",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.12254901975393295,
+          0.9215686321258545
+        ],
+        "octa_range": [
+          0.0,
+          0.699999988079071
+        ],
+        "raw": {
+          "mae": 0.013756991166884003,
+          "mse": 0.001146137046395513,
+          "psnr": 29.407634496157414,
+          "max_projection_pcc": 0.36936420339042436,
+          "max_projection_ssim": 0.30092257510948006,
+          "high_signal_mae": 0.07001622286922708,
+          "fraction_outside_0_1": 0.2439098358154297
+        },
+        "final_clamp": {
+          "mae": 0.01313437093490366,
+          "mse": 0.0011321447342726451,
+          "psnr": 29.46098049050647,
+          "max_projection_pcc": 0.36936420339042436,
+          "max_projection_ssim": 0.30092257510948006,
+          "high_signal_mae": 0.06992767423044227,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "validation_10319_y064_x064",
+        "case_id": "10319",
+        "patient_id": "10319",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10319_y064_x064.npz",
+        "sha256": "7cd6eba6c1cc9bb8964f063ac85952bd0649560f0a1affbdbcdd79b489053a3b",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.09607843309640884,
+          0.8303921818733215
+        ],
+        "octa_range": [
+          0.0,
+          0.7745097875595093
+        ],
+        "raw": {
+          "mae": 0.01595535234735601,
+          "mse": 0.0015198285277304392,
+          "psnr": 28.182054078850047,
+          "max_projection_pcc": 0.2876304074274621,
+          "max_projection_ssim": 0.2748890152597369,
+          "high_signal_mae": 0.07911046297458317,
+          "fraction_outside_0_1": 0.3001718521118164
+        },
+        "final_clamp": {
+          "mae": 0.015105660757121053,
+          "mse": 0.00148267999582999,
+          "psnr": 28.289525718587505,
+          "max_projection_pcc": 0.2876304074274621,
+          "max_projection_ssim": 0.2748890152597369,
+          "high_signal_mae": 0.07862595247075979,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "validation_10319_y120_x120",
+        "case_id": "10319",
+        "patient_id": "10319",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10319_y120_x120.npz",
+        "sha256": "13b418f543cca1f9909ea62c64e499939dab3ce71b633e6d3a9c69a49980dba6",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.09607843309640884,
+          0.9558823704719543
+        ],
+        "octa_range": [
+          0.0,
+          0.658823549747467
+        ],
+        "raw": {
+          "mae": 0.01388965479854365,
+          "mse": 0.0011995806571041905,
+          "psnr": 29.209705457306512,
+          "max_projection_pcc": 0.2929457401035341,
+          "max_projection_ssim": 0.2870418651587458,
+          "high_signal_mae": 0.07541673815039855,
+          "fraction_outside_0_1": 0.3646392822265625
+        },
+        "final_clamp": {
+          "mae": 0.012849752793972158,
+          "mse": 0.0011657443597305416,
+          "psnr": 29.333966771334556,
+          "max_projection_pcc": 0.2929457401035341,
+          "max_projection_ssim": 0.2870418651587458,
+          "high_signal_mae": 0.07515383267560495,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      }
+    ],
+    "scope": "One training patch, single seed. Other patches are diagnostic holdouts, not tuned on."
+  },
+  "capacity_matched_supervised": {
+    "complete": true,
+    "updates": 2400,
+    "successful_updates": 2400,
+    "skipped_amp_updates": 0,
+    "parameter_count": 2097521,
+    "elapsed_seconds": 209.8748729591025,
+    "peak_allocated_bytes": 2368967168,
+    "memorization_threshold_passed": true,
+    "constant_mean_predictor": {
+      "mae": 0.03445032229373923,
+      "mse": 0.0033605451272273185,
+      "psnr": 24.73590268281587,
+      "max_projection_pcc": null,
+      "max_projection_ssim": 0.021621853267102902,
+      "high_signal_mae": 0.170655929558313,
+      "fraction_outside_0_1": 0.0
+    },
+    "evaluation": [
+      {
+        "id": "train_10301_y064_x064",
+        "case_id": "10301",
+        "patient_id": "10301",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10301_y064_x064.npz",
+        "sha256": "078eb3c16579c634b8594517c287e44738df2f973853bc2c5606f3397179858f",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.1039215698838234,
+          0.9058823585510254
+        ],
+        "octa_range": [
+          0.0,
+          0.6764705777168274
+        ],
+        "raw": {
+          "mae": 0.0061343428889674145,
+          "mse": 0.00013139206493803046,
+          "psnr": 38.814308620036755,
+          "max_projection_pcc": 0.9190458530285766,
+          "max_projection_ssim": 0.9069941551131102,
+          "high_signal_mae": 0.021779123174214824,
+          "fraction_outside_0_1": 0.3888874053955078
+        },
+        "final_clamp": {
+          "mae": 0.005096134869387758,
+          "mse": 0.0001234285925671776,
+          "psnr": 39.08584223157291,
+          "max_projection_pcc": 0.9190458530285766,
+          "max_projection_ssim": 0.9069941551131102,
+          "high_signal_mae": 0.021779123174214824,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": true
+      },
+      {
+        "id": "train_10301_y120_x120",
+        "case_id": "10301",
+        "patient_id": "10301",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10301_y120_x120.npz",
+        "sha256": "d2fbe7824e06e0b109c6937f5f7456051d37768b5fb9a76a38f340c916044c6f",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.1147058829665184,
+          0.9813725352287292
+        ],
+        "octa_range": [
+          0.0,
+          0.704901933670044
+        ],
+        "raw": {
+          "mae": 0.023066672778835007,
+          "mse": 0.002110751918508843,
+          "psnr": 26.755628073147562,
+          "max_projection_pcc": 0.06820790534995029,
+          "max_projection_ssim": 0.11399882754514258,
+          "high_signal_mae": 0.10822885980159659,
+          "fraction_outside_0_1": 0.7783975601196289
+        },
+        "final_clamp": {
+          "mae": 0.013712311906228458,
+          "mse": 0.0016444601008137646,
+          "psnr": 27.839766592482924,
+          "max_projection_pcc": 0.06820790534995029,
+          "max_projection_ssim": 0.11399882754514258,
+          "high_signal_mae": 0.10339896968550484,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "train_10303_y064_x064",
+        "case_id": "10303",
+        "patient_id": "10303",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10303_y064_x064.npz",
+        "sha256": "96a66d9112d96d9464add4446ebef9eb3e9dc6edc737446e1d50933f725695e8",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.13137255609035492,
+          0.9333333373069763
+        ],
+        "octa_range": [
+          0.0,
+          0.7941176295280457
+        ],
+        "raw": {
+          "mae": 0.02320526366646236,
+          "mse": 0.003011360833619739,
+          "psnr": 25.212372024211955,
+          "max_projection_pcc": 0.13415070823242034,
+          "max_projection_ssim": 0.1361042023930651,
+          "high_signal_mae": 0.11166371531997094,
+          "fraction_outside_0_1": 0.3147716522216797
+        },
+        "final_clamp": {
+          "mae": 0.020338541233237084,
+          "mse": 0.0026339618997436092,
+          "psnr": 25.793905113980706,
+          "max_projection_pcc": 0.13415070823242034,
+          "max_projection_ssim": 0.1361042023930651,
+          "high_signal_mae": 0.1068003805473237,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "train_10303_y120_x120",
+        "case_id": "10303",
+        "patient_id": "10303",
+        "split": "train",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/train_10303_y120_x120.npz",
+        "sha256": "11e2de90636ee2e4dd3d50c6d3b36d5aa478770b26a678bc5fc8c00183e86880",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.11666666716337204,
+          0.949999988079071
+        ],
+        "octa_range": [
+          0.0,
+          0.6421568393707275
+        ],
+        "raw": {
+          "mae": 0.023640634860678023,
+          "mse": 0.0018760093712079948,
+          "psnr": 27.26764996525315,
+          "max_projection_pcc": 0.04873301017619971,
+          "max_projection_ssim": 0.09687554160841116,
+          "high_signal_mae": 0.10346438071289832,
+          "fraction_outside_0_1": 0.8226203918457031
+        },
+        "final_clamp": {
+          "mae": 0.011540641548941966,
+          "mse": 0.0013430470570426933,
+          "psnr": 28.719087704616285,
+          "max_projection_pcc": 0.04873301017619971,
+          "max_projection_ssim": 0.09687554160841116,
+          "high_signal_mae": 0.09860991487659809,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "validation_10302_y064_x064",
+        "case_id": "10302",
+        "patient_id": "10302",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10302_y064_x064.npz",
+        "sha256": "80071c905c58ec5963443a5e9abc3ad57a2daf0119308aa9a780eebb38849fbe",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.1147058829665184,
+          0.9450980424880981
+        ],
+        "octa_range": [
+          0.0,
+          0.9882352948188782
+        ],
+        "raw": {
+          "mae": 0.027700943779285225,
+          "mse": 0.0025540723349961525,
+          "psnr": 25.92766807055055,
+          "max_projection_pcc": 0.12127110409870859,
+          "max_projection_ssim": 0.11327667563712995,
+          "high_signal_mae": 0.09374627244898641,
+          "fraction_outside_0_1": 0.060936927795410156
+        },
+        "final_clamp": {
+          "mae": 0.02640353413656804,
+          "mse": 0.002362707946310572,
+          "psnr": 26.265899580733347,
+          "max_projection_pcc": 0.12127110409870859,
+          "max_projection_ssim": 0.11327667563712995,
+          "high_signal_mae": 0.09134958437534686,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "validation_10302_y120_x120",
+        "case_id": "10302",
+        "patient_id": "10302",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10302_y120_x120.npz",
+        "sha256": "38c8d5093dafaa5ad3fbe1bd9ea650c62cd321bc3be33d83c417d3c9d6b08fcd",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.12254901975393295,
+          0.9215686321258545
+        ],
+        "octa_range": [
+          0.0,
+          0.699999988079071
+        ],
+        "raw": {
+          "mae": 0.024188371233044625,
+          "mse": 0.0024946698385812298,
+          "psnr": 26.029869236960263,
+          "max_projection_pcc": 0.13232901309025527,
+          "max_projection_ssim": 0.15162098999274876,
+          "high_signal_mae": 0.10265874142155189,
+          "fraction_outside_0_1": 0.12023258209228516
+        },
+        "final_clamp": {
+          "mae": 0.021926378203040775,
+          "mse": 0.002192023622902703,
+          "psnr": 26.591547698769887,
+          "max_projection_pcc": 0.13232901309025527,
+          "max_projection_ssim": 0.15162098999274876,
+          "high_signal_mae": 0.09841596940799828,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "validation_10319_y064_x064",
+        "case_id": "10319",
+        "patient_id": "10319",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10319_y064_x064.npz",
+        "sha256": "7cd6eba6c1cc9bb8964f063ac85952bd0649560f0a1affbdbcdd79b489053a3b",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.09607843309640884,
+          0.8303921818733215
+        ],
+        "octa_range": [
+          0.0,
+          0.7745097875595093
+        ],
+        "raw": {
+          "mae": 0.02400732409737516,
+          "mse": 0.0028005429049803143,
+          "psnr": 25.52757769449994,
+          "max_projection_pcc": 0.12387998327923791,
+          "max_projection_ssim": 0.1616523918777287,
+          "high_signal_mae": 0.09552648613634654,
+          "fraction_outside_0_1": 0.21367359161376953
+        },
+        "final_clamp": {
+          "mae": 0.021679355224910934,
+          "mse": 0.0025042555924549023,
+          "psnr": 26.013213476948525,
+          "max_projection_pcc": 0.12387998327923791,
+          "max_projection_ssim": 0.1616523918777287,
+          "high_signal_mae": 0.09158856339522822,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      },
+      {
+        "id": "validation_10319_y120_x120",
+        "case_id": "10319",
+        "patient_id": "10319",
+        "split": "validation",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "file": "/srv/oct_research/three_diagnostics_20261021/inputs/validation_10319_y120_x120.npz",
+        "sha256": "13b418f543cca1f9909ea62c64e499939dab3ce71b633e6d3a9c69a49980dba6",
+        "shape": [
+          1,
+          1,
+          256,
+          64,
+          64
+        ],
+        "oct_range": [
+          0.09607843309640884,
+          0.9558823704719543
+        ],
+        "octa_range": [
+          0.0,
+          0.658823549747467
+        ],
+        "raw": {
+          "mae": 0.02104878165268742,
+          "mse": 0.0021315250068731496,
+          "psnr": 26.713095678804137,
+          "max_projection_pcc": 0.12303925788488534,
+          "max_projection_ssim": 0.15042693382376163,
+          "high_signal_mae": 0.10010754042088597,
+          "fraction_outside_0_1": 0.711369514465332
+        },
+        "final_clamp": {
+          "mae": 0.01504554274545411,
+          "mse": 0.001821086136321901,
+          "psnr": 27.39669511841226,
+          "max_projection_pcc": 0.12303925788488534,
+          "max_projection_ssim": 0.15042693382376163,
+          "high_signal_mae": 0.0961087455065188,
+          "fraction_outside_0_1": 0.0
+        },
+        "trained_on_this_patch": false
+      }
+    ]
+  },
+  "formula_checks": 22,
+  "posthoc_layers": {
+    "complete": true,
+    "completed": "2026-10-21T22:04:58.645001+08:00",
+    "cases": [
+      {
+        "id": "train_10301_y064_x064",
+        "split": "train",
+        "case_id": "10301",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "cached_input_exact_match": true,
+        "cached_sha256": "78db6998ca49173e885a011d90648f0f7666210961f1e0693d8602ae4fb6526e",
+        "empty_rays": 0,
+        "metrics": {
+          "voxel": {
+            "pcc": 0.1500487816681414,
+            "ssim": 0.12331666822335897,
+            "mae": 0.0833768820127716
+          },
+          "haar": {
+            "pcc": 0.15391737161150604,
+            "ssim": 0.11915541170427257,
+            "mae": 0.08753385754448573
+          },
+          "small": {
+            "pcc": 0.6096316090195042,
+            "ssim": 0.399866857367715,
+            "mae": 0.0668854905563876
+          },
+          "matched": {
+            "pcc": 0.966788980779525,
+            "ssim": 0.9539590789786984,
+            "mae": 0.019641489929881573
+          }
+        }
+      },
+      {
+        "id": "train_10301_y120_x120",
+        "split": "train",
+        "case_id": "10301",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "cached_input_exact_match": true,
+        "cached_sha256": "d6a8dc3e57ca1a0d88d6130e8be211ffc5692b1502d9aa132728ecf21125251f",
+        "empty_rays": 0,
+        "metrics": {
+          "voxel": {
+            "pcc": 0.46061216592896603,
+            "ssim": 0.316265470375499,
+            "mae": 0.050465594833639216
+          },
+          "haar": {
+            "pcc": 0.4994927420039523,
+            "ssim": 0.3737072106836785,
+            "mae": 0.041410425363739733
+          },
+          "small": {
+            "pcc": 0.4795470884570313,
+            "ssim": 0.33682491246631435,
+            "mae": 0.05022041790985554
+          },
+          "matched": {
+            "pcc": 0.419962116866246,
+            "ssim": 0.28690184979181776,
+            "mae": 0.05842726277879251
+          }
+        }
+      },
+      {
+        "id": "validation_10302_y064_x064",
+        "split": "validation",
+        "case_id": "10302",
+        "origin_ZYX": [
+          0,
+          64,
+          64
+        ],
+        "cached_input_exact_match": true,
+        "cached_sha256": "214e59453d34a61ea6db646df88632715eb701847b7c14c36dfd6fa0b354365a",
+        "empty_rays": 0,
+        "metrics": {
+          "voxel": {
+            "pcc": 0.06769990335023751,
+            "ssim": 0.11195796527454636,
+            "mae": 0.09693939116641559
+          },
+          "haar": {
+            "pcc": 0.14341011131395956,
+            "ssim": 0.10791367964251047,
+            "mae": 0.09979828350515163
+          },
+          "small": {
+            "pcc": 0.237207526222008,
+            "ssim": 0.21645003581607128,
+            "mae": 0.08106891748002454
+          },
+          "matched": {
+            "pcc": 0.15613456836517522,
+            "ssim": 0.15422404400778414,
+            "mae": 0.08777258407553745
+          }
+        }
+      },
+      {
+        "id": "validation_10302_y120_x120",
+        "split": "validation",
+        "case_id": "10302",
+        "origin_ZYX": [
+          0,
+          120,
+          120
+        ],
+        "cached_input_exact_match": true,
+        "cached_sha256": "20a806e9564520cb20315fa8a572f0929e11c5151aff22ce1bb131dc22df77d7",
+        "empty_rays": 0,
+        "metrics": {
+          "voxel": {
+            "pcc": 0.2757581354348273,
+            "ssim": 0.1686284785082643,
+            "mae": 0.07980515131941956
+          },
+          "haar": {
+            "pcc": 0.32459749489259804,
+            "ssim": 0.16870834290740502,
+            "mae": 0.08046040732335769
+          },
+          "small": {
+            "pcc": 0.24285101660338188,
+            "ssim": 0.23217695460554402,
+            "mae": 0.08240691060802874
+          },
+          "matched": {
+            "pcc": 0.32928433233299403,
+            "ssim": 0.17471262960168116,
+            "mae": 0.08556297417896985
+          }
+        }
+      }
+    ],
+    "protocol": "First train/validation IDs at two fixed locations. Reuse prior official native-640 MATLAB1-based ILM/OPL layers only after inference. Exactly equal OCT/OCTA arrays verified before use. No training, parameter selection or test patients."
+  },
+  "groups": {
+    "voxel": {
+      "train": {
+        "patients": 2,
+        "patches": 4,
+        "teacher": {
+          "0.0": {
+            "velocity_mse": 0.001313561457209289,
+            "zero_velocity_mse": 0.0874077882617712,
+            "relative_rmse": 0.12000105071542858,
+            "velocity_pcc": 0.919414499544831,
+            "high_signal_velocity_mse": 0.01347120269201696,
+            "endpoint_pcc": 0.033413131036322284
+          },
+          "0.001": {
+            "velocity_mse": 0.0012330941244727,
+            "zero_velocity_mse": 0.0874077882617712,
+            "relative_rmse": 0.11621427269745341,
+            "velocity_pcc": 0.9246485818177322,
+            "high_signal_velocity_mse": 0.012600917601957917,
+            "endpoint_pcc": 0.11914945445421563
+          },
+          "0.01": {
+            "velocity_mse": 0.000681472331052646,
+            "zero_velocity_mse": 0.0874077882617712,
+            "relative_rmse": 0.08653404603491545,
+            "velocity_pcc": 0.9595856030915402,
+            "high_signal_velocity_mse": 0.006068016111385077,
+            "endpoint_pcc": 0.6477395995588977
+          },
+          "0.05": {
+            "velocity_mse": 0.00014012475548952352,
+            "zero_velocity_mse": 0.0874077882617712,
+            "relative_rmse": 0.03981655881231233,
+            "velocity_pcc": 0.9915190927255478,
+            "high_signal_velocity_mse": 0.0007637786911800504,
+            "endpoint_pcc": 0.9447498619845838
+          },
+          "0.1": {
+            "velocity_mse": 7.036099850665778e-05,
+            "zero_velocity_mse": 0.0874077882617712,
+            "relative_rmse": 0.028328172370711925,
+            "velocity_pcc": 0.9959511810629895,
+            "high_signal_velocity_mse": 0.00030531699303537607,
+            "endpoint_pcc": 0.9761198171215203
+          },
+          "0.5": {
+            "velocity_mse": 2.672056280061952e-05,
+            "zero_velocity_mse": 0.0874077882617712,
+            "relative_rmse": 0.017455887277483775,
+            "velocity_pcc": 0.998542679664861,
+            "high_signal_velocity_mse": 0.00011872160757775418,
+            "endpoint_pcc": 0.9966171171726383
+          },
+          "0.9": {
+            "velocity_mse": 3.782612384384265e-05,
+            "zero_velocity_mse": 0.0874077882617712,
+            "relative_rmse": 0.02077039699969881,
+            "velocity_pcc": 0.9981738528270597,
+            "high_signal_velocity_mse": 0.0001406900082656648,
+            "endpoint_pcc": 0.9998327804162612
+          },
+          "1.0": {
+            "velocity_mse": 4.840902147407178e-05,
+            "zero_velocity_mse": 0.0874077882617712,
+            "relative_rmse": 0.023503485841370346,
+            "velocity_pcc": 0.9979177711982922,
+            "high_signal_velocity_mse": 0.00015096029528649524,
+            "endpoint_pcc": 1.0
+          }
+        },
+        "solvers": {
+          "1": {
+            "mae": 0.011117329188994413,
+            "psnr": 30.092251300795738,
+            "max_projection_pcc": 0.033413131036322284,
+            "max_projection_ssim": 0.1572306199324612
+          },
+          "8": {
+            "mae": 0.01166482964319479,
+            "psnr": 30.37019782518238,
+            "max_projection_pcc": 0.06645722767654111,
+            "max_projection_ssim": 0.1749012919199469
+          },
+          "32": {
+            "mae": 0.01150025477519287,
+            "psnr": 30.523898113619605,
+            "max_projection_pcc": 0.09704526460695313,
+            "max_projection_ssim": 0.1948178062140587
+          }
+        },
+        "noise_ood": {
+          "0.1": {
+            "velocity_mse": 1.491623153289159,
+            "relative_rmse": 1.2199950262036585,
+            "velocity_pcc": -0.7499396972124652
+          },
+          "0.5": {
+            "velocity_mse": 1.4325130482514699,
+            "relative_rmse": 1.1955781990080454,
+            "velocity_pcc": -0.7520043621580952
+          },
+          "0.9": {
+            "velocity_mse": 1.2117203573385873,
+            "relative_rmse": 1.0995843659882105,
+            "velocity_pcc": -0.5119764562144042
+          }
+        },
+        "first_patch_extra_solvers": [
+          {
+            "method": "euler",
+            "steps": 128,
+            "raw": {
+              "mae": 0.01611126057318024,
+              "mse": 0.0011057130988554394,
+              "psnr": 29.563575454974718,
+              "max_projection_pcc": 0.10792384892788849,
+              "max_projection_ssim": 0.21320134927444523,
+              "high_signal_mae": 0.06989628738206934,
+              "fraction_outside_0_1": 0.5997085571289062
+            },
+            "final_clamp": {
+              "mae": 0.012887544251241279,
+              "mse": 0.0010763363688360674,
+              "psnr": 29.680519848958472,
+              "max_projection_pcc": 0.10792384892788849,
+              "max_projection_ssim": 0.21320134927444523,
+              "high_signal_mae": 0.0698587622559228,
+              "fraction_outside_0_1": 0.0
+            }
+          },
+          {
+            "method": "heun",
+            "steps": 8,
+            "raw": {
+              "mae": 0.01686723515680788,
+              "mse": 0.00115028613701343,
+              "psnr": 29.391941141953097,
+              "max_projection_pcc": 0.044534915042449594,
+              "max_projection_ssim": 0.1781113341066787,
+              "high_signal_mae": 0.07553500379483834,
+              "fraction_outside_0_1": 0.6165666580200195
+            },
+            "final_clamp": {
+              "mae": 0.013179450798678993,
+              "mse": 0.0011167127886734293,
+              "psnr": 29.52058510262478,
+              "max_projection_pcc": 0.044534915042449594,
+              "max_projection_ssim": 0.1781113341066787,
+              "high_signal_mae": 0.07551192501014035,
+              "fraction_outside_0_1": 0.0
+            }
+          },
+          {
+            "method": "heun",
+            "steps": 32,
+            "raw": {
+              "mae": 0.016113127865501453,
+              "mse": 0.0011006327585779245,
+              "psnr": 29.58357565250189,
+              "max_projection_pcc": 0.09712485854052584,
+              "max_projection_ssim": 0.20553099984832437,
+              "high_signal_mae": 0.07004370274582425,
+              "fraction_outside_0_1": 0.6000471115112305
+            },
+            "final_clamp": {
+              "mae": 0.012871197594595318,
+              "mse": 0.0010711436795343657,
+              "psnr": 29.701522704905152,
+              "max_projection_pcc": 0.09712485854052584,
+              "max_projection_ssim": 0.20553099984832437,
+              "high_signal_mae": 0.0700071389758382,
+              "fraction_outside_0_1": 0.0
+            }
+          }
+        ],
+        "t0_to_t05_velocity_mse_ratio": 49.159198741833166
+      },
+      "validation": {
+        "patients": 2,
+        "patches": 4,
+        "teacher": {
+          "0.0": {
+            "velocity_mse": 0.0015439431881532073,
+            "zero_velocity_mse": 0.09344903007149696,
+            "relative_rmse": 0.1276913861340963,
+            "velocity_pcc": 0.9099970466545235,
+            "high_signal_velocity_mse": 0.013904242543503642,
+            "endpoint_pcc": 0.06414965772887182
+          },
+          "0.001": {
+            "velocity_mse": 0.0014628743811044842,
+            "zero_velocity_mse": 0.09344903007149696,
+            "relative_rmse": 0.12426513393943578,
+            "velocity_pcc": 0.9156298709491582,
+            "high_signal_velocity_mse": 0.013120296876877546,
+            "endpoint_pcc": 0.14159452569682004
+          },
+          "0.01": {
+            "velocity_mse": 0.0008665119530633092,
+            "zero_velocity_mse": 0.09344903007149696,
+            "relative_rmse": 0.0956126422281231,
+            "velocity_pcc": 0.9540960011310475,
+            "high_signal_velocity_mse": 0.0066805846290662885,
+            "endpoint_pcc": 0.6374270868444794
+          },
+          "0.05": {
+            "velocity_mse": 0.00021789643142255954,
+            "zero_velocity_mse": 0.09344903007149696,
+            "relative_rmse": 0.04805568025256261,
+            "velocity_pcc": 0.9900859290004141,
+            "high_signal_velocity_mse": 0.0010184566635871306,
+            "endpoint_pcc": 0.9422169353148127
+          },
+          "0.1": {
+            "velocity_mse": 0.00010183468111790717,
+            "zero_velocity_mse": 0.09344903007149696,
+            "relative_rmse": 0.032824052877137674,
+            "velocity_pcc": 0.9953415236102832,
+            "high_signal_velocity_mse": 0.000361993137630634,
+            "endpoint_pcc": 0.9765744973025778
+          },
+          "0.5": {
+            "velocity_mse": 4.003391859441763e-05,
+            "zero_velocity_mse": 0.09344903007149696,
+            "relative_rmse": 0.020453038823221126,
+            "velocity_pcc": 0.9984116825234162,
+            "high_signal_velocity_mse": 0.00010601337999105453,
+            "endpoint_pcc": 0.9972008776018226
+          },
+          "0.9": {
+            "velocity_mse": 4.469890882319305e-05,
+            "zero_velocity_mse": 0.09344903007149696,
+            "relative_rmse": 0.0218025425456745,
+            "velocity_pcc": 0.9980434118807306,
+            "high_signal_velocity_mse": 0.00012153805801062845,
+            "endpoint_pcc": 0.9998595541998854
+          },
+          "1.0": {
+            "velocity_mse": 5.572407735598972e-05,
+            "zero_velocity_mse": 0.09344903007149696,
+            "relative_rmse": 0.024351787228653308,
+            "velocity_pcc": 0.9977478707026278,
+            "high_signal_velocity_mse": 0.0001345665514236316,
+            "endpoint_pcc": 1.0
+          }
+        },
+        "solvers": {
+          "1": {
+            "mae": 0.011674309046705328,
+            "psnr": 29.31107982079485,
+            "max_projection_pcc": 0.06414965772887182,
+            "max_projection_ssim": 0.1544903909906102
+          },
+          "8": {
+            "mae": 0.011863793329892819,
+            "psnr": 29.74418636552395,
+            "max_projection_pcc": 0.11880731863716759,
+            "max_projection_ssim": 0.17610012454018953
+          },
+          "32": {
+            "mae": 0.011934114900549325,
+            "psnr": 29.777937611832588,
+            "max_projection_pcc": 0.1642298308147621,
+            "max_projection_ssim": 0.19833126586375716
+          }
+        },
+        "noise_ood": {
+          "0.1": {
+            "velocity_mse": 1.4937134583791098,
+            "relative_rmse": 1.2207840903716733,
+            "velocity_pcc": -0.753697082513547
+          },
+          "0.5": {
+            "velocity_mse": 1.4353216290473938,
+            "relative_rmse": 1.1966844584558007,
+            "velocity_pcc": -0.7592076463724478
+          },
+          "0.9": {
+            "velocity_mse": 1.2223686675230663,
+            "relative_rmse": 1.1043447898287733,
+            "velocity_pcc": -0.5302908604543732
+          }
+        },
+        "first_patch_extra_solvers": [
+          {
+            "method": "euler",
+            "steps": 128,
+            "raw": {
+              "mae": 0.01904647808250226,
+              "mse": 0.001367202535823907,
+              "psnr": 28.64167144777293,
+              "max_projection_pcc": 0.07482028352418599,
+              "max_projection_ssim": 0.16137738455591208,
+              "high_signal_mae": 0.07968230180889954,
+              "fraction_outside_0_1": 0.7151899337768555
+            },
+            "final_clamp": {
+              "mae": 0.012883709662248166,
+              "mse": 0.0012823528179572313,
+              "psnr": 28.91992469504332,
+              "max_projection_pcc": 0.07482028352418599,
+              "max_projection_ssim": 0.16137738455591208,
+              "high_signal_mae": 0.07940591180039647,
+              "fraction_outside_0_1": 0.0
+            }
+          },
+          {
+            "method": "heun",
+            "steps": 8,
+            "raw": {
+              "mae": 0.01959289424956645,
+              "mse": 0.0014089761111916732,
+              "psnr": 28.510963701735292,
+              "max_projection_pcc": 0.028546801863913077,
+              "max_projection_ssim": 0.14536622098577015,
+              "high_signal_mae": 0.08670810213059839,
+              "fraction_outside_0_1": 0.718505859375
+            },
+            "final_clamp": {
+              "mae": 0.012971314204483386,
+              "mse": 0.0013250019985841578,
+              "psnr": 28.777834666528967,
+              "max_projection_pcc": 0.028546801863913077,
+              "max_projection_ssim": 0.14536622098577015,
+              "high_signal_mae": 0.08655624677827094,
+              "fraction_outside_0_1": 0.0
+            }
+          },
+          {
+            "method": "heun",
+            "steps": 32,
+            "raw": {
+              "mae": 0.01902605450664141,
+              "mse": 0.001359797468293371,
+              "psnr": 28.665257717420243,
+              "max_projection_pcc": 0.0703296223198871,
+              "max_projection_ssim": 0.15823615916308922,
+              "high_signal_mae": 0.080027176981824,
+              "fraction_outside_0_1": 0.7144098281860352
+            },
+            "final_clamp": {
+              "mae": 0.012847425173992955,
+              "mse": 0.0012764203742694036,
+              "psnr": 28.940062721985562,
+              "max_projection_pcc": 0.0703296223198871,
+              "max_projection_ssim": 0.15823615916308922,
+              "high_signal_mae": 0.07977747691551411,
+              "fraction_outside_0_1": 0.0
+            }
+          }
+        ],
+        "t0_to_t05_velocity_mse_ratio": 38.56587719515662
+      }
+    },
+    "haar": {
+      "train": {
+        "patients": 2,
+        "patches": 4,
+        "teacher": {
+          "0.0": {
+            "velocity_mse": 0.00125375299830921,
+            "zero_velocity_mse": 0.08740778267383575,
+            "relative_rmse": 0.11792612499044641,
+            "velocity_pcc": 0.9920537277619853,
+            "high_signal_velocity_mse": 0.013007579604163766,
+            "endpoint_pcc": 0.09401979498145789
+          },
+          "0.001": {
+            "velocity_mse": 0.0011892721522599459,
+            "zero_velocity_mse": 0.08740778267383575,
+            "relative_rmse": 0.11481874844171075,
+            "velocity_pcc": 0.9924660557915943,
+            "high_signal_velocity_mse": 0.012267621932551265,
+            "endpoint_pcc": 0.1562867056408443
+          },
+          "0.01": {
+            "velocity_mse": 0.0008203106408473104,
+            "zero_velocity_mse": 0.08740778267383575,
+            "relative_rmse": 0.09551789186048845,
+            "velocity_pcc": 0.9948073816655147,
+            "high_signal_velocity_mse": 0.008160179480910301,
+            "endpoint_pcc": 0.6016052754112545
+          },
+          "0.05": {
+            "velocity_mse": 0.00025433920382056385,
+            "zero_velocity_mse": 0.08740778267383575,
+            "relative_rmse": 0.053496695186375114,
+            "velocity_pcc": 0.9984251315339969,
+            "high_signal_velocity_mse": 0.0019111837609671056,
+            "endpoint_pcc": 0.9192816979906142
+          },
+          "0.1": {
+            "velocity_mse": 0.0001485725151724182,
+            "zero_velocity_mse": 0.08740778267383575,
+            "relative_rmse": 0.04093413984126913,
+            "velocity_pcc": 0.9991450434582663,
+            "high_signal_velocity_mse": 0.0008995703683467582,
+            "endpoint_pcc": 0.9561464893206071
+          },
+          "0.5": {
+            "velocity_mse": 9.185305316350423e-05,
+            "zero_velocity_mse": 0.08740778267383575,
+            "relative_rmse": 0.0323444530974653,
+            "velocity_pcc": 0.9996780559769283,
+            "high_signal_velocity_mse": 0.00029238398565212265,
+            "endpoint_pcc": 0.9945781875607665
+          },
+          "0.9": {
+            "velocity_mse": 0.00013425847646431066,
+            "zero_velocity_mse": 0.08740778267383575,
+            "relative_rmse": 0.039181641461183164,
+            "velocity_pcc": 0.9996642182593185,
+            "high_signal_velocity_mse": 0.00033553409593878314,
+            "endpoint_pcc": 0.999788459204038
+          },
+          "1.0": {
+            "velocity_mse": 0.0001644508956815116,
+            "zero_velocity_mse": 0.08740778267383575,
+            "relative_rmse": 0.04337433454434127,
+            "velocity_pcc": 0.9996412053571595,
+            "high_signal_velocity_mse": 0.0003953009654651396,
+            "endpoint_pcc": 0.9999999999999413
+          }
+        },
+        "solvers": {
+          "1": {
+            "mae": 0.013469295766446647,
+            "psnr": 29.644100519420277,
+            "max_projection_pcc": 0.09401979498145789,
+            "max_projection_ssim": 0.1602896103893448
+          },
+          "8": {
+            "mae": 0.012074611682177773,
+            "psnr": 30.041300821828514,
+            "max_projection_pcc": 0.08939596363107384,
+            "max_projection_ssim": 0.159020373761856
+          },
+          "32": {
+            "mae": 0.012046511500377367,
+            "psnr": 30.143838685037334,
+            "max_projection_pcc": 0.07536599098012865,
+            "max_projection_ssim": 0.15491184059491245
+          }
+        },
+        "noise_ood": {
+          "0.1": {
+            "velocity_mse": 1.7721553643544514,
+            "relative_rmse": 1.3297806409154043,
+            "velocity_pcc": -0.6294648013821962
+          },
+          "0.5": {
+            "velocity_mse": 1.6866600712140403,
+            "relative_rmse": 1.2973081596764668,
+            "velocity_pcc": -0.5870825518923857
+          },
+          "0.9": {
+            "velocity_mse": 1.262736370166143,
+            "relative_rmse": 1.1224958264259666,
+            "velocity_pcc": -0.25054902710665145
+          }
+        },
+        "first_patch_extra_solvers": [
+          {
+            "method": "euler",
+            "steps": 128,
+            "raw": {
+              "mae": 0.02046038272716222,
+              "mse": 0.001284844800366228,
+              "psnr": 28.911493286869483,
+              "max_projection_pcc": 0.12073434184710509,
+              "max_projection_ssim": 0.17609538529112484,
+              "high_signal_mae": 0.07942272753933474,
+              "fraction_outside_0_1": 0.5433387756347656
+            },
+            "final_clamp": {
+              "mae": 0.013905103164795266,
+              "mse": 0.0011600405736102986,
+              "psnr": 29.35526820611956,
+              "max_projection_pcc": 0.12073434184710509,
+              "max_projection_ssim": 0.17609538529112484,
+              "high_signal_mae": 0.07933683419543021,
+              "fraction_outside_0_1": 0.0
+            }
+          },
+          {
+            "method": "heun",
+            "steps": 8,
+            "raw": {
+              "mae": 0.020235660543529377,
+              "mse": 0.0012676315210431166,
+              "psnr": 28.970069701405517,
+              "max_projection_pcc": 0.12864792785660023,
+              "max_projection_ssim": 0.18053613394848797,
+              "high_signal_mae": 0.08108479028353414,
+              "fraction_outside_0_1": 0.5491724014282227
+            },
+            "final_clamp": {
+              "mae": 0.013649323778264947,
+              "mse": 0.0011493186791594419,
+              "psnr": 29.395595349226404,
+              "max_projection_pcc": 0.12864792785660023,
+              "max_projection_ssim": 0.18053613394848797,
+              "high_signal_mae": 0.08106611522503832,
+              "fraction_outside_0_1": 0.0
+            }
+          },
+          {
+            "method": "heun",
+            "steps": 32,
+            "raw": {
+              "mae": 0.020478475676853625,
+              "mse": 0.001285153144082683,
+              "psnr": 28.910451169497225,
+              "max_projection_pcc": 0.11793363416907121,
+              "max_projection_ssim": 0.17502334467581937,
+              "high_signal_mae": 0.07953083075705827,
+              "fraction_outside_0_1": 0.5452814102172852
+            },
+            "final_clamp": {
+              "mae": 0.01387625555937872,
+              "mse": 0.0011595566438654514,
+              "psnr": 29.357080314008655,
+              "max_projection_pcc": 0.11793363416907121,
+              "max_projection_ssim": 0.17502334467581937,
+              "high_signal_mae": 0.07944954848058661,
+              "fraction_outside_0_1": 0.0
+            }
+          }
+        ],
+        "t0_to_t05_velocity_mse_ratio": 13.649551703822523
+      },
+      "validation": {
+        "patients": 2,
+        "patches": 4,
+        "teacher": {
+          "0.0": {
+            "velocity_mse": 0.0012336431827861816,
+            "zero_velocity_mse": 0.09344901889562607,
+            "relative_rmse": 0.11441901375612006,
+            "velocity_pcc": 0.9926882732619391,
+            "high_signal_velocity_mse": 0.010860765352845192,
+            "endpoint_pcc": 0.16050474328759695
+          },
+          "0.001": {
+            "velocity_mse": 0.001177387108327821,
+            "zero_velocity_mse": 0.09344901889562607,
+            "relative_rmse": 0.11177678000438881,
+            "velocity_pcc": 0.9930236943110952,
+            "high_signal_velocity_mse": 0.010293018538504839,
+            "endpoint_pcc": 0.21821651832863923
+          },
+          "0.01": {
+            "velocity_mse": 0.0008118137338897213,
+            "zero_velocity_mse": 0.09344901889562607,
+            "relative_rmse": 0.09285875458450177,
+            "velocity_pcc": 0.9951939012344074,
+            "high_signal_velocity_mse": 0.0067470542853698134,
+            "endpoint_pcc": 0.5834169321979705
+          },
+          "0.05": {
+            "velocity_mse": 0.0002663068808033131,
+            "zero_velocity_mse": 0.09344901889562607,
+            "relative_rmse": 0.05328254369990575,
+            "velocity_pcc": 0.9984535652216091,
+            "high_signal_velocity_mse": 0.0016231283952947706,
+            "endpoint_pcc": 0.9142282989549696
+          },
+          "0.1": {
+            "velocity_mse": 0.00015711255764472298,
+            "zero_velocity_mse": 0.09344901889562607,
+            "relative_rmse": 0.04092857062793541,
+            "velocity_pcc": 0.999146098408668,
+            "high_signal_velocity_mse": 0.0008020850509637967,
+            "endpoint_pcc": 0.9549844370509831
+          },
+          "0.5": {
+            "velocity_mse": 8.979898302641232e-05,
+            "zero_velocity_mse": 0.09344901889562607,
+            "relative_rmse": 0.030966317367366374,
+            "velocity_pcc": 0.9996790077082782,
+            "high_signal_velocity_mse": 0.00026711266400525346,
+            "endpoint_pcc": 0.9948171836603188
+          },
+          "0.9": {
+            "velocity_mse": 0.00012029645768052433,
+            "zero_velocity_mse": 0.09344901889562607,
+            "relative_rmse": 0.035861338183620986,
+            "velocity_pcc": 0.999660881043048,
+            "high_signal_velocity_mse": 0.000299138504487928,
+            "endpoint_pcc": 0.9998016643176495
+          },
+          "1.0": {
+            "velocity_mse": 0.000141446667839773,
+            "zero_velocity_mse": 0.09344901889562607,
+            "relative_rmse": 0.038885658532700054,
+            "velocity_pcc": 0.9996355002145934,
+            "high_signal_velocity_mse": 0.0003494635966490023,
+            "endpoint_pcc": 0.9999999999999446
+          }
+        },
+        "solvers": {
+          "1": {
+            "mae": 0.013805606171622641,
+            "psnr": 29.550882987715013,
+            "max_projection_pcc": 0.16050474328759695,
+            "max_projection_ssim": 0.1684180791883995
+          },
+          "8": {
+            "mae": 0.012855482467771046,
+            "psnr": 29.787613703921853,
+            "max_projection_pcc": 0.17825936008907714,
+            "max_projection_ssim": 0.17515133684661974
+          },
+          "32": {
+            "mae": 0.013113802486218204,
+            "psnr": 29.73113699521079,
+            "max_projection_pcc": 0.17708460428605688,
+            "max_projection_ssim": 0.17797376840589202
+          }
+        },
+        "noise_ood": {
+          "0.1": {
+            "velocity_mse": 1.7716070314248404,
+            "relative_rmse": 1.3295031983892427,
+            "velocity_pcc": -0.6294030844735634
+          },
+          "0.5": {
+            "velocity_mse": 1.682746410369873,
+            "relative_rmse": 1.2957317751650943,
+            "velocity_pcc": -0.5840847854711475
+          },
+          "0.9": {
+            "velocity_mse": 1.2675379017988841,
+            "relative_rmse": 1.1245676757279297,
+            "velocity_pcc": -0.24670184935062484
+          }
+        },
+        "first_patch_extra_solvers": [
+          {
+            "method": "euler",
+            "steps": 128,
+            "raw": {
+              "mae": 0.021047302197385306,
+              "mse": 0.0014451290594234847,
+              "psnr": 28.40093365853747,
+              "max_projection_pcc": 0.0985570931209731,
+              "max_projection_ssim": 0.14083741310451278,
+              "high_signal_mae": 0.08089247007693878,
+              "fraction_outside_0_1": 0.5380735397338867
+            },
+            "final_clamp": {
+              "mae": 0.01469915795006747,
+              "mse": 0.0013207318002321907,
+              "psnr": 28.79185365205241,
+              "max_projection_pcc": 0.0985570931209731,
+              "max_projection_ssim": 0.14083741310451278,
+              "high_signal_mae": 0.08074709792763624,
+              "fraction_outside_0_1": 0.0
+            }
+          },
+          {
+            "method": "heun",
+            "steps": 8,
+            "raw": {
+              "mae": 0.020555847760627285,
+              "mse": 0.0014032961484398375,
+              "psnr": 28.528506667756922,
+              "max_projection_pcc": 0.08039783244775042,
+              "max_projection_ssim": 0.14421828486582045,
+              "high_signal_mae": 0.08267048478641251,
+              "fraction_outside_0_1": 0.5449609756469727
+            },
+            "final_clamp": {
+              "mae": 0.014226552967250228,
+              "mse": 0.001289641287840963,
+              "psnr": 28.895310713869485,
+              "max_projection_pcc": 0.08039783244775042,
+              "max_projection_ssim": 0.14421828486582045,
+              "high_signal_mae": 0.08263587345056539,
+              "fraction_outside_0_1": 0.0
+            }
+          },
+          {
+            "method": "heun",
+            "steps": 32,
+            "raw": {
+              "mae": 0.021039228451084302,
+              "mse": 0.00144305690050732,
+              "psnr": 28.407165441046036,
+              "max_projection_pcc": 0.09295738393569788,
+              "max_projection_ssim": 0.14043812795318236,
+              "high_signal_mae": 0.08101022695108455,
+              "fraction_outside_0_1": 0.5397348403930664
+            },
+            "final_clamp": {
+              "mae": 0.01465934310582808,
+              "mse": 0.0013185262574312655,
+              "psnr": 28.7991121714551,
+              "max_projection_pcc": 0.09295738393569788,
+              "max_projection_ssim": 0.14043812795318236,
+              "high_signal_mae": 0.0808729807478968,
+              "fraction_outside_0_1": 0.0
+            }
+          }
+        ],
+        "t0_to_t05_velocity_mse_ratio": 13.73783022045287
+      }
+    }
+  }
+}

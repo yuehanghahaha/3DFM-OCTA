@@ -1,0 +1,10 @@
+test_analytic_velocity_reaches_target_with_both_representations_and_solvers (test_flowoct_velocity_only.VelocityOnlyTests) ... ok
+test_haar_initialization_and_velocity_gradients_match_original (test_flowoct_velocity_only.VelocityOnlyTests) ... /srv/oct_research/fm3d_validation_256cube_20261021/source/flowoct/wavelet_functions.py:108: DeprecationWarning: 'saved_variables' is deprecated; use 'saved_tensors'
+  matrix_Low_0, matrix_Low_1, matrix_High_0, matrix_High_1 = ctx.saved_variables
+ok
+test_pixel_update_has_one_channel_and_no_wavelet_or_auxiliary_head (test_flowoct_velocity_only.VelocityOnlyTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.998s
+
+OK

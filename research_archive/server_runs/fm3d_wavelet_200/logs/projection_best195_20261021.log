@@ -1,0 +1,68 @@
+Projection report 1/50: 10305
+Projection report 2/50: 10307
+Projection report 3/50: 10317
+Projection report 4/50: 10318
+Projection report 5/50: 10321
+Projection report 6/50: 10322
+Projection report 7/50: 10325
+Projection report 8/50: 10326
+Projection report 9/50: 10327
+Projection report 10/50: 10328
+Projection report 11/50: 10330
+Projection report 12/50: 10331
+Projection report 13/50: 10332
+Projection report 14/50: 10341
+Projection report 15/50: 10342
+Projection report 16/50: 10347
+Projection report 17/50: 10351
+Projection report 18/50: 10355
+Projection report 19/50: 10356
+Projection report 20/50: 10358
+Projection report 21/50: 10359
+Projection report 22/50: 10362
+Projection report 23/50: 10363
+Projection report 24/50: 10365
+Projection report 25/50: 10367
+Projection report 26/50: 10379
+Projection report 27/50: 10394
+Projection report 28/50: 10395
+Projection report 29/50: 10404
+Projection report 30/50: 10410
+Projection report 31/50: 10415
+Projection report 32/50: 10420
+Projection report 33/50: 10421
+Projection report 34/50: 10423
+Projection report 35/50: 10425
+Projection report 36/50: 10430
+Projection report 37/50: 10433
+Projection report 38/50: 10446
+Projection report 39/50: 10448
+Projection report 40/50: 10454
+Projection report 41/50: 10460
+Projection report 42/50: 10467
+Projection report 43/50: 10472
+Projection report 44/50: 10475
+Projection report 45/50: 10476
+Projection report 46/50: 10484
+Projection report 47/50: 10494
+Projection report 48/50: 10497
+Projection report 49/50: 10498
+Projection report 50/50: 10499
+{
+  "FULL": {
+    "mae": 0.007387915326094464,
+    "psnr": 40.95070496744994,
+    "correlation": 0.3051794727716477
+  },
+  "ILM_OPL": {
+    "mae": 0.0847526901166915,
+    "psnr": 19.05535512568998,
+    "correlation": 0.39774444781259305
+  },
+  "OPL_BM": {
+    "mae": 0.07931866783595339,
+    "psnr": 19.49069581299895,
+    "correlation": 0.02337202402057684
+  }
+}
+PROJECTION_EXIT_CODE=0

@@ -1,0 +1,11 @@
+test_aggregation_counts_patients_and_nulls_correctly (__main__.ExperimentTests) ... ok
+test_five_arms_are_only_the_requested_factor_changes (__main__.ExperimentTests) ... ok
+test_projection_axis_and_unclamped_reconstruction_gradients (__main__.ExperimentTests) ... ok
+test_real_cli_checkpoint_predictions_and_resume_guards (__main__.ExperimentTests) ... ok
+test_rollout_reaches_every_step_and_never_requires_a_target (__main__.ExperimentTests) ... ok
+test_wavelet_free_path_and_loss_are_in_voxel_units (__main__.ExperimentTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 11.379s
+
+OK

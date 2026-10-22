@@ -1,0 +1,495 @@
+epoch=101 step=1/200 FM=0.000040
+epoch=101 step=20/200 FM=0.000040
+epoch=101 step=40/200 FM=0.000083
+epoch=101 step=60/200 FM=0.000051
+epoch=101 step=80/200 FM=0.000026
+epoch=101 step=100/200 FM=0.000046
+epoch=101 step=120/200 FM=0.000036
+epoch=101 step=140/200 FM=0.000025
+epoch=101 step=160/200 FM=0.000039
+epoch=101 step=180/200 FM=0.000085
+epoch=101 step=200/200 FM=0.000097
+{"epoch": 101, "fm_loss": 6.621896844080766e-05, "train_seconds": 173.1355668590404, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 1048576.0, "peak_allocated_bytes": 1947656704}
+epoch=102 step=1/200 FM=0.000279
+epoch=102 step=20/200 FM=0.000149
+epoch=102 step=40/200 FM=0.000547
+epoch=102 step=60/200 FM=0.000036
+epoch=102 step=80/200 FM=0.000040
+epoch=102 step=100/200 FM=0.000023
+epoch=102 step=120/200 FM=0.000039
+epoch=102 step=140/200 FM=0.000036
+epoch=102 step=160/200 FM=0.000043
+epoch=102 step=180/200 FM=0.000044
+epoch=102 step=200/200 FM=0.000029
+{"epoch": 102, "fm_loss": 0.0001253856574294332, "train_seconds": 163.29249556199647, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 1048576.0, "peak_allocated_bytes": 1947656704}
+epoch=103 step=1/200 FM=0.000108
+epoch=103 step=20/200 FM=0.000054
+epoch=103 step=40/200 FM=0.000027
+epoch=103 step=60/200 FM=0.001033
+epoch=103 step=80/200 FM=0.000057
+epoch=103 step=100/200 FM=0.000217
+epoch=103 step=120/200 FM=0.000178
+epoch=103 step=140/200 FM=0.000041
+epoch=103 step=160/200 FM=0.000216
+epoch=103 step=180/200 FM=0.000050
+epoch=103 step=200/200 FM=0.000041
+{"epoch": 103, "fm_loss": 0.00022443734012085769, "train_seconds": 162.4742449580226, "optimizer_updates": 199, "amp_skipped_updates": 1, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=104 step=1/200 FM=0.000047
+epoch=104 step=20/200 FM=0.000061
+epoch=104 step=40/200 FM=0.000021
+epoch=104 step=60/200 FM=0.000070
+epoch=104 step=80/200 FM=0.000303
+epoch=104 step=100/200 FM=0.000034
+epoch=104 step=120/200 FM=0.000082
+epoch=104 step=140/200 FM=0.000255
+epoch=104 step=160/200 FM=0.000079
+epoch=104 step=180/200 FM=0.000059
+epoch=104 step=200/200 FM=0.000063
+{"epoch": 104, "fm_loss": 0.0001376299001094594, "train_seconds": 161.222006771015, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=105 step=1/200 FM=0.000043
+epoch=105 step=20/200 FM=0.000223
+epoch=105 step=40/200 FM=0.000047
+epoch=105 step=60/200 FM=0.000338
+epoch=105 step=80/200 FM=0.000109
+epoch=105 step=100/200 FM=0.000061
+epoch=105 step=120/200 FM=0.000135
+epoch=105 step=140/200 FM=0.000066
+epoch=105 step=160/200 FM=0.000178
+epoch=105 step=180/200 FM=0.000125
+epoch=105 step=200/200 FM=0.000148
+1/10 10302: MAE=0.022213 PSNR=27.403
+2/10 10319: MAE=0.023011 PSNR=27.102
+3/10 10338: MAE=0.024482 PSNR=26.810
+4/10 10357: MAE=0.020661 PSNR=28.324
+5/10 10396: MAE=0.020935 PSNR=27.899
+6/10 10422: MAE=0.021216 PSNR=28.131
+7/10 10447: MAE=0.026997 PSNR=27.140
+8/10 10456: MAE=0.025804 PSNR=26.810
+9/10 10495: MAE=0.021022 PSNR=28.482
+10/10 10500: MAE=0.021346 PSNR=28.130
+{"epoch": 105, "fm_loss": 0.00015938500846459646, "train_seconds": 162.13318330899347, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704, "validation": {"mae": 0.02276874340790762, "psnr": 27.622982429677496}}
+epoch=106 step=1/200 FM=0.000325
+epoch=106 step=20/200 FM=0.000164
+epoch=106 step=40/200 FM=0.000040
+epoch=106 step=60/200 FM=0.000028
+epoch=106 step=80/200 FM=0.000045
+epoch=106 step=100/200 FM=0.000047
+epoch=106 step=120/200 FM=0.000063
+epoch=106 step=140/200 FM=0.000056
+epoch=106 step=160/200 FM=0.000152
+epoch=106 step=180/200 FM=0.000027
+epoch=106 step=200/200 FM=0.000066
+{"epoch": 106, "fm_loss": 0.00010199992464549724, "train_seconds": 163.7907982430188, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=107 step=1/200 FM=0.000043
+epoch=107 step=20/200 FM=0.000045
+epoch=107 step=40/200 FM=0.000046
+epoch=107 step=60/200 FM=0.000050
+epoch=107 step=80/200 FM=0.000107
+epoch=107 step=100/200 FM=0.001227
+epoch=107 step=120/200 FM=0.000575
+epoch=107 step=140/200 FM=0.000032
+epoch=107 step=160/200 FM=0.000519
+epoch=107 step=180/200 FM=0.000049
+epoch=107 step=200/200 FM=0.000038
+{"epoch": 107, "fm_loss": 9.124133579462068e-05, "train_seconds": 163.1419734429801, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=108 step=1/200 FM=0.000039
+epoch=108 step=20/200 FM=0.000061
+epoch=108 step=40/200 FM=0.000059
+epoch=108 step=60/200 FM=0.000045
+epoch=108 step=80/200 FM=0.000131
+epoch=108 step=100/200 FM=0.000034
+epoch=108 step=120/200 FM=0.000035
+epoch=108 step=140/200 FM=0.000055
+epoch=108 step=160/200 FM=0.000032
+epoch=108 step=180/200 FM=0.000027
+epoch=108 step=200/200 FM=0.000045
+{"epoch": 108, "fm_loss": 0.00010144915733690141, "train_seconds": 163.24264810909517, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=109 step=1/200 FM=0.000040
+epoch=109 step=20/200 FM=0.000078
+epoch=109 step=40/200 FM=0.000091
+epoch=109 step=60/200 FM=0.000043
+epoch=109 step=80/200 FM=0.000045
+epoch=109 step=100/200 FM=0.000033
+epoch=109 step=120/200 FM=0.000101
+epoch=109 step=140/200 FM=0.000054
+epoch=109 step=160/200 FM=0.000092
+epoch=109 step=180/200 FM=0.000345
+epoch=109 step=200/200 FM=0.000040
+{"epoch": 109, "fm_loss": 0.00012117803220007773, "train_seconds": 162.02929891704116, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=110 step=1/200 FM=0.000075
+epoch=110 step=20/200 FM=0.000018
+epoch=110 step=40/200 FM=0.000087
+epoch=110 step=60/200 FM=0.000029
+epoch=110 step=80/200 FM=0.000245
+epoch=110 step=100/200 FM=0.000029
+epoch=110 step=120/200 FM=0.000031
+epoch=110 step=140/200 FM=0.000040
+epoch=110 step=160/200 FM=0.000042
+epoch=110 step=180/200 FM=0.000053
+epoch=110 step=200/200 FM=0.000054
+1/10 10302: MAE=0.023747 PSNR=27.568
+2/10 10319: MAE=0.020944 PSNR=28.050
+3/10 10338: MAE=0.027035 PSNR=26.807
+4/10 10357: MAE=0.021565 PSNR=28.438
+5/10 10396: MAE=0.019634 PSNR=28.306
+6/10 10422: MAE=0.021798 PSNR=28.616
+7/10 10447: MAE=0.037027 PSNR=26.534
+8/10 10456: MAE=0.033800 PSNR=26.566
+9/10 10495: MAE=0.017598 PSNR=30.182
+10/10 10500: MAE=0.023017 PSNR=28.161
+{"epoch": 110, "fm_loss": 9.400860975802062e-05, "train_seconds": 162.02280501800124, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704, "validation": {"mae": 0.02461643431330817, "psnr": 27.92278349769798}, "window_best": {"start_epoch": 101, "end_epoch": 110, "selected_epoch": 105, "mae": 0.02276874340790762, "checkpoint": "best_window_0101_0110.pt"}}
+epoch=111 step=1/200 FM=0.000489
+epoch=111 step=20/200 FM=0.000310
+epoch=111 step=40/200 FM=0.000101
+epoch=111 step=60/200 FM=0.000043
+epoch=111 step=80/200 FM=0.000025
+epoch=111 step=100/200 FM=0.000029
+epoch=111 step=120/200 FM=0.000019
+epoch=111 step=140/200 FM=0.000038
+epoch=111 step=160/200 FM=0.000045
+epoch=111 step=180/200 FM=0.000156
+epoch=111 step=200/200 FM=0.000163
+{"epoch": 111, "fm_loss": 9.684602579909551e-05, "train_seconds": 163.02985467098188, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=112 step=1/200 FM=0.000067
+epoch=112 step=20/200 FM=0.000051
+epoch=112 step=40/200 FM=0.000160
+epoch=112 step=60/200 FM=0.000289
+epoch=112 step=80/200 FM=0.000115
+epoch=112 step=100/200 FM=0.000044
+epoch=112 step=120/200 FM=0.000054
+epoch=112 step=140/200 FM=0.000050
+epoch=112 step=160/200 FM=0.000077
+epoch=112 step=180/200 FM=0.000594
+epoch=112 step=200/200 FM=0.000428
+{"epoch": 112, "fm_loss": 0.00019390983408811734, "train_seconds": 162.1235714330105, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=113 step=1/200 FM=0.000045
+epoch=113 step=20/200 FM=0.000037
+epoch=113 step=40/200 FM=0.000094
+epoch=113 step=60/200 FM=0.000514
+epoch=113 step=80/200 FM=0.000077
+epoch=113 step=100/200 FM=0.000038
+epoch=113 step=120/200 FM=0.000025
+epoch=113 step=140/200 FM=0.000086
+epoch=113 step=160/200 FM=0.000149
+epoch=113 step=180/200 FM=0.000040
+epoch=113 step=200/200 FM=0.000066
+{"epoch": 113, "fm_loss": 0.0001013911231439124, "train_seconds": 163.71112989098765, "optimizer_updates": 199, "amp_skipped_updates": 1, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=114 step=1/200 FM=0.000020
+epoch=114 step=20/200 FM=0.000016
+epoch=114 step=40/200 FM=0.000097
+epoch=114 step=60/200 FM=0.000151
+epoch=114 step=80/200 FM=0.000079
+epoch=114 step=100/200 FM=0.000044
+epoch=114 step=120/200 FM=0.000049
+epoch=114 step=140/200 FM=0.000050
+epoch=114 step=160/200 FM=0.000071
+epoch=114 step=180/200 FM=0.000031
+epoch=114 step=200/200 FM=0.000028
+{"epoch": 114, "fm_loss": 0.00010968352388772473, "train_seconds": 163.3661703990074, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=115 step=1/200 FM=0.000042
+epoch=115 step=20/200 FM=0.000022
+epoch=115 step=40/200 FM=0.000028
+epoch=115 step=60/200 FM=0.000030
+epoch=115 step=80/200 FM=0.000085
+epoch=115 step=100/200 FM=0.000066
+epoch=115 step=120/200 FM=0.000048
+epoch=115 step=140/200 FM=0.000027
+epoch=115 step=160/200 FM=0.000019
+epoch=115 step=180/200 FM=0.000053
+epoch=115 step=200/200 FM=0.000087
+1/10 10302: MAE=0.018917 PSNR=26.333
+2/10 10319: MAE=0.016763 PSNR=27.958
+3/10 10338: MAE=0.021653 PSNR=25.514
+4/10 10357: MAE=0.015618 PSNR=27.596
+5/10 10396: MAE=0.016071 PSNR=27.584
+6/10 10422: MAE=0.015090 PSNR=28.258
+7/10 10447: MAE=0.017849 PSNR=28.586
+8/10 10456: MAE=0.018911 PSNR=27.289
+9/10 10495: MAE=0.011044 PSNR=32.332
+10/10 10500: MAE=0.015910 PSNR=27.508
+{"epoch": 115, "fm_loss": 6.127013418335991e-05, "train_seconds": 163.20785681996495, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704, "validation": {"mae": 0.016782567981839608, "psnr": 27.895810511971867}}
+epoch=116 step=1/200 FM=0.000042
+epoch=116 step=20/200 FM=0.000038
+epoch=116 step=40/200 FM=0.000034
+epoch=116 step=60/200 FM=0.000033
+epoch=116 step=80/200 FM=0.000017
+epoch=116 step=100/200 FM=0.000043
+epoch=116 step=120/200 FM=0.000103
+epoch=116 step=140/200 FM=0.000037
+epoch=116 step=160/200 FM=0.000023
+epoch=116 step=180/200 FM=0.000054
+epoch=116 step=200/200 FM=0.000102
+{"epoch": 116, "fm_loss": 7.660958623546321e-05, "train_seconds": 164.8492026469903, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=117 step=1/200 FM=0.000160
+epoch=117 step=20/200 FM=0.000316
+epoch=117 step=40/200 FM=0.000268
+epoch=117 step=60/200 FM=0.000175
+epoch=117 step=80/200 FM=0.000080
+epoch=117 step=100/200 FM=0.000058
+epoch=117 step=120/200 FM=0.000046
+epoch=117 step=140/200 FM=0.000079
+epoch=117 step=160/200 FM=0.000108
+epoch=117 step=180/200 FM=0.000057
+epoch=117 step=200/200 FM=0.000033
+{"epoch": 117, "fm_loss": 0.00032111260921737996, "train_seconds": 164.6281481150072, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=118 step=1/200 FM=0.000133
+epoch=118 step=20/200 FM=0.000534
+epoch=118 step=40/200 FM=0.000027
+epoch=118 step=60/200 FM=0.000035
+epoch=118 step=80/200 FM=0.000152
+epoch=118 step=100/200 FM=0.000022
+epoch=118 step=120/200 FM=0.000026
+epoch=118 step=140/200 FM=0.000089
+epoch=118 step=160/200 FM=0.000022
+epoch=118 step=180/200 FM=0.000037
+epoch=118 step=200/200 FM=0.000037
+{"epoch": 118, "fm_loss": 6.773457370854885e-05, "train_seconds": 161.82597086403985, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=119 step=1/200 FM=0.000076
+epoch=119 step=20/200 FM=0.000105
+epoch=119 step=40/200 FM=0.000069
+epoch=119 step=60/200 FM=0.000093
+epoch=119 step=80/200 FM=0.000043
+epoch=119 step=100/200 FM=0.000023
+epoch=119 step=120/200 FM=0.000023
+epoch=119 step=140/200 FM=0.000030
+epoch=119 step=160/200 FM=0.000017
+epoch=119 step=180/200 FM=0.000068
+epoch=119 step=200/200 FM=0.000065
+{"epoch": 119, "fm_loss": 6.461342690272431e-05, "train_seconds": 162.03738701995462, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=120 step=1/200 FM=0.000031
+epoch=120 step=20/200 FM=0.000028
+epoch=120 step=40/200 FM=0.000098
+epoch=120 step=60/200 FM=0.000125
+epoch=120 step=80/200 FM=0.000030
+epoch=120 step=100/200 FM=0.000211
+epoch=120 step=120/200 FM=0.000017
+epoch=120 step=140/200 FM=0.000093
+epoch=120 step=160/200 FM=0.000029
+epoch=120 step=180/200 FM=0.000038
+epoch=120 step=200/200 FM=0.000040
+1/10 10302: MAE=0.018794 PSNR=25.820
+2/10 10319: MAE=0.014863 PSNR=27.878
+3/10 10338: MAE=0.021616 PSNR=25.040
+4/10 10357: MAE=0.015556 PSNR=26.906
+5/10 10396: MAE=0.015391 PSNR=27.178
+6/10 10422: MAE=0.014418 PSNR=27.703
+7/10 10447: MAE=0.016922 PSNR=27.770
+8/10 10456: MAE=0.018175 PSNR=26.654
+9/10 10495: MAE=0.008907 PSNR=32.607
+10/10 10500: MAE=0.015968 PSNR=26.792
+{"epoch": 120, "fm_loss": 8.093585201095266e-05, "train_seconds": 163.62410573801026, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704, "validation": {"mae": 0.01606098029228423, "psnr": 27.434912703381126}, "window_best": {"start_epoch": 111, "end_epoch": 120, "selected_epoch": 120, "mae": 0.01606098029228423, "checkpoint": "best_window_0111_0120.pt"}}
+epoch=121 step=1/200 FM=0.000056
+epoch=121 step=20/200 FM=0.000051
+epoch=121 step=40/200 FM=0.000019
+epoch=121 step=60/200 FM=0.000069
+epoch=121 step=80/200 FM=0.000049
+epoch=121 step=100/200 FM=0.000092
+epoch=121 step=120/200 FM=0.000102
+epoch=121 step=140/200 FM=0.000058
+epoch=121 step=160/200 FM=0.000026
+epoch=121 step=180/200 FM=0.000023
+epoch=121 step=200/200 FM=0.000056
+{"epoch": 121, "fm_loss": 7.06256702369501e-05, "train_seconds": 184.56659230508376, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=122 step=1/200 FM=0.000123
+epoch=122 step=20/200 FM=0.000039
+epoch=122 step=40/200 FM=0.000051
+epoch=122 step=60/200 FM=0.000083
+epoch=122 step=80/200 FM=0.000112
+epoch=122 step=100/200 FM=0.000122
+epoch=122 step=120/200 FM=0.000024
+epoch=122 step=140/200 FM=0.000032
+epoch=122 step=160/200 FM=0.000248
+epoch=122 step=180/200 FM=0.000057
+epoch=122 step=200/200 FM=0.000086
+{"epoch": 122, "fm_loss": 0.00011565568060177611, "train_seconds": 176.32118242699653, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=123 step=1/200 FM=0.000570
+epoch=123 step=20/200 FM=0.000190
+epoch=123 step=40/200 FM=0.000055
+epoch=123 step=60/200 FM=0.000034
+epoch=123 step=80/200 FM=0.000074
+epoch=123 step=100/200 FM=0.000130
+epoch=123 step=120/200 FM=0.000056
+epoch=123 step=140/200 FM=0.000047
+epoch=123 step=160/200 FM=0.000048
+epoch=123 step=180/200 FM=0.000062
+epoch=123 step=200/200 FM=0.000039
+{"epoch": 123, "fm_loss": 0.00011737194098714099, "train_seconds": 170.6210340380203, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 1048576.0, "peak_allocated_bytes": 1947656704}
+epoch=124 step=1/200 FM=0.000025
+epoch=124 step=20/200 FM=0.000127
+epoch=124 step=40/200 FM=0.000029
+epoch=124 step=60/200 FM=0.000061
+epoch=124 step=80/200 FM=0.000033
+epoch=124 step=100/200 FM=0.000080
+epoch=124 step=120/200 FM=0.000060
+epoch=124 step=140/200 FM=0.000087
+epoch=124 step=160/200 FM=0.000052
+epoch=124 step=180/200 FM=0.000021
+epoch=124 step=200/200 FM=0.000060
+{"epoch": 124, "fm_loss": 7.235749432311422e-05, "train_seconds": 173.43814644799568, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 1048576.0, "peak_allocated_bytes": 1947656704}
+epoch=125 step=1/200 FM=0.000089
+epoch=125 step=20/200 FM=0.000036
+epoch=125 step=40/200 FM=0.000098
+epoch=125 step=60/200 FM=0.000040
+epoch=125 step=80/200 FM=0.000081
+epoch=125 step=100/200 FM=0.000043
+epoch=125 step=120/200 FM=0.000038
+epoch=125 step=140/200 FM=0.000043
+epoch=125 step=160/200 FM=0.000029
+epoch=125 step=180/200 FM=0.000042
+epoch=125 step=200/200 FM=0.000024
+1/10 10302: MAE=0.019094 PSNR=26.653
+2/10 10319: MAE=0.016619 PSNR=28.274
+3/10 10338: MAE=0.021747 PSNR=25.816
+4/10 10357: MAE=0.016147 PSNR=27.712
+5/10 10396: MAE=0.016206 PSNR=27.832
+6/10 10422: MAE=0.015453 PSNR=28.520
+7/10 10447: MAE=0.021088 PSNR=28.412
+8/10 10456: MAE=0.021395 PSNR=27.303
+9/10 10495: MAE=0.011440 PSNR=32.455
+10/10 10500: MAE=0.016645 PSNR=27.551
+{"epoch": 125, "fm_loss": 6.553188394718745e-05, "train_seconds": 177.83621565799695, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 1048576.0, "peak_allocated_bytes": 1947656704, "validation": {"mae": 0.01758341285210467, "psnr": 28.052865132869407}}
+epoch=126 step=1/200 FM=0.000046
+epoch=126 step=20/200 FM=0.000140
+epoch=126 step=40/200 FM=0.000323
+epoch=126 step=60/200 FM=0.000078
+epoch=126 step=80/200 FM=0.000064
+epoch=126 step=100/200 FM=0.000023
+epoch=126 step=120/200 FM=0.000037
+epoch=126 step=140/200 FM=0.000017
+epoch=126 step=160/200 FM=0.000041
+epoch=126 step=180/200 FM=0.000090
+epoch=126 step=200/200 FM=0.000035
+{"epoch": 126, "fm_loss": 6.439145997774176e-05, "train_seconds": 182.93366243806668, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 1048576.0, "peak_allocated_bytes": 1947656704}
+epoch=127 step=1/200 FM=0.000044
+epoch=127 step=20/200 FM=0.000028
+epoch=127 step=40/200 FM=0.000483
+epoch=127 step=60/200 FM=0.000311
+epoch=127 step=80/200 FM=0.000059
+epoch=127 step=100/200 FM=0.000271
+epoch=127 step=120/200 FM=0.000325
+epoch=127 step=140/200 FM=0.000081
+epoch=127 step=160/200 FM=0.000051
+epoch=127 step=180/200 FM=0.000038
+epoch=127 step=200/200 FM=0.000042
+{"epoch": 127, "fm_loss": 0.00019744438689485832, "train_seconds": 229.3351701159263, "optimizer_updates": 199, "amp_skipped_updates": 1, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=128 step=1/200 FM=0.000025
+epoch=128 step=20/200 FM=0.000042
+epoch=128 step=40/200 FM=0.000377
+epoch=128 step=60/200 FM=0.000014
+epoch=128 step=80/200 FM=0.000044
+epoch=128 step=100/200 FM=0.000023
+epoch=128 step=120/200 FM=0.000019
+epoch=128 step=140/200 FM=0.000024
+epoch=128 step=160/200 FM=0.000094
+epoch=128 step=180/200 FM=0.000238
+epoch=128 step=200/200 FM=0.000026
+{"epoch": 128, "fm_loss": 6.109081691647588e-05, "train_seconds": 171.41053880599793, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=129 step=1/200 FM=0.000023
+epoch=129 step=20/200 FM=0.000294
+epoch=129 step=40/200 FM=0.000050
+epoch=129 step=60/200 FM=0.000076
+epoch=129 step=80/200 FM=0.000048
+epoch=129 step=100/200 FM=0.000024
+epoch=129 step=120/200 FM=0.000083
+epoch=129 step=140/200 FM=0.000208
+epoch=129 step=160/200 FM=0.000020
+epoch=129 step=180/200 FM=0.000323
+epoch=129 step=200/200 FM=0.000084
+{"epoch": 129, "fm_loss": 0.00012048080103340908, "train_seconds": 169.69446181703825, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704}
+epoch=130 step=1/200 FM=0.000118
+epoch=130 step=20/200 FM=0.000038
+epoch=130 step=40/200 FM=0.000100
+epoch=130 step=60/200 FM=0.000022
+epoch=130 step=80/200 FM=0.000030
+epoch=130 step=100/200 FM=0.000042
+epoch=130 step=120/200 FM=0.000034
+epoch=130 step=140/200 FM=0.000170
+epoch=130 step=160/200 FM=0.000508
+epoch=130 step=180/200 FM=0.000053
+epoch=130 step=200/200 FM=0.000072
+1/10 10302: MAE=0.021016 PSNR=27.168
+2/10 10319: MAE=0.020014 PSNR=28.481
+3/10 10338: MAE=0.023172 PSNR=26.452
+4/10 10357: MAE=0.018438 PSNR=28.297
+5/10 10396: MAE=0.019738 PSNR=28.129
+6/10 10422: MAE=0.018231 PSNR=28.865
+7/10 10447: MAE=0.019458 PSNR=28.703
+8/10 10456: MAE=0.020482 PSNR=27.742
+9/10 10495: MAE=0.015448 PSNR=32.198
+10/10 10500: MAE=0.018730 PSNR=28.164
+{"epoch": 130, "fm_loss": 8.486881037242711e-05, "train_seconds": 173.35304596996866, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 524288.0, "peak_allocated_bytes": 1947656704, "validation": {"mae": 0.019472638893138623, "psnr": 28.419959696210675}, "window_best": {"start_epoch": 121, "end_epoch": 130, "selected_epoch": 125, "mae": 0.01758341285210467, "checkpoint": "best_window_0121_0130.pt"}}
+epoch=131 step=1/200 FM=0.000201
+epoch=131 step=20/200 FM=0.000481
+epoch=131 step=40/200 FM=0.000258
+epoch=131 step=60/200 FM=0.000051
+epoch=131 step=80/200 FM=0.000026
+epoch=131 step=100/200 FM=0.000015
+epoch=131 step=120/200 FM=0.000108
+epoch=131 step=140/200 FM=0.000064
+epoch=131 step=160/200 FM=0.000037
+epoch=131 step=180/200 FM=0.000085
+epoch=131 step=200/200 FM=0.000126
+{"epoch": 131, "fm_loss": 0.00016582382101660187, "train_seconds": 191.1864956159843, "optimizer_updates": 199, "amp_skipped_updates": 1, "amp_scale": 262144.0, "peak_allocated_bytes": 1947656704}
+epoch=132 step=1/200 FM=0.000042
+epoch=132 step=20/200 FM=0.000061
+epoch=132 step=40/200 FM=0.000041
+epoch=132 step=60/200 FM=0.000038
+epoch=132 step=80/200 FM=0.000095
+epoch=132 step=100/200 FM=0.000030
+epoch=132 step=120/200 FM=0.000106
+epoch=132 step=140/200 FM=0.000030
+epoch=132 step=160/200 FM=0.000018
+epoch=132 step=180/200 FM=0.000025
+epoch=132 step=200/200 FM=0.000019
+{"epoch": 132, "fm_loss": 0.00011336461556311405, "train_seconds": 175.32506528601516, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 262144.0, "peak_allocated_bytes": 1947656704}
+epoch=133 step=1/200 FM=0.000109
+epoch=133 step=20/200 FM=0.000028
+epoch=133 step=40/200 FM=0.000038
+epoch=133 step=60/200 FM=0.000025
+epoch=133 step=80/200 FM=0.000120
+epoch=133 step=100/200 FM=0.000109
+epoch=133 step=120/200 FM=0.000061
+epoch=133 step=140/200 FM=0.000020
+epoch=133 step=160/200 FM=0.000011
+epoch=133 step=180/200 FM=0.000024
+epoch=133 step=200/200 FM=0.000047
+{"epoch": 133, "fm_loss": 7.990163302110886e-05, "train_seconds": 167.91843261290342, "optimizer_updates": 200, "amp_skipped_updates": 0, "amp_scale": 262144.0, "peak_allocated_bytes": 1947656704}
+epoch=134 step=1/200 FM=0.000181
+epoch=134 step=20/200 FM=0.000105
+epoch=134 step=40/200 FM=0.000032
+epoch=134 step=60/200 FM=0.000022
+epoch=134 step=80/200 FM=0.000027
+Traceback (most recent call last):
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/srv/oct_research/fm3d_ubuntu/fm3d/train.py", line 235, in <module>
+    main()
+  File "/srv/oct_research/fm3d_ubuntu/fm3d/train.py", line 195, in main
+    for step, sample in enumerate(loader, 1):
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/srv/oct_research/fm3d_ubuntu/fm3d/data.py", line 103, in __getitem__
+    source, target = load_pair(row['path'], self.axis_order, self.intensity_scale, self.depth)
+  File "/srv/oct_research/fm3d_ubuntu/fm3d/data.py", line 73, in load_pair
+    a = np.asarray(data[key], dtype=np.float32)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/numpy/lib/npyio.py", line 256, in __getitem__
+    return format.read_array(bytes,
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/numpy/lib/format.py", line 831, in read_array
+    data = _read_bytes(fp, read_size, "array data")
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/site-packages/numpy/lib/format.py", line 966, in _read_bytes
+    r = fp.read(size - len(data))
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/zipfile.py", line 955, in read
+    data = self._read1(n)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/zipfile.py", line 1061, in _read1
+    self._update_crc(data)
+  File "/srv/oct_research/conda_envs/lyh_fm3d/lib/python3.10/zipfile.py", line 970, in _update_crc
+    self._running_crc = crc32(newdata, self._running_crc)
+KeyboardInterrupt

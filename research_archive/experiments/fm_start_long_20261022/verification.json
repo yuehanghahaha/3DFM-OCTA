@@ -1,0 +1,296 @@
+{
+  "passed": true,
+  "verified_predictions": 48,
+  "independent_projection_recomputation": true,
+  "optimizer_resume_counters_verified": true,
+  "records": [
+    {
+      "budget": 4800,
+      "arm": "fm_uniform",
+      "id": "train_10301_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_uniform",
+      "id": "train_10301_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_uniform",
+      "id": "train_10303_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_uniform",
+      "id": "train_10303_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_uniform",
+      "id": "validation_10302_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_uniform",
+      "id": "validation_10302_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_uniform",
+      "id": "validation_10319_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_uniform",
+      "id": "validation_10319_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "direct_t0",
+      "id": "train_10301_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "direct_t0",
+      "id": "train_10301_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "direct_t0",
+      "id": "train_10303_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "direct_t0",
+      "id": "train_10303_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "direct_t0",
+      "id": "validation_10302_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "direct_t0",
+      "id": "validation_10302_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "direct_t0",
+      "id": "validation_10319_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "direct_t0",
+      "id": "validation_10319_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_half_start",
+      "id": "train_10301_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_half_start",
+      "id": "train_10301_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_half_start",
+      "id": "train_10303_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_half_start",
+      "id": "train_10303_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_half_start",
+      "id": "validation_10302_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_half_start",
+      "id": "validation_10302_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_half_start",
+      "id": "validation_10319_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 4800,
+      "arm": "fm_half_start",
+      "id": "validation_10319_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_uniform",
+      "id": "train_10301_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_uniform",
+      "id": "train_10301_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_uniform",
+      "id": "train_10303_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_uniform",
+      "id": "train_10303_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_uniform",
+      "id": "validation_10302_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_uniform",
+      "id": "validation_10302_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_uniform",
+      "id": "validation_10319_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_uniform",
+      "id": "validation_10319_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "direct_t0",
+      "id": "train_10301_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "direct_t0",
+      "id": "train_10301_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "direct_t0",
+      "id": "train_10303_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "direct_t0",
+      "id": "train_10303_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "direct_t0",
+      "id": "validation_10302_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "direct_t0",
+      "id": "validation_10302_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "direct_t0",
+      "id": "validation_10319_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "direct_t0",
+      "id": "validation_10319_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_half_start",
+      "id": "train_10301_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_half_start",
+      "id": "train_10301_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_half_start",
+      "id": "train_10303_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_half_start",
+      "id": "train_10303_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_half_start",
+      "id": "validation_10302_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_half_start",
+      "id": "validation_10302_y120_x120",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_half_start",
+      "id": "validation_10319_y064_x064",
+      "passed": true
+    },
+    {
+      "budget": 7200,
+      "arm": "fm_half_start",
+      "id": "validation_10319_y120_x120",
+      "passed": true
+    }
+  ]
+}

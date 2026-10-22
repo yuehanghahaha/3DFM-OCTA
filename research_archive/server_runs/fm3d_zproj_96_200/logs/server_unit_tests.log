@@ -1,0 +1,38 @@
+test_amp_overflow_skips_then_recovers (fm3d.test_core.CoreTests) ... ok
+test_axes_scale_and_paired_crop (fm3d.test_core.CoreTests) ... ok
+test_bmp_pack_is_lossless_and_numeric (fm3d.test_core.CoreTests) ... /tmp/tmp14q2yjha/pair.npz: (16, 12, 8), axis_order=ZYX, no intensity/geometry changes
+ok
+test_duplicate_group_repair_preserves_counts (fm3d.test_core.CoreTests) ... ERROR
+test_flow_target_and_batched_gradient (fm3d.test_core.CoreTests) ... ok
+test_manifest_counts_and_patient_leakage (fm3d.test_core.CoreTests) ... ok
+test_native_and_cached_geometry_have_identical_model_inputs (fm3d.test_core.CoreTests) ... ok
+test_overlap_coverage_padding_and_fixed_source (fm3d.test_core.CoreTests) ... ok
+test_train_resume_and_evaluate_cli (fm3d.test_core.CoreTests) ... ok
+test_all_eight_band_axes_and_signs (fm3d.test_wavelet.WaveletTests) ... ok
+test_conditioned_and_unconditioned_gradients (fm3d.test_wavelet.WaveletTests) ... ok
+test_flow_oracle_and_mse_scaling (fm3d.test_wavelet.WaveletTests) ... ok
+test_global_coefficient_stitching_padding_and_fixed_condition (fm3d.test_wavelet.WaveletTests) ... ok
+test_invalid_shapes_fail_explicitly (fm3d.test_wavelet.WaveletTests) ... ok
+test_inverse_energy_and_gradient (fm3d.test_wavelet.WaveletTests) ... ok
+test_matches_pywavelets_if_installed (fm3d.test_wavelet.WaveletTests) ... skipped 'Optional reference check; PyWavelets is not a runtime dependency'
+test_train_resume_milestones_and_evaluate_cli (fm3d.test_wavelet.WaveletTests) ... ok
+test_projection_gradient_reaches_the_unet (fm3d.test_projection.ProjectionTests) ... ok
+test_projection_reduces_only_axial_z_and_uses_fp32 (fm3d.test_projection.ProjectionTests) ... ok
+test_supervision_uses_only_oct_at_zero_time_and_is_unclamped (fm3d.test_projection.ProjectionTests) ... ok
+test_train_resume_loss_configuration_and_evaluate (fm3d.test_projection.ProjectionTests) ... ok
+test_validation_projection_metrics_handle_constant_maps (fm3d.test_projection.ProjectionTests) ... 1/2 0: MAE=0.000000 PSNR=120.000
+2/2 1: MAE=0.000000 PSNR=120.000
+ok
+
+======================================================================
+ERROR: test_duplicate_group_repair_preserves_counts (fm3d.test_core.CoreTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/srv/oct_research/fm3d_zproj_96_200/fm3d/test_core.py", line 170, in test_duplicate_group_repair_preserves_counts
+    from tools.prepare_common_octa500 import protect_duplicate_groups
+ModuleNotFoundError: No module named 'tools'
+
+----------------------------------------------------------------------
+Ran 22 tests in 254.381s
+
+FAILED (errors=1, skipped=1)

@@ -1,0 +1,16 @@
+{
+  "n_files": 1,
+  "threshold": 0.05,
+  "data_range": 1.0,
+  "aggregation": "unweighted per-file mean; patient macro only when one file = one patient",
+  "note": "GT-threshold mask is NOT an anatomical vessel annotation or the paper foreground protocol; empty masks produce NaN",
+  "mean": {
+    "mae_full": 0.4373119682479077,
+    "psnr_full_range1": 6.468923131575027,
+    "ssim_3d_range1_win7": 0.08600970788621319,
+    "mae_fg_gt_threshold": 0.33094690496660434,
+    "psnr_fg_range1": 8.578270758084635,
+    "mae_background": 0.44719179018828825,
+    "foreground_fraction": 0.084991455078125
+  }
+}

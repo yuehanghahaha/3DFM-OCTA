@@ -1,0 +1,2 @@
+file,mae_full,psnr_full_range1,ssim_3d_range1_win7,mae_fg_gt_threshold,psnr_fg_range1,mae_background,foreground_fraction
+smoke_synthetic\best_epoch_001_psnr_6.8567_ssim_0.0891\synthetic_test_000.npz,0.4373119682479077,6.468923131575027,0.08600970788621319,0.33094690496660434,8.578270758084635,0.44719179018828825,0.084991455078125

@@ -1,0 +1,32 @@
+{
+  "scope": "One real training case: two patch updates and one-step full-volume inference only; not trained-model performance",
+  "case_id": "10301",
+  "fov": "3M",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "volume_ZYX": [
+    256,
+    304,
+    304
+  ],
+  "patch_ZYX": [
+    256,
+    64,
+    64
+  ],
+  "coefficient_BCZYX": [
+    1,
+    8,
+    128,
+    32,
+    32
+  ],
+  "losses": [
+    0.19187825918197632,
+    0.13424840569496155
+  ],
+  "amp_skipped_updates": 0,
+  "roundtrip_max_error": 2.980232238769531e-07,
+  "full_volume_inference_ode_steps": 1,
+  "full_volume_inference_seconds": 10.093701699981466,
+  "prediction_finite_and_in_range": true
+}

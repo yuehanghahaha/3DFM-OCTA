@@ -1,0 +1,29 @@
+{
+  "created_date": "2026-10-20",
+  "files_sha256": {
+    "fm3d/__init__.py": "b7a5e3f1150f7a71f4f2273fdf7e5c63ebc5243f3eb582ff33cc0f7466e82c93",
+    "fm3d/benchmark.py": "aa08ee0b8b2ad3768caca50bd5bb8d6d4ea9af797799daf6478c3ea11c2d9114",
+    "fm3d/data.py": "692792101f3983cf6acf88a82b7057cd320c282eb813909e8c18192136abbe54",
+    "fm3d/evaluate.py": "0fd8662fd965a288d1b2b5efd9b9ac1750ee3eb9d01385b3b1ffb85403373efb",
+    "fm3d/inference.py": "cf043091231609a36cbe315a1b8f00790b797fdb08e4ba8608c73e79aa00ebac",
+    "fm3d/model.py": "a5c4f97614423c2db07d3e5addddb5d884c4bbd752829f241a7aef97518e2026",
+    "fm3d/README.md": "578fb8ed195811fb3df3aaa7d483915ef1a4cf93de6127a183486ed862bc0edf",
+    "fm3d/requirements.txt": "13291cc2f50f7574bc597dd92afa7cb19680b0ea2ea42a8ef727ee454bb13da3",
+    "fm3d/scripts/train_wavelet_200.sh": "fd541567666d0cfda81cb43332bc3c3d9dc1599f71de5d7dab7869e79d77f6be",
+    "fm3d/test_core.py": "3279433c5718944aeb666135a3bac18de5f14536183f9a913adaec0bc4ce0fb1",
+    "fm3d/test_wavelet.py": "3a3c8342c64eda241f99c9b2751186c8239a2a48f24ef1a29a4328920b541bdc",
+    "fm3d/train.py": "3b2d0a9997a386a72b3f887bf84da27a30aa76acd33bac59c31b91b2e24014e8",
+    "fm3d/train_wavelet.py": "d329dc77554fdcf6bacb5e8aec1cf6e87afc3ce15ed609a426485eec9567852c",
+    "fm3d/UBUNTU.md": "937b0f369778c45c8bc3a07cff9b8fcead5c61132b87d206fd3890d1ad50d008",
+    "fm3d/WAVELET.md": "bf3725fc1ea185ebf1b33b29ff8388820ba358c240c07bf7794f867d6e5a765c",
+    "fm3d/wavelets.py": "20c6791a5ae3344b5fc062e3d242bd833872dbce78e511c0e4a40fa80c5dde98",
+    "tools/prepare_common_octa500.py": "70cdc65a6a33690d6c7799757b7ed3757328bbbe0478152f1c799be11eb78b49",
+    "verification/unit_tests.txt": "4fe79238f4e2862df1369c925770ee41a050260a3dd2c55975e8a476d69ec64c",
+    "verification/final_stitching_test.txt": "75f97c5a0456499eb8fe75ea9720b95d1d4b158b4749ba3f9974a6b87917ddd9",
+    "verification/haar3d_gpu_benchmark.json": "8993b3055edd76897fb3b9eaf9787546be5d50d259a57cc42aea9f923b1a4c28",
+    "verification/legacy_compatibility.json": "0525a01cd711912a56841f2d737b9fc67193d44c0be2c13c68e56b684c4f3b41",
+    "verification/real_data_smoke.json": "75b50d043cd5c96cf1e3f08edb5881bf42c2822bdd0be2448627056cd1398f7c",
+    "verification/changes_from_baseline.patch": "214a24f518ba26cecc66e9ed56aadd042f53e835c57f51385dc2b95bd1c0e761"
+  },
+  "contains_patient_volumes_or_checkpoints": false
+}

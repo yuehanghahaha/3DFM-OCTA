@@ -1,0 +1,284 @@
+{
+  "complete": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "arm": "voxel",
+      "check": "production_training_state_target_and_condition",
+      "time": 0.0,
+      "loss_with_exact_velocity": 0.0,
+      "max_state_error": 0.0,
+      "fixed_condition_matches_source": true,
+      "passed": true
+    },
+    {
+      "arm": "voxel",
+      "check": "production_training_state_target_and_condition",
+      "time": 0.1,
+      "loss_with_exact_velocity": 0.0,
+      "max_state_error": 0.0,
+      "fixed_condition_matches_source": true,
+      "passed": true
+    },
+    {
+      "arm": "voxel",
+      "check": "production_training_state_target_and_condition",
+      "time": 0.5,
+      "loss_with_exact_velocity": 0.0,
+      "max_state_error": 0.0,
+      "fixed_condition_matches_source": true,
+      "passed": true
+    },
+    {
+      "arm": "voxel",
+      "check": "production_training_state_target_and_condition",
+      "time": 0.9,
+      "loss_with_exact_velocity": 0.0,
+      "max_state_error": 5.960464477539063e-08,
+      "fixed_condition_matches_source": true,
+      "passed": true
+    },
+    {
+      "arm": "voxel",
+      "check": "production_training_state_target_and_condition",
+      "time": 1.0,
+      "loss_with_exact_velocity": 0.0,
+      "max_state_error": 0.0,
+      "fixed_condition_matches_source": true,
+      "passed": true
+    },
+    {
+      "arm": "voxel",
+      "check": "production_sampler_odd_shape_multiple_overlapping_windows",
+      "steps": 1,
+      "max_endpoint_error": 1.1920928955078125e-07,
+      "time_grid": [
+        0.0
+      ],
+      "starts_from_oct": true,
+      "training_mode_restored": true,
+      "passed": true
+    },
+    {
+      "arm": "voxel",
+      "check": "production_sampler_odd_shape_multiple_overlapping_windows",
+      "steps": 8,
+      "max_endpoint_error": 2.980232238769531e-07,
+      "time_grid": [
+        0.0,
+        0.125,
+        0.25,
+        0.375,
+        0.5,
+        0.625,
+        0.75,
+        0.875
+      ],
+      "starts_from_oct": true,
+      "training_mode_restored": true,
+      "passed": true
+    },
+    {
+      "arm": "voxel",
+      "check": "production_sampler_odd_shape_multiple_overlapping_windows",
+      "steps": 32,
+      "max_endpoint_error": 1.0132789611816406e-06,
+      "time_grid": [
+        0.0,
+        0.03125,
+        0.0625,
+        0.09375,
+        0.125,
+        0.15625,
+        0.1875,
+        0.21875,
+        0.25,
+        0.28125,
+        0.3125,
+        0.34375,
+        0.375,
+        0.40625,
+        0.4375,
+        0.46875,
+        0.5,
+        0.53125,
+        0.5625,
+        0.59375,
+        0.625,
+        0.65625,
+        0.6875,
+        0.71875,
+        0.75,
+        0.78125,
+        0.8125,
+        0.84375,
+        0.875,
+        0.90625,
+        0.9375,
+        0.96875
+      ],
+      "starts_from_oct": true,
+      "training_mode_restored": true,
+      "passed": true
+    },
+    {
+      "arm": "voxel",
+      "check": "negative_control_reversed_velocity_must_fail",
+      "max_endpoint_error": 0.4285585880279541,
+      "passed": true
+    },
+    {
+      "arm": "haar",
+      "check": "production_training_state_target_and_condition",
+      "time": 0.0,
+      "loss_with_exact_velocity": 0.0,
+      "max_state_error": 0.0,
+      "fixed_condition_matches_source": true,
+      "passed": true
+    },
+    {
+      "arm": "haar",
+      "check": "production_training_state_target_and_condition",
+      "time": 0.1,
+      "loss_with_exact_velocity": 0.0,
+      "max_state_error": 0.0,
+      "fixed_condition_matches_source": true,
+      "passed": true
+    },
+    {
+      "arm": "haar",
+      "check": "production_training_state_target_and_condition",
+      "time": 0.5,
+      "loss_with_exact_velocity": 0.0,
+      "max_state_error": 0.0,
+      "fixed_condition_matches_source": true,
+      "passed": true
+    },
+    {
+      "arm": "haar",
+      "check": "production_training_state_target_and_condition",
+      "time": 0.9,
+      "loss_with_exact_velocity": 0.0,
+      "max_state_error": 2.384185791015625e-07,
+      "fixed_condition_matches_source": true,
+      "passed": true
+    },
+    {
+      "arm": "haar",
+      "check": "production_training_state_target_and_condition",
+      "time": 1.0,
+      "loss_with_exact_velocity": 0.0,
+      "max_state_error": 0.0,
+      "fixed_condition_matches_source": true,
+      "passed": true
+    },
+    {
+      "arm": "haar",
+      "check": "production_sampler_odd_shape_multiple_overlapping_windows",
+      "steps": 1,
+      "max_endpoint_error": 2.384185791015625e-07,
+      "time_grid": [
+        0.0
+      ],
+      "starts_from_oct": true,
+      "training_mode_restored": true,
+      "passed": true
+    },
+    {
+      "arm": "haar",
+      "check": "production_sampler_odd_shape_multiple_overlapping_windows",
+      "steps": 8,
+      "max_endpoint_error": 3.5762786865234375e-07,
+      "time_grid": [
+        0.0,
+        0.125,
+        0.25,
+        0.375,
+        0.5,
+        0.625,
+        0.75,
+        0.875
+      ],
+      "starts_from_oct": true,
+      "training_mode_restored": true,
+      "passed": true
+    },
+    {
+      "arm": "haar",
+      "check": "production_sampler_odd_shape_multiple_overlapping_windows",
+      "steps": 32,
+      "max_endpoint_error": 8.344650268554688e-07,
+      "time_grid": [
+        0.0,
+        0.03125,
+        0.0625,
+        0.09375,
+        0.125,
+        0.15625,
+        0.1875,
+        0.21875,
+        0.25,
+        0.28125,
+        0.3125,
+        0.34375,
+        0.375,
+        0.40625,
+        0.4375,
+        0.46875,
+        0.5,
+        0.53125,
+        0.5625,
+        0.59375,
+        0.625,
+        0.65625,
+        0.6875,
+        0.71875,
+        0.75,
+        0.78125,
+        0.8125,
+        0.84375,
+        0.875,
+        0.90625,
+        0.9375,
+        0.96875
+      ],
+      "starts_from_oct": true,
+      "training_mode_restored": true,
+      "passed": true
+    },
+    {
+      "arm": "haar",
+      "check": "negative_control_reversed_velocity_must_fail",
+      "max_endpoint_error": 0.4285585880279541,
+      "passed": true
+    },
+    {
+      "check": "haar_inverse_and_mse_units",
+      "inverse_max_error": 2.980232238769531e-07,
+      "voxel_mse": 0.16164404153823853,
+      "coefficient_mse": 0.16164404153823853,
+      "passed": true
+    },
+    {
+      "check": "screenshot_noise_path_endpoint_identity",
+      "time": 0.1,
+      "max_endpoint_error": 3.5762786865234375e-07,
+      "passed": true
+    },
+    {
+      "check": "screenshot_noise_path_endpoint_identity",
+      "time": 0.5,
+      "max_endpoint_error": 1.1920928955078125e-07,
+      "passed": true
+    },
+    {
+      "check": "screenshot_noise_path_endpoint_identity",
+      "time": 0.9,
+      "max_endpoint_error": 1.1920928955078125e-07,
+      "passed": true
+    }
+  ],
+  "training": "state=(1-t)*OCT+t*OCTA; velocity=OCTA-OCT; Haar is linear transform of both",
+  "inference": "state0=OCT; t_k=k/N; state+=v/N; positive time direction; only final voxel clamp",
+  "screenshot": "state=(1-t)*epsilon+t*OCTA; velocity=OCTA-epsilon; requires training for that source distribution"
+}

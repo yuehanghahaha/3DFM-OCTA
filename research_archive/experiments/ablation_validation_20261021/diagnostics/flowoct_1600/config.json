@@ -1,0 +1,13 @@
+{
+  "kind": "flowoct",
+  "original_checkpoint": "/srv/oct_research/fm3d_validation_20261021/06_flowoct/one_case/latest.pt",
+  "original_sha256": "a4e42f4d89bbc4145ebfd7214a0bcf0a03b070d9ec219283361ea01eb09d9a77",
+  "start_updates": 400,
+  "target_updates": 1600,
+  "new_updates": 1200,
+  "case_id": "10301",
+  "patch_id": "y064_x064",
+  "selection_sha256": "bac002ac2c30b72c594b5ef58ac717dbcd9f5c873ee2b6305c16bbd6c67548fd",
+  "source_sha256": "8c30a73f3e44cb7d884146adc0ffde50a73aeb77bdbfbf7c71213d9ee3ff0f1d",
+  "policy": "Restore original model/optimizer/scaler at400. Same fixed training block; no changes to original checkpoint or loss."
+}

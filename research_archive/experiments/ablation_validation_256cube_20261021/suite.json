@@ -1,0 +1,12 @@
+{
+  "schema": "256cube_single_patient_pilot_v1",
+  "seed": 20261021,
+  "updates": 400,
+  "eval_every": 200,
+  "shape_ZYX": [256, 256, 256],
+  "training_case": "10301",
+  "validation_cases": ["10319", "10447", "10456", "10302"],
+  "3d_model": "Same base16 U-Net; block and rollout activation checkpointing; AMP; AdamW2e-4; clip1",
+  "losses": "Same five arms; OCT-only free8 endpoint losses; no t=0 modification",
+  "flowoct": {"lr": 0.0002, "beta": 0.5, "train_slices": 0, "network_chunk": 8}
+}

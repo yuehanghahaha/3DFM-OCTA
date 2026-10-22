@@ -1,0 +1,11 @@
+{
+  "checkpoint": "/srv/oct_research/fm3d_ubuntu/runs/fm3d_3M_run01/best.pt",
+  "checkpoint_sha256": "d3433e6fca9567b38ed26e2fcfaeb6cde220abd65ffd9a5987ee40a5be0723ec",
+  "split": "test",
+  "expected_cases": 50,
+  "gpu_visible_devices": "0",
+  "ode_steps": 8,
+  "checkpoint_epoch": 90,
+  "new_projection_metrics": "post-hoc only; did not select checkpoint or ODE settings",
+  "ground_truth_layers": "post-hoc projection only; not generator input"
+}

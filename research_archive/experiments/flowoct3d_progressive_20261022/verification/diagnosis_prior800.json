@@ -1,0 +1,885 @@
+{
+  "records": [
+    {
+      "model": "prior_full_800",
+      "checkpoint_sha256": "99b6ec7fcb4eb06bc3ca2353db69fb6c11ff90ae851e0a369589f0d5c82e47a7",
+      "case_id": "10301",
+      "split": "train",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.002399330260232091,
+          "ilm_opl_pcc": 0.20680588862188445,
+          "ilm_opl_ssim": 0.15599881963644713,
+          "hf_energy_ratio": 0.8566031455993652,
+          "prediction_std": 0.04318664222955704,
+          "target_std": 0.057970188558101654
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.0014206557534635067,
+          "ilm_opl_pcc": 0.937989745647518,
+          "ilm_opl_ssim": 0.8766668310921064,
+          "hf_energy_ratio": 0.6815924644470215,
+          "prediction_std": 0.05265674740076065,
+          "target_std": 0.057970188558101654
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.18223608834891766,
+          "ilm_opl_ssim": 0.14784766563046134,
+          "hf_energy_ratio": 0.8836701512336731,
+          "prediction_std": 0.04532594606280327,
+          "target_std": 0.057970188558101654
+        }
+      ],
+      "weighted_gradients": [
+        {
+          "time": 0.0,
+          "terms": {
+            "fm": {
+              "raw_loss": 0.005774936638772488,
+              "weighted_loss": 0.005774936638772488,
+              "generator_gradient_norm": 0.5731006264686584
+            },
+            "reconstruction": {
+              "raw_loss": 0.053291644901037216,
+              "weighted_loss": 0.026645822450518608,
+              "generator_gradient_norm": 0.9595253467559814
+            },
+            "projection": {
+              "raw_loss": 0.0754905641078949,
+              "weighted_loss": 0.007549056317657232,
+              "generator_gradient_norm": 0.37433215975761414
+            },
+            "rdca": {
+              "raw_loss": 2.732639789581299,
+              "weighted_loss": 0.013663198798894882,
+              "generator_gradient_norm": 2.3563461303710938
+            }
+          },
+          "gradient_cosines": {
+            "fm__reconstruction": 0.8918343782424927,
+            "fm__projection": 0.9046424031257629,
+            "fm__rdca": 0.5134351253509521,
+            "reconstruction__projection": 0.725048840045929,
+            "reconstruction__rdca": 0.706303060054779,
+            "projection__rdca": 0.34415361285209656
+          }
+        },
+        {
+          "time": 0.5,
+          "terms": {
+            "fm": {
+              "raw_loss": 0.0031182754319161177,
+              "weighted_loss": 0.0031182754319161177,
+              "generator_gradient_norm": 0.09081856161355972
+            },
+            "reconstruction": {
+              "raw_loss": 0.020003698766231537,
+              "weighted_loss": 0.010001849383115768,
+              "generator_gradient_norm": 0.18890681862831116
+            },
+            "projection": {
+              "raw_loss": 0.03245304524898529,
+              "weighted_loss": 0.003245304571464658,
+              "generator_gradient_norm": 0.112482950091362
+            },
+            "rdca": {
+              "raw_loss": 1.877276062965393,
+              "weighted_loss": 0.009386380203068256,
+              "generator_gradient_norm": 0.08830369263887405
+            }
+          },
+          "gradient_cosines": {
+            "fm__reconstruction": 0.9566802382469177,
+            "fm__projection": 0.7069951891899109,
+            "fm__rdca": 0.6654985547065735,
+            "reconstruction__projection": 0.673095703125,
+            "reconstruction__rdca": 0.5842409133911133,
+            "projection__rdca": 0.9178200960159302
+          }
+        }
+      ]
+    },
+    {
+      "model": "prior_full_800",
+      "checkpoint_sha256": "99b6ec7fcb4eb06bc3ca2353db69fb6c11ff90ae851e0a369589f0d5c82e47a7",
+      "case_id": "10304",
+      "split": "train",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.003090501530095935,
+          "ilm_opl_pcc": 0.3016833713891863,
+          "ilm_opl_ssim": 0.20153643729030404,
+          "hf_energy_ratio": 1.301084280014038,
+          "prediction_std": 0.04943932592868805,
+          "target_std": 0.05943188816308975
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.001955250510945916,
+          "ilm_opl_pcc": 0.9567858434406125,
+          "ilm_opl_ssim": 0.9007812552101775,
+          "hf_energy_ratio": 0.8281651735305786,
+          "prediction_std": 0.05512412637472153,
+          "target_std": 0.05943188816308975
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.27607679353983017,
+          "ilm_opl_ssim": 0.20698105207766082,
+          "hf_energy_ratio": 1.272655963897705,
+          "prediction_std": 0.048222221434116364,
+          "target_std": 0.05943188816308975
+        }
+      ],
+      "weighted_gradients": [
+        {
+          "time": 0.0,
+          "terms": {
+            "fm": {
+              "raw_loss": 0.006056937389075756,
+              "weighted_loss": 0.006056937389075756,
+              "generator_gradient_norm": 0.2596844732761383
+            },
+            "reconstruction": {
+              "raw_loss": 0.05591066554188728,
+              "weighted_loss": 0.02795533277094364,
+              "generator_gradient_norm": 0.5121541023254395
+            },
+            "projection": {
+              "raw_loss": 0.08383475989103317,
+              "weighted_loss": 0.008383476175367832,
+              "generator_gradient_norm": 0.4362470507621765
+            },
+            "rdca": {
+              "raw_loss": 2.732766628265381,
+              "weighted_loss": 0.013663833029568195,
+              "generator_gradient_norm": 0.9638195633888245
+            }
+          },
+          "gradient_cosines": {
+            "fm__reconstruction": 0.6755430698394775,
+            "fm__projection": -0.768877387046814,
+            "fm__rdca": 0.873690664768219,
+            "reconstruction__projection": -0.24450886249542236,
+            "reconstruction__rdca": 0.770828127861023,
+            "projection__rdca": -0.6601465344429016
+          }
+        },
+        {
+          "time": 0.5,
+          "terms": {
+            "fm": {
+              "raw_loss": 0.003366020740941167,
+              "weighted_loss": 0.003366020740941167,
+              "generator_gradient_norm": 0.11355788260698318
+            },
+            "reconstruction": {
+              "raw_loss": 0.02146897464990616,
+              "weighted_loss": 0.01073448732495308,
+              "generator_gradient_norm": 0.26590409874916077
+            },
+            "projection": {
+              "raw_loss": 0.029948800802230835,
+              "weighted_loss": 0.0029948800802230835,
+              "generator_gradient_norm": 0.03699348866939545
+            },
+            "rdca": {
+              "raw_loss": 1.8113248348236084,
+              "weighted_loss": 0.00905662402510643,
+              "generator_gradient_norm": 0.08366917073726654
+            }
+          },
+          "gradient_cosines": {
+            "fm__reconstruction": 0.972359836101532,
+            "fm__projection": 0.7443766593933105,
+            "fm__rdca": 0.5837447047233582,
+            "reconstruction__projection": 0.6686113476753235,
+            "reconstruction__rdca": 0.5640734434127808,
+            "projection__rdca": 0.3130369186401367
+          }
+        }
+      ]
+    },
+    {
+      "model": "prior_full_800",
+      "checkpoint_sha256": "99b6ec7fcb4eb06bc3ca2353db69fb6c11ff90ae851e0a369589f0d5c82e47a7",
+      "case_id": "10310",
+      "split": "train",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.005127447657287121,
+          "ilm_opl_pcc": 0.10990884723890264,
+          "ilm_opl_ssim": 0.1622926162771273,
+          "hf_energy_ratio": 0.822529673576355,
+          "prediction_std": 0.06116851419210434,
+          "target_std": 0.09782584011554718
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.0020296527072787285,
+          "ilm_opl_pcc": 0.9395033120363815,
+          "ilm_opl_ssim": 0.8834192452588835,
+          "hf_energy_ratio": 0.6734437942504883,
+          "prediction_std": 0.09039805084466934,
+          "target_std": 0.09782584011554718
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.11051518935148413,
+          "ilm_opl_ssim": 0.16680660323156724,
+          "hf_energy_ratio": 0.8094964027404785,
+          "prediction_std": 0.06045730039477348,
+          "target_std": 0.09782584011554718
+        }
+      ],
+      "weighted_gradients": [
+        {
+          "time": 0.0,
+          "terms": {
+            "fm": {
+              "raw_loss": 0.01297389343380928,
+              "weighted_loss": 0.01297389343380928,
+              "generator_gradient_norm": 1.088672161102295
+            },
+            "reconstruction": {
+              "raw_loss": 0.07851964235305786,
+              "weighted_loss": 0.03925982117652893,
+              "generator_gradient_norm": 1.3817358016967773
+            },
+            "projection": {
+              "raw_loss": 0.07503530383110046,
+              "weighted_loss": 0.007503530476242304,
+              "generator_gradient_norm": 0.4211025834083557
+            },
+            "rdca": {
+              "raw_loss": 2.455379009246826,
+              "weighted_loss": 0.01227689441293478,
+              "generator_gradient_norm": 0.6992062926292419
+            }
+          },
+          "gradient_cosines": {
+            "fm__reconstruction": 0.9744800925254822,
+            "fm__projection": -0.9062673449516296,
+            "fm__rdca": 0.966007649898529,
+            "reconstruction__projection": -0.8119292855262756,
+            "reconstruction__rdca": 0.9543075561523438,
+            "projection__rdca": -0.8802609443664551
+          }
+        },
+        {
+          "time": 0.5,
+          "terms": {
+            "fm": {
+              "raw_loss": 0.004408857319504023,
+              "weighted_loss": 0.004408857319504023,
+              "generator_gradient_norm": 0.09618647396564484
+            },
+            "reconstruction": {
+              "raw_loss": 0.024139029905200005,
+              "weighted_loss": 0.012069514952600002,
+              "generator_gradient_norm": 0.1572108417749405
+            },
+            "projection": {
+              "raw_loss": 0.028554854914546013,
+              "weighted_loss": 0.00285548553802073,
+              "generator_gradient_norm": 0.06030303239822388
+            },
+            "rdca": {
+              "raw_loss": 2.056229591369629,
+              "weighted_loss": 0.010281147435307503,
+              "generator_gradient_norm": 0.03910806030035019
+            }
+          },
+          "gradient_cosines": {
+            "fm__reconstruction": 0.9080201983451843,
+            "fm__projection": 0.8384245038032532,
+            "fm__rdca": 0.3481142222881317,
+            "reconstruction__projection": 0.6948822736740112,
+            "reconstruction__rdca": 0.3169904053211212,
+            "projection__rdca": 0.32827961444854736
+          }
+        }
+      ]
+    },
+    {
+      "model": "prior_full_800",
+      "checkpoint_sha256": "99b6ec7fcb4eb06bc3ca2353db69fb6c11ff90ae851e0a369589f0d5c82e47a7",
+      "case_id": "10439",
+      "split": "train",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.002284115646034479,
+          "ilm_opl_pcc": 0.2509996078660063,
+          "ilm_opl_ssim": 0.3082069126130794,
+          "hf_energy_ratio": 2.1456775665283203,
+          "prediction_std": 0.03719079867005348,
+          "target_std": 0.03958337381482124
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.0012449639616534114,
+          "ilm_opl_pcc": 0.933330058389293,
+          "ilm_opl_ssim": 0.874675890340084,
+          "hf_energy_ratio": 0.9823315739631653,
+          "prediction_std": 0.037447839975357056,
+          "target_std": 0.03958337381482124
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.18953506802751885,
+          "ilm_opl_ssim": 0.30243083571102075,
+          "hf_energy_ratio": 2.178041458129883,
+          "prediction_std": 0.0384090319275856,
+          "target_std": 0.03958337381482124
+        }
+      ],
+      "weighted_gradients": [
+        {
+          "time": 0.0,
+          "terms": {
+            "fm": {
+              "raw_loss": 0.005041115451604128,
+              "weighted_loss": 0.005041115451604128,
+              "generator_gradient_norm": 0.36828118562698364
+            },
+            "reconstruction": {
+              "raw_loss": 0.050032347440719604,
+              "weighted_loss": 0.025016173720359802,
+              "generator_gradient_norm": 0.8188245892524719
+            },
+            "projection": {
+              "raw_loss": 0.06487086415290833,
+              "weighted_loss": 0.0064870864152908325,
+              "generator_gradient_norm": 0.18935705721378326
+            },
+            "rdca": {
+              "raw_loss": 3.7744433879852295,
+              "weighted_loss": 0.0188722163438797,
+              "generator_gradient_norm": 2.810436248779297
+            }
+          },
+          "gradient_cosines": {
+            "fm__reconstruction": 0.8286477327346802,
+            "fm__projection": -0.297537237405777,
+            "fm__rdca": 0.5298734903335571,
+            "reconstruction__projection": 0.1867380291223526,
+            "reconstruction__rdca": 0.668367862701416,
+            "projection__rdca": 0.23680263757705688
+          }
+        },
+        {
+          "time": 0.5,
+          "terms": {
+            "fm": {
+              "raw_loss": 0.0021963249891996384,
+              "weighted_loss": 0.0021963249891996384,
+              "generator_gradient_norm": 0.07703162729740143
+            },
+            "reconstruction": {
+              "raw_loss": 0.017113013193011284,
+              "weighted_loss": 0.008556506596505642,
+              "generator_gradient_norm": 0.20562246441841125
+            },
+            "projection": {
+              "raw_loss": 0.02491018921136856,
+              "weighted_loss": 0.002491018967702985,
+              "generator_gradient_norm": 0.028119923546910286
+            },
+            "rdca": {
+              "raw_loss": 1.9210877418518066,
+              "weighted_loss": 0.009605438448488712,
+              "generator_gradient_norm": 0.06746682524681091
+            }
+          },
+          "gradient_cosines": {
+            "fm__reconstruction": 0.9685640335083008,
+            "fm__projection": 0.6173195838928223,
+            "fm__rdca": 0.6970499157905579,
+            "reconstruction__projection": 0.6127944588661194,
+            "reconstruction__rdca": 0.6408515572547913,
+            "projection__rdca": 0.28499096632003784
+          }
+        }
+      ]
+    },
+    {
+      "model": "prior_full_800",
+      "checkpoint_sha256": "99b6ec7fcb4eb06bc3ca2353db69fb6c11ff90ae851e0a369589f0d5c82e47a7",
+      "case_id": "10319",
+      "split": "validation",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.0025575519539415836,
+          "ilm_opl_pcc": 0.255062504750709,
+          "ilm_opl_ssim": 0.18341853981881362,
+          "hf_energy_ratio": 0.9877172112464905,
+          "prediction_std": 0.042280253022909164,
+          "target_std": 0.055525410920381546
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.0013790945522487164,
+          "ilm_opl_pcc": 0.9475071590109333,
+          "ilm_opl_ssim": 0.8908878118051554,
+          "hf_energy_ratio": 0.7198304533958435,
+          "prediction_std": 0.04984794557094574,
+          "target_std": 0.055525410920381546
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.2164473054627171,
+          "ilm_opl_ssim": 0.17583285871845827,
+          "hf_energy_ratio": 0.9216681122779846,
+          "prediction_std": 0.04133963584899902,
+          "target_std": 0.055525410920381546
+        }
+      ]
+    },
+    {
+      "model": "prior_full_800",
+      "checkpoint_sha256": "99b6ec7fcb4eb06bc3ca2353db69fb6c11ff90ae851e0a369589f0d5c82e47a7",
+      "case_id": "10447",
+      "split": "validation",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.005410158075392246,
+          "ilm_opl_pcc": 0.27590668228795057,
+          "ilm_opl_ssim": 0.1895913087630915,
+          "hf_energy_ratio": 2.878270149230957,
+          "prediction_std": 0.050102267414331436,
+          "target_std": 0.041089028120040894
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.004773069638758898,
+          "ilm_opl_pcc": 0.9623274549516411,
+          "ilm_opl_ssim": 0.8558851812240391,
+          "hf_energy_ratio": 1.1199662685394287,
+          "prediction_std": 0.0428956039249897,
+          "target_std": 0.041089028120040894
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.25949919417110057,
+          "ilm_opl_ssim": 0.19045091535910794,
+          "hf_energy_ratio": 2.8433918952941895,
+          "prediction_std": 0.051042888313531876,
+          "target_std": 0.041089028120040894
+        }
+      ]
+    },
+    {
+      "model": "prior_full_800",
+      "checkpoint_sha256": "99b6ec7fcb4eb06bc3ca2353db69fb6c11ff90ae851e0a369589f0d5c82e47a7",
+      "case_id": "10456",
+      "split": "validation",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.004414019640535116,
+          "ilm_opl_pcc": 0.2959829633115441,
+          "ilm_opl_ssim": 0.1895818675541196,
+          "hf_energy_ratio": 1.1766492128372192,
+          "prediction_std": 0.05450404807925224,
+          "target_std": 0.06321031600236893
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.00309356558136642,
+          "ilm_opl_pcc": 0.9559760192972988,
+          "ilm_opl_ssim": 0.8912100042808501,
+          "hf_energy_ratio": 0.7799985408782959,
+          "prediction_std": 0.05992349609732628,
+          "target_std": 0.06321031600236893
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.24068978560953,
+          "ilm_opl_ssim": 0.1712276983719406,
+          "hf_energy_ratio": 1.1406610012054443,
+          "prediction_std": 0.054099228233098984,
+          "target_std": 0.06321031600236893
+        }
+      ]
+    },
+    {
+      "model": "prior_full_800",
+      "checkpoint_sha256": "99b6ec7fcb4eb06bc3ca2353db69fb6c11ff90ae851e0a369589f0d5c82e47a7",
+      "case_id": "10302",
+      "split": "validation",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.0027971924282610416,
+          "ilm_opl_pcc": 0.17700465239140828,
+          "ilm_opl_ssim": 0.1733849416468543,
+          "hf_energy_ratio": 0.9762523770332336,
+          "prediction_std": 0.043398622423410416,
+          "target_std": 0.058940012007951736
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.0016019430477172136,
+          "ilm_opl_pcc": 0.9478896991982521,
+          "ilm_opl_ssim": 0.8838502038999302,
+          "hf_energy_ratio": 0.7040334939956665,
+          "prediction_std": 0.05312161520123482,
+          "target_std": 0.058940012007951736
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.12719675682124335,
+          "ilm_opl_ssim": 0.1648224896770736,
+          "hf_energy_ratio": 0.99972003698349,
+          "prediction_std": 0.04403930529952049,
+          "target_std": 0.058940012007951736
+        }
+      ]
+    },
+    {
+      "model": "prior_haar_800",
+      "checkpoint_sha256": "75774e777c2d1b46a9dee7e69c833731d085e2c926af7d4c27d7948b3c59d1cc",
+      "case_id": "10301",
+      "split": "train",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.002559061162173748,
+          "ilm_opl_pcc": 0.2425743919613688,
+          "ilm_opl_ssim": 0.17460797467226502,
+          "hf_energy_ratio": 0.6211012005805969,
+          "prediction_std": 0.05223545432090759,
+          "target_std": 0.057970188558101654
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.0014563130680471659,
+          "ilm_opl_pcc": 0.9459339248157801,
+          "ilm_opl_ssim": 0.8337232167540316,
+          "hf_energy_ratio": 0.5054659247398376,
+          "prediction_std": 0.053306616842746735,
+          "target_std": 0.057970188558101654
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.26834093225905653,
+          "ilm_opl_ssim": 0.1793601468787954,
+          "hf_energy_ratio": 0.5593945384025574,
+          "prediction_std": 0.05480387061834335,
+          "target_std": 0.057970188558101654
+        }
+      ]
+    },
+    {
+      "model": "prior_haar_800",
+      "checkpoint_sha256": "75774e777c2d1b46a9dee7e69c833731d085e2c926af7d4c27d7948b3c59d1cc",
+      "case_id": "10304",
+      "split": "train",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.0032118489034473896,
+          "ilm_opl_pcc": 0.39355567920678786,
+          "ilm_opl_ssim": 0.2227326532047066,
+          "hf_energy_ratio": 0.815644383430481,
+          "prediction_std": 0.06240652874112129,
+          "target_std": 0.05943188816308975
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.001618117792531848,
+          "ilm_opl_pcc": 0.9568773123356831,
+          "ilm_opl_ssim": 0.8525767481857718,
+          "hf_energy_ratio": 0.5666802525520325,
+          "prediction_std": 0.055683717131614685,
+          "target_std": 0.05943188816308975
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.3947135133431124,
+          "ilm_opl_ssim": 0.23317332458225418,
+          "hf_energy_ratio": 0.7788075804710388,
+          "prediction_std": 0.06330398470163345,
+          "target_std": 0.05943188816308975
+        }
+      ]
+    },
+    {
+      "model": "prior_haar_800",
+      "checkpoint_sha256": "75774e777c2d1b46a9dee7e69c833731d085e2c926af7d4c27d7948b3c59d1cc",
+      "case_id": "10310",
+      "split": "train",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.004087713081389666,
+          "ilm_opl_pcc": 0.13049855332604995,
+          "ilm_opl_ssim": 0.15978156946242003,
+          "hf_energy_ratio": 0.5581309795379639,
+          "prediction_std": 0.0767623707652092,
+          "target_std": 0.09782584011554718
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.0021523055620491505,
+          "ilm_opl_pcc": 0.9413066994574812,
+          "ilm_opl_ssim": 0.8279027740901401,
+          "hf_energy_ratio": 0.471900075674057,
+          "prediction_std": 0.0930599793791771,
+          "target_std": 0.09782584011554718
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.15070107918964756,
+          "ilm_opl_ssim": 0.16459180529927817,
+          "hf_energy_ratio": 0.5097715258598328,
+          "prediction_std": 0.08025580644607544,
+          "target_std": 0.09782584011554718
+        }
+      ]
+    },
+    {
+      "model": "prior_haar_800",
+      "checkpoint_sha256": "75774e777c2d1b46a9dee7e69c833731d085e2c926af7d4c27d7948b3c59d1cc",
+      "case_id": "10439",
+      "split": "train",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.0016217285301536322,
+          "ilm_opl_pcc": 0.3205836640811778,
+          "ilm_opl_ssim": 0.30794546911673876,
+          "hf_energy_ratio": 1.389587163925171,
+          "prediction_std": 0.04275278002023697,
+          "target_std": 0.03958337381482124
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.0010733423987403512,
+          "ilm_opl_pcc": 0.9260909574168099,
+          "ilm_opl_ssim": 0.8374653270130906,
+          "hf_energy_ratio": 0.6968725323677063,
+          "prediction_std": 0.0375550203025341,
+          "target_std": 0.03958337381482124
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.3152700677354574,
+          "ilm_opl_ssim": 0.3137353782848723,
+          "hf_energy_ratio": 1.294251561164856,
+          "prediction_std": 0.04485888034105301,
+          "target_std": 0.03958337381482124
+        }
+      ]
+    },
+    {
+      "model": "prior_haar_800",
+      "checkpoint_sha256": "75774e777c2d1b46a9dee7e69c833731d085e2c926af7d4c27d7948b3c59d1cc",
+      "case_id": "10319",
+      "split": "validation",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.0026373793371021748,
+          "ilm_opl_pcc": 0.26696902819588214,
+          "ilm_opl_ssim": 0.18197579559306,
+          "hf_energy_ratio": 0.6914872527122498,
+          "prediction_std": 0.05248906835913658,
+          "target_std": 0.055525410920381546
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.001563558354973793,
+          "ilm_opl_pcc": 0.943389844122588,
+          "ilm_opl_ssim": 0.8443408166919517,
+          "hf_energy_ratio": 0.5200528502464294,
+          "prediction_std": 0.04996625334024429,
+          "target_std": 0.055525410920381546
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.27056538081657056,
+          "ilm_opl_ssim": 0.1820286580740205,
+          "hf_energy_ratio": 0.6010313630104065,
+          "prediction_std": 0.052264969795942307,
+          "target_std": 0.055525410920381546
+        }
+      ]
+    },
+    {
+      "model": "prior_haar_800",
+      "checkpoint_sha256": "75774e777c2d1b46a9dee7e69c833731d085e2c926af7d4c27d7948b3c59d1cc",
+      "case_id": "10447",
+      "split": "validation",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.004721467848867178,
+          "ilm_opl_pcc": 0.33261320007261025,
+          "ilm_opl_ssim": 0.20497841271447692,
+          "hf_energy_ratio": 2.273010730743408,
+          "prediction_std": 0.06480899453163147,
+          "target_std": 0.041089028120040894
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.0036523742601275444,
+          "ilm_opl_pcc": 0.9583349753682291,
+          "ilm_opl_ssim": 0.8251508298653136,
+          "hf_energy_ratio": 0.9364888072013855,
+          "prediction_std": 0.04357235133647919,
+          "target_std": 0.041089028120040894
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.3549059187343816,
+          "ilm_opl_ssim": 0.21402030117885218,
+          "hf_energy_ratio": 2.163592576980591,
+          "prediction_std": 0.0661376416683197,
+          "target_std": 0.041089028120040894
+        }
+      ]
+    },
+    {
+      "model": "prior_haar_800",
+      "checkpoint_sha256": "75774e777c2d1b46a9dee7e69c833731d085e2c926af7d4c27d7948b3c59d1cc",
+      "case_id": "10456",
+      "split": "validation",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.003922088071703911,
+          "ilm_opl_pcc": 0.3619464966921289,
+          "ilm_opl_ssim": 0.18608902983693054,
+          "hf_energy_ratio": 0.9045049548149109,
+          "prediction_std": 0.06963355094194412,
+          "target_std": 0.06321031600236893
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.002635570941492915,
+          "ilm_opl_pcc": 0.9531531263845031,
+          "ilm_opl_ssim": 0.8474304881034452,
+          "hf_energy_ratio": 0.5843682885169983,
+          "prediction_std": 0.05969022214412689,
+          "target_std": 0.06321031600236893
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.3570261427770584,
+          "ilm_opl_ssim": 0.18849283987429133,
+          "hf_energy_ratio": 0.8456749320030212,
+          "prediction_std": 0.06846549361944199,
+          "target_std": 0.06321031600236893
+        }
+      ]
+    },
+    {
+      "model": "prior_haar_800",
+      "checkpoint_sha256": "75774e777c2d1b46a9dee7e69c833731d085e2c926af7d4c27d7948b3c59d1cc",
+      "case_id": "10302",
+      "split": "validation",
+      "quality": [
+        {
+          "mode": "pure_oct_t0_endpoint",
+          "target_in_state": false,
+          "velocity_mse": 0.0026729244273155928,
+          "ilm_opl_pcc": 0.20351411653285978,
+          "ilm_opl_ssim": 0.17079890139642584,
+          "hf_energy_ratio": 0.663789689540863,
+          "prediction_std": 0.054849375039339066,
+          "target_std": 0.058940012007951736
+        },
+        {
+          "mode": "target_assisted_t05_endpoint",
+          "target_in_state": true,
+          "velocity_mse": 0.0016240349505096674,
+          "ilm_opl_pcc": 0.9486904249499449,
+          "ilm_opl_ssim": 0.8344196980402808,
+          "hf_energy_ratio": 0.5011842250823975,
+          "prediction_std": 0.053415291011333466,
+          "target_std": 0.058940012007951736
+        },
+        {
+          "mode": "pure_oct_euler8",
+          "target_in_state": false,
+          "velocity_mse": null,
+          "ilm_opl_pcc": 0.18635696312462982,
+          "ilm_opl_ssim": 0.1693374026699232,
+          "hf_energy_ratio": 0.6159117817878723,
+          "prediction_std": 0.05754195526242256,
+          "target_std": 0.058940012007951736
+        }
+      ]
+    }
+  ],
+  "scope": "Fixed first patch of each frozen train/validation patient. Target-assisted estimates are diagnostic only. Gradient norms use loss weights and generator parameters; negative cosine indicates local conflict, not proof of training failure."
+}

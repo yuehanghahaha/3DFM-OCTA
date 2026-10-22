@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "html_links_checked": 17,
+  "missing_links": [],
+  "native_prediction_pngs_checked": 40,
+  "server_predictions_verified": 35,
+  "training_records_and_source_signatures_verified": true,
+  "visually_reviewed": [
+    "preview_train256.png",
+    "10301_train_comparison256.png",
+    "10319_validation_comparison256.png"
+  ]
+}

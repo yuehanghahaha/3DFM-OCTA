@@ -1,0 +1,9 @@
+{
+  "archive": "D:\\data\\code\\keyan_fuxian\\FlowOCT\\artifacts\\fm3d_wavelet_20261020\\fm3d_wavelet_ubuntu.zip",
+  "bytes": 66905,
+  "files": 24,
+  "sha256": "72de3e5d0af14669c0938771c99dc7b3dabc0704acff47b6101e1132e1a97456",
+  "zip_crc_and_all_entry_hashes": "passed",
+  "isolated_import_check": "passed",
+  "shell_syntax": "passed with Git Bash -n"
+}

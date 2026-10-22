@@ -1,0 +1,2 @@
+Read fm3d/UBUNTU.md. This archive does NOT contain OCT/OCTA volumes. Transfer the prepared OCTA500_common_v1 data separately. Keep its original directory structure and final split CSVs.
+The preparation script only requires matplotlib if you regenerate QA images; training does not require it.

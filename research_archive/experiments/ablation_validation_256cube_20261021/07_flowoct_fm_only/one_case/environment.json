@@ -1,0 +1,17 @@
+{
+  "torch": "2.5.1+cu121",
+  "monai": "1.4.0",
+  "numpy": "1.26.4",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "cuda_visible_devices": "0",
+  "generator_parameters": 2328449,
+  "contrast_head_parameters": 0,
+  "amp": false,
+  "gradient_clipping": false,
+  "representation": "pixel",
+  "sampled_Bscans_per_update": 64,
+  "network_chunk": 2,
+  "inference_chunk": 4,
+  "native_model_axes": "BCYXZ",
+  "independent_OCT_condition": false
+}

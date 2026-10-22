@@ -1,0 +1,7 @@
+{
+  "status": "final_evaluation",
+  "arm": "07_flowoct_fm_only",
+  "updates": 400,
+  "target": 400,
+  "solver": "native3"
+}

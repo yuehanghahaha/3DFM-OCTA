@@ -1,0 +1,67 @@
+{
+  "checked_date": "2026-10-19",
+  "transpro_commit": "dc748eac63ebffadfe191e96ef85e45e5d3539a0",
+  "xoct_commit": "4bf151bee591880a28556fa18e0a79aee63ade93",
+  "flowoct_commit": "2309126956d2b80a95f2d307d85a50799cc658a6",
+  "cpgmd_commit": "85b83f627b48a015d0230cb8f7e598fc033e4eee",
+  "mutri_commit": "4512283853c039cf8995e606d057355aee416a29",
+  "cpgmd_fulltext": "/home/researcher/Zotero/storage/G7WGNSRS/CPGMD_英文原文.pdf",
+  "mutri_fulltext": "/workspace/FlowOCT/artifacts/input_dimension_audit_20261008/sources/MuTri_CVPR2025.pdf",
+  "scope": "Published paper text, public repository code and author preprocessing issue comment. No model training.",
+  "limitations": [
+    "CPGMD English full text inspected: split counts and reported image sizes confirmed. Complete public-dataset geometry/intensity preparation and generation implementation remain unspecified or unavailable.",
+    "TransPro, FlowOCT, CPGMD and MuTri exact split manifests not located in inspected materials.",
+    "XOCT offline image/label preparation scripts not located.",
+    "MuTri offline BMP-to-NPY preparation and dedicated 6M training command not located; input shapes are derived from the published default/3M entrypoints, not a training run."
+  ],
+  "xoct_splits": [
+    {
+      "fov": "3M",
+      "file": "test_pids.csv",
+      "count": 40,
+      "min": 10461.0,
+      "max": 10500.0,
+      "sha256": "CCD797EC772E26B2104059090BAB2A67CFF754F0C683ADA28A1086B1107C9E2D"
+    },
+    {
+      "fov": "3M",
+      "file": "train_pids.csv",
+      "count": 140,
+      "min": 10301.0,
+      "max": 10440.0,
+      "sha256": "D6414D16BB9FFABC05F222F21763C26921625DE263EBD07E11A5BD93F3801809"
+    },
+    {
+      "fov": "3M",
+      "file": "val_pids.csv",
+      "count": 20,
+      "min": 10441.0,
+      "max": 10460.0,
+      "sha256": "62EEB64C4DB3E23F8D5FB91EFE8FA282A8F2E3E4A34540020426B62AFC6CE8E3"
+    },
+    {
+      "fov": "6M",
+      "file": "test_pids.csv",
+      "count": 70,
+      "min": 10231.0,
+      "max": 10300.0,
+      "sha256": "74916B90B6B248C2C1A698FA10A9B4F98B6EDE3EA9DDA09BBCBBE33B8195B0F4"
+    },
+    {
+      "fov": "6M",
+      "file": "train_pids.csv",
+      "count": 200,
+      "min": 10001.0,
+      "max": 10200.0,
+      "sha256": "FB68D414B2B69D1D96DEC2E4F89E156A490A8FE5978D68E9864440FE238EC101"
+    },
+    {
+      "fov": "6M",
+      "file": "val_pids.csv",
+      "count": 30,
+      "min": 10201.0,
+      "max": 10230.0,
+      "sha256": "3AB2A205D025364CCEAE540712A7AC020F960B238343D45FFE902509282936CD"
+    }
+  ]
+}

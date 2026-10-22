@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "completed_arms": 6,
+  "successful_updates": 2400,
+  "amp_skipped": 0,
+  "checked_3d_predictions": 35,
+  "large_artifacts": 41,
+  "shape_ZYX": [
+    256,
+    256,
+    256
+  ],
+  "target_exactly_matches_frozen_data": true,
+  "volume_mae_independently_recomputed": true
+}

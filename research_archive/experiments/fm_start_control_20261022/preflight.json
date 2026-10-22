@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "source_only_direct_mse_equals_t0_flow_mse": true,
+  "direct_loss": 0.2550055980682373,
+  "t0_loss": 0.2550055980682373,
+  "max_gradient_error": 2.9802322387695312e-08,
+  "schedule_counts_and_coupled_uniform_times_verified": true
+}
